@@ -1,0 +1,33 @@
+{
+  "name": "howl",
+  "version": "1.0.0",
+  "description": "Repository for the Founders Program project \"Howl\". May 2019",
+  "main": "server.js",
+  "scripts": {
+    "client": " cd client  && npm run build",
+    "dev": " npm run client && nodemon ./src/server.js ",
+    "start": "node ./src/server.js", 
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint --fix ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/founders-programme-2/howl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/founders-programme-2/howl/issues"
+  },
+  "homepage": "https://github.com/founders-programme-2/howl#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.19.0"
+  }
+}
