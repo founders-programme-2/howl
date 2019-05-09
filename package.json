@@ -2,7 +2,7 @@
   "name": "howl",
   "version": "1.0.0",
   "description": "Repository for the Founders Program project \"Howl\". May 2019",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "client": " cd client  && npm run build",
     "dev": " npm run client && nodemon ./src/server.js ",
