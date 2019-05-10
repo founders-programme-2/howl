@@ -9,7 +9,7 @@
     "start": "node ./src/server.js", 
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src", 
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "npm run client"
   },
   "repository": {
     "type": "git",
