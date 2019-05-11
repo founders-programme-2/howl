@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Hello HOWL!
-    </div>
+    <Fragment>
+      <h1>Hello HOWL!</h1>
+    </Fragment>
   );
-}
+};
 
 export default App;
