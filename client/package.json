@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-eslint": "^10.0.0",
+    "env2": "^2.2.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "typescript": "^3.4.5",
-    "babel-eslint": "^10.0.0"
+    "typescript": "^3.4.5"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
