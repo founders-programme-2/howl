@@ -4,7 +4,7 @@ import {
   Main,
   About,
   Resources,
-  WLM,
+  Wlm,
   AddStory,
   Archive,
   Footer,
@@ -29,7 +29,7 @@ const App = () => {
       <Route path="/results" component={Results} />
       <Route path="/story" component={Story} />
       <Route path="/timeline" component={Timeline} />
-      <Route path="/wlm" component={WLM} />
+      <Route path="/wlm" component={Wlm} />
     </BrowserRouter>
   );
 };

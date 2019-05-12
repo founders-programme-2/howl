@@ -1,7 +1,7 @@
 import Main from './Main';
 import About from './About';
 import Resources from './Resources';
-import WLM from './WLM';
+import Wlm from './Wlm ';
 import AddStory from './AddStory';
 import Archive from './Archive';
 import Footer from './Footer';
@@ -15,7 +15,7 @@ export {
   Main,
   About,
   Resources,
-  WLM,
+  Wlm,
   AddStory,
   Archive,
   Footer,
