@@ -1,7 +1,7 @@
 import Main from './Main';
 import About from './About';
 import Resources from './Resources';
-import Wlm from './Wlm ';
+import Wlm from './Wlm';
 import AddStory from './AddStory';
 import Archive from './Archive';
 import Footer from './Footer';

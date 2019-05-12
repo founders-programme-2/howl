@@ -13,7 +13,7 @@ import {
   Results,
   Story,
   Timeline,
-} from './Components ';
+} from './Components';
 
 const App = () => {
   return (
