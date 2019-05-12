@@ -62,3 +62,6 @@ typings/
 
 # ignore environment file
 config.env
+
+# WebStorm IDE files
+.idea/
