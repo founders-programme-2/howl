@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Repository for the Founders Program project \"Howl\". May 2019",
   "main": "server.js",
-  "scripts": {        
+  "scripts": {
     "client": " cd client  && npm run build",
     "dev": " npm run client && nodemon ./src/server.js ",
-    "start": "node ./src/server.js", 
+    "start": "node ./src/server.js",
     "eslint": "eslint ./src",
-    "eslint:fix": "eslint --fix ./src", 
+    "eslint:fix": "eslint --fix ./src",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/founders-programme-2/howl#readme",
   "dependencies": {
+    "airtable": "^0.6.0",
     "env2": "^2.2.2",
     "express": "^4.16.4"
   },
