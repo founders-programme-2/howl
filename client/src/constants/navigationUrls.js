@@ -1,0 +1,10 @@
+export const MAIN_URL = '/';
+export const ABOUT_URL = '/about';
+export const ADD_URL = '/add';
+export const ARCHIVE_URL = '/archive';
+export const HELP_URL = '/help';
+export const RESOURCES_URL = '/resources';
+export const RESULTS_URL = '/results';
+export const STORY_URL = '/story';
+export const TIMELINE_URL = '/timeline';
+export const WLM_URL = '/wlm';
