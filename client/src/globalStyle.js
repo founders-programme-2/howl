@@ -9,6 +9,12 @@ export default createGlobalStyle`
         background-color: #FFFBF0;
     }
 
+    // for main content of each page outside of footer and header
+    main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
     // titles   
     h1 {
         font-family: 'Raleway', sans-serif;
