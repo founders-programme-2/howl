@@ -1,4 +1,3 @@
-export const MAIN_URL = '/';
 export const ABOUT_URL = '/about';
 export const ADD_URL = '/add';
 export const ARCHIVE_URL = '/archive';
