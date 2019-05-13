@@ -7,6 +7,7 @@ export default createGlobalStyle`
     
     body {
         background-color: #FFFBF0;
+        margin: 0;
     }
 
     // for main content of each page outside of footer and header
@@ -49,6 +50,6 @@ export default createGlobalStyle`
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
         padding: 0.8rem;
-        margin: 0.4rem;
+        margin: 1rem;
     }
 `;
