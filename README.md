@@ -14,18 +14,18 @@ Repository for the Founders Program project "Howl". May 2019
 
 ## Stack
 
-### Cloudinary
+### ![Cloudinary](https://cloudinary.com/)
 
-- Used to deal with image uploads
+- Cloudinary simplifies image management by automating the entire image lifecycle—from upload, storage, and management to on-the-fly manipulation for creating multiple variants and high-performance delivery through global Content Delivery Networks.
 
-### Multer
+### ![Multer](https://www.npmjs.com/package/multer)
 
-- makes it possible for an application to accept form-data which allows us to easily transport files from the browser to our server
-- primarily used with image uploads
+- Multer is a node.js middleware for handling `multipart/form-data`, which is primarily used for uploading files.
 
-### Data URI
+### ![Data URI](https://www.npmjs.com/package/datauri)
 
-- creates a readable stream for image uploads
+- Node.js Module and CLI to generate Data URI scheme.
+- The data URI scheme is a uniform resource identifier (URI) scheme that provides a way to include data in-line in web pages as if they were external resources.
 
 ## Team
 
