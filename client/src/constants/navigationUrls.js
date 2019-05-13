@@ -1,9 +1,13 @@
-export const ABOUT_URL = '/about';
-export const ADD_URL = '/add';
-export const ARCHIVE_URL = '/archive';
-export const HELP_URL = '/help';
-export const RESOURCES_URL = '/resources';
-export const RESULTS_URL = '/results';
-export const STORY_URL = '/story';
-export const TIMELINE_URL = '/timeline';
-export const WLM_URL = '/wlm';
+const navigationUrls = {
+  ABOUT_URL: '/about',
+  ADD_URL: '/add',
+  ARCHIVE_URL: '/archive',
+  HELP_URL: '/help',
+  RESOURCES_URL: '/resources',
+  RESULTS_URL: '/results',
+  STORY_URL: '/story',
+  TIMELINE_URL: '/timeline',
+  WLM_URL: '/wlm',
+};
+
+export default navigationUrls;
