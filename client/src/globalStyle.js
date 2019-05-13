@@ -29,7 +29,7 @@ export default createGlobalStyle`
         font-size: 2.5rem;
     }
 
-    // nav, buttons etc
+    // nav, buttons etc - probably not actually necessary here as nav and buttons are separate elements
     h3 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
