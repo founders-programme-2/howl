@@ -14,7 +14,7 @@ exports.uploadImg = (req, res) => {
         },
       });
     }).catch(err => res.status(400).json({
-      messge: 'someting went wrong while processing your request',
+      messge: 'something went wrong while processing your request',
       data: {
         err,
       },
