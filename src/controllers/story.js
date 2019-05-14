@@ -1,4 +1,4 @@
-const Story = require('../airtables');
+const { Story } = require('../airtables');
 
 const create = (req, res) => {
   const {
