@@ -1,11 +1,23 @@
 import React from 'react';
-import { NavLink, NavList, NavSection, NavLi, Logo } from './Header.style';
+import { Link } from 'react-router-dom';
+
+import {
+  NavLink,
+  NavList,
+  NavSection,
+  NavLi,
+  Logo,
+  NavBtn,
+} from './Header.style';
+
 import logoPath from '../../../Assets/logo.svg';
 
 const Header = () => {
   return (
     <NavSection>
-      <Logo src={logoPath} alt="Howl logo" />
+      <Link to="/">
+        <Logo src={logoPath} alt="Howl logo" />
+      </Link>
       <NavList>
         <NavLi>
           <NavLink to="/about">About Howl</NavLink>
@@ -23,7 +35,9 @@ const Header = () => {
           <NavLink to="timeline">Interactive Timeline</NavLink>
         </NavLi>
       </NavList>
-      <button type="button">Add Your Story</button>
+      <Link to="/story">
+        <NavBtn type="button">Add Your Story</NavBtn>
+      </Link>
     </NavSection>
   );
 };
