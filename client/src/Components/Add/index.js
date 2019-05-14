@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AddStory = () => {
-  return <h1>Hello AddStory page!</h1>;
+const Add = () => {
+  return <h1>Hello Add page!</h1>;
 };
 
-export default AddStory;
+export default Add;
