@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.9.3",
     "babel-eslint": "^10.0.0",
     "prop-types": "^15.7.2",
+    "env2": "^2.2.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
@@ -20,7 +21,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "react-a11y": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
