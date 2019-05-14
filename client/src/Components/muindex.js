@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
@@ -13,9 +12,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
 import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
+import PropTypes from 'prop-types';
 
 export {
-  PropTypes,
   withStyles,
   TextField,
   Radio,
@@ -30,4 +29,5 @@ export {
   Select,
   Checkbox,
   Chip,
+  PropTypes,
 };
