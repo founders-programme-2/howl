@@ -25,8 +25,6 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route path="/add" component={AddStory} />
         <Route path="/archive" component={Archive} />
-        <Route path="/footer" component={Footer} />
-        <Route path="/header" component={Header} />
         <Route path="/help" component={Help} />
         <Route path="/resources" component={Resources} />
         <Route path="/results" component={Results} />
