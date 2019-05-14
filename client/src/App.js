@@ -1,16 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import {
-  ABOUT_URL,
-  ADD_URL,
-  ARCHIVE_URL,
-  HELP_URL,
-  RESOURCES_URL,
-  RESULTS_URL,
-  STORY_URL,
-  TIMELINE_URL,
-  WLM_URL,
-} from './constants/navigationUrls';
+import navigationUrls from './constants/navigationUrls';
+
 import {
   Main,
   About,
@@ -25,6 +16,18 @@ import {
   Story,
   Timeline,
 } from './Components';
+
+const {
+  ABOUT_URL,
+  ADD_URL,
+  ARCHIVE_URL,
+  HELP_URL,
+  RESOURCES_URL,
+  RESULTS_URL,
+  STORY_URL,
+  TIMELINE_URL,
+  WLM_URL,
+} = navigationUrls;
 
 const App = () => {
   return (
