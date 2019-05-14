@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
 
 import GlobalStyle from './globalStyle';
 import {
-  Main,
+  Landing,
   About,
   Resources,
   Wlm,
-  AddStory,
+  Add,
+  Form,
   Archive,
   Footer,
   Header,
@@ -16,11 +17,13 @@ import {
   Results,
   Story,
   Timeline,
+  Error404,
 } from './Components';
 
 const {
   ABOUT_URL,
   ADD_URL,
+  FORM_URL,
   ARCHIVE_URL,
   HELP_URL,
   RESOURCES_URL,
@@ -32,12 +35,13 @@ const {
 
 const App = () => {
   return (
-    <Fragment>
-      <GlobalStyle />
-      <BrowserRouter>
-        <Route path="/" component={Main} />
+    <BrowserRouter>
+    <GlobalStyle />
+      <Switch>
+        <Route path="/" exact component={Landing} />
         <Route path={ABOUT_URL} component={About} />
-        <Route path={ADD_URL} component={AddStory} />
+        <Route path={ADD_URL} component={Add} />
+        <Route path={FORM_URL} component={Form} />
         <Route path={ARCHIVE_URL} component={Archive} />
         <Route path="/footer" component={Footer} />
         <Route path="/header" component={Header} />
@@ -47,8 +51,9 @@ const App = () => {
         <Route path={STORY_URL} component={Story} />
         <Route path={TIMELINE_URL} component={Timeline} />
         <Route path={WLM_URL} component={Wlm} />
-      </BrowserRouter>
-    </Fragment>
+        <Route component={Error404} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

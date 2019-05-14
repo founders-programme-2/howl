@@ -1,6 +1,7 @@
 const navigationUrls = {
   ABOUT_URL: '/about',
   ADD_URL: '/add',
+  FORM_URL: '/form',
   ARCHIVE_URL: '/archive',
   HELP_URL: '/help',
   RESOURCES_URL: '/resources',
