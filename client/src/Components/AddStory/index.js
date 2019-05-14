@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { Fragment, Component } from 'react';
 import attach from './attach.png';
-import styles from './muiStyles';
+import { styles } from './muiStyles';
 import {
   withStyles,
   TextField,
@@ -31,7 +31,7 @@ const MenuProps = {
   },
 };
 
-const names = [
+const arrTags = [
   'sexual assault',
   'LGTBQ+',
   'domestic violence',
@@ -54,25 +54,26 @@ const names = [
 
 class AddStory extends Component {
   state = {
-    name: [],
+    tags: [],
     category: '',
     radio: '',
   };
 
-  handleChange = event => {
-    this.setState({ name: event.target.value });
+  tagsChange = event => {
+    this.setState({ tags: event.target.value });
   };
 
   radioChange = event => {
     this.setState({ radio: event.target.value });
   };
 
-  whenChange = event => {
+  categoryChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
     const { classes } = this.props;
+    const { tags, category, radio } = this.state;
 
     return (
       <Fragment>
@@ -115,7 +116,7 @@ class AddStory extends Component {
             <RadioGroup
               name="storyType"
               className={classes.group}
-              value={this.state.radio}
+              value={radio}
               onChange={this.radioChange}
             >
               <FormControlLabel
@@ -171,23 +172,24 @@ class AddStory extends Component {
           className={classes.textField}
           margin="normal"
         />
-        <input
-          id="inputImg"
-          label="upload file"
-          type="file"
-          accept="image/*"
-          hidden
-        />
         <label htmlFor="inputImg">
+          <input
+            id="inputImg"
+            label="upload file"
+            type="file"
+            accept="image/*"
+            hidden
+          />
           <img src={attach} alt="attach" />
         </label>
         <div className={classes.root}>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="selectMultipleCheckbox">Tag</InputLabel>
+            <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
             <Select
+              aria-label="tags"
               multiple
-              value={this.state.name}
-              onChange={this.handleChange}
+              value={tags}
+              onChange={this.tagsChange}
               input={<Input id="selectMultipleCheckbox" />}
               renderValue={selected => (
                 <div className={classes.chips}>
@@ -198,10 +200,10 @@ class AddStory extends Component {
               )}
               MenuProps={MenuProps}
             >
-              {names.map(name => (
-                <MenuItem key={name} value={name}>
-                  <Checkbox checked={this.state.name.indexOf(name) > -1} />
-                  <ListItemText primary={name} />
+              {arrTags.map(tag => (
+                <MenuItem key={tag} value={tag}>
+                  <Checkbox checked={tags.indexOf(tag) > -1} />
+                  <ListItemText primary={tag} />
                 </MenuItem>
               ))}
             </Select>
@@ -209,8 +211,9 @@ class AddStory extends Component {
           <FormControl className={classes.formControl}>
             <InputLabel htmlFor="category">Category</InputLabel>
             <Select
-              value={this.state.category}
-              onChange={this.whenChange}
+              aria-label="category"
+              value={category}
+              onChange={this.categoryChange}
               inputProps={{
                 name: 'category',
                 id: 'category',
