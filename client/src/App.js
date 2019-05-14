@@ -7,7 +7,6 @@ import {
   Wlm,
   AddStory,
   Archive,
-  Footer,
   Header,
   Help,
   Results,
@@ -21,7 +20,10 @@ const App = () => {
     <Fragment>
       <GlobalStyle />
       <BrowserRouter>
-        <Route path="/" component={Main} />
+        {// matches every route so header always displays}
+        <Route path="/" component={Header} />
+        {// displays the Main component content as well at "/" route}
+        <Route exact path="/" component={Main} />
         <Route path="/about" component={About} />
         <Route path="/add" component={AddStory} />
         <Route path="/archive" component={Archive} />
