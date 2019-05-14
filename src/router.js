@@ -2,9 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/hey', (req, res) => {
-  res.send('HEY GUYS, HOWL HERE');
-});
+const { uploadImg, multerUploads, cloudinaryConfig } = require('./middlewares/uploadImg');
+
+
+router.post('/uploadImg', [cloudinaryConfig, multerUploads, uploadImg]);
 
 
 module.exports = router;
