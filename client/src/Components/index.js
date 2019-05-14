@@ -1,4 +1,4 @@
-import Landing from '/Landing';
+import Landing from './Landing';
 import About from './About';
 import Resources from './Resources';
 import Wlm from './Wlm';
@@ -11,6 +11,7 @@ import Help from './Help';
 import Results from './Results';
 import Story from './Story';
 import Timeline from './Timeline';
+import Error404 from './Error404';
 
 export {
   Landing,
@@ -26,4 +27,5 @@ export {
   Results,
   Story,
   Timeline,
+  Error404,
 };

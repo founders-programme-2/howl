@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
 
 import {
@@ -16,7 +16,7 @@ import {
   Results,
   Story,
   Timeline,
-  Error404
+  Error404,
 } from './Components';
 
 const {
@@ -30,26 +30,27 @@ const {
   STORY_URL,
   TIMELINE_URL,
   WLM_URL,
-  ERROR_404_URL,
 } = navigationUrls;
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={Landing} />
-      <Route path={ABOUT_URL} component={About} />
-      <Route path={ADD_URL} component={Add} />
-      <Route path={FORM_URL} component={Form} />
-      <Route path={ARCHIVE_URL} component={Archive} />
-      <Route path="/footer" component={Footer} />
-      <Route path="/header" component={Header} />
-      <Route path={HELP_URL} component={Help} />
-      <Route path={RESOURCES_URL} component={Resources} />
-      <Route path={RESULTS_URL} component={Results} />
-      <Route path={STORY_URL} component={Story} />
-      <Route path={TIMELINE_URL} component={Timeline} />
-      <Route path={WLM_URL} component={Wlm} />
-      <Redirect to={ERROR_404_URL} component={Error404}/>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path={ABOUT_URL} component={About} />
+        <Route path={ADD_URL} component={Add} />
+        <Route path={FORM_URL} component={Form} />
+        <Route path={ARCHIVE_URL} component={Archive} />
+        <Route path="/footer" component={Footer} />
+        <Route path="/header" component={Header} />
+        <Route path={HELP_URL} component={Help} />
+        <Route path={RESOURCES_URL} component={Resources} />
+        <Route path={RESULTS_URL} component={Results} />
+        <Route path={STORY_URL} component={Story} />
+        <Route path={TIMELINE_URL} component={Timeline} />
+        <Route path={WLM_URL} component={Wlm} />
+        <Route component={Error404} />
+      </Switch>
     </BrowserRouter>
   );
 };

@@ -9,7 +9,6 @@ const navigationUrls = {
   STORY_URL: '/story',
   TIMELINE_URL: '/timeline',
   WLM_URL: '/wlm',
-  ERROR_404_URL: '/404',
 };
 
 export default navigationUrls;
