@@ -10,7 +10,7 @@
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "heroku-postbuild": "cd client && npm i && npm run build",
-    "coverage": "nyc report --reporter=json && codecov -f coverage/coverage-final.json"
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -27,10 +27,11 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "codecov": "^3.4.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
-    "nodemon": "^1.19.0",
-    "nyc": "^14.1.1"
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0"
   }
 }
