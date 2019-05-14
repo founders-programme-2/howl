@@ -1,6 +1,8 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Fragment, Component } from 'react';
+import attach from './attach.png';
+import styles from './muiStyles';
 import {
-  PropTypes,
   withStyles,
   TextField,
   Radio,
@@ -15,40 +17,8 @@ import {
   Select,
   Checkbox,
   Chip,
+  PropTypes,
 } from '../muindex';
-
-const styles = theme => ({
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: '200px',
-  },
-  group: {
-    margin: `${theme.spacing.unit}px 0`,
-  },
-
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing.unit * 3,
-    minWidth: 120,
-    maxWidth: 300,
-  },
-  chips: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    width: '97%',
-    padding: 5,
-    maxHeight: 100,
-    overflowY: 'auto',
-  },
-  chip: {
-    margin: theme.spacing.unit / 4,
-  },
-});
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -85,12 +55,20 @@ const names = [
 class AddStory extends Component {
   state = {
     name: [],
+    category: '',
+    radio: '',
   };
 
   handleChange = event => {
-    this.setState({ name: event.target.value }, () => {
-      console.log(this.state.name);
-    });
+    this.setState({ name: event.target.value });
+  };
+
+  radioChange = event => {
+    this.setState({ radio: event.target.value });
+  };
+
+  whenChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
@@ -137,7 +115,8 @@ class AddStory extends Component {
             <RadioGroup
               name="storyType"
               className={classes.group}
-              value="textPost"
+              value={this.state.radio}
+              onChange={this.radioChange}
             >
               <FormControlLabel
                 value="textPost"
@@ -178,13 +157,6 @@ class AddStory extends Component {
           margin="normal"
         />
         <TextField
-          id="imageCap"
-          label="Image Caption"
-          placeholder="Enter image caption..."
-          className={classes.textField}
-          margin="normal"
-        />
-        <TextField
           id="details"
           label="Details"
           placeholder="Enter your story's details"
@@ -192,14 +164,31 @@ class AddStory extends Component {
           className={classes.textField}
           margin="normal"
         />
+        <TextField
+          id="imageCap"
+          label="Image Caption"
+          placeholder="Enter image caption..."
+          className={classes.textField}
+          margin="normal"
+        />
+        <input
+          id="inputImg"
+          label="upload file"
+          type="file"
+          accept="image/*"
+          hidden
+        />
+        <label htmlFor="inputImg">
+          <img src={attach} alt="attach" />
+        </label>
         <div className={classes.root}>
           <FormControl className={classes.formControl}>
-            <InputLabel htmlFor="select-multiple-checkbox">Tag</InputLabel>
+            <InputLabel htmlFor="selectMultipleCheckbox">Tag</InputLabel>
             <Select
               multiple
               value={this.state.name}
               onChange={this.handleChange}
-              input={<Input id="select-multiple-checkbox" />}
+              input={<Input id="selectMultipleCheckbox" />}
               renderValue={selected => (
                 <div className={classes.chips}>
                   {selected.map(value => (
@@ -217,10 +206,29 @@ class AddStory extends Component {
               ))}
             </Select>
           </FormControl>
+          <FormControl className={classes.formControl}>
+            <InputLabel htmlFor="category">Category</InputLabel>
+            <Select
+              value={this.state.category}
+              onChange={this.whenChange}
+              inputProps={{
+                name: 'category',
+                id: 'category',
+              }}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
         </div>
       </Fragment>
     );
   }
 }
+
+AddStory.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(AddStory);
