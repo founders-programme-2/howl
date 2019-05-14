@@ -32,9 +32,6 @@ const {
   WLM_URL,
 } = navigationUrls;
 
-// first "/" Route matches every Route to always display the header
-// second "/" Route will display the Main component
-// (commenting here because they weren't working inside the router)
 const App = () => {
   return (
     <BrowserRouter>
