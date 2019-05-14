@@ -1,12 +1,10 @@
-import React, { Fragment } from 'react';
-import Header from '../Common/Header';
+import React from 'react';
 
 const Main = () => {
   return (
-    <Fragment>
-      <Header />
-      <h1>Hello Main Page</h1>
-    </Fragment>
+    <main>
+      <h1>Hello Main page!</h1>
+    </main>
   );
 };
 
