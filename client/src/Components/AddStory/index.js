@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { Fragment, Component } from 'react';
 import attach from './attach.png';
-import { styles } from './muiStyles';
+import { styles, MenuProps } from './muiStyles';
 import {
   withStyles,
   TextField,
@@ -19,17 +19,6 @@ import {
   Chip,
   PropTypes,
 } from '../muindex';
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
 
 const arrTags = [
   'sexual assault',
