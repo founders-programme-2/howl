@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/founders-programme-2/howl#readme",
   "dependencies": {
+    "airtable": "^0.6.0",
     "cloudinary": "^1.14.0",
     "datauri": "^2.0.0",
     "env2": "^2.2.2",

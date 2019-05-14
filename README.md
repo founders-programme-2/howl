@@ -27,6 +27,9 @@ Repository for the Founders Program project "Howl". May 2019
 - Node.js Module and CLI to generate Data URI scheme.
 - The data URI scheme is a uniform resource identifier (URI) scheme that provides a way to include data in-line in web pages as if they were external resources.
 
+### [Airtable](https://airtable.com/)
+- Airtable is a platform works like a spreadsheet but gives us the power of a database to organize anything, we're using it to store app stories instead of saving it in the database.
+
 ## Team
 
 |     <a href="https://github.com/orjwan98" target="_blank">**Orjwan Al-Rajaby**</a>      |      <a href="https://github.com/mhmdtshref" target="_blank">**Muhammad Shareef**</a>       |
