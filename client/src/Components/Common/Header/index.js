@@ -8,19 +8,19 @@ const Header = () => {
       <Logo src={logoPath} alt="Howl logo" />
       <NavList>
         <NavLi>
-          <NavLink>About Howl</NavLink>
+          <NavLink to="/about">About Howl</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink>Women&#39;s Liberation</NavLink>
+          <NavLink to="/wlm">Women&#39;s Liberation</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink>Feminist Resources</NavLink>
+          <NavLink to="/resources">Feminist Resources</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink>The Archive</NavLink>
+          <NavLink to="/archive">The Archive</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink>Interactive Timeline</NavLink>
+          <NavLink to="timeline">Interactive Timeline</NavLink>
         </NavLi>
       </NavList>
       <button type="button">Add Your Story</button>

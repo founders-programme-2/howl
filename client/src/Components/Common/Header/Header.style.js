@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const NavSection = styled.nav`
   background-color: black;
@@ -18,12 +19,11 @@ export const NavLi = styled.li`
   text-align: center;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   font-size: 1.3rem;
   color: white;
-  list-style: none;
 `;
 
 export const Logo = styled.img`
