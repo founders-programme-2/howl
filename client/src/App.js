@@ -7,7 +7,8 @@ import {
   About,
   Resources,
   Wlm,
-  AddStory,
+  Add,
+  Form
   Archive,
   Footer,
   Header,
@@ -20,6 +21,7 @@ import {
 const {
   ABOUT_URL,
   ADD_URL,
+  FORM_URL,
   ARCHIVE_URL,
   HELP_URL,
   RESOURCES_URL,
@@ -34,7 +36,8 @@ const App = () => {
     <BrowserRouter>
       <Route path="/" component={Main} />
       <Route path={ABOUT_URL} component={About} />
-      <Route path={ADD_URL} component={AddStory} />
+      <Route path={ADD_URL} component={Add} />
+      <Route path={FORM_URL} component={Form} />
       <Route path={ARCHIVE_URL} component={Archive} />
       <Route path="/footer" component={Footer} />
       <Route path="/header" component={Header} />
