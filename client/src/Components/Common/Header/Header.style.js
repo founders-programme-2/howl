@@ -18,15 +18,18 @@ export const NavList = styled.ul`
 
 export const NavLi = styled.li`
   text-align: center;
+  padding: 0.5rem;
 `;
 
 export const NavLink = styled(Link)`
   font-family: 'Raleway', sans-serif;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 1.3rem;
   color: white;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   &:hover {
     color: #fffbf0;
@@ -43,7 +46,10 @@ export const Logo = styled.img`
 `;
 
 export const NavBtn = styled.button`
+  text-transform: uppercase;
   transition: all 0.2s ease-in-out;
+  font-size: 1.2rem;
+
   &:hover {
     cursor: pointer;
     background-color: white;
