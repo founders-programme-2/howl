@@ -1,14 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
 
 import {
-  Main,
+  Landing,
   About,
   Resources,
   Wlm,
   Add,
-  Form
+  Form,
   Archive,
   Footer,
   Header,
@@ -16,6 +16,7 @@ import {
   Results,
   Story,
   Timeline,
+  Error404
 } from './Components';
 
 const {
@@ -29,12 +30,13 @@ const {
   STORY_URL,
   TIMELINE_URL,
   WLM_URL,
+  ERROR_404_URL,
 } = navigationUrls;
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/" component={Main} />
+      <Route path="/" component={Landing} />
       <Route path={ABOUT_URL} component={About} />
       <Route path={ADD_URL} component={Add} />
       <Route path={FORM_URL} component={Form} />
@@ -47,6 +49,7 @@ const App = () => {
       <Route path={STORY_URL} component={Story} />
       <Route path={TIMELINE_URL} component={Timeline} />
       <Route path={WLM_URL} component={Wlm} />
+      <Redirect to={ERROR_404_URL} component={Error404}/>
     </BrowserRouter>
   );
 };

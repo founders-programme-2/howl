@@ -1,8 +1,9 @@
-import Main from './Main';
+import Landing from '/Landing';
 import About from './About';
 import Resources from './Resources';
 import Wlm from './Wlm';
-import AddStory from './AddStory';
+import Add from './Add';
+import Form from './Form';
 import Archive from './Archive';
 import Footer from './Footer';
 import Header from './Header';
@@ -12,11 +13,12 @@ import Story from './Story';
 import Timeline from './Timeline';
 
 export {
-  Main,
+  Landing,
   About,
   Resources,
   Wlm,
-  AddStory,
+  Add,
+  Form,
   Archive,
   Footer,
   Header,
