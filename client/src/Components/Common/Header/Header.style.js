@@ -52,7 +52,12 @@ export const NavBtn = styled.button`
 
   &:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: var(--main-bg-color);
     transform: scale(1.1);
   }
+`;
+
+// Had to wrap button in a div in order for the margin to work. Fragments did not work.
+export const BtnWrapper = styled.div`
+  margin: auto;
 `;

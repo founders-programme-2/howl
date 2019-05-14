@@ -8,6 +8,7 @@ import {
   NavLi,
   Logo,
   NavBtn,
+  BtnWrapper,
 } from './Header.style';
 
 import logoPath from '../../../Assets/logo.svg';
@@ -35,9 +36,11 @@ const Header = () => {
           <NavLink to="timeline">Interactive Timeline</NavLink>
         </NavLi>
       </NavList>
-      <Link to="/story">
-        <NavBtn type="button">Add Your Story</NavBtn>
-      </Link>
+      <BtnWrapper>
+        <Link to="/story">
+          <NavBtn type="button">Add Your Story</NavBtn>
+        </Link>
+      </BtnWrapper>
     </NavSection>
   );
 };
