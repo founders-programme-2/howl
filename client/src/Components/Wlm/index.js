@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Wlm = () => {
-  return <h1>Hello Wlm page!</h1>;
+  return (
+    <main>
+      <h1>Hello Wlm page!</h1>
+    </main>
+  );
 };
 
 export default Wlm;
