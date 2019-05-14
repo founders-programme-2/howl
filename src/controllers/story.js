@@ -1,4 +1,4 @@
-import Story from '../airtables';
+const Story = require('../airtables');
 
 const create = (req, res) => {
   const {
@@ -19,4 +19,4 @@ const create = (req, res) => {
   });
 };
 
-export default { create };
+module.exports = { create };

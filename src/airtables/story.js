@@ -1,5 +1,5 @@
-import Airtable from 'airtable';
-import env2 from 'env2';
+const Airtable = require('airtable');
+const env2 = require('env2');
 
 env2('config.env');
 
@@ -11,4 +11,4 @@ if (!AIRTABLE_API_KEY) {
 
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base('apppdW6Ebu2yFkm80');
 
-export default base('posts');
+module.exports = base('posts');

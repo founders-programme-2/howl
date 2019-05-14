@@ -1,3 +1,3 @@
-import Story from './story';
+const Story = require('./story');
 
-export default { Story };
+module.exports = { Story };
