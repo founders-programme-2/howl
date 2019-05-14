@@ -1,41 +1,60 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import navigationUrls from './constants/navigationUrls';
+
+import GlobalStyle from './globalStyle';
 import {
-  Main,
+  Landing,
   About,
   Resources,
   Wlm,
-  AddStory,
+  Add,
+  Form,
   Archive,
   Header,
   Help,
   Results,
   Story,
   Timeline,
+  Error404,
 } from './Components';
-import GlobalStyle from './globalStyle';
+
+const {
+  ABOUT_URL,
+  ADD_URL,
+  FORM_URL,
+  ARCHIVE_URL,
+  HELP_URL,
+  RESOURCES_URL,
+  RESULTS_URL,
+  STORY_URL,
+  TIMELINE_URL,
+  WLM_URL,
+} = navigationUrls;
 
 // first "/" Route matches every Route to always display the header
 // second "/" Route will display the Main component
 // (commenting here because they weren't working inside the router)
 const App = () => {
   return (
-    <Fragment>
+    <BrowserRouter>
+      <Header />
       <GlobalStyle />
-      <BrowserRouter>
-        <Route path="/" component={Header} />
-        <Route exact path="/" component={Main} />
-        <Route path="/about" component={About} />
-        <Route path="/add" component={AddStory} />
-        <Route path="/archive" component={Archive} />
-        <Route path="/help" component={Help} />
-        <Route path="/resources" component={Resources} />
-        <Route path="/results" component={Results} />
-        <Route path="/story" component={Story} />
-        <Route path="/timeline" component={Timeline} />
-        <Route path="/wlm" component={Wlm} />
-      </BrowserRouter>
-    </Fragment>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path={ABOUT_URL} component={About} />
+        <Route path={ADD_URL} component={Add} />
+        <Route path={FORM_URL} component={Form} />
+        <Route path={ARCHIVE_URL} component={Archive} />
+        <Route path={HELP_URL} component={Help} />
+        <Route path={RESOURCES_URL} component={Resources} />
+        <Route path={RESULTS_URL} component={Results} />
+        <Route path={STORY_URL} component={Story} />
+        <Route path={TIMELINE_URL} component={Timeline} />
+        <Route path={WLM_URL} component={Wlm} />
+        <Route component={Error404} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 
