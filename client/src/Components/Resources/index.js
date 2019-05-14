@@ -1,6 +1,19 @@
 import React, { Fragment } from 'react';
+import resourcesData from './resourcesData';
 
 const Resources = () => {
+  // maps over data and renders resources on page
+  const renderResources = resourcesData.map(resource => {
+    return (
+      <article key={resource.id}>
+        <a href={resource.link} target="_blank" rel="noopener noreferrer">
+          <h2>{resource.title}</h2>
+          <p>{resource.info}</p>
+        </a>
+      </article>
+    );
+  });
+
   return (
     <Fragment>
       <main>
@@ -13,31 +26,7 @@ const Resources = () => {
           exist. If you are looking to learn more, please have a look at the
           following:
         </p>
-        <article>
-          <h2>The Feminist Library</h2>
-          <p>
-            The Feminist Library is a large collection of Women&#39;s Liberation
-            Movement literature based in London. They have been supporting
-            research, activist and community projects since 1975.
-          </p>
-        </article>
-        <article>
-          <h2>Timeline of the Women&#39;s Liberation Movement</h2>
-          <p>
-            Collected and held by the British Library, the Timeline of the
-            Women’s Liberation Movement details a number of significant
-            historical events.
-          </p>
-        </article>
-        <article>
-          <h2 />
-        </article>
-        To add: https://www.bl.uk/sisterhood/timeline
-        http://www.lse.ac.uk/Library/Collections/Collection-highlights/The-Womens-Library
-        http://feministlibrary.co.uk/ https://www.bishopsgate.org.uk/Library
-        https://southallblacksisters.org.uk/
-        https://finnmackay.wordpress.com/about/ https://womenslibrary.org.uk/
-        https://feministarchivenorth.org.uk/
+        {renderResources}
       </main>
     </Fragment>
   );
