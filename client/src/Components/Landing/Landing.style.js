@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Sheader = styled.header`
   margin: 5rem 2rem;
+  padding-left: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   grid-area: header;
@@ -13,10 +14,10 @@ font-size: 4rem;
 
 export const Sp = styled.p`
   font-variant: small-caps;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
   text-transform: lowercase;
   letter-spacing: 0.1rem;
-  fonts-size: 2rem;
+  font-size: 1.2rem;
 `;
 
 export const SLink = styled(Link)`
@@ -37,19 +38,22 @@ export const Sh2 = styled.h2`
   letter-spacing: 0.1rem;
 `;
 
-export const Ssection = styled.section`
-  margin: 2rem;
+export const Ssection_Nav = styled.section`
+ grid-area: nav;
+ margin: 2rem 5rem;
 `;
 
-export const Ssection_Who = styled(Ssection)`
-  margin: 2rem 5rem;
-  width: 30vw;
+export const Ssection_Who = styled.section`
+  margin: 0 5rem 2rem;
+  width: 25vw;
+  grid-area: who;
 `;
 
 export const Simg = styled.img`
   border-radius: 20px;
   width: 25vw;
   margin: 0 2rem;
+  grid-area: image;
 `;
 
 export const Smain = styled.main`

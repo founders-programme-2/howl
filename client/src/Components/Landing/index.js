@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
-import { Smain, Sheader, Sp, SLink, Sa, Sh2, Ssection, Ssection_Who, Simg, Sh1 } from './Landing.style';
+import { Smain, Sheader, Sp, SLink, Sa, Sh2, Ssection_Nav, Ssection_Who, Simg, Sh1 } from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
 
 const Landing = () => {
@@ -26,7 +26,7 @@ const Landing = () => {
           </Sp>
         </Ssection_Who>
         <Simg src={landingImage} alt="A group of women and their children" />
-        <Ssection>
+        <Ssection_Nav>
           <Sh2>Navigation</Sh2>
           <Sp>
             Browse our our story and photo archive by using the archive controls
@@ -36,7 +36,11 @@ const Landing = () => {
             </Sa>{' '}
             to filter your results by category, location, tags or year. The
             yellow bar of years above the search controls allows you to view
-            stories from within a four to five period of time. All other
+            stories from within a four to five period of time. 
+            
+            <br />
+            <br />
+            All other
             information is accessible from the black banner{' '}
             <Sa href="#topLink" aria-label="Scroll to top">
               the top of the page
@@ -45,7 +49,7 @@ const Landing = () => {
             including more information about Howl, the Women&#39;s Liberation
             Movement and other resources.
           </Sp>
-        </Ssection>
+        </Ssection_Nav>
       </Smain>
       <a name="bottomLink" aria-label="Search bar" />
     </Fragment>
