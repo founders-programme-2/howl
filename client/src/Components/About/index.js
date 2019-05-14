@@ -3,11 +3,10 @@ import React, { Fragment } from 'react';
 const About = () => {
   return (
     <Fragment>
-      <header>
-        <h1>About Howl</h1>
-      </header>
-
       <main>
+        <header>
+          <h1>About Howl</h1>
+        </header>
         <p>
           The History of Women&#39;s Liberation (HOWL) project arose initially
           out of discussions older/old feminists were holding about the
