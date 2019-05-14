@@ -15,14 +15,15 @@ import {
 } from './Components';
 import GlobalStyle from './globalStyle';
 
+// first "/" Route matches every Route to always display the header
+// second "/" Route will display the Main component
+// (commenting here because they weren't working inside the router)
 const App = () => {
   return (
     <Fragment>
       <GlobalStyle />
       <BrowserRouter>
-        {// matches every route so header always displays}
         <Route path="/" component={Header} />
-        {// displays the Main component content as well at "/" route}
         <Route exact path="/" component={Main} />
         <Route path="/about" component={About} />
         <Route path="/add" component={AddStory} />
