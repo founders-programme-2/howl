@@ -2,9 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
-    // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular)
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,900|Roboto');
+// import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular, bold)
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,900|Roboto:400,700');
     
+
     :root {
         --main-bg-color: #FFFBF0; 
         --main-font-color: #0A0A0A;
@@ -29,6 +30,7 @@ export default createGlobalStyle`
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
         font-size: 3rem;
+        letter-spacing: 0.1rem;
     }
 
     // subtitle
