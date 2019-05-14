@@ -1,12 +1,14 @@
-const express = require('express');
+import express from 'express';
+import controllers from './controllers';
+
+import { uploadImg, multerUploads, cloudinaryConfig } from'./middlewares/uploadImg';
+
 
 const router = express.Router();
-
-const { uploadImg, multerUploads, cloudinaryConfig } = require('./middlewares/uploadImg');
 
 
 router.post('/uploadImg', [cloudinaryConfig, multerUploads, uploadImg]);
 
-router.post('/posts/create', require('./controllers/story').create);
+router.post('/posts/create', controllers.Story.create);
 
-module.exports = router;
+export default router;

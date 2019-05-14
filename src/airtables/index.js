@@ -1,3 +1,3 @@
-const Story = require('./story');
+import Story from './story';
 
-module.exports = { Story };
+export default { Story };

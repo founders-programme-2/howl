@@ -1,4 +1,4 @@
-const { Story } = require('../airtables');
+import Story from '../airtables';
 
 const create = (req, res) => {
   const {
@@ -12,11 +12,11 @@ const create = (req, res) => {
     date,
   }, (err) => {
     if (err) {
-      res.json({ success: false, err: 'Saving data error' });
+      res.json({ success: false, err: 'There\'s been an error in saving the data to Airtable' });
     } else {
       res.json({ success: true });
     }
   });
 };
 
-module.exports = { create };
+export default { create };
