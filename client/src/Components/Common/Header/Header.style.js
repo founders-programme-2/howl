@@ -32,7 +32,7 @@ export const NavLink = styled(Link)`
   letter-spacing: 0.05em;
 
   &:hover {
-    color: #fffbf0;
+    color: var(--main-bg-color);
     transform: scale(1.1);
   }
 `;
