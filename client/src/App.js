@@ -36,7 +36,7 @@ const {
 const App = () => {
   return (
     <BrowserRouter>
-    <GlobalStyle />
+      <GlobalStyle />
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path={ABOUT_URL} component={About} />
