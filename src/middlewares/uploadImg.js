@@ -39,13 +39,13 @@ exports.uploadImg = (req, res) => {
     return uploader.upload(file).then((result) => {
       const image = result.url;
       return res.status(200).json({
-        messge: 'Your image has been uploded successfully to cloudinary',
+        message: 'Your image has been uploaded successfully to cloudinary',
         data: {
           image,
         },
       });
     }).catch(err => res.status(400).json({
-      messge: 'something went wrong while processing your request',
+      message: 'something went wrong while processing your request',
       data: {
         err,
       },
