@@ -5,8 +5,17 @@ export default createGlobalStyle`
     // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular)
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,900|Roboto');
     
+    :root {
+        --main-bg-color: #FFFBF0; 
+        --main-font-color: #0A0A0A;
+        --secondary-font-color: #FFFFFF;
+        --main-btn-color: #F6C25B;
+        --highlight-color: #C02700;
+    }
+
     body {
-        background-color: #FFFBF0;
+        background-color: var(--main-bg-color);
+        color:  var(--main-font-color);
     }
 
     // for main content of each page outside of footer and header
@@ -45,7 +54,7 @@ export default createGlobalStyle`
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
         font-size: 1.5rem;
-        background: #FFFBF0;
+        background: var(--main-btn-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
         padding: 0.8rem;

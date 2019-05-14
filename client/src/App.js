@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
 
+import GlobalStyle from './globalStyle';
 import {
   Main,
   About,
@@ -16,7 +17,6 @@ import {
   Story,
   Timeline,
 } from './Components';
-import GlobalStyle from './globalStyle';
 
 const {
   ABOUT_URL,
