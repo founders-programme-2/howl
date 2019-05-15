@@ -1,7 +1,12 @@
 import React from 'react';
+import ContactInfo from './ContactInfo';
 
 const Add = () => {
-  return <h1>Hello Add page!</h1>;
+  return (
+    <main>
+      <ContactInfo />
+    </main>
+  );
 };
 
 export default Add;
