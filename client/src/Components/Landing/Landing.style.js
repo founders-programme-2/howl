@@ -7,10 +7,10 @@ export const Sheader = styled.header`
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   grid-area: header;
-`
+`;
 export const Sh1 = styled.h1`
-font-size: 4rem;
-`
+  font-size: 4rem;
+`;
 
 export const Sp = styled.p`
   font-variant: small-caps;
@@ -39,8 +39,8 @@ export const Sh2 = styled.h2`
 `;
 
 export const SsectionNav = styled.section`
- grid-area: nav;
- margin: 2rem 5rem;
+  grid-area: nav;
+  margin: 2rem 5rem;
 `;
 
 export const SsectionWho = styled.section`
@@ -60,9 +60,10 @@ export const Smain = styled.main`
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header header"
-  "who image"
-  "nav nav"
+  grid-template-areas:
+    'header header'
+    'who image'
+    'nav nav';
 `;
 
 export const SaHidden = styled.a`

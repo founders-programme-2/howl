@@ -1,4 +1,4 @@
-const styles = theme => ({
+const styles = () => ({
   textField: {
     marginLeft: '5%',
     marginRight: '5%',
