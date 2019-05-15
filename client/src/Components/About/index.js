@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
-import { Sheader, Ssection, Sp } from './About.style'
+import { Sheader, Ssection, Sp, Sh1, Sh2 } from './About.style'
 
 const About = () => {
   return (
     <Fragment>
       <main>
         <Sheader>
-          <h1>About Howl</h1>
+          <Sh1>About Howl</Sh1>
         </Sheader>
         <Sp>
           The History of Women&#39;s Liberation (HOWL) project arose initially
@@ -23,45 +23,22 @@ const About = () => {
         </Sp>
 
         <Ssection>
-          <h2>Join Us</h2>
+          <Sh2>Want to get involved?</Sh2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris
-            ultrices eros in cursus turpis massa. At auctor urna nunc id cursus.
-            Dis parturient montes nascetur ridiculus mus mauris vitae ultricies
-            leo. Tristique senectus et netus et malesuada fames. Nec ullamcorper
-            sit amet risus nullam eget. Id neque aliquam vestibulum morbi
-            blandit cursus risus. Eu feugiat pretium nibh ipsum consequat nisl
-            vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
-            est velit. Non blandit massa enim nec dui nunc mattis.
+            Send an email introducing yourself to fakeemail@gmail.com and come to one of our meetings!
           </p>
         </Ssection>
         <Ssection>
-          <h2>Donate</h2>
+          <Sh2>Donate</Sh2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris
-            ultrices eros in cursus turpis massa. At auctor urna nunc id cursus.
-            Dis parturient montes nascetur ridiculus mus mauris vitae ultricies
-            leo. Tristique senectus et netus et malesuada fames. Nec ullamcorper
-            sit amet risus nullam eget. Id neque aliquam vestibulum morbi
-            blandit cursus risus. Eu feugiat pretium nibh ipsum consequat nisl
-            vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
-            est velit. Non blandit massa enim nec dui nunc mattis.
+            Excited about our project? We are always looking for donations. 
+    
           </p>
         </Ssection>
         <Ssection>
-          <h2>Contact Us</h2>
+          <Sh2>Contact Us</Sh2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris
-            ultrices eros in cursus turpis massa. At auctor urna nunc id cursus.
-            Dis parturient montes nascetur ridiculus mus mauris vitae ultricies
-            leo. Tristique senectus et netus et malesuada fames. Nec ullamcorper
-            sit amet risus nullam eget. Id neque aliquam vestibulum morbi
-            blandit cursus risus. Eu feugiat pretium nibh ipsum consequat nisl
-            vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
-            est velit. Non blandit massa enim nec dui nunc mattis.
+           Have a question? Send us an email at fakeemail@gmail.com.
           </p>
         </Ssection>
       </main>
