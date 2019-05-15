@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
 import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1, SaHidden } from './Landing.style';
-import landingImage from '../../Assets/landing_page.jpg';
+import landingImage from '../../assets/landing_page.jpg';
 
 const Landing = () => {
   return (
