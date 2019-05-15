@@ -11,7 +11,7 @@ import {
   FormGroup,
   RadioGroup,
 } from '../../muIndex';
-import { styles } from './muiStyles';
+import styles from './muiStyles';
 
 const Details = ({ classes, radio, radioChange }) => {
   return (
