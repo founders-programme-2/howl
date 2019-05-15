@@ -4,8 +4,8 @@
   "description": "Repository for the Founders Program project \"Howl\". May 2019",
   "main": "server.js",
   "scripts": {
-    "client": " cd client  && npm run build",
-    "dev": " npm run client && nodemon ./src/server.js ",
+    "dev:server": "nodemon ./src/server.js ",
+    "dev:client": "cd ./client && npm start",
     "start": "node ./src/server.js",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
