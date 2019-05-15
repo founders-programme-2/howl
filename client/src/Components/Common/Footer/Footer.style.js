@@ -11,21 +11,20 @@ export const FooterDiv = styled.div`
 export const TitleDiv = styled.div`
   width: 30%;
   height: 100%;
-  background-color: blue;
+  /*background-color: blue;*/
 `;
 
 export const StyledTitle = styled.h2`
-  color: black;
+  color: white;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  margin: 5% 0 0 0;
 `;
 
 export const FilterDiv = styled.div`
   width: 40%;
   height: 100%;
-  background-color: red;
-`;
-
-export const FormContainer = styled.div`
-  width: 100%;
+  /*background-color: red;*/
+  display: flex;
+  justify-content: center;
 `;
