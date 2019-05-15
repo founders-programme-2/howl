@@ -1,19 +1,58 @@
-const path = require('path');
-const express = require('express');
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import navigationUrls from './constants/navigationUrls';
 
-const app = express();
+import GlobalStyle from './globalStyle';
+import {
+  Landing,
+  About,
+  Resources,
+  Wlm,
+  Add,
+  Form,
+  Archive,
+  Header,
+  Help,
+  Results,
+  Story,
+  Timeline,
+  Error404,
+} from './Components';
 
-const router = require('./router');
+const {
+  ABOUT_URL,
+  ADD_URL,
+  FORM_URL,
+  ARCHIVE_URL,
+  HELP_URL,
+  RESOURCES_URL,
+  RESULTS_URL,
+  STORY_URL,
+  TIMELINE_URL,
+  WLM_URL,
+} = navigationUrls;
 
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(router);
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Header />
+      <GlobalStyle />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path={ABOUT_URL} component={About} />
+        <Route path={ADD_URL} component={Add} />
+        <Route path={FORM_URL} component={Form} />
+        <Route path={ARCHIVE_URL} component={Archive} />
+        <Route path={HELP_URL} component={Help} />
+        <Route path={RESOURCES_URL} component={Resources} />
+        <Route path={RESULTS_URL} component={Results} />
+        <Route path={STORY_URL} component={Story} />
+        <Route path={TIMELINE_URL} component={Timeline} />
+        <Route path={WLM_URL} component={Wlm} />
+        <Route component={Error404} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-});
-
-
-module.exports = app;
+export default App;
