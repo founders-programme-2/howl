@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { AddHead, AddSub, Para } from './ContactInfo.style';
 import { withStyles, TextField } from '../../muIndex';
-import { styles } from './muiStyles';
+import styles from './muiStyles';
 
 const ContactInfo = ({ classes }) => {
   return (
