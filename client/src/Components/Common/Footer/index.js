@@ -9,14 +9,28 @@ import {
 } from '@material-ui/core';
 import { FooterDiv, TitleDiv, StyledTitle, FilterDiv } from './Footer.style';
 
-const styles = theme => ({
+const styles = () => ({
   button: {
     backgroundColor: '#F6C25B',
-    width: '80%',
-    margin: `5% 10% 5% 10%`,
+    width: '50%',
+    margin: `5% 25% 5% 25%`,
+    fontFamily: 'Raleway, sans-serif',
+    fontWeight: 'bold',
+    borderRadius: '20px',
   },
   formControl: {
-    width: '100%',
+    width: '80%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
+    height: '80%',
+  },
+  select: {
+    width: '40%',
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
   },
 });
 
@@ -32,7 +46,7 @@ const BootstrapInput = withStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     border: '1px solid #ced4da',
     fontSize: 16,
-    width: '40%',
+    width: '80%',
     padding: '10px 26px 10px 12px',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
@@ -55,6 +69,7 @@ const Footer = ({ classes }) => {
       <FilterDiv>
         <FormControl className={classes.formControl}>
           <Select
+            className={classes.select}
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
@@ -67,6 +82,7 @@ const Footer = ({ classes }) => {
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
           <Select
+            className={classes.select}
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
@@ -79,6 +95,7 @@ const Footer = ({ classes }) => {
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
           <Select
+            className={classes.select}
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
@@ -91,6 +108,7 @@ const Footer = ({ classes }) => {
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
           <Select
+            className={classes.select}
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
