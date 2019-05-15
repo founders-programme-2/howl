@@ -78,7 +78,7 @@ const Footer = ({ classes }) => {
               <BootstrapInput name="age" id="category-customized-select" />
             }
           >
-            <MenuItem value="">
+            <MenuItem value="None">
               <em>None</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
@@ -87,11 +87,12 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
+            value="None"
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
           >
-            <MenuItem value="">
+            <MenuItem value="None">
               <em>None</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
@@ -100,11 +101,12 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
+            value="None"
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
           >
-            <MenuItem value="">
+            <MenuItem value="None">
               <em>None</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
@@ -113,11 +115,12 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
+            value="None"
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
           >
-            <MenuItem value="">
+            <MenuItem value="None">
               <em>None</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
