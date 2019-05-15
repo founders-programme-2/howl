@@ -33,7 +33,8 @@
         "trailingComma": "es5",
         "singleQuote": true
       }
-    ]
+    ], 
+    "react/prop-types": 0
   },
   "plugins": ["prettier"]
 }
