@@ -14,7 +14,7 @@ const styles = () => ({
     backgroundColor: '#F6C25B',
     width: '50%',
     margin: `5% 25% 5% 25%`,
-    fontFamily: 'Raleway, sans-serif',
+    fontFamily: ['Raleway', 'sans-serif'].join(','),
     fontWeight: 'bold',
     borderRadius: '20px',
   },
@@ -47,7 +47,7 @@ const BootstrapInput = withStyles(theme => ({
     border: '1px solid #ced4da',
     fontSize: 16,
     width: '80%',
-    padding: '10px 26px 10px 12px',
+    padding: '5% 16% 5% 8%',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
     fontFamily: ['Raleway', 'sans-serif'].join(','),
@@ -55,6 +55,9 @@ const BootstrapInput = withStyles(theme => ({
       borderRadius: 4,
       borderColor: '#80bdff',
       boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+    },
+    svg: {
+      width: '20%',
     },
   },
 }))(InputBase);
@@ -70,6 +73,7 @@ const Footer = ({ classes }) => {
         <FormControl className={classes.formControl}>
           <Select
             className={classes.select}
+            value="None"
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
