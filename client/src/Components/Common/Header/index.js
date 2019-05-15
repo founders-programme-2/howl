@@ -9,13 +9,15 @@ import {
   Logo,
   NavBtn,
   BtnWrapper,
+  Sa
 } from './Header.style';
 
-import logoPath from '../../../Assets/logo.svg';
+import logoPath from '../../../assets/logo.svg';
 
 const Header = () => {
   return (
     <NavSection>
+    <Sa href="#top" name="topLink" aria-label="Navigation bar">Top of page</Sa>
       <Link to="/">
         <Logo src={logoPath} alt="Howl logo" />
       </Link>
