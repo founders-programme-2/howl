@@ -12,7 +12,7 @@ import {
   Sa
 } from './Header.style';
 
-import logoPath from '../../../assets/logo.svg';
+import logoPath from '../../../Assets/logo.svg';
 
 const Header = () => {
   return (

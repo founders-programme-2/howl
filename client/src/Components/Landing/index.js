@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
 import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1, SaHidden } from './Landing.style';
-import landingImage from '../../assets/landing_page.jpg';
+import landingImage from '../../Assets/landing_page.jpg';
 
 const Landing = () => {
   return (
@@ -35,8 +35,7 @@ const Landing = () => {
             </Sa>{' '}
             to filter your results by category, location, tags or year. The
             yellow bar of years above the search controls allows you to view
-            stories from within a four to five period of time. 
-            
+            stories from within a four to five period of time.
             <br />
             <br />
             All other
