@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
+import { Sheader, Ssection, Sp } from './About.style'
 
 const About = () => {
   return (
     <Fragment>
       <main>
-        <header>
+        <Sheader>
           <h1>About Howl</h1>
-        </header>
-        <p>
+        </Sheader>
+        <Sp>
           The History of Women&#39;s Liberation (HOWL) project arose initially
           out of discussions older/old feminists were holding about the
           importance of collecting and producing our own history. Our time is
@@ -19,9 +20,9 @@ const About = () => {
           events. HOWL originated in London but we are committed to making sure
           that the voices and materials collected are diverse, inclusive and
           cover the whole of the UK.
-        </p>
+        </Sp>
 
-        <section>
+        <Ssection>
           <h2>Join Us</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,8 +35,8 @@ const About = () => {
             vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
             est velit. Non blandit massa enim nec dui nunc mattis.
           </p>
-        </section>
-        <section>
+        </Ssection>
+        <Ssection>
           <h2>Donate</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -48,8 +49,8 @@ const About = () => {
             vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
             est velit. Non blandit massa enim nec dui nunc mattis.
           </p>
-        </section>
-        <section>
+        </Ssection>
+        <Ssection>
           <h2>Contact Us</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -62,7 +63,7 @@ const About = () => {
             vel pretium lectus. Maecenas accumsan lacus vel facilisis volutpat
             est velit. Non blandit massa enim nec dui nunc mattis.
           </p>
-        </section>
+        </Ssection>
       </main>
     </Fragment>
   );
