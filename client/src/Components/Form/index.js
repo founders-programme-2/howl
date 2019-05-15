@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContactInfo from './ContactInfo';
 import Details from './Details';
+import Post from './Post';
 
 class Form extends Component {
   state = {
@@ -17,6 +18,7 @@ class Form extends Component {
       <main>
         <ContactInfo />
         <Details radio={radio} radioChange={this.radioChange} />
+        <Post />
       </main>
     );
   }
