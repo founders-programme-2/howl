@@ -6,4 +6,6 @@ const AddSub = styled.h2``;
 
 const Para = styled.p``;
 
-export { AddHead, AddSub, Para };
+const Form = styled.form``;
+
+export { AddHead, AddSub, Para, Form };
