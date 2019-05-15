@@ -1,7 +1,7 @@
 const styles = theme => ({
   textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
+    marginLeft: '5%',
+    marginRight: '5%',
     width: '200px',
   },
 });
