@@ -9,6 +9,7 @@ import {
   FormControl,
   FormLabel,
   FormGroup,
+  RadioGroup,
 } from '../../muIndex';
 import { styles } from './muiStyles';
 
@@ -31,25 +32,27 @@ const Details = ({ classes, radio, radioChange }) => {
       <DateFun />
       <FormControl className={classes.formControl}>
         <FormLabel component="legend">I would like to share:</FormLabel>
-        <FormGroup
-          row
+
+        <RadioGroup
           name="storyType"
           className={classes.group}
           value={radio}
           onChange={radioChange}
         >
-          <FormControlLabel
-            value="textPost"
-            control={<Radio />}
-            label="Text Post"
-          />
-          <FormControlLabel
-            value="imagePost"
-            control={<Radio />}
-            label="Image Post"
-          />
-          <FormControlLabel value="both" control={<Radio />} label="Both" />
-        </FormGroup>
+          <FormGroup row>
+            <FormControlLabel
+              value="textPost"
+              control={<Radio />}
+              label="Text Post"
+            />
+            <FormControlLabel
+              value="imagePost"
+              control={<Radio />}
+              label="Image Post"
+            />
+            <FormControlLabel value="both" control={<Radio />} label="Both" />
+          </FormGroup>
+        </RadioGroup>
       </FormControl>
     </Fragment>
   );
