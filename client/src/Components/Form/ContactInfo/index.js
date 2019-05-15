@@ -6,7 +6,9 @@ import styles from './muiStyles';
 const ContactInfo = ({ classes }) => {
   return (
     <Fragment>
-      <AddHead>Submit your story from the Women Liberation Movement</AddHead>
+      <AddHead>
+        Submit your story from the Women&#39;s Liberation Movement
+      </AddHead>
       <AddSub>Contact Info</AddSub>
       <Para>
         How might we get in touch with you if we have any questions about your
