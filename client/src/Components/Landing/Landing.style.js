@@ -57,11 +57,14 @@ export const Simg = styled.img`
 `;
 
 export const Smain = styled.main`
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header header"
-    "who image"
-    "nav nav"
-}
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header"
+  "who image"
+  "nav nav"
+`;
+
+export const SaHidden = styled.a`
+  font-size: 0;
 `;

@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
-import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1 } from './Landing.style';
+import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1, SaHidden } from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
 
 const Landing = () => {
   return (
     <Fragment>
-      <a name="topLink" aria-label="Navigation bar" />
       <Smain>
         <Sheader>
           <Sp>Welcome to Howl:</Sp>
@@ -51,7 +50,7 @@ const Landing = () => {
           </Sp>
         </SsectionNav>
       </Smain>
-      <a name="bottomLink" aria-label="Search bar" />
+      <SaHidden name="bottomLink" aria-label="Search bar">Page Bottom</SaHidden>
     </Fragment>
   );
 };

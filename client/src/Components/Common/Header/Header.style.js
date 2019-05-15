@@ -32,7 +32,7 @@ export const NavLink = styled(Link)`
   letter-spacing: 0.05em;
 
   &:hover {
-    color: var(--main-bg-color);
+    color: var(--main-btn-color);
     transform: scale(1.1);
   }
 `;
@@ -60,4 +60,8 @@ export const NavBtn = styled.button`
 // Had to wrap button in a div in order for the margin to work. Fragments did not work.
 export const BtnWrapper = styled.div`
   margin: auto;
+`;
+
+export const Sa = styled.a`
+  font-size: 0;
 `;
