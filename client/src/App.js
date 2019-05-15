@@ -12,6 +12,7 @@ import {
   Form,
   Archive,
   Header,
+  Footer,
   Help,
   Results,
   Story,
@@ -51,6 +52,7 @@ const App = () => {
         <Route path={WLM_URL} component={Wlm} />
         <Route component={Error404} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 };
