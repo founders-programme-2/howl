@@ -38,12 +38,12 @@ export const Sh2 = styled.h2`
   letter-spacing: 0.1rem;
 `;
 
-export const Ssection_Nav = styled.section`
+export const SsectionNav = styled.section`
  grid-area: nav;
  margin: 2rem 5rem;
 `;
 
-export const Ssection_Who = styled.section`
+export const SsectionWho = styled.section`
   margin: 0 5rem 2rem;
   width: 25vw;
   grid-area: who;

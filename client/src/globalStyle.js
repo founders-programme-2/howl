@@ -17,6 +17,7 @@ export default createGlobalStyle`
     body {
         background-color: var(--main-bg-color);
         color:  var(--main-font-color);
+        margin: 0;
     }
 
     // for main content of each page outside of footer and header
@@ -40,7 +41,7 @@ export default createGlobalStyle`
         font-size: 2.5rem;
     }
 
-    // nav, buttons etc
+    // nav, buttons etc - probably not actually necessary here as nav and buttons are separate elements
     h3 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
@@ -60,6 +61,6 @@ export default createGlobalStyle`
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
         padding: 0.8rem;
-        margin: 0.4rem;
+        margin: 1rem;
     }
 `;

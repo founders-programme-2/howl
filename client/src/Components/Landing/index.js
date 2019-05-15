@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
-import { Smain, Sheader, Sp, SLink, Sa, Sh2, Ssection_Nav, Ssection_Who, Simg, Sh1 } from './Landing.style';
+import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1 } from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
 
 const Landing = () => {
@@ -12,7 +12,7 @@ const Landing = () => {
           <Sp>Welcome to Howl:</Sp>
           <Sh1>A History of <br /> Women&#39;s Liberation</Sh1>
         </Sheader>
-        <Ssection_Who>
+        <SsectionWho>
           <Sh2>Who are we?</Sh2>
           <Sp>
             <SLink to="/about">Howl</SLink> is a group of UK-based women who are
@@ -24,9 +24,9 @@ const Landing = () => {
             <SLink to="/add">add your story, photos or ephemera</SLink> to our
             archive.
           </Sp>
-        </Ssection_Who>
+        </SsectionWho>
         <Simg src={landingImage} alt="A group of women and their children" />
-        <Ssection_Nav>
+        <SsectionNav>
           <Sh2>Navigation</Sh2>
           <Sp>
             Browse our our story and photo archive by using the archive controls
@@ -49,7 +49,7 @@ const Landing = () => {
             including more information about Howl, the Women&#39;s Liberation
             Movement and other resources.
           </Sp>
-        </Ssection_Nav>
+        </SsectionNav>
       </Smain>
       <a name="bottomLink" aria-label="Search bar" />
     </Fragment>
