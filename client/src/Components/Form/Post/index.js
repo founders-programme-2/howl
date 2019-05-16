@@ -138,11 +138,11 @@ const Post = ({
             control={
               <Checkbox
                 checked={imgPermission}
-                onChange={checkboxChange}
+                onChange={checkboxChange('imgPermission')}
                 value="imgPermission"
               />
             }
-            label="I have the rights or permissions to upload this image publically."
+            label="I have the rights or permissions to upload this image publicly."
           />
         </Fragment>
       ) : null}
