@@ -24,7 +24,13 @@ export const StyledTitle = styled.h2`
 export const FilterDiv = styled.div`
   width: 40%;
   height: 100%;
-  /*background-color: red;*/
   display: flex;
+  justify-content: center;
+`;
+
+export const SearchDiv = styled.div`
+  width: 30%;
+  height: 100%;
+  display: felx;
   justify-content: center;
 `;
