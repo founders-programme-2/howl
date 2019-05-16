@@ -128,8 +128,7 @@ const renderSelectItems = items => {
 
 const yearsGenerator = () => {
   const years = [];
-  const currentYear = (new Date).getFullYear();
-  for(let i = 1960; i <= currentYear;i++){
+  for(let i = 1960; i <= 1990;i++){
     years.push(i);
   }
   return years;
