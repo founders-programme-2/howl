@@ -43,12 +43,6 @@ const styles = theme => ({
     marginTop: '2.5%',
     marginBottom: '2.5%',
   },
-  searchTextField: {
-    backgroundColor: theme.palette.common.white,
-    borderRadius: '50px',
-    width: '80%',
-    height: '20%',
-  },
   searchFormControl: {
     width: '100%',
     height: '60%',
@@ -57,6 +51,16 @@ const styles = theme => ({
     justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
+  },
+  searchTextField: {
+    backgroundColor: theme.palette.common.white,
+    borderRadius: '50px',
+    fontWeight: '700',
+    width: '80%',
+    height: '20%',
+  },
+  searchTextFieldLebel: {
+    fontWeight: 'bold',
   },
   searchButton: {
     width: '45%',
@@ -102,6 +106,7 @@ const BootstrapInput = withStyles(theme => ({
     transition: theme.transitions.create(['border-color', 'box-shadow']),
     // Use the system font instead of the default Roboto font.
     fontFamily: ['Raleway', 'sans-serif'].join(','),
+    fontWeight: '600',
     '&:focus': {
       borderRadius: 4,
       borderColor: '#80bdff',
@@ -126,13 +131,13 @@ const Footer = ({ classes }) => {
         <FormControl className={classes.formControl}>
           <Select
             className={classes.select}
-            value="None"
+            value="Category"
             input={
               <BootstrapInput name="age" id="category-customized-select" />
             }
           >
-            <MenuItem value="None">
-              <em>None</em>
+            <MenuItem value="Category">
+              <em>Category</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>
@@ -140,13 +145,13 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
-            value="None"
+            value="Tags"
             input={
-              <BootstrapInput name="age" id="category-customized-select" />
+              <BootstrapInput name="age" id="tags-customized-select" />
             }
           >
-            <MenuItem value="None">
-              <em>None</em>
+            <MenuItem value="Tags">
+              <em>Tags</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>
@@ -154,13 +159,13 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
-            value="None"
+            value="Location"
             input={
-              <BootstrapInput name="age" id="category-customized-select" />
+              <BootstrapInput name="location" id="location-customized-select" />
             }
           >
-            <MenuItem value="None">
-              <em>None</em>
+            <MenuItem value="Location">
+              <em>Location</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>
@@ -168,13 +173,13 @@ const Footer = ({ classes }) => {
           </Select>
           <Select
             className={classes.select}
-            value="None"
+            value="Year"
             input={
-              <BootstrapInput name="age" id="category-customized-select" />
+              <BootstrapInput name="year" id="year-customized-select" />
             }
           >
-            <MenuItem value="None">
-              <em>None</em>
+            <MenuItem value="Year">
+              <em>Year</em>
             </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>
@@ -188,6 +193,9 @@ const Footer = ({ classes }) => {
           <TextField
             id="outlined-search"
             label="Search ..."
+            InputLabelProps={{
+              className: classes.searchTextFieldLebel
+            }}
             type="search"
             className={classes.searchTextField}
             variant="filled"
