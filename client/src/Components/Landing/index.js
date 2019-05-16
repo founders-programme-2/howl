@@ -10,7 +10,6 @@ import {
   SsectionNav,
   SsectionWho,
   Simg,
-  Sh1,
   SaHidden,
 } from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
@@ -21,9 +20,9 @@ const Landing = () => {
       <Smain>
         <Sheader>
           <Sp>Welcome to Howl:</Sp>
-          <Sh1>
+          <h1>
             A History of <br /> Women&#39;s Liberation
-          </Sh1>
+          </h1>
         </Sheader>
         <SsectionWho>
           <Sh2>Who are we?</Sh2>
