@@ -72,7 +72,9 @@ const AdditionalInfo = ({
           }}
         >
           {arrCategory.map(cat => (
-            <MenuItem value={cat}>{cat}</MenuItem>
+            <MenuItem value={cat} key={cat}>
+              {cat}
+            </MenuItem>
           ))}
         </Select>
         <FormControlLabel
