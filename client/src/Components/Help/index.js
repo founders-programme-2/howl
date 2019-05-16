@@ -41,6 +41,7 @@ const Help = () => {
           other parameters first.
         </p>
         <ImgExample src={timeline} alt="Example of clickable timeline" />
+        <figcaption>Example of the footer timeline</figcaption>
       </SectionCntr>
 
       <SectionCntr>
@@ -53,6 +54,7 @@ const Help = () => {
           parameters first.
         </p>
         <ImgExample src={dropdowns} alt="Dropdown selector example" />
+        <figcaption>Example of the footer drop down menus</figcaption>
       </SectionCntr>
 
       <SectionCntr>
@@ -64,6 +66,7 @@ const Help = () => {
           parameters first.
         </p>
         <ImgExample src={searchInput} alt="Search input example" />
+        <figcaption>Example of the search query input</figcaption>
       </SectionCntr>
 
       <SectionCntr>
@@ -73,6 +76,7 @@ const Help = () => {
           <Highlight>"Search"</Highlight>!
         </p>
         <ImgExample src={searchBtn} alt="Search button example" />
+        <figcaption>Example of the footer search button</figcaption>
       </SectionCntr>
 
       <CallToAction>Now give it a try yourself!</CallToAction>

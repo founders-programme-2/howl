@@ -5,7 +5,7 @@ export const H2Sml = styled.h2`
 `;
 
 export const ImgExample = styled.img`
-  margin: 1rem;
+  margin: 1rem 1rem 0.2rem 1rem;
 `;
 
 export const SectionCntr = styled.section`

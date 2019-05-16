@@ -85,4 +85,14 @@ export default createGlobalStyle`
         padding: 0.8rem;
         margin: 1rem;
     }
+
+    figcaption {
+        font-family: 'Roboto', sans-serif;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        margin: 0rem 2rem;
+        text-align: center;
+    }
 `;
