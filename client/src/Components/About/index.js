@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sp } from './About.style';
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
         <header>
           <h1>About Howl</h1>
         </header>
-        <p>
+        <Sp>
           The History of Women&#39;s Liberation (HOWL) project arose initially
           out of discussions older/old feminists were holding about the
           importance of collecting and producing our own history. Our time is
@@ -18,19 +19,19 @@ const About = () => {
           events. HOWL originated in London but we are committed to making sure
           that the voices and materials collected are diverse, inclusive and
           cover the whole of the UK.
-        </p>
+        </Sp>
           <h2>Want to get involved?</h2>
-          <p>
+          <Sp>
             Send an email introducing yourself to fakeemail@gmail.com and come to one of our meetings!
-          </p>
+          </Sp>
           <h2>Donate</h2>
-          <p>
+          <Sp>
             Passionate about our cause? We are always looking for donations. 
-          </p>
+          </Sp>
           <h2>Contact Us</h2>
-          <p>
+          <Sp>
            Have a question? Send us an email at fakeemail@gmail.com.
-          </p>
+          </Sp>
 
       </main>
   );

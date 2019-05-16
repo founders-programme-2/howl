@@ -15,8 +15,9 @@ const Archive = () => {
         filter your results by category, location, tags or year. Above the search controls, you'll find 
         a yellow bar of dates. This allows you to view stories from between a time span of four to five 
         years.
-        <br />
-        <br />
+      </p>
+      
+      <p>
         Prefer a visual approach? Take a look at the <Link to={TIMELINE_URL}>timeline</Link>.
       </p>
     </main>
