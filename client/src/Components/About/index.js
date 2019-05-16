@@ -1,12 +1,12 @@
 import React from 'react';
-import { Sheader, Sp, Sh1, Sh2, Smain } from './About.style'
+import { Sp, Sh2, Smain } from './About.style'
 
 const About = () => {
   return (
       <Smain>
-        <Sheader>
-          <Sh1>About Howl</Sh1>
-        </Sheader>
+        <header>
+          <h1>About Howl</h1>
+        </header>
         <Sp>
           The History of Women&#39;s Liberation (HOWL) project arose initially
           out of discussions older/old feminists were holding about the
