@@ -35,7 +35,7 @@ const Add = () => {
           pharetra nulla. Morbi rutrum sit amet sapien ac consectetur.
         </p>
         <Link to={FORM_URL}>
-          <NavBtn type="button">I agree, let's go.</NavBtn>
+          <NavBtn type="button">I agree, let&#39;s go.</NavBtn>
         </Link>
       </main>
     </Fragment>
