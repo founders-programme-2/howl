@@ -51,4 +51,7 @@ exports.uploadImg = (req, res) => {
       },
     }));
   }
+  return (res.status(400).json({
+    message: 'something went wrong while processing your request',
+  }));
 };
