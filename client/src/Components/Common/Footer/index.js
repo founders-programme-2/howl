@@ -5,18 +5,29 @@ import {
   MenuItem,
   InputBase,
   FormControl,
+  TextField,
   withStyles,
-} from '@material-ui/core';
-import { FooterDiv, TitleDiv, StyledTitle, FilterDiv } from './Footer.style';
+} from '../../muIndex';
+import {
+  FooterDiv,
+  TitleDiv,
+  StyledTitle,
+  FilterDiv,
+  SearchDiv,
+} from './Footer.style';
 
-const styles = () => ({
-  button: {
+const styles = theme => ({
+  howToSearchButton: {
     backgroundColor: '#F6C25B',
     width: '50%',
     margin: `5% 25% 5% 25%`,
     fontFamily: ['Raleway', 'sans-serif'].join(','),
     fontWeight: 'bold',
     borderRadius: '20px',
+    '&:hover': {
+      color: theme.palette.common.white,
+      backgroundColor: '#F6C25B',
+    },
   },
   formControl: {
     width: '80%',
@@ -24,13 +35,53 @@ const styles = () => ({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     marginTop: '2.5%',
-    marginBottom: '2.5%',
+    marginBottom: '1%',
     height: '80%',
   },
   select: {
     width: '40%',
     marginTop: '2.5%',
     marginBottom: '2.5%',
+  },
+  searchTextField: {
+    backgroundColor: theme.palette.common.white,
+    borderRadius: '50px',
+    width: '80%',
+    height: '20%',
+  },
+  searchFormControl: {
+    width: '100%',
+    height: '60%',
+    margin: '8% auto 5% auto',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  searchButton: {
+    width: '45%',
+    backgroundColor: '#F6C25B',
+    borderRadius: '20px',
+    fontWeight: 'bold',
+    marginTop: '2%',
+    marginRight: '2.5%',
+    '&:hover': {
+      color: theme.palette.common.white,
+      backgroundColor: '#F6C25B',
+    },
+  },
+  resetButton: {
+    width: '30%',
+    backgroundColor: '#C02700',
+    color: theme.palette.common.black,
+    borderRadius: '20px',
+    fontWeight: 'bold',
+    marginTop: '2%',
+    marginLeft: '2.5%',
+    '&:hover': {
+      color: theme.palette.common.white,
+      backgroundColor: '#C02700',
+    },
   },
 });
 
@@ -54,7 +105,8 @@ const BootstrapInput = withStyles(theme => ({
     '&:focus': {
       borderRadius: 4,
       borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+      boxShadow: theme.palette.background.paper,
+      backgroundColor: theme.palette.background.paper,
     },
     svg: {
       width: '20%',
@@ -67,8 +119,9 @@ const Footer = ({ classes }) => {
     <FooterDiv>
       <TitleDiv>
         <StyledTitle>SEARCH ARCHIVE</StyledTitle>
-        <Button className={classes.button}>HOW TO SEARCH</Button>
+        <Button className={classes.howToSearchButton}>HOW TO SEARCH</Button>
       </TitleDiv>
+
       <FilterDiv>
         <FormControl className={classes.formControl}>
           <Select
@@ -129,6 +182,20 @@ const Footer = ({ classes }) => {
           </Select>
         </FormControl>
       </FilterDiv>
+
+      <SearchDiv>
+        <FormControl className={classes.searchFormControl}>
+          <TextField
+            id="outlined-search"
+            label="Search ..."
+            type="search"
+            className={classes.searchTextField}
+            variant="filled"
+          />
+          <Button className={classes.searchButton}>Search</Button>
+          <Button className={classes.resetButton}>Reset</Button>
+        </FormControl>
+      </SearchDiv>
     </FooterDiv>
   );
 };
