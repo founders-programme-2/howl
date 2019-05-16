@@ -15,7 +15,6 @@ export const SLink = styled(Link)`
   font-weight: 700;
 `;
 
-
 export const Sh2 = styled.h2`
   font-variant: small-caps;
   font-size: 1.2rem;
