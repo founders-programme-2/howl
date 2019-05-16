@@ -18,7 +18,11 @@ import { tags, locations } from './filtersData';
 import { styles, BootstrapInput } from './mui.style';
 
 const renderSelectItems = items => {
-  return items.map(item => <MenuItem key={item} value={item}>{item}</MenuItem>);
+  return items.map(item => (
+    <MenuItem key={item} value={item}>
+      {item}
+    </MenuItem>
+  ));
 };
 
 const yearsGenerator = () => {
