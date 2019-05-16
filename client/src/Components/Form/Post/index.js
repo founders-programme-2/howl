@@ -1,12 +1,27 @@
 import React, { Fragment } from 'react';
 import Attach from './attach.png';
-import { TextField, withStyles } from '../../muIndex';
-import { AttachImg, Input, Form, Label } from './Post.style';
+import {
+  TextField,
+  withStyles,
+  FormControlLabel,
+  Checkbox,
+  FormControl,
+} from '../../muIndex';
+import AttachImg from './Post.style';
 import styles from './muiStyles';
 
-const Post = ({ classes, title, details, imageCap, textChange, radio }) => {
+const Post = ({
+  classes,
+  title,
+  details,
+  imageCap,
+  textChange,
+  radio,
+  imgPermission,
+  checkboxChange,
+}) => {
   return (
-    <Form>
+    <FormControl>
       {radio === 'textPost' ? (
         <Fragment>
           <TextField
@@ -54,8 +69,8 @@ const Post = ({ classes, title, details, imageCap, textChange, radio }) => {
             margin="normal"
             onChange={textChange('imageCap')}
           />
-          <Label htmlFor="inputImg">
-            <Input
+          <label htmlFor="inputImg">
+            <input
               id="inputImg"
               label="upload file"
               type="file"
@@ -63,7 +78,17 @@ const Post = ({ classes, title, details, imageCap, textChange, radio }) => {
               hidden
             />
             <AttachImg src={Attach} alt="attach" />
-          </Label>
+          </label>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={imgPermission}
+                onChange={checkboxChange('imgPermission')}
+                value="imgPermission"
+              />
+            }
+            label="I have the rights or permissions to upload this image publically."
+          />
         </Fragment>
       ) : null}
       {radio === 'both' ? (
@@ -99,8 +124,8 @@ const Post = ({ classes, title, details, imageCap, textChange, radio }) => {
             margin="normal"
             onChange={textChange('imageCap')}
           />
-          <Label htmlFor="inputImg">
-            <Input
+          <label htmlFor="inputImg">
+            <input
               id="inputImg"
               label="upload file"
               type="file"
@@ -108,10 +133,20 @@ const Post = ({ classes, title, details, imageCap, textChange, radio }) => {
               hidden
             />
             <AttachImg src={Attach} alt="attach" />
-          </Label>
+          </label>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={imgPermission}
+                onChange={checkboxChange}
+                value="imgPermission"
+              />
+            }
+            label="I have the rights or permissions to upload this image publically."
+          />
         </Fragment>
       ) : null}
-    </Form>
+    </FormControl>
   );
 };
 

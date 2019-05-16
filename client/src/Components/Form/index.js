@@ -18,6 +18,7 @@ class Form extends Component {
     title: '',
     details: '',
     imageCap: '',
+    imgPermission: false,
     wlmConnection: '',
   };
 
@@ -74,6 +75,7 @@ class Form extends Component {
       title,
       details,
       imageCap,
+      imgPermission,
       wlmConnection,
     } = this.state;
     return (
@@ -84,31 +86,35 @@ class Form extends Component {
           phone={phone}
           textChange={this.textChange}
         />
-        <Details
-          radio={radio}
-          radioChange={this.radioChange}
-          location={location}
-          selectedDate={selectedDate}
-          textChange={this.textChange}
-          handleDateChange={this.handleDateChange}
-        />
-        <Post
-          title={title}
-          details={details}
-          imageCap={imageCap}
-          textChange={this.textChange}
-          radio={radio}
-        />
-        <AdditionalInfo
-          tags={tags}
-          category={category}
-          infoTrue={infoTrue}
-          tagsChange={this.tagsChange}
-          categoryChange={this.categoryChange}
-          checkboxChange={this.checkboxChange}
-          wlmConnection={wlmConnection}
-          textChange={this.textChange}
-        />
+        <form>
+          <Details
+            radio={radio}
+            radioChange={this.radioChange}
+            location={location}
+            selectedDate={selectedDate}
+            textChange={this.textChange}
+            handleDateChange={this.handleDateChange}
+          />
+          <Post
+            title={title}
+            details={details}
+            imageCap={imageCap}
+            imgPermission={imgPermission}
+            checkboxChange={this.checkboxChange}
+            textChange={this.textChange}
+            radio={radio}
+          />
+          <AdditionalInfo
+            tags={tags}
+            category={category}
+            infoTrue={infoTrue}
+            tagsChange={this.tagsChange}
+            categoryChange={this.categoryChange}
+            checkboxChange={this.checkboxChange}
+            wlmConnection={wlmConnection}
+            textChange={this.textChange}
+          />
+        </form>
       </main>
     );
   }
