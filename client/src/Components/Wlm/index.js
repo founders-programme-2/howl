@@ -1,13 +1,13 @@
 import React from 'react';
-import { Sp, Smain } from './Wlm.style';
+
 
 const Wlm = () => {
   return (
-      <Smain>
+      <main>
         <header>
-          <h1>Women&#39;s Liberation Movement</h1>
+          <h1>The Women&#39;s <br/> Liberation Movement</h1>
         </header>
-        <Sp>
+        <p>
           The Women’s Liberation Movement (WLM) in the UK arose out of the rich
           mix of 1960s social upheavals and events around the world. Here in the
           UK, trade union women were putting equal-pay back on the agenda,
@@ -40,8 +40,8 @@ const Wlm = () => {
           After some years of relative quiescence in
           the 1990s, new ‘waves’ of feminists have made themselves known. Much
           has been accomplished - much more is needed.
-        </Sp>
-      </Smain>
+        </p>
+      </main>
   );
 };
 
