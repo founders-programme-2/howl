@@ -14,7 +14,7 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: new Date('January 1960'),
+    selectedDate: '',
     title: '',
     details: '',
     imageCap: '',
@@ -56,9 +56,19 @@ class Form extends Component {
       month: 'long',
     };
     const dateModified = date.toLocaleDateString('en-US', options);
-    this.setState({ selectedDate: dateModified }, () => {
-      console.log(this.state.selectedDate);
-    });
+    const splitted = dateModified.split(' ');
+    this.setState(
+      { selectedDate: dateModified, month: splitted[0], year: splitted[1] },
+      () => {
+        console.log(
+          this.state.selectedDate,
+          'month',
+          this.state.month,
+          'year',
+          this.state.year
+        );
+      }
+    );
   };
 
   render() {
