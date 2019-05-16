@@ -24,8 +24,9 @@ const Post = ({ classes, imgPermission, checkboxChange }) => {
         <TextField
           id="details"
           label="Details"
-          placeholder="Enter your story's details"
           multiline
+          rows="4"
+          placeholder="Enter your story's details"
           className={classes.textField}
           margin="normal"
         />
