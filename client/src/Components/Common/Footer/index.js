@@ -15,10 +15,11 @@ import {
   FilterDiv,
   SearchDiv,
 } from './Footer.style';
+import {tags, locations} from './filtersData';
 
 const styles = theme => ({
   howToSearchButton: {
-    backgroundColor: '#F6C25B',
+    backgroundColor: 'var(--main-btn-color)',
     width: '50%',
     margin: `5% 25% 5% 25%`,
     fontFamily: ['Raleway', 'sans-serif'].join(','),
@@ -26,7 +27,7 @@ const styles = theme => ({
     borderRadius: '20px',
     '&:hover': {
       color: theme.palette.common.white,
-      backgroundColor: '#F6C25B',
+      backgroundColor: 'var(--main-btn-color)',
     },
   },
   formControl: {
@@ -64,19 +65,19 @@ const styles = theme => ({
   },
   searchButton: {
     width: '45%',
-    backgroundColor: '#F6C25B',
+    backgroundColor: 'var(--main-btn-color)',
     borderRadius: '20px',
     fontWeight: 'bold',
     marginTop: '2%',
     marginRight: '2.5%',
     '&:hover': {
       color: theme.palette.common.white,
-      backgroundColor: '#F6C25B',
+      backgroundColor: 'var(--main-btn-color)',
     },
   },
   resetButton: {
     width: '30%',
-    backgroundColor: '#C02700',
+    backgroundColor: 'var(--highlight-color)',
     color: theme.palette.common.black,
     borderRadius: '20px',
     fontWeight: 'bold',
@@ -84,7 +85,7 @@ const styles = theme => ({
     marginLeft: '2.5%',
     '&:hover': {
       color: theme.palette.common.white,
-      backgroundColor: '#C02700',
+      backgroundColor: 'var(--highlight-color)',
     },
   },
 });
@@ -119,11 +120,26 @@ const BootstrapInput = withStyles(theme => ({
   },
 }))(InputBase);
 
+const renderSelectItems = items => {
+  return items.map(item => (
+    <MenuItem value={item}>{item}</MenuItem>
+  ));
+};
+
+const yearsGenerator = () => {
+  const years = [];
+  const currentYear = (new Date).getFullYear();
+  for(let i = 1960; i <= currentYear;i++){
+    years.push(i);
+  }
+  return years;
+};
+
 const Footer = ({ classes }) => {
   return (
     <FooterDiv>
       <TitleDiv>
-        <StyledTitle>SEARCH ARCHIVE</StyledTitle>
+        <StyledTitle>Search Archive</StyledTitle>
         <Button className={classes.howToSearchButton}>HOW TO SEARCH</Button>
       </TitleDiv>
 
@@ -133,7 +149,11 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Category"
             input={
-              <BootstrapInput name="category" id="category-customized-select" aria-label="Category" />
+              <BootstrapInput
+                name="category"
+                id="category-customized-select"
+                aria-label="Category"
+              />
             }
           >
             <MenuItem value="Category">
@@ -147,43 +167,49 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Tags"
             input={
-              <BootstrapInput name="tags" id="tags-customized-select" aria-label="Tags"/>
+              <BootstrapInput
+                name="tags"
+                id="tags-customized-select"
+                aria-label="Tags"
+              />
             }
           >
             <MenuItem value="Tags">
               <em>Tags</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            {renderSelectItems(tags)}
           </Select>
           <Select
             className={classes.select}
             value="Location"
             input={
-              <BootstrapInput name="location" id="location-customized-select" aria-label="Location" />
+              <BootstrapInput
+                name="location"
+                id="location-customized-select"
+                aria-label="Location"
+              />
             }
           >
             <MenuItem value="Location">
               <em>Location</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            {renderSelectItems(locations)}
           </Select>
           <Select
             className={classes.select}
             value="Year"
             input={
-              <BootstrapInput name="year" id="year-customized-select" aria-label="Year" />
+              <BootstrapInput
+                name="year"
+                id="year-customized-select"
+                aria-label="Year"
+              />
             }
           >
             <MenuItem value="Year">
               <em>Year</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            {renderSelectItems(yearsGenerator())}
           </Select>
         </FormControl>
       </FilterDiv>
@@ -194,7 +220,7 @@ const Footer = ({ classes }) => {
             id="outlined-search"
             label="Search ..."
             InputLabelProps={{
-              className: classes.searchTextFieldLebel
+              className: classes.searchTextFieldLebel,
             }}
             type="search"
             className={classes.searchTextField}
