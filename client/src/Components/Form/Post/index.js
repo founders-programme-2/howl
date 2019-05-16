@@ -1,45 +1,64 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Attach from './attach.png';
-import { TextField, withStyles } from '../../muIndex';
-import { AttachImg, Input, Form, Label } from './Post.style';
+import {
+  TextField,
+  withStyles,
+  FormControlLabel,
+  Checkbox,
+  FormControl,
+} from '../../muIndex';
+import AttachImg from './Post.style';
 import styles from './muiStyles';
 
-const Post = ({ classes }) => {
+const Post = ({ classes, imgPermission, checkboxChange }) => {
   return (
-    <Form>
-      <TextField
-        id="title"
-        label="Title"
-        placeholder="Enter your Title..."
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="details"
-        label="Details"
-        placeholder="Enter your story's details"
-        multiline
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="imageCap"
-        label="Image Caption"
-        placeholder="Enter image caption..."
-        className={classes.textField}
-        margin="normal"
-      />
-      <Label htmlFor="inputImg">
-        <Input
-          id="inputImg"
-          label="upload file"
-          type="file"
-          accept="image/*"
-          hidden
+    <Fragment>
+      <FormControl>
+        <TextField
+          id="title"
+          label="Title"
+          placeholder="Enter your Title..."
+          className={classes.textField}
+          margin="normal"
         />
-        <AttachImg src={Attach} alt="attach" />
-      </Label>
-    </Form>
+        <TextField
+          id="details"
+          label="Details"
+          placeholder="Enter your story's details"
+          multiline
+          className={classes.textField}
+          margin="normal"
+        />
+        <TextField
+          id="imageCap"
+          label="Image Caption"
+          placeholder="Enter image caption..."
+          className={classes.textField}
+          margin="normal"
+        />
+        <label htmlFor="inputImg">
+          <input
+            id="inputImg"
+            name="image"
+            label="upload file"
+            type="file"
+            accept="image/*"
+            hidden
+          />
+          <AttachImg src={Attach} alt="attach" />
+        </label>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={imgPermission}
+              onChange={checkboxChange}
+              value="imgPermission"
+            />
+          }
+          label="I have the rights or permissions to upload this image publically."
+        />
+      </FormControl>
+    </Fragment>
   );
 };
 
