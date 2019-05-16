@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { NavBtn } from './Add.style'
+import { NavBtn } from './Add.style';
+import navigationUrls from '../../constants/navigationUrls';
 
 const Add = () => {
+  const { FORM_URL } = navigationUrls;
   return (
     <Fragment>
       <main>
@@ -32,7 +34,7 @@ const Add = () => {
           molestie. In hac habitasse platea dictumst. In ac ornare purus, vitae
           pharetra nulla. Morbi rutrum sit amet sapien ac consectetur.
         </p>
-        <Link to="/form">
+        <Link to={FORM_URL}>
           <NavBtn type="button">I agree, let's go.</NavBtn>
         </Link>
       </main>
