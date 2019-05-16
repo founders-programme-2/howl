@@ -8,9 +8,6 @@ export const Sheader = styled.header`
   letter-spacing: 0.2rem;
   grid-area: header;
 `;
-export const Sh1 = styled.h1`
-  font-size: 4rem;
-`;
 
 export const Sp = styled.p`
   font-variant: small-caps;

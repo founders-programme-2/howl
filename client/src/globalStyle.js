@@ -30,15 +30,16 @@ export default createGlobalStyle`
     h1 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        font-size: 3rem;
-        letter-spacing: 0.1rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
     }
 
     // subtitle
     h2 {
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: 0.1rem;
     }
 
@@ -64,4 +65,11 @@ export default createGlobalStyle`
         padding: 0.8rem;
         margin: 1rem;
     }
+
+    header {
+        margin: 4rem 2rem 2rem;
+        padding-left: 3rem;
+    }
+
+
 `;
