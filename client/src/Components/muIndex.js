@@ -6,6 +6,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
+import Button from '@material-ui/core/Button';
+import InputBase from '@material-ui/core/InputBase';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 
 export {
   withStyles,
@@ -16,4 +20,8 @@ export {
   FormControl,
   FormLabel,
   RadioGroup,
+  Button,
+  InputBase,
+  MenuItem,
+  Select,
 };
