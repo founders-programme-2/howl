@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import DateFnsUtils from '@date-io/date-fns'; // choose your lib
+import React from 'react';
+import DateFnsUtils from '@date-io/date-fns';
 import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 
-const DateFun = () => {
-  const [selectedDate, handleDateChange] = useState(new Date());
-
+const DateFun = ({ selectedDate, handleDateChange }) => {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <DatePicker
