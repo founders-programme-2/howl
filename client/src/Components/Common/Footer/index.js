@@ -133,7 +133,7 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Category"
             input={
-              <BootstrapInput name="age" id="category-customized-select" />
+              <BootstrapInput name="category" id="category-customized-select" aria-label="Category" />
             }
           >
             <MenuItem value="Category">
@@ -147,7 +147,7 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Tags"
             input={
-              <BootstrapInput name="age" id="tags-customized-select" />
+              <BootstrapInput name="tags" id="tags-customized-select" aria-label="Tags"/>
             }
           >
             <MenuItem value="Tags">
@@ -161,7 +161,7 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Location"
             input={
-              <BootstrapInput name="location" id="location-customized-select" />
+              <BootstrapInput name="location" id="location-customized-select" aria-label="Location" />
             }
           >
             <MenuItem value="Location">
@@ -175,7 +175,7 @@ const Footer = ({ classes }) => {
             className={classes.select}
             value="Year"
             input={
-              <BootstrapInput name="year" id="year-customized-select" />
+              <BootstrapInput name="year" id="year-customized-select" aria-label="Year" />
             }
           >
             <MenuItem value="Year">
