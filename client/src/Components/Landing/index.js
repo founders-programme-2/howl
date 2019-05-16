@@ -1,6 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Fragment } from 'react';
-import { Smain, Sheader, Sp, SLink, Sa, Sh2, SsectionNav, SsectionWho, Simg, Sh1, SaHidden } from './Landing.style';
+import {
+  Smain,
+  Sheader,
+  Sp,
+  SLink,
+  Sa,
+  Sh2,
+  SsectionNav,
+  SsectionWho,
+  Simg,
+  Sh1,
+  SaHidden,
+} from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
 
 const Landing = () => {
@@ -9,7 +21,9 @@ const Landing = () => {
       <Smain>
         <Sheader>
           <Sp>Welcome to Howl:</Sp>
-          <Sh1>A History of <br /> Women&#39;s Liberation</Sh1>
+          <Sh1>
+            A History of <br /> Women&#39;s Liberation
+          </Sh1>
         </Sheader>
         <SsectionWho>
           <Sh2>Who are we?</Sh2>
@@ -35,12 +49,10 @@ const Landing = () => {
             </Sa>{' '}
             to filter your results by category, location, tags or year. The
             yellow bar of years above the search controls allows you to view
-            stories from within a four to five period of time. 
-            
+            stories from within a four to five period of time.
             <br />
             <br />
-            All other
-            information is accessible from the black banner{' '}
+            All other information is accessible from the black banner{' '}
             <Sa href="#topLink" aria-label="Scroll to top">
               the top of the page
             </Sa>
@@ -50,7 +62,9 @@ const Landing = () => {
           </Sp>
         </SsectionNav>
       </Smain>
-      <SaHidden name="bottomLink" aria-label="Search bar">Page Bottom</SaHidden>
+      <SaHidden name="bottomLink" aria-label="Search bar">
+        Page Bottom
+      </SaHidden>
     </Fragment>
   );
 };
