@@ -10,6 +10,7 @@ import {
   Checkbox,
   Chip,
   FormControlLabel,
+  TextField,
 } from '../../muIndex';
 import { styles, MenuProps } from './muiStyles';
 import { arrTags, arrCategory } from '../data.json';
@@ -25,6 +26,15 @@ const AdditionalInfo = ({
 }) => {
   return (
     <Fragment>
+      <TextField
+        id="standard-multiline-static"
+        label="Connection to Women’s Liberation Movement"
+        multiline
+        rows="4"
+        placeholder="examples: activist, daughter of an activist, et cetera)"
+        className={classes.textField}
+        margin="normal"
+      />
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
         <Select
