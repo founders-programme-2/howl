@@ -1,36 +1,36 @@
 import styled from 'styled-components';
+import '../../../globalStyle';
 
-export const FooterDiv = styled.div`
+export const FooterDiv = styled.footer`
   min-width: 100%;
-  background-color: black;
-  display: felx;
+  background-color: var(--secondary-bg-color);
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 `;
 
-export const TitleDiv = styled.div`
+export const TitleDiv = styled.section`
   width: 30%;
   height: 100%;
-  /*background-color: blue;*/
 `;
 
 export const StyledTitle = styled.h2`
-  color: white;
+  color: var(--secondary-font-color);
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
   margin: 5% 0 0 0;
 `;
 
-export const FilterDiv = styled.div`
+export const FilterDiv = styled.section`
   width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
 `;
 
-export const SearchDiv = styled.div`
+export const SearchDiv = styled.section`
   width: 30%;
   height: 100%;
-  display: felx;
+  display: flex;
   justify-content: center;
 `;
