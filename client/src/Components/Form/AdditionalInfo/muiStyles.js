@@ -1,6 +1,6 @@
 export const styles = theme => ({
   formControl: {
-    margin: theme.spacing.unit * 3,
+    margin: theme.spacing(3),
     minWidth: 120,
     maxWidth: 300,
   },
@@ -14,7 +14,7 @@ export const styles = theme => ({
     overflowY: 'auto',
   },
   chip: {
-    margin: theme.spacing.unit / 4,
+    margin: theme.spacing / 4,
   },
 });
 
