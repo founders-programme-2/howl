@@ -41,4 +41,4 @@ export const locations = [
   'South West',
 ];
 
-export default { tags, locations, };
+export default { tags, locations };

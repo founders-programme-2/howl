@@ -15,7 +15,7 @@ import {
   FilterDiv,
   SearchDiv,
 } from './Footer.style';
-import {tags, locations} from './filtersData';
+import { tags, locations } from './filtersData';
 
 const styles = theme => ({
   howToSearchButton: {
@@ -121,14 +121,12 @@ const BootstrapInput = withStyles(theme => ({
 }))(InputBase);
 
 const renderSelectItems = items => {
-  return items.map(item => (
-    <MenuItem value={item}>{item}</MenuItem>
-  ));
+  return items.map(item => <MenuItem value={item}>{item}</MenuItem>);
 };
 
 const yearsGenerator = () => {
   const years = [];
-  for(let i = 1960; i <= 1990;i++){
+  for (let i = 1960; i <= 1990; i += 1) {
     years.push(i);
   }
   return years;
