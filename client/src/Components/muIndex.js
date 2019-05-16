@@ -8,8 +8,13 @@ import FormLabel from '@material-ui/core/FormLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
+import Checkbox from '@material-ui/core/Checkbox';
+import Chip from '@material-ui/core/Chip';
 
 export {
   withStyles,
@@ -22,6 +27,11 @@ export {
   RadioGroup,
   Button,
   InputBase,
+  Input,
+  InputLabel,
   MenuItem,
+  ListItemText,
   Select,
+  Checkbox,
+  Chip,
 };
