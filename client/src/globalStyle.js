@@ -71,7 +71,5 @@ export default createGlobalStyle`
         padding-left: 3rem;
     }
 
-    main {
 
-    }
 `;
