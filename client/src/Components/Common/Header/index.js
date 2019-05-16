@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import navigationUrls from '../../../constants/navigationUrls';
 import {
   NavLink,
   NavList,
@@ -11,13 +11,21 @@ import {
   BtnWrapper,
   Sa,
 } from './Header.style';
-
 import logoPath from '../../../assets/logo.svg';
+
+const {
+  ABOUT_URL,
+  ADD_URL,
+  ARCHIVE_URL,
+  RESOURCES_URL,
+  TIMELINE_URL,
+  WLM_URL,
+} = navigationUrls;
 
 const Header = () => {
   return (
     <NavSection>
-      <Sa href="#top" name="topLink" aria-label="Navigation bar">
+      <Sa href="#top" name="topLink" aria-label="Navigation to top of page">
         Top of page
       </Sa>
       <Link to="/">
@@ -25,23 +33,23 @@ const Header = () => {
       </Link>
       <NavList>
         <NavLi>
-          <NavLink to="/about">About Howl</NavLink>
+          <NavLink to={ABOUT_URL}>About Howl</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to="/wlm">Women&#39;s Liberation</NavLink>
+          <NavLink to={WLM_URL}>Women&#39;s Liberation</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to="/resources">Feminist Resources</NavLink>
+          <NavLink to={RESOURCES_URL}>Feminist Resources</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to="/archive">The Archive</NavLink>
+          <NavLink to={ARCHIVE_URL}>The Archive</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to="timeline">Interactive Timeline</NavLink>
+          <NavLink to={TIMELINE_URL}>Interactive Timeline</NavLink>
         </NavLi>
       </NavList>
       <BtnWrapper>
-        <Link to="/story">
+        <Link to={ADD_URL}>
           <NavBtn type="button">Add Your Story</NavBtn>
         </Link>
       </BtnWrapper>
