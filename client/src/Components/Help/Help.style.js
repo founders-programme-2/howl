@@ -20,5 +20,6 @@ export const Highlight = styled.span`
 `;
 
 export const CallToAction = styled.h2`
+  margin-top: 3rem;
   text-align: center;
 `;
