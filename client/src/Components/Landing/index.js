@@ -2,10 +2,9 @@
 import React, { Fragment } from 'react';
 import {
   Smain,
-  Sheader,
+  Sheader, 
   Sp,
   SLink,
-  Sa,
   Sh2,
   SsectionNav,
   SsectionWho,
@@ -42,18 +41,18 @@ const Landing = () => {
           <Sh2>Navigation</Sh2>
           <Sp>
             Browse our story and photo archive by using the archive controls at{' '}
-            <Sa href="#bottomLink" aria-label="Scroll to bottom">
+            <a href="#bottomLink" aria-label="Scroll to bottom">
               the bottom of this page
-            </Sa>{' '}
+            </a>{' '}
             to filter your results by category, location, tags or year. The
             yellow bar of years above the search controls allows you to view
             stories from within a four to five period of time.
             <br />
             <br />
             All other information is accessible from the black banner{' '}
-            <Sa href="#topLink" aria-label="Scroll to top">
+            <a href="#topLink" aria-label="Scroll to top">
               the top of the page
-            </Sa>
+            </a>
             . From there, you can navigate to other parts of the project,
             including more information about Howl, the Women&#39;s Liberation
             Movement and other resources.
