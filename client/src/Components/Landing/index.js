@@ -42,7 +42,7 @@ const Landing = () => {
         <SsectionNav>
           <Sh2>Navigation</Sh2>
           <Sp>
-            Browse our our story and photo archive by using the archive controls
+            Browse our story and photo archive by using the archive controls
             at{' '}
             <Sa href="#bottomLink" aria-label="Scroll to bottom">
               the bottom of this page
