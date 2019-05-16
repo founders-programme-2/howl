@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
-import { Sheader, Ssection, Sp, Sh1, Sh2 } from './About.style'
+import React from 'react';
+import { Sheader, Sp, Sh1, Sh2, Smain } from './About.style'
 
 const About = () => {
   return (
-    <Fragment>
-      <main>
+      <Smain>
         <Sheader>
           <Sh1>About Howl</Sh1>
         </Sheader>
@@ -21,28 +20,20 @@ const About = () => {
           that the voices and materials collected are diverse, inclusive and
           cover the whole of the UK.
         </Sp>
-
-        <Ssection>
           <Sh2>Want to get involved?</Sh2>
-          <p>
+          <Sp>
             Send an email introducing yourself to fakeemail@gmail.com and come to one of our meetings!
-          </p>
-        </Ssection>
-        <Ssection>
+          </Sp>
           <Sh2>Donate</Sh2>
-          <p>
-            Excited about our project? We are always looking for donations. 
-    
-          </p>
-        </Ssection>
-        <Ssection>
+          <Sp>
+            Passionate about our cause? We are always looking for donations. 
+          </Sp>
           <Sh2>Contact Us</Sh2>
-          <p>
+          <Sp>
            Have a question? Send us an email at fakeemail@gmail.com.
-          </p>
-        </Ssection>
-      </main>
-    </Fragment>
+          </Sp>
+
+      </Smain>
   );
 };
 
