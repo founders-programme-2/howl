@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { NavBtn } from './Add.style'
 
 const Add = () => {
   return (
@@ -30,6 +32,9 @@ const Add = () => {
           molestie. In hac habitasse platea dictumst. In ac ornare purus, vitae
           pharetra nulla. Morbi rutrum sit amet sapien ac consectetur.
         </p>
+        <Link to="/form">
+          <NavBtn type="button">I agree, let's go.</NavBtn>
+        </Link>
       </main>
     </Fragment>
   );
