@@ -39,6 +39,9 @@ export const locations = [
   'London',
   'South East',
   'South West',
+  'Scotland',
+  'Northern Ireland',
+  'Wales',
 ];
 
 export default { tags, locations };
