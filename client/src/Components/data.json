@@ -1,5 +1,5 @@
 {
-    "arrTags" : [
+    "tags" : [
     "Lesbianism",
     "Sexuality",
     "Working class",
@@ -29,7 +29,7 @@
     "Music",
     "International"
     ],
-    "arrCategory": [
+    "categories": [
         "Cat1",
         "Cat2",
         "Cat3",
@@ -38,7 +38,7 @@
         "Cat6",
         "Cat7"
     ],
-    "arrLocations": [
+    "locations": [
         "North East",
         "North West",
         "Yorkshire and the Humber",
