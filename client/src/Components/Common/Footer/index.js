@@ -14,7 +14,7 @@ import {
   FilterDiv,
   SearchDiv,
 } from './Footer.style';
-import { tags, locations } from './filtersData';
+import { tags, categories, locations } from '../../data';
 import { styles, BootstrapInput } from './mui.style';
 
 const renderSelectItems = items => {
@@ -57,7 +57,7 @@ const Footer = ({ classes }) => {
             <MenuItem value="Category">
               <em>Category</em>
             </MenuItem>
-            {renderSelectItems(['Category-1', 'Category-2', 'Category-3'])}
+            {renderSelectItems(categories)}
           </Select>
           <Select
             className={classes.select}
