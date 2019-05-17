@@ -61,7 +61,7 @@ const Landing = () => {
         </SsectionNav>
       </Smain>
       <SaHidden name="bottomLink" aria-label="Search bar">
-        <Footer/>
+        <Footer />
       </SaHidden>
     </Fragment>
   );
