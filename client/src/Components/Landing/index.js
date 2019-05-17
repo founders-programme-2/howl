@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import {
   Smain,
-  Sheader, 
+  Sheader,
   Sp,
   SLink,
   Sh2,
