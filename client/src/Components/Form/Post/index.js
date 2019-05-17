@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Attach from './attach.png';
 import {
   TextField,
@@ -22,129 +22,67 @@ const Post = ({
 }) => {
   return (
     <FormControl>
-      {radio === 'textPost' ? (
-        <Fragment>
-          <TextField
-            id="title"
-            label="Title"
-            name="title"
-            value={title}
-            placeholder="Enter your Title..."
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('title')}
-          />
-          <TextField
-            id="details"
-            label="Details"
-            name="details"
-            value={details}
-            placeholder="Enter your story's details"
-            multiline
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('details')}
-          />
-        </Fragment>
+      <TextField
+        id="title"
+        label="Title"
+        name="title"
+        value={title}
+        placeholder="Enter your Title..."
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('title')}
+      />
+      {radio === 'imagePost' || radio === 'both' ? (
+        <TextField
+          id="imageCap"
+          label="Image Caption"
+          name="imageCap"
+          value={imageCap}
+          placeholder="Enter image caption..."
+          multiline
+          rows="2"
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('imageCap')}
+        />
       ) : null}
-      {radio === 'imagePost' ? (
-        <Fragment>
-          <TextField
-            id="title"
-            label="Title"
-            name="title"
-            value={title}
-            placeholder="Enter your Title..."
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('title')}
+      {radio === 'imagePost' || radio === 'both' ? (
+        <label htmlFor="inputImg">
+          <input
+            id="inputImg"
+            label="upload file"
+            type="file"
+            accept="image/*"
+            hidden
           />
-          <TextField
-            id="imageCap"
-            label="Image Caption"
-            name="imageCap"
-            value={imageCap}
-            placeholder="Enter image caption..."
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('imageCap')}
-          />
-          <label htmlFor="inputImg">
-            <input
-              id="inputImg"
-              label="upload file"
-              type="file"
-              accept="image/*"
-              hidden
-            />
-            <AttachImg src={Attach} alt="attach" />
-          </label>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={imgPermission}
-                onChange={checkboxChange('imgPermission')}
-                value="imgPermission"
-              />
-            }
-            label="I have the rights or permissions to upload this image publically."
-          />
-        </Fragment>
+          <AttachImg src={Attach} alt="attach" />
+        </label>
       ) : null}
-      {radio === 'both' ? (
-        <Fragment>
-          <TextField
-            id="title"
-            label="Title"
-            name="title"
-            value={title}
-            placeholder="Enter your Title..."
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('title')}
-          />
-          <TextField
-            id="details"
-            label="Details"
-            name="details"
-            value={details}
-            placeholder="Enter your story's details"
-            multiline
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('details')}
-          />
-          <TextField
-            id="imageCap"
-            label="Image Caption"
-            name="imageCap"
-            value={imageCap}
-            placeholder="Enter image caption..."
-            className={classes.textField}
-            margin="normal"
-            onChange={textChange('imageCap')}
-          />
-          <label htmlFor="inputImg">
-            <input
-              id="inputImg"
-              label="upload file"
-              type="file"
-              accept="image/*"
-              hidden
+      {radio === 'textPost' || radio === 'both' ? (
+        <TextField
+          id="details"
+          label="Details"
+          name="details"
+          value={details}
+          placeholder="Enter your story's details"
+          multiline
+          rows="4"
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('details')}
+        />
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={imgPermission}
+              onChange={checkboxChange('imgPermission')}
+              value="imgPermission"
             />
-            <AttachImg src={Attach} alt="attach" />
-          </label>
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={imgPermission}
-                onChange={checkboxChange('imgPermission')}
-                value="imgPermission"
-              />
-            }
-            label="I have the rights or permissions to upload this image publicly."
-          />
-        </Fragment>
+          }
+          label="I have the rights or permissions to upload this image publicly."
+        />
       ) : null}
     </FormControl>
   );
