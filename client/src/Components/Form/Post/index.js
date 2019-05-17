@@ -1,45 +1,90 @@
 import React from 'react';
 import Attach from './attach.png';
-import { TextField, withStyles } from '../../muIndex';
-import { AttachImg, Input, Form, Label } from './Post.style';
+import {
+  TextField,
+  withStyles,
+  FormControlLabel,
+  Checkbox,
+  FormControl,
+} from '../../muIndex';
+import AttachImg from './Post.style';
 import styles from './muiStyles';
 
-const Post = ({ classes }) => {
+const Post = ({
+  classes,
+  title,
+  details,
+  imageCap,
+  textChange,
+  radio,
+  imgPermission,
+  checkboxChange,
+}) => {
   return (
-    <Form>
+    <FormControl>
       <TextField
         id="title"
         label="Title"
+        name="title"
+        value={title}
         placeholder="Enter your Title..."
         className={classes.textField}
         margin="normal"
+        onChange={textChange('title')}
       />
-      <TextField
-        id="details"
-        label="Details"
-        placeholder="Enter your story's details"
-        multiline
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="imageCap"
-        label="Image Caption"
-        placeholder="Enter image caption..."
-        className={classes.textField}
-        margin="normal"
-      />
-      <Label htmlFor="inputImg">
-        <Input
-          id="inputImg"
-          label="upload file"
-          type="file"
-          accept="image/*"
-          hidden
+      {radio === 'imagePost' || radio === 'both' ? (
+        <TextField
+          id="imageCap"
+          label="Image Caption"
+          name="imageCap"
+          value={imageCap}
+          placeholder="Enter image caption..."
+          multiline
+          rows="2"
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('imageCap')}
         />
-        <AttachImg src={Attach} alt="attach" />
-      </Label>
-    </Form>
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
+        <label htmlFor="inputImg">
+          <input
+            id="inputImg"
+            label="upload file"
+            type="file"
+            accept="image/*"
+            hidden
+          />
+          <AttachImg src={Attach} alt="attach" />
+        </label>
+      ) : null}
+      {radio === 'textPost' || radio === 'both' ? (
+        <TextField
+          id="details"
+          label="Details"
+          name="details"
+          value={details}
+          placeholder="Enter your story's details"
+          multiline
+          rows="4"
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('details')}
+        />
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={imgPermission}
+              onChange={checkboxChange('imgPermission')}
+              value="imgPermission"
+            />
+          }
+          label="I have the rights or permissions to upload this image publicly."
+        />
+      ) : null}
+    </FormControl>
   );
 };
 

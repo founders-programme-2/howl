@@ -23,17 +23,22 @@ const AdditionalInfo = ({
   categoryChange,
   infoTrue,
   checkboxChange,
+  textChange,
+  wlmConnection,
 }) => {
   return (
     <Fragment>
       <TextField
         id="standard-multiline-static"
         label="Connection to Women’s Liberation Movement"
+        name="wlmConnection"
+        value={wlmConnection}
         multiline
         rows="4"
         placeholder="examples: activist, daughter of an activist, et cetera)"
         className={classes.textField}
         margin="normal"
+        onChange={textChange('wlmConnection')}
       />
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
@@ -81,7 +86,7 @@ const AdditionalInfo = ({
           control={
             <Checkbox
               checked={infoTrue}
-              onChange={checkboxChange}
+              onChange={checkboxChange('infoTrue')}
               value="infoTrue"
             />
           }

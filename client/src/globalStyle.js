@@ -25,22 +25,32 @@ export default createGlobalStyle`
     main {
         max-width: 80%;
         margin: 0 auto;
+        padding-left: 3rem;
+        padding-bottom: 6rem;
     }
+
+    header {
+        margin: 4rem 2rem 2rem;
+    }
+
 
     // titles   
     h1 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        font-size: 3rem;
-        letter-spacing: 0.1rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
     }
 
     // subtitle
     h2 {
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: 0.1rem;
+        margin: 2rem 2rem 0;
+
     }
 
     // nav, buttons etc - probably not actually necessary here as nav and buttons are separate elements
@@ -52,7 +62,18 @@ export default createGlobalStyle`
 
     p {
         font-family: 'Roboto', sans-serif;
+        font-variant: small-caps;
+        line-height: 1.5rem;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
         font-size: 1.2rem;
+        margin: 2rem 2rem;
+
+    }
+
+    a {
+        color: var(--highlight-color);
+        font-weight: 700;
     }
 
     button {

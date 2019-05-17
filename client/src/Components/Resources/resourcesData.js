@@ -25,7 +25,7 @@ const resourcesData = [
     title: 'Bishopsgate Institute',
     link: 'https://www.bishopsgate.org.uk/Library',
     info:
-      "Bishopsgate Institute's printed and archival collections cover a variety of subject areas exploring the experiences of everyday people, and including a special focus on feminist & women's history.",
+      "Bishopsgate Institute's printed and archival collections cover a variety of subject areas exploring the experiences of everyday people, and including a special focus on feminist and women's history.",
   },
   {
     id: 4,
