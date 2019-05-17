@@ -13,7 +13,15 @@ import {
 } from '../../muIndex';
 import styles from './muiStyles';
 
-const Details = ({ classes, radio, radioChange }) => {
+const Details = ({
+  classes,
+  radio,
+  radioChange,
+  location,
+  textChange,
+  selectedDate,
+  handleDateChange,
+}) => {
   return (
     <Fragment>
       <h2>Your Contribution</h2>
@@ -25,11 +33,17 @@ const Details = ({ classes, radio, radioChange }) => {
       <TextField
         id="location"
         label="Location"
+        name="location"
+        value={location}
         placeholder="Where did this happen?"
         className={classes.textField}
         margin="normal"
+        onChange={textChange('location')}
       />
-      <DateFun />
+      <DateFun
+        selectedDate={selectedDate}
+        handleDateChange={handleDateChange}
+      />
       <FormControl className={classes.formControl}>
         <FormLabel component="legend">I would like to share:</FormLabel>
 
