@@ -10,6 +10,7 @@ class Form extends Component {
     tags: [],
     category: '',
     infoTrue: false,
+    imgPermission: false,
   };
 
   radioChange = event => {
@@ -29,20 +30,25 @@ class Form extends Component {
   };
 
   render() {
-    const { radio, tags, category, infoTrue } = this.state;
+    const { radio, tags, category, infoTrue, imgPermission } = this.state;
     return (
       <main>
         <ContactInfo />
-        <Details radio={radio} radioChange={this.radioChange} />
-        <Post />
-        <AdditionalInfo
-          tags={tags}
-          category={category}
-          infoTrue={infoTrue}
-          tagsChange={this.tagsChange}
-          categoryChange={this.categoryChange}
-          checkboxChange={this.checkboxChange}
-        />
+        <form>
+          <Details radio={radio} radioChange={this.radioChange} />
+          <Post
+            imgPermission={imgPermission}
+            checkboxChange={this.checkboxChange}
+          />
+          <AdditionalInfo
+            tags={tags}
+            category={category}
+            infoTrue={infoTrue}
+            tagsChange={this.tagsChange}
+            categoryChange={this.categoryChange}
+            checkboxChange={this.checkboxChange}
+          />
+        </form>
       </main>
     );
   }
