@@ -8,7 +8,7 @@ export const FooterDiv = styled.footer`
   flex-direction: row;
   flex-wrap: nowrap;
   bottom: 0;
-  position: absolute;
+  position: fixed;
 `;
 
 export const TitleDiv = styled.section`
