@@ -7,7 +7,7 @@ const { uploadImg, multerUploads, cloudinaryConfig } = require('./middlewares/up
 const router = express.Router();
 
 
-router.post('/uploadImg', [cloudinaryConfig, multerUploads, uploadImg]);
+router.post('/upload', [cloudinaryConfig, multerUploads, uploadImg]);
 
 router.post('/posts/create', controllers.Story.create);
 
