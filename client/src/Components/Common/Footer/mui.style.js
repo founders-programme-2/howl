@@ -38,14 +38,15 @@ export const styles = theme => ({
   },
   searchTextField: {
     backgroundColor: theme.palette.common.white,
-    borderRadius: '50px',
+    borderRadius: '4px',
     fontWeight: '700',
     width: '80%',
     height: '20%',
   },
-  searchTextFieldLebel: {
+  searchTextFieldLabel: {
     fontWeight: 'bold',
   },
+
   searchButton: {
     width: '45%',
     backgroundColor: 'var(--main-btn-color)',
