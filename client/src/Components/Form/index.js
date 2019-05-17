@@ -75,6 +75,9 @@ class Form extends Component {
     } = this.state;
     return (
       <main>
+      <header>
+        <h1>Add to HOWL</h1>
+      </header>
         <ContactInfo
           name={name}
           email={email}
