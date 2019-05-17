@@ -27,27 +27,19 @@ class Form extends Component {
   };
 
   tagsChange = event => {
-    this.setState({ tags: event.target.value }, () => {
-      console.log(this.state.tags);
-    });
+    this.setState({ tags: event.target.value });
   };
 
   categoryChange = event => {
-    this.setState({ [event.target.name]: event.target.value }, () => {
-      console.log(this.state[event.target.name]);
-    });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   checkboxChange = name => event => {
-    this.setState({ [name]: event.target.checked }, () => {
-      console.log(this.state[name]);
-    });
+    this.setState({ [name]: event.target.checked });
   };
 
   textChange = name => event => {
-    this.setState({ [name]: event.target.value }, () => {
-      console.log(this.state[name]);
-    });
+    this.setState({ [name]: event.target.value });
   };
 
   handleDateChange = date => {
@@ -57,18 +49,11 @@ class Form extends Component {
     };
     const dateModified = date.toLocaleDateString('en-US', options);
     const splitted = dateModified.split(' ');
-    this.setState(
-      { selectedDate: dateModified, month: splitted[0], year: splitted[1] },
-      () => {
-        console.log(
-          this.state.selectedDate,
-          'month',
-          this.state.month,
-          'year',
-          this.state.year
-        );
-      }
-    );
+    this.setState({
+      selectedDate: dateModified,
+      month: splitted[0],
+      year: splitted[1],
+    });
   };
 
   render() {
