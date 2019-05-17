@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import resourcesData from './resourcesData';
-import { Sh2, Sp } from './Resources.style'
+import { Sh2, Sp } from './Resources.style';
 
 const Resources = () => {
   // maps over data and renders resources on page
@@ -10,7 +10,7 @@ const Resources = () => {
         <a href={resource.link} target="_blank" rel="noopener noreferrer">
           <Sh2>{resource.title}</Sh2>
         </a>
-          <Sp>{resource.info}</Sp>
+        <Sp>{resource.info}</Sp>
       </article>
     );
   });

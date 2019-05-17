@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Attach from './attach.png';
 import {
   TextField,
@@ -10,37 +10,46 @@ import {
 import AttachImg from './Post.style';
 import styles from './muiStyles';
 
-const Post = ({ classes, imgPermission, checkboxChange }) => {
+const Post = ({
+  classes,
+  title,
+  details,
+  imageCap,
+  textChange,
+  radio,
+  imgPermission,
+  checkboxChange,
+}) => {
   return (
-    <Fragment>
-      <FormControl>
-        <TextField
-          id="title"
-          label="Title"
-          placeholder="Enter your Title..."
-          className={classes.textField}
-          margin="normal"
-        />
-        <TextField
-          id="details"
-          label="Details"
-          multiline
-          rows="4"
-          placeholder="Enter your story's details"
-          className={classes.textField}
-          margin="normal"
-        />
+    <FormControl>
+      <TextField
+        id="title"
+        label="Title"
+        name="title"
+        value={title}
+        placeholder="Enter your Title..."
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('title')}
+      />
+      {radio === 'imagePost' || radio === 'both' ? (
         <TextField
           id="imageCap"
           label="Image Caption"
+          name="imageCap"
+          value={imageCap}
           placeholder="Enter image caption..."
+          multiline
+          rows="2"
           className={classes.textField}
           margin="normal"
+          onChange={textChange('imageCap')}
         />
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
         <label htmlFor="inputImg">
           <input
             id="inputImg"
-            name="image"
             label="upload file"
             type="file"
             accept="image/*"
@@ -48,18 +57,34 @@ const Post = ({ classes, imgPermission, checkboxChange }) => {
           />
           <AttachImg src={Attach} alt="attach" />
         </label>
+      ) : null}
+      {radio === 'textPost' || radio === 'both' ? (
+        <TextField
+          id="details"
+          label="Details"
+          name="details"
+          value={details}
+          placeholder="Enter your story's details"
+          multiline
+          rows="4"
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('details')}
+        />
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
         <FormControlLabel
           control={
             <Checkbox
               checked={imgPermission}
-              onChange={checkboxChange}
+              onChange={checkboxChange('imgPermission')}
               value="imgPermission"
             />
           }
-          label="I have the rights or permissions to upload this image publically."
+          label="I have the rights or permissions to upload this image publicly."
         />
-      </FormControl>
-    </Fragment>
+      ) : null}
+    </FormControl>
   );
 };
 
