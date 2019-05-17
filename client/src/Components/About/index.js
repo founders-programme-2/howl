@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sp } from './About.style';
 
 const About = () => {
   return (

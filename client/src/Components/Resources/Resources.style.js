@@ -5,5 +5,6 @@ export const Sh2 = styled.h2`
 `;
 
 export const Sp = styled.p`
-  color: var(--main-font-color);
+    color: var(--main-font-color);
+    margin: 0rem 2rem;
 `;

@@ -66,7 +66,7 @@ export default createGlobalStyle`
         text-transform: lowercase;
         letter-spacing: 0.1rem;
         font-size: 1.2rem;
-        margin: 0rem 2rem;
+        margin: 2rem 2rem;
 
     }
 
