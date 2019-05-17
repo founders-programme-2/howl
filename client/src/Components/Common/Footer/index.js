@@ -116,7 +116,7 @@ const Footer = ({ classes }) => {
             id="outlined-search"
             label="Search ..."
             InputLabelProps={{
-              className: classes.searchTextFieldLebel,
+              className: classes.searchTextFieldLabel,
             }}
             type="search"
             className={classes.searchTextField}
