@@ -6,6 +6,7 @@
     "@date-io/date-fns": "^1.3.5",
     "@material-ui/core": "^4.0.0-beta.2",
     "@material-ui/pickers": "^3.0.0-beta.1",
+    "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
     "date-fns": "^2.0.0-alpha.27",
     "env2": "^2.2.2",
@@ -49,5 +50,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:9000"
 }
