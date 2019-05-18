@@ -25,6 +25,9 @@ class Form extends Component {
     imgPermission: false,
     imgLink: '',
     wlmConnection: '',
+    message: '',
+    uploadFlag: false,
+    imageFlag: true,
   };
 
   radioChange = event => {
@@ -64,9 +67,24 @@ class Form extends Component {
   handleUploadFile = event => {
     const img = new FormData();
     img.append('uploadedImg', event.target.files[0]);
-    axios
-      .post('/upload', img)
-      .then(({ data }) => this.setState({ imgLink: data.image }));
+    this.setState({ uploadFlag: true, imageFlag: false }, () => {
+      axios.post('/upload', img).then(({ data }) => {
+        if (data.success) {
+          this.setState({
+            uploadFlag: false,
+            imgLink: data.image,
+            message: 'Image uploaded successfully!',
+          });
+        } else {
+          this.setState({
+            uploadFlag: false,
+            imageFlag: true,
+            imgLink: 'no url was retrieved',
+            message: 'Something went wrong, please try again.',
+          });
+        }
+      });
+    });
   };
 
   handleSubmit = event => {
@@ -94,6 +112,10 @@ class Form extends Component {
       imageCap,
       imgPermission,
       wlmConnection,
+      message,
+      imgLink,
+      uploadFlag,
+      imageFlag,
     } = this.state;
     return (
       <main>
@@ -121,6 +143,10 @@ class Form extends Component {
             textChange={this.textChange}
             handleUploadFile={this.handleUploadFile}
             radio={radio}
+            imgLink={imgLink}
+            message={message}
+            uploadFlag={uploadFlag}
+            imageFlag={imageFlag}
           />
           <AdditionalInfo
             tags={tags}
