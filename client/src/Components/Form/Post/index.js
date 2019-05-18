@@ -19,6 +19,7 @@ const Post = ({
   radio,
   imgPermission,
   checkboxChange,
+  handleUploadFile,
 }) => {
   return (
     <FormControl>
@@ -52,6 +53,7 @@ const Post = ({
             id="inputImg"
             label="upload file"
             type="file"
+            onChange={handleUploadFile}
             accept="image/*"
             hidden
           />

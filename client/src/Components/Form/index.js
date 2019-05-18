@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import ContactInfo from './ContactInfo';
 import Details from './Details';
 import Post from './Post';
@@ -56,6 +57,14 @@ class Form extends Component {
     });
   };
 
+  handleUploadFile = event => {
+    const img = new FormData();
+    img.append('uploadedImg', event.target.files[0]);
+    axios
+      .post('/upload', img)
+      .then(({ data }) => this.setState({ imgLink: data.image }));
+  };
+
   render() {
     const {
       radio,
@@ -97,6 +106,7 @@ class Form extends Component {
             imgPermission={imgPermission}
             checkboxChange={this.checkboxChange}
             textChange={this.textChange}
+            handleUploadFile={this.handleUploadFile}
             radio={radio}
           />
           <AdditionalInfo
