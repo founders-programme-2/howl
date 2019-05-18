@@ -26,6 +26,79 @@ const Post = ({
   uploadFlag,
   imageFlag,
 }) => {
+  const imageCaptionComponent =
+    radio === 'imagePost' || radio === 'both' ? (
+      <TextField
+        id="imageCap"
+        label="Image Caption"
+        name="imageCap"
+        value={imageCap}
+        placeholder="Enter image caption..."
+        multiline
+        rows="2"
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('imageCap')}
+      />
+    ) : null;
+
+  const imageUploadInput =
+    (radio === 'imagePost' || radio === 'both') && imageFlag ? (
+      <label htmlFor="inputImg">
+        <input
+          id="inputImg"
+          label="upload file"
+          type="file"
+          onChange={handleUploadFile}
+          accept="image/*"
+          hidden
+        />
+        <AttachImg src={Attach} alt="attach" />
+      </label>
+    ) : null;
+
+  const uploadStatusMsg =
+    (radio === 'imagePost' || radio === 'both') && imgLink ? (
+      <Message>{message}</Message>
+    ) : null;
+
+  const LoaderWithMsg =
+    (radio === 'imagePost' || radio === 'both') && uploadFlag ? (
+      <Fragment>
+        <Loader uploadFlag={uploadFlag} />
+        <Message>Uploading...</Message>
+      </Fragment>
+    ) : null;
+
+  const postDetails =
+    radio === 'textPost' || radio === 'both' ? (
+      <TextField
+        id="details"
+        label="Details"
+        name="details"
+        value={details}
+        placeholder="Enter your story's details"
+        multiline
+        rows="4"
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('details')}
+      />
+    ) : null;
+
+  const imgPermissionCheckbox =
+    radio === 'imagePost' || radio === 'both' ? (
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={imgPermission}
+            onChange={checkboxChange('imgPermission')}
+            value="imgPermission"
+          />
+        }
+        label="I have the rights or permissions to upload this image publicly."
+      />
+    ) : null;
   return (
     <FormControl>
       <TextField
@@ -38,68 +111,12 @@ const Post = ({
         margin="normal"
         onChange={textChange('title')}
       />
-      {radio === 'imagePost' || radio === 'both' ? (
-        <TextField
-          id="imageCap"
-          label="Image Caption"
-          name="imageCap"
-          value={imageCap}
-          placeholder="Enter image caption..."
-          multiline
-          rows="2"
-          className={classes.textField}
-          margin="normal"
-          onChange={textChange('imageCap')}
-        />
-      ) : null}
-      {(radio === 'imagePost' || radio === 'both') && imageFlag ? (
-        <label htmlFor="inputImg">
-          <input
-            id="inputImg"
-            label="upload file"
-            type="file"
-            onChange={handleUploadFile}
-            accept="image/*"
-            hidden
-          />
-          <AttachImg src={Attach} alt="attach" />
-        </label>
-      ) : null}
-      {(radio === 'imagePost' || radio === 'both') && imgLink ? (
-        <Message>{message}</Message>
-      ) : null}
-      {(radio === 'imagePost' || radio === 'both') && uploadFlag ? (
-        <Fragment>
-          <Loader uploadFlag={uploadFlag} />
-          <Message>Uploading...</Message>
-        </Fragment>
-      ) : null}
-      {radio === 'textPost' || radio === 'both' ? (
-        <TextField
-          id="details"
-          label="Details"
-          name="details"
-          value={details}
-          placeholder="Enter your story's details"
-          multiline
-          rows="4"
-          className={classes.textField}
-          margin="normal"
-          onChange={textChange('details')}
-        />
-      ) : null}
-      {radio === 'imagePost' || radio === 'both' ? (
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={imgPermission}
-              onChange={checkboxChange('imgPermission')}
-              value="imgPermission"
-            />
-          }
-          label="I have the rights or permissions to upload this image publicly."
-        />
-      ) : null}
+      {imageCaptionComponent}
+      {imageUploadInput}
+      {uploadStatusMsg}
+      {LoaderWithMsg}
+      {postDetails}
+      {imgPermissionCheckbox}
     </FormControl>
   );
 };
