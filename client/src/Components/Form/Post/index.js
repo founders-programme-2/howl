@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Attach from './attach.png';
 import {
   TextField,
@@ -7,8 +7,9 @@ import {
   Checkbox,
   FormControl,
 } from '../../muIndex';
-import AttachImg from './Post.style';
+import { AttachImg, Message } from './Post.style';
 import styles from './muiStyles';
+import Loader from './Loader';
 
 const Post = ({
   classes,
@@ -20,6 +21,10 @@ const Post = ({
   imgPermission,
   checkboxChange,
   handleUploadFile,
+  message,
+  imgLink,
+  uploadFlag,
+  imageFlag,
 }) => {
   return (
     <FormControl>
@@ -47,7 +52,7 @@ const Post = ({
           onChange={textChange('imageCap')}
         />
       ) : null}
-      {radio === 'imagePost' || radio === 'both' ? (
+      {(radio === 'imagePost' || radio === 'both') && imageFlag ? (
         <label htmlFor="inputImg">
           <input
             id="inputImg"
@@ -59,6 +64,15 @@ const Post = ({
           />
           <AttachImg src={Attach} alt="attach" />
         </label>
+      ) : null}
+      {(radio === 'imagePost' || radio === 'both') && imgLink ? (
+        <Message>{message}</Message>
+      ) : null}
+      {(radio === 'imagePost' || radio === 'both') && uploadFlag ? (
+        <Fragment>
+          <Loader uploadFlag={uploadFlag} />
+          <Message>Uploading...</Message>
+        </Fragment>
       ) : null}
       {radio === 'textPost' || radio === 'both' ? (
         <TextField
