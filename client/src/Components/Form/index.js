@@ -4,6 +4,7 @@ import ContactInfo from './ContactInfo';
 import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
+import Buttons from './Buttons';
 
 class Form extends Component {
   state = {
@@ -65,6 +66,10 @@ class Form extends Component {
       .then(({ data }) => this.setState({ imgLink: data.image }));
   };
 
+  // handleButton = event => {
+  //   this.setState({})
+  // }
+
   render() {
     const {
       radio,
@@ -119,6 +124,7 @@ class Form extends Component {
             wlmConnection={wlmConnection}
             textChange={this.textChange}
           />
+          <Buttons />
         </form>
       </main>
     );
