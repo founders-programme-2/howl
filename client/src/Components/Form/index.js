@@ -17,10 +17,13 @@ class Form extends Component {
     phone: '',
     location: '',
     selectedDate: '',
+    year: '',
+    month: '',
     title: '',
     details: '',
     imageCap: '',
     imgPermission: false,
+    imgLink: '',
     wlmConnection: '',
   };
 
@@ -66,9 +69,14 @@ class Form extends Component {
       .then(({ data }) => this.setState({ imgLink: data.image }));
   };
 
-  // handleButton = event => {
-  //   this.setState({})
-  // }
+  handleSubmit = event => {
+    event.preventDefault();
+    const submittedData = { ...this.state };
+    axios.post('/posts/create', submittedData).then(res => {
+      const { history } = this.props;
+      history.push('/story');
+    });
+  };
 
   render() {
     const {
@@ -124,7 +132,7 @@ class Form extends Component {
             wlmConnection={wlmConnection}
             textChange={this.textChange}
           />
-          <Buttons />
+          <Buttons handleSubmit={this.handleSubmit} />
         </form>
       </main>
     );
