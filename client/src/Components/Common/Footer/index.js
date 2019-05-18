@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Button,
   Select,
@@ -6,6 +6,11 @@ import {
   FormControl,
   TextField,
   withStyles,
+  Input,
+  InputLabel,
+  Chip,
+  Checkbox,
+  ListItemText,
 } from '../../muIndex';
 import {
   FooterDiv,
@@ -13,14 +18,25 @@ import {
   StyledTitle,
   FilterDiv,
   SearchDiv,
+  BoldText,
 } from './Footer.style';
-import { tags, categories, locations } from '../../data';
-import { styles, BootstrapInput } from './mui.style';
+import { tags as tagsArr, categories, locations } from '../../data';
+import { styles, BootstrapInput, MenuProps } from './mui.style';
+import Form from '../../Form';
 
 const renderSelectItems = items => {
   return items.map(item => (
     <MenuItem key={item} value={item}>
       {item}
+    </MenuItem>
+  ));
+};
+
+const renderMultiSelectItems = items => {
+  return items.map(item => (
+    <MenuItem key={item} value={item}>
+      <Checkbox checked={items.indexOf(item) > -1} />
+      <ListItemText primary={item} />
     </MenuItem>
   ));
 };
@@ -33,101 +49,128 @@ const yearsGenerator = () => {
   return years;
 };
 
-const Footer = ({ classes }) => {
-  return (
-    <FooterDiv>
-      <TitleDiv>
-        <StyledTitle>Search Archive</StyledTitle>
-        <Button className={classes.howToSearchButton}>HOW TO SEARCH</Button>
-      </TitleDiv>
+class Footer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tags: [],
+    };
+  }
 
-      <FilterDiv>
-        <FormControl className={classes.formControl}>
-          <Select
-            className={classes.select}
-            value="Category"
-            input={
-              <BootstrapInput
-                name="category"
-                id="category-customized-select"
-                aria-label="Category"
-              />
-            }
-          >
-            <MenuItem value="Category">
-              <em>Category</em>
-            </MenuItem>
-            {renderSelectItems(categories)}
-          </Select>
-          <Select
-            className={classes.select}
-            value="Tags"
-            input={
-              <BootstrapInput
-                name="tags"
-                id="tags-customized-select"
-                aria-label="Tags"
-              />
-            }
-          >
-            <MenuItem value="Tags">
-              <em>Tags</em>
-            </MenuItem>
-            {renderSelectItems(tags)}
-          </Select>
-          <Select
-            className={classes.select}
-            value="Location"
-            input={
-              <BootstrapInput
-                name="location"
-                id="location-customized-select"
-                aria-label="Location"
-              />
-            }
-          >
-            <MenuItem value="Location">
-              <em>Location</em>
-            </MenuItem>
-            {renderSelectItems(locations)}
-          </Select>
-          <Select
-            className={classes.select}
-            value="Year"
-            input={
-              <BootstrapInput
-                name="year"
-                id="year-customized-select"
-                aria-label="Year"
-              />
-            }
-          >
-            <MenuItem value="Year">
-              <em>Year</em>
-            </MenuItem>
-            {renderSelectItems(yearsGenerator())}
-          </Select>
-        </FormControl>
-      </FilterDiv>
+  render() {
+    const { classes } = this.props;
+    const { tags } = this.state;
+    return (
+      <Fragment>
+        <FooterDiv>
+          <TitleDiv>
+            <StyledTitle>Search Archive</StyledTitle>
+            <Button className={classes.howToSearchButton}>HOW TO SEARCH</Button>
+          </TitleDiv>
 
-      <SearchDiv>
-        <FormControl className={classes.searchFormControl}>
-          <TextField
-            id="outlined-search"
-            label="Search ..."
-            InputLabelProps={{
-              className: classes.searchTextFieldLabel,
-            }}
-            type="search"
-            className={classes.searchTextField}
-            variant="filled"
-          />
-          <Button className={classes.searchButton}>Search</Button>
-          <Button className={classes.resetButton}>Reset</Button>
-        </FormControl>
-      </SearchDiv>
-    </FooterDiv>
-  );
-};
+          <FilterDiv>
+            <FormControl className={classes.formControl}>
+              <Select
+                className={classes.select}
+                value="Category"
+                input={
+                  <BootstrapInput
+                    name="category"
+                    id="category-customized-select"
+                    aria-label="Category"
+                  />
+                }
+              >
+                <MenuItem value="Category">
+                  <BoldText>Category</BoldText>
+                </MenuItem>
+                {renderSelectItems(categories)}
+              </Select>
+
+              <FormControl className={classes.multipleSelectFormControl}>
+                <InputLabel htmlFor="selectMultipleCheckbox" className={classes.MultipleSelectInputLabel} >Tags</InputLabel>
+                <Select
+                  multiple
+                  value={tags}
+                  input={<Input id="selectMultipleCheckbox" />}
+                  renderValue={selected => (
+                    <div className={classes.chips}>
+                      {selected.map(value => (
+                        <Chip
+                          key={value}
+                          label={value}
+                          className={classes.chip}
+                        />
+                      ))}
+                    </div>
+                  )}
+                  MenuProps={MenuProps}
+                >
+                  {tagsArr.map(tag => (
+                    <MenuItem key={tag} value={tag}>
+                      <Checkbox checked={tags.indexOf(tag) > -1} />
+                      <ListItemText primary={tag} />
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
+              <Select
+                className={classes.select}
+                value="Location"
+                input={
+                  <BootstrapInput
+                    name="location"
+                    id="location-customized-select"
+                    aria-label="Location"
+                  />
+                }
+              >
+                <MenuItem value="Location">
+                  <BoldText>Location</BoldText>
+                </MenuItem>
+                {renderSelectItems(locations)}
+              </Select>
+              <Select
+                className={classes.select}
+                value="Year"
+                input={
+                  <BootstrapInput
+                    name="year"
+                    id="year-customized-select"
+                    aria-label="Year"
+                  />
+                }
+              >
+                <MenuItem value="Year">
+                  <BoldText>Year</BoldText>
+                </MenuItem>
+                {renderSelectItems(yearsGenerator())}
+              </Select>
+            </FormControl>
+          </FilterDiv>
+
+          <SearchDiv>
+            <FormControl className={classes.searchFormControl}>
+              <TextField
+                id="outlined-search"
+                label="Search ..."
+                InputLabelProps={{
+                  className: classes.searchTextFieldLabel,
+                }}
+                type="search"
+                className={classes.searchTextField}
+                variant="filled"
+              />
+              <Button className={classes.searchButton}>Search</Button>
+              <Button className={classes.resetButton}>Reset</Button>
+            </FormControl>
+          </SearchDiv>
+        </FooterDiv>
+        <Form />
+      </Fragment>
+    );
+  }
+}
 
 export default withStyles(styles)(Footer);

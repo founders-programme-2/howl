@@ -22,6 +22,30 @@ export const styles = theme => ({
     marginBottom: '1%',
     height: '80%',
   },
+
+  multipleSelectFormControl: {
+    width: '42%',
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
+    borderRadius: '4px',
+    backgroundColor: 'white',
+  },
+  chips: {
+    width: '100%',
+    marginTop: '2.5%',
+    marginBottom: '2.5%',
+  },
+  chip: {
+    width: '100%',
+    marginTop: '2.5%',
+    marginBottom: '5%',
+  },
+  multipleInputSelectLabel: {
+    marginTop: '-2%',
+    marginLeft: '5%',
+    fontWeight: 'bold',
+    color: 'black',
+  },
   select: {
     width: '40%',
     marginTop: '2.5%',
@@ -102,3 +126,14 @@ export const BootstrapInput = withStyles(theme => ({
     },
   },
 }))(InputBase);
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+export const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};

@@ -36,3 +36,7 @@ export const SearchDiv = styled.section`
   display: flex;
   justify-content: center;
 `;
+
+export const BoldText = styled.span`
+  font-weight: bold;
+`;
