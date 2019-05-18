@@ -90,7 +90,7 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const submittedData = { ...this.state };
-    axios.post('/posts/create', submittedData).then(res => {
+    axios.post('/posts/create', submittedData).then(() => {
       const { history } = this.props;
       history.push('/story');
     });
