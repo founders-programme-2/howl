@@ -62,7 +62,7 @@ const AdditionalInfo = ({
             id: 'category',
           }}
         >
-          {arrCategory.map(cat => (
+          {arrCategory.sort().map(cat => (
             <MenuItem value={cat} key={cat}>
               {cat}
             </MenuItem>
@@ -70,8 +70,8 @@ const AdditionalInfo = ({
         </Select>
       </FormControl>
       <p>
-        Please select one or more &#39;tags&#39; for your contribution. A tag can be
-        thought of as a related theme or subcategory.{' '}
+        Please select one or more &#39;tags&#39; for your contribution. A tag
+        can be thought of as a related theme or subcategory.{' '}
       </p>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
@@ -90,7 +90,7 @@ const AdditionalInfo = ({
           )}
           MenuProps={MenuProps}
         >
-          {arrTags.map(tag => (
+          {arrTags.sort().map(tag => (
             <MenuItem key={tag} value={tag}>
               <Checkbox checked={tags.indexOf(tag) > -1} />
               <ListItemText primary={tag} />
@@ -110,6 +110,19 @@ const AdditionalInfo = ({
           label="I certify that this information is true to the best of my knowledge and contains no personal attacks."
         />
       </FormControl>
+      <p>Anything else you would like to tell us?</p>
+      <TextField
+        id="notes"
+        label="Additional comments?"
+        name="notes"
+        value={wlmConnection}
+        multiline
+        rows="4"
+        placeholder="Talk to us!"
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('notes')}
+      />
     </Fragment>
   );
 };
