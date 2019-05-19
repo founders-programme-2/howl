@@ -20,7 +20,7 @@ const AdditionalInfo = ({
   tags,
   tagsChange,
   category,
-  categoryChange,
+  dropdownChange,
   infoTrue,
   checkboxChange,
   textChange,
@@ -56,7 +56,7 @@ const AdditionalInfo = ({
         <Select
           aria-label="category"
           value={category}
-          onChange={categoryChange}
+          onChange={dropdownChange}
           inputProps={{
             name: 'category',
             id: 'category',
