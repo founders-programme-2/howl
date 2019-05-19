@@ -113,7 +113,7 @@ export const BootstrapInput = withStyles(theme => ({
     width: '80%',
     padding: '5% 16% 5% 8%',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
-    fontFamily: ['Raleway', 'sans-serif'].join(','),
+    fontFamily: 'Raleway, sans-serif',
     fontWeight: '600',
     '&:focus': {
       borderRadius: 4,
