@@ -31,7 +31,7 @@ class Form extends Component {
     this.setState({ tags: event.target.value });
   };
 
-  categoryChange = event => {
+  dropdownChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
@@ -84,16 +84,16 @@ class Form extends Component {
     } = this.state;
     return (
       <main>
-      <header>
-        <h1>Add to HOWL</h1>
-      </header>
-      <form>
-        <ContactInfo
-          name={name}
-          email={email}
-          phone={phone}
-          textChange={this.textChange}
-        />
+        <header>
+          <h1>Add to HOWL</h1>
+        </header>
+        <form>
+          <ContactInfo
+            name={name}
+            email={email}
+            phone={phone}
+            textChange={this.textChange}
+          />
           <Details
             radio={radio}
             radioChange={this.radioChange}
@@ -101,6 +101,7 @@ class Form extends Component {
             selectedDate={selectedDate}
             textChange={this.textChange}
             handleDateChange={this.handleDateChange}
+            dropdownChange={this.dropdownChange}
           />
           <Post
             title={title}
@@ -117,7 +118,7 @@ class Form extends Component {
             category={category}
             infoTrue={infoTrue}
             tagsChange={this.tagsChange}
-            categoryChange={this.categoryChange}
+            dropdownChange={this.dropdownChange}
             checkboxChange={this.checkboxChange}
             wlmConnection={wlmConnection}
             textChange={this.textChange}
