@@ -19,6 +19,7 @@ const Post = ({
   radio,
   imgPermission,
   checkboxChange,
+  handleUploadFile,
 }) => {
   return (
     <FormControl>
@@ -71,10 +72,10 @@ const Post = ({
       {radio === 'textPost' || radio === 'both' ? (
         <Fragment>
           <p>
-            Please enter your story relating to the Women's Liberation Movement
-            below. We encourage detailed memories but request that if you have a
-            story that is longer than 1000 words, you email it directly to us at
-            fakeemail@howl.co.uk
+            Please enter your story relating to the Women&#39;s Liberation
+            Movement below. We encourage detailed memories but request you have
+            you have a story that is longer than 1000 words, you email directly
+            directly to us at fakeemail@howl.co.uk
           </p>
           <TextField
             id="details"

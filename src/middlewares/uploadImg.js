@@ -23,7 +23,7 @@ exports.cloudinaryConfig = (req, res, next) => {
 const storage = multer.memoryStorage();
 
 // Turn image into a buffer
-exports.multerUploads = multer({ storage }).single('image');
+exports.multerUploads = multer({ storage }).single('uploadedImg');
 
 const dUri = new Datauri();
 
@@ -39,19 +39,16 @@ exports.uploadImg = (req, res) => {
     return uploader.upload(file).then((result) => {
       const image = result.url;
       return res.status(200).json({
-        message: 'Your image has been uploaded successfully to cloudinary',
-        data: {
-          image,
-        },
+        success: true,
+        image,
       });
     }).catch(err => res.status(400).json({
-      message: 'something went wrong while processing your request',
-      data: {
-        err,
-      },
+      success: false,
+      err,
     }));
   }
   return (res.status(400).json({
-    message: 'something went wrong while processing your request',
+    success: false,
+    err: 'something went wrong while processing your request, please try again',
   }));
 };
