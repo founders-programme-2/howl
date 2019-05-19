@@ -1,15 +1,18 @@
 import React, { Fragment } from 'react';
 import DateFun from './DatePicker';
+import { locations } from '../data.json';
 
 import {
   withStyles,
-  TextField,
   Radio,
   FormControlLabel,
   FormControl,
   FormLabel,
   FormGroup,
   RadioGroup,
+  InputLabel,
+  Select,
+  MenuItem,
 } from '../../muIndex';
 import styles from './muiStyles';
 
@@ -18,9 +21,9 @@ const Details = ({
   radio,
   radioChange,
   location,
-  textChange,
   selectedDate,
   handleDateChange,
+  dropdownChange,
 }) => {
   return (
     <Fragment>
@@ -35,16 +38,25 @@ const Details = ({
         &#39;Additional comments&#39; section at the end of the form.
       </p>
       <p>Where did this event occur?</p>
-      <TextField
-        id="location"
-        label="Location"
-        name="location"
-        value={location}
-        placeholder="Where did this happen?"
-        className={classes.textField}
-        margin="normal"
-        onChange={textChange('location')}
-      />
+
+      <FormControl className={classes.formControl}>
+        <InputLabel htmlFor="location">Location</InputLabel>
+        <Select
+          aria-label="location"
+          value={location}
+          onChange={dropdownChange}
+          inputProps={{
+            name: 'location',
+            id: 'location',
+          }}
+        >
+          {locations.sort().map(loc => (
+            <MenuItem value={loc} key={loc}>
+              {loc}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
       <p>Approximately when did this event occur?</p>
       <DateFun
         selectedDate={selectedDate}
