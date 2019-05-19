@@ -5,6 +5,7 @@ env2('config.env');
 
 const { AIRTABLE_API_KEY } = process.env;
 
+/* istanbul ignore next */
 if (!AIRTABLE_API_KEY) {
   throw new Error('Missing Airtable API KEY env var');
 }
