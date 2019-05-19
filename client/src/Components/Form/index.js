@@ -78,13 +78,13 @@ class Form extends Component {
       <header>
         <h1>Add to HOWL</h1>
       </header>
+      <form>
         <ContactInfo
           name={name}
           email={email}
           phone={phone}
           textChange={this.textChange}
         />
-        <form>
           <Details
             radio={radio}
             radioChange={this.radioChange}

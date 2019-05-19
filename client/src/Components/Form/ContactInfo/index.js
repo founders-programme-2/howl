@@ -7,9 +7,10 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
     <Fragment>
       <h2>Contact Info</h2>
       <p>
-      Our team of moderators will need to approve your story
-      before it is published publicly. If we have any questions or concerns about your content, we will 
-      get in touch using your contact details. We will not use your details to send you spam mail. 
+        Our team of moderators will need to approve your story before it is
+        published publicly. If we have any questions or concerns about your
+        content, we will get in touch using your contact details. We will not
+        use your details to send you spam mail.
       </p>
       <form>
         <TextField

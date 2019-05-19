@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Attach from './attach.png';
 import {
   TextField,
@@ -22,6 +22,10 @@ const Post = ({
 }) => {
   return (
     <FormControl>
+      <p>
+        What would you like to title your contribution to the archive (under 10
+        words)?
+      </p>
       <TextField
         id="title"
         label="Title"
@@ -33,44 +37,58 @@ const Post = ({
         onChange={textChange('title')}
       />
       {radio === 'imagePost' || radio === 'both' ? (
-        <TextField
-          id="imageCap"
-          label="Image Caption"
-          name="imageCap"
-          value={imageCap}
-          placeholder="Enter image caption..."
-          multiline
-          rows="2"
-          className={classes.textField}
-          margin="normal"
-          onChange={textChange('imageCap')}
-        />
+        <Fragment>
+          <p>Please enter a caption for this image (under 100 words):</p>
+          <TextField
+            id="imageCap"
+            label="Image Caption"
+            name="imageCap"
+            value={imageCap}
+            placeholder="Enter image caption..."
+            multiline
+            rows="2"
+            className={classes.textField}
+            margin="normal"
+            onChange={textChange('imageCap')}
+          />
+        </Fragment>
       ) : null}
       {radio === 'imagePost' || radio === 'both' ? (
-        <label htmlFor="inputImg">
-          <input
-            id="inputImg"
-            label="upload file"
-            type="file"
-            accept="image/*"
-            hidden
-          />
-          <AttachImg src={Attach} alt="attach" />
-        </label>
+        <Fragment>
+          <p>Please upload your image:</p>
+          <label htmlFor="inputImg">
+            <input
+              id="inputImg"
+              label="upload file"
+              type="file"
+              accept="image/*"
+              hidden
+            />
+            <AttachImg src={Attach} alt="attach" />
+          </label>
+        </Fragment>
       ) : null}
       {radio === 'textPost' || radio === 'both' ? (
-        <TextField
-          id="details"
-          label="Details"
-          name="details"
-          value={details}
-          placeholder="Enter your story's details"
-          multiline
-          rows="4"
-          className={classes.textField}
-          margin="normal"
-          onChange={textChange('details')}
-        />
+        <Fragment>
+          <p>
+            Please enter your story relating to the Women's Liberation Movement
+            below. We encourage detailed memories but request that if you have a
+            story that is longer than 1000 words, you email it directly to us at
+            fakeemail@howl.co.uk
+          </p>
+          <TextField
+            id="details"
+            label="Details"
+            name="details"
+            value={details}
+            placeholder="Enter your story's details"
+            multiline
+            rows="4"
+            className={classes.textField}
+            margin="normal"
+            onChange={textChange('details')}
+          />
+        </Fragment>
       ) : null}
       {radio === 'imagePost' || radio === 'both' ? (
         <FormControlLabel

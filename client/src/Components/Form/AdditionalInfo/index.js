@@ -28,6 +28,11 @@ const AdditionalInfo = ({
 }) => {
   return (
     <Fragment>
+      <p>
+        Tell us about yourself. What is your connection to the Women&#39;s
+        Liberation Movement? Please do not share any private information here
+        such as your phone number or address.
+      </p>
       <TextField
         id="standard-multiline-static"
         label="Connection to Women’s Liberation Movement"
@@ -40,6 +45,34 @@ const AdditionalInfo = ({
         margin="normal"
         onChange={textChange('wlmConnection')}
       />
+      <p>
+        Please select one major category under which your contribution falls
+        under. We understand that there might be more than one fits, please
+        select one and you will be given a chance to select some subcategories
+        later.
+      </p>
+      <FormControl className={classes.formControl}>
+        <InputLabel htmlFor="category">Category</InputLabel>
+        <Select
+          aria-label="category"
+          value={category}
+          onChange={categoryChange}
+          inputProps={{
+            name: 'category',
+            id: 'category',
+          }}
+        >
+          {arrCategory.map(cat => (
+            <MenuItem value={cat} key={cat}>
+              {cat}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+      <p>
+        Please select one or more &#39;tags&#39; for your contribution. A tag can be
+        thought of as a related theme or subcategory.{' '}
+      </p>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
         <Select
@@ -65,23 +98,7 @@ const AdditionalInfo = ({
           ))}
         </Select>
       </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="category">Category</InputLabel>
-        <Select
-          aria-label="category"
-          value={category}
-          onChange={categoryChange}
-          inputProps={{
-            name: 'category',
-            id: 'category',
-          }}
-        >
-          {arrCategory.map(cat => (
-            <MenuItem value={cat} key={cat}>
-              {cat}
-            </MenuItem>
-          ))}
-        </Select>
+      <FormControl>
         <FormControlLabel
           control={
             <Checkbox
