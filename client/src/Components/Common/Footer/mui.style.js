@@ -14,22 +14,22 @@ export const styles = theme => ({
     },
   },
   formControl: {
-    width: '80%',
+    width: '100%',
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginTop: '2.5%',
-    marginBottom: '1%',
-    height: '80%',
+    flexWrap: 'nowrap',
+    justifyContent: 'space-evenly',
+    marginTop: '4%',
   },
 
   multipleSelectFormControl: {
-    width: '42%',
-    marginTop: '2.5%',
-    marginBottom: '2.5%',
+    width: '95%',
+    margin: '0 2.5% 0',
     borderRadius: '4px',
     backgroundColor: 'white',
+    padding: '4px',
   },
+
+  tagsSelect: {},
   chips: {
     width: '100%',
     marginTop: '2.5%',
@@ -41,13 +41,13 @@ export const styles = theme => ({
     marginBottom: '5%',
   },
   multipleInputSelectLabel: {
-    marginTop: '-2%',
-    marginLeft: '5%',
+    width: '95%',
+    margin: '0px',
     fontWeight: 'bold',
     color: 'black',
   },
   select: {
-    width: '40%',
+    width: '30%',
     marginTop: '2.5%',
     marginBottom: '2.5%',
   },

@@ -25,9 +25,8 @@ export const StyledTitle = styled.h2`
 
 export const FilterDiv = styled.section`
   width: 40%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 `;
 
 export const SearchDiv = styled.section`
