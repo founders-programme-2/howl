@@ -87,34 +87,6 @@ class Footer extends Component {
                 {renderSelectItems(categories)}
               </Select>
 
-              <FormControl className={classes.multipleSelectFormControl}>
-                <InputLabel htmlFor="selectMultipleCheckbox" className={classes.MultipleSelectInputLabel} >Tags</InputLabel>
-                <Select
-                  multiple
-                  value={tags}
-                  input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
-                  renderValue={selected => (
-                    <div className={classes.chips}>
-                      {selected.map(value => (
-                        <Chip
-                          key={value}
-                          label={value}
-                          className={classes.chip}
-                        />
-                      ))}
-                    </div>
-                  )}
-                  MenuProps={MenuProps}
-                >
-                  {tagsArr.map(tag => (
-                    <MenuItem key={tag} value={tag}>
-                      <Checkbox checked={tags.indexOf(tag) > -1} />
-                      <ListItemText primary={tag} />
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-
               <Select
                 className={classes.select}
                 value="Location"
@@ -146,6 +118,42 @@ class Footer extends Component {
                   <BoldText>Year</BoldText>
                 </MenuItem>
                 {renderSelectItems(yearsGenerator())}
+              </Select>
+            </FormControl>
+            <FormControl
+              variant="filled"
+              className={classes.multipleSelectFormControl}
+            >
+              <InputLabel
+                htmlFor="selectMultipleCheckbox"
+                className={classes.MultipleSelectInputLabel}
+              >
+                Tags
+              </InputLabel>
+              <Select
+                className={classes.tagsSelect}
+                multiple
+                value={tags}
+                input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
+                renderValue={selected => (
+                  <div className={classes.chips}>
+                    {selected.map(value => (
+                      <Chip
+                        key={value}
+                        label={value}
+                        className={classes.chip}
+                      />
+                    ))}
+                  </div>
+                )}
+                MenuProps={MenuProps}
+              >
+                {tagsArr.map(tag => (
+                  <MenuItem key={tag} value={tag}>
+                    <Checkbox checked={tags.indexOf(tag) > -1} />
+                    <ListItemText primary={tag} />
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </FilterDiv>
