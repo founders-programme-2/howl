@@ -30,8 +30,8 @@ const Details = ({
         hugely important to us at HOWL. We value everyone&#39;s input and thank
         you in advance for sharing with us. We will now go through and ask you a
         series of questions about the story or image that you&#39;d like to
-        contribute. Don&#39;t worry if you can&#39;t remember something exactly.
-        Answer to the best of your ability and put any comments in the
+        contribute. Don&#39;t worry if you can&#39;t remember something
+        perfectly. Answer to the best of your ability and put any comments in
         &#39;Additional comments&#39; section at the end of the form.
       </p>
       <p>Where did this event occur?</p>
