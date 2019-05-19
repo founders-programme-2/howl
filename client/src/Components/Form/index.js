@@ -4,6 +4,8 @@ import ContactInfo from './ContactInfo';
 import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
+import { MuiThemeProvider } from '../muIndex';
+import FormTheme from './Form.style';
 
 class Form extends Component {
   state = {
@@ -15,7 +17,7 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: '',
+    selectedDate: 'January 1960',
     title: '',
     details: '',
     imageCap: '',
@@ -83,48 +85,50 @@ class Form extends Component {
       wlmConnection,
     } = this.state;
     return (
-      <main>
-        <header>
-          <h1>Add to HOWL</h1>
-        </header>
-        <form>
-          <ContactInfo
-            name={name}
-            email={email}
-            phone={phone}
-            textChange={this.textChange}
-          />
-          <Details
-            radio={radio}
-            radioChange={this.radioChange}
-            location={location}
-            selectedDate={selectedDate}
-            textChange={this.textChange}
-            handleDateChange={this.handleDateChange}
-            dropdownChange={this.dropdownChange}
-          />
-          <Post
-            title={title}
-            details={details}
-            imageCap={imageCap}
-            imgPermission={imgPermission}
-            checkboxChange={this.checkboxChange}
-            textChange={this.textChange}
-            handleUploadFile={this.handleUploadFile}
-            radio={radio}
-          />
-          <AdditionalInfo
-            tags={tags}
-            category={category}
-            infoTrue={infoTrue}
-            tagsChange={this.tagsChange}
-            dropdownChange={this.dropdownChange}
-            checkboxChange={this.checkboxChange}
-            wlmConnection={wlmConnection}
-            textChange={this.textChange}
-          />
-        </form>
-      </main>
+      <MuiThemeProvider theme={FormTheme}>
+        <main>
+          <header>
+            <h1>Add to HOWL</h1>
+          </header>
+          <form>
+            <ContactInfo
+              name={name}
+              email={email}
+              phone={phone}
+              textChange={this.textChange}
+            />
+            <Details
+              radio={radio}
+              radioChange={this.radioChange}
+              location={location}
+              selectedDate={selectedDate}
+              textChange={this.textChange}
+              handleDateChange={this.handleDateChange}
+              dropdownChange={this.dropdownChange}
+            />
+            <Post
+              title={title}
+              details={details}
+              imageCap={imageCap}
+              imgPermission={imgPermission}
+              checkboxChange={this.checkboxChange}
+              textChange={this.textChange}
+              handleUploadFile={this.handleUploadFile}
+              radio={radio}
+            />
+            <AdditionalInfo
+              tags={tags}
+              category={category}
+              infoTrue={infoTrue}
+              tagsChange={this.tagsChange}
+              dropdownChange={this.dropdownChange}
+              checkboxChange={this.checkboxChange}
+              wlmConnection={wlmConnection}
+              textChange={this.textChange}
+            />
+          </form>
+        </main>
+      </MuiThemeProvider>
     );
   }
 }
