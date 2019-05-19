@@ -92,7 +92,7 @@ class Footer extends Component {
                 <Select
                   multiple
                   value={tags}
-                  input={<Input id="selectMultipleCheckbox" />}
+                  input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                   renderValue={selected => (
                     <div className={classes.chips}>
                       {selected.map(value => (
