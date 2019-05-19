@@ -175,7 +175,6 @@ class Footer extends Component {
             </FormControl>
           </SearchDiv>
         </FooterDiv>
-        <Form />
       </Fragment>
     );
   }
