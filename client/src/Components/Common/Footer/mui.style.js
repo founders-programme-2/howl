@@ -22,8 +22,8 @@ export const styles = theme => ({
   },
 
   multipleSelectFormControl: {
-    width: '95%',
-    margin: '0 2.5% 0',
+    width: '95.5%',
+    margin: '2.5%',
     borderRadius: '4px',
     backgroundColor: 'white',
     padding: '4px',
@@ -49,7 +49,6 @@ export const styles = theme => ({
   select: {
     width: '30%',
     marginTop: '2.5%',
-    marginBottom: '2.5%',
   },
   searchFormControl: {
     width: '100%',
