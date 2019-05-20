@@ -129,7 +129,7 @@ const Post = ({
       />
     ) : null;
   return (
-    <FormControl>
+    <FormControl className={classes.formControl}>
       <p>
         What would you like to title your contribution to the archive (under 10
         words)?

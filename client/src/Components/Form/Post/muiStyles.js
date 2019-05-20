@@ -25,6 +25,9 @@ const styles = () => ({
     display: 'block',
     paddingLeft: '2%',
   },
+  formControl: {
+    width: '100%',
+  },
 });
 
 export default styles;
