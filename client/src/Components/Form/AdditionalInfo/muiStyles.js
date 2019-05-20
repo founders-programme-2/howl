@@ -1,4 +1,4 @@
-export const styles = theme => ({
+export const styles = () => ({
   formControl: {
     display: 'block',
     marginLeft: '5%',
@@ -40,8 +40,8 @@ export const styles = theme => ({
     overflowY: 'auto',
   },
   chip: {
-    background: 'rgba(192, 39, 0, 0.7)',
-    margin: '3px',
+    background: 'var(--highlight-color)',
+    margin: '0.5%',
     color: 'white',
     fontWeight: 'bold',
     fontSize: 14,
