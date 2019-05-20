@@ -1,7 +1,19 @@
-import { InputBase, withStyles } from '../../muIndex';
+import { InputBase, withStyles, createMuiTheme } from '../../muIndex';
+
+export const footerTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#F6C25B',
+    },
+    secondary: {
+      main: '#F6C25B',
+    },
+  },
+});
 
 export const styles = theme => ({
   howToSearchButton: {
+    textTransform: 'uppercase',
     backgroundColor: 'var(--main-btn-color)',
     width: '50%',
     margin: `5% 25% 5% 25%`,
@@ -18,7 +30,6 @@ export const styles = theme => ({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     justifyContent: 'space-evenly',
-    marginTop: '4%',
   },
 
   multipleSelectFormControl: {
@@ -28,8 +39,6 @@ export const styles = theme => ({
     backgroundColor: 'white',
     padding: '4px',
   },
-
-  tagsSelect: {},
   chips: {
     width: '100%',
     marginTop: '2.5%',
@@ -40,11 +49,13 @@ export const styles = theme => ({
     marginTop: '2.5%',
     marginBottom: '5%',
   },
-  multipleInputSelectLabel: {
+  MultipleSelectInputLabel: {
     width: '95%',
     margin: '0px',
-    fontWeight: 'bold',
     color: 'black',
+    fontWeight: '600',
+    fontFamily: 'Raleway, sans-serif',
+    fontSize: 16,
   },
   select: {
     width: '30%',
@@ -52,17 +63,16 @@ export const styles = theme => ({
   },
   searchFormControl: {
     width: '100%',
-    height: '60%',
-    margin: '8% auto 5% auto',
+    height: '50%',
+    margin: '0px auto ',
     display: 'flex',
     justifyContent: 'center',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
   },
   searchTextField: {
+    margin: 'auto',
     backgroundColor: theme.palette.common.white,
     borderRadius: '4px',
-    fontWeight: '700',
+    fontWeight: 'bold',
     width: '80%',
     height: '20%',
   },
@@ -71,7 +81,7 @@ export const styles = theme => ({
   },
 
   searchButton: {
-    width: '45%',
+    width: '60%',
     backgroundColor: 'var(--main-btn-color)',
     borderRadius: '20px',
     fontWeight: 'bold',

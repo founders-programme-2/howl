@@ -31,7 +31,16 @@ export const FilterDiv = styled.section`
 
 export const SearchDiv = styled.section`
   width: 30%;
-  height: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+`;
+
+export const ButtonsContainer = styled.section`
+  width: 80%;
+  margin: 1% auto 0px;
   display: flex;
   justify-content: center;
 `;
