@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Footer from '../Common/Footer';
 
 const Story = () => {
   return (
-    <main>
-      <h1>Hello Story page!</h1>
-    </main>
+    <Fragment>
+      <main>
+        <h1>Hello Story page!</h1>
+      </main>
+      <Footer />
+    </Fragment>
   );
 };
 

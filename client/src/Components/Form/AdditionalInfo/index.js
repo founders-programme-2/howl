@@ -13,7 +13,7 @@ import {
   TextField,
 } from '../../muIndex';
 import { styles, MenuProps } from './muiStyles';
-import { arrTags, arrCategory } from '../data.json';
+import { tags as arrTags, categories as arrCategory } from '../../data.json';
 
 const AdditionalInfo = ({
   classes,

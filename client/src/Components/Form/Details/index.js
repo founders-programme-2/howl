@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import DateFun from './DatePicker';
-import { locations } from '../data.json';
+import { locations } from '../../data.json';
 
 import {
   withStyles,

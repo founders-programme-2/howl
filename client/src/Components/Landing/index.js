@@ -12,6 +12,7 @@ import {
   SaHidden,
 } from './Landing.style';
 import landingImage from '../../assets/landing_page.jpg';
+import Footer from '../Common/Footer';
 
 const Landing = () => {
   return (
@@ -60,7 +61,7 @@ const Landing = () => {
         </SsectionNav>
       </Smain>
       <SaHidden name="bottomLink" aria-label="Search bar">
-        Page Bottom
+        <Footer />
       </SaHidden>
     </Fragment>
   );
