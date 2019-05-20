@@ -4,10 +4,12 @@ const Submit = styled.button`
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   font-size: 1.2rem;
-
+  background: var(--highlight-color);
+  color: white;
   &:hover {
     cursor: pointer;
     background-color: var(--main-bg-color);
+    color: black;
     transform: scale(1.1);
   }
 `;
@@ -23,6 +25,11 @@ const GoBack = styled.button`
   }
 `;
 
-const ButtonsContainer = styled.div``;
+const ButtonsContainer = styled.div`
+  margin: 2%;
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 export { Submit, GoBack, ButtonsContainer };
