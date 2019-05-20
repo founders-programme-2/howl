@@ -1,4 +1,8 @@
-import { withStyles } from '@material-ui/core/styles';
+import {
+  withStyles,
+  MuiThemeProvider,
+  createMuiTheme,
+} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormGroup from '@material-ui/core/FormGroup';
 import Radio from '@material-ui/core/Radio';
@@ -34,4 +38,6 @@ export {
   Select,
   Checkbox,
   Chip,
+  MuiThemeProvider,
+  createMuiTheme,
 };
