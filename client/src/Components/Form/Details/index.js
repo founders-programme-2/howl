@@ -40,15 +40,15 @@ const Details = ({
       <p>Where did this event occur?</p>
 
       <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="location">Location</InputLabel>
+        <InputLabel htmlFor="location" className={classes.label}>
+          Location
+        </InputLabel>
         <Select
           aria-label="location"
           value={location}
           onChange={dropdownChange}
-          inputProps={{
-            name: 'location',
-            id: 'location',
-          }}
+          disableUnderline
+          className={classes.selectLocation}
         >
           {locations.sort().map(loc => (
             <MenuItem value={loc} key={loc}>
@@ -63,7 +63,7 @@ const Details = ({
         handleDateChange={handleDateChange}
       />
       <p>What kind of contribution would you like to make?</p>
-      <FormControl className={classes.formControl}>
+      <FormControl className={classes.formControlRadio}>
         <FormLabel component="legend">I would like to share:</FormLabel>
 
         <RadioGroup
