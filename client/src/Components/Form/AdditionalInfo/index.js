@@ -25,6 +25,7 @@ const AdditionalInfo = ({
   checkboxChange,
   textChange,
   wlmConnection,
+  additionalComments,
 }) => {
   return (
     <Fragment>
@@ -117,16 +118,16 @@ const AdditionalInfo = ({
       />
       <p>Anything else you would like to tell us?</p>
       <TextField
-        id="notes"
+        id="additionalComments"
         label="Additional comments?"
-        name="notes"
-        value={wlmConnection}
+        name="additionalComments"
+        value={additionalComments}
         multiline
         rows="4"
         placeholder="Talk to us!"
         className={classes.textField}
         margin="normal"
-        onChange={textChange('notes')}
+        onChange={textChange('additionalComments')}
         InputProps={{
           disableUnderline: true,
         }}
