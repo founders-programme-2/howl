@@ -44,6 +44,10 @@ const Details = ({
           Location
         </InputLabel>
         <Select
+          inputProps={{
+            name: 'location',
+            id: 'location',
+          }}
           aria-label="location"
           value={location}
           onChange={dropdownChange}
