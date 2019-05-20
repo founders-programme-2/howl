@@ -1,6 +1,9 @@
 import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
-import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import {
+  KeyboardDatePicker,
+  MuiPickersUtilsProvider,
+} from '@material-ui/pickers';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '../../../muIndex';
 import style from './muiStyles';
@@ -9,7 +12,8 @@ const DateFun = ({ selectedDate, handleDateChange, classes }) => {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid className={classes.grid}>
-        <DatePicker
+        <KeyboardDatePicker
+          inputVariant="outlined"
           variant="dialog"
           openTo="year"
           views={['year', 'month']}
@@ -21,6 +25,10 @@ const DateFun = ({ selectedDate, handleDateChange, classes }) => {
             classes: {
               root: classes.helperText,
             },
+          }}
+          allowKeyboardControl
+          InputLabelProps={{
+            shrink: true,
           }}
         />
       </Grid>
