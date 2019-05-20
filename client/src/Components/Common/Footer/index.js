@@ -22,7 +22,6 @@ import {
 } from './Footer.style';
 import { tags as tagsArr, categories, locations } from '../../data';
 import { styles, BootstrapInput, MenuProps } from './mui.style';
-import Form from '../../Form';
 
 const renderSelectItems = items => {
   return items.map(item => (
@@ -32,10 +31,10 @@ const renderSelectItems = items => {
   ));
 };
 
-const renderMultiSelectItems = items => {
+const renderMultiSelectItems = (items, selectedItems) => {
   return items.map(item => (
     <MenuItem key={item} value={item}>
-      <Checkbox checked={items.indexOf(item) > -1} />
+      <Checkbox checked={selectedItems.indexOf(item) > -1} />
       <ListItemText primary={item} />
     </MenuItem>
   ));
@@ -148,12 +147,7 @@ class Footer extends Component {
                 )}
                 MenuProps={MenuProps}
               >
-                {tagsArr.map(tag => (
-                  <MenuItem key={tag} value={tag}>
-                    <Checkbox checked={tags.indexOf(tag) > -1} />
-                    <ListItemText primary={tag} />
-                  </MenuItem>
-                ))}
+                {renderMultiSelectItems(tagsArr, tags)}
               </Select>
             </FormControl>
           </FilterDiv>
