@@ -22,7 +22,6 @@ const Timeline = () => {
           Prefer a simpler approach? Take a look at the{' '}
           <Link to={ARCHIVE_URL}>archive</Link> for a text-based experience.
         </p>
-        <Footer />
       </main>
       <Footer />
     </Fragment>
