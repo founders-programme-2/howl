@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Footer from '../Common/Footer';
 
 const Results = () => {
-  return <h1>Hello Results page!</h1>;
+  return (
+    <Fragment>
+      <h1>Hello Results page!</h1>
+      <Footer />
+    </Fragment>
+  );
 };
 
 export default Results;
