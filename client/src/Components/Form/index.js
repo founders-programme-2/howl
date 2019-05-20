@@ -4,6 +4,7 @@ import ContactInfo from './ContactInfo';
 import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
+import Buttons from './Buttons';
 
 class Form extends Component {
   state = {
@@ -16,10 +17,13 @@ class Form extends Component {
     phone: '',
     location: '',
     selectedDate: '',
+    year: '',
+    month: '',
     title: '',
     details: '',
     imageCap: '',
     imgPermission: false,
+    imgLink: '',
     wlmConnection: '',
   };
 
@@ -63,6 +67,15 @@ class Form extends Component {
     axios
       .post('/upload', img)
       .then(({ data }) => this.setState({ imgLink: data.image }));
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const submittedData = { ...this.state };
+    axios.post('/posts/create', submittedData).then(res => {
+      const { history } = this.props;
+      history.push('/story');
+    });
   };
 
   render() {
@@ -119,6 +132,7 @@ class Form extends Component {
             wlmConnection={wlmConnection}
             textChange={this.textChange}
           />
+          <Buttons handleSubmit={this.handleSubmit} />
         </form>
       </main>
     );
