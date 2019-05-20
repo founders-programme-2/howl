@@ -1,15 +1,18 @@
 import React, { Fragment } from 'react';
 import DateFun from './DatePicker';
+import { locations } from '../../data.json';
 
 import {
   withStyles,
-  TextField,
   Radio,
   FormControlLabel,
   FormControl,
   FormLabel,
   FormGroup,
   RadioGroup,
+  InputLabel,
+  Select,
+  MenuItem,
 } from '../../muIndex';
 import styles from './muiStyles';
 
@@ -18,33 +21,53 @@ const Details = ({
   radio,
   radioChange,
   location,
-  textChange,
   selectedDate,
   handleDateChange,
+  dropdownChange,
 }) => {
   return (
     <Fragment>
       <h2>Your Contribution</h2>
       <p>
-        Collecting personal stories, pictures and artifcats from real women is
-        hugely important to us at HOWL. We value everyone’s input and thank you
-        in advance for sharing with us.
+        Collecting personal stories, pictures and artifacts from real women is
+        hugely important to us at HOWL. We value everyone&#39;s input and thank
+        you in advance for sharing with us. We will now go through and ask you a
+        series of questions about the story or image that you&#39;d like to
+        contribute. Don&#39;t worry if you can&#39;t remember something
+        perfectly. Answer to the best of your ability and put any comments in
+        &#39;Additional comments&#39; section at the end of the form.
       </p>
-      <TextField
-        id="location"
-        label="Location"
-        name="location"
-        value={location}
-        placeholder="Where did this happen?"
-        className={classes.textField}
-        margin="normal"
-        onChange={textChange('location')}
-      />
+      <p>Where did this event occur?</p>
+
+      <FormControl className={classes.formControl}>
+        <InputLabel htmlFor="location" className={classes.label}>
+          Location
+        </InputLabel>
+        <Select
+          inputProps={{
+            name: 'location',
+            id: 'location',
+          }}
+          aria-label="location"
+          value={location}
+          onChange={dropdownChange}
+          disableUnderline
+          className={classes.selectLocation}
+        >
+          {locations.sort().map(loc => (
+            <MenuItem value={loc} key={loc}>
+              {loc}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+      <p>Approximately when did this event occur?</p>
       <DateFun
         selectedDate={selectedDate}
         handleDateChange={handleDateChange}
       />
-      <FormControl className={classes.formControl}>
+      <p>What kind of contribution would you like to make?</p>
+      <FormControl className={classes.formControlRadio}>
         <FormLabel component="legend">I would like to share:</FormLabel>
 
         <RadioGroup

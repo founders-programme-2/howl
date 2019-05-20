@@ -4,6 +4,8 @@ import ContactInfo from './ContactInfo';
 import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
+import { MuiThemeProvider } from '../muIndex';
+import FormTheme from './Form.style';
 import Buttons from './Buttons';
 
 class Form extends Component {
@@ -16,7 +18,7 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: '',
+    selectedDate: new Date(),
     year: '',
     month: '',
     title: '',
@@ -25,6 +27,7 @@ class Form extends Component {
     imgPermission: false,
     imgLink: '',
     wlmConnection: '',
+    additionalComments: '',
     message: '',
     uploadFlag: false,
     imageFlag: true,
@@ -38,7 +41,7 @@ class Form extends Component {
     this.setState({ tags: event.target.value });
   };
 
-  categoryChange = event => {
+  dropdownChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
@@ -105,6 +108,15 @@ class Form extends Component {
     });
   };
 
+  handleSubmit = event => {
+    event.preventDefault();
+    const submittedData = { ...this.state };
+    axios.post('/posts/create', submittedData).then(() => {
+      const { history } = this.props;
+      history.push('/story');
+    });
+  };
+
   render() {
     const {
       radio,
@@ -121,55 +133,63 @@ class Form extends Component {
       imageCap,
       imgPermission,
       wlmConnection,
+      additionalComments,
       message,
       imgLink,
       uploadFlag,
       imageFlag,
     } = this.state;
     return (
-      <main>
-        <ContactInfo
-          name={name}
-          email={email}
-          phone={phone}
-          textChange={this.textChange}
-        />
-        <form>
-          <Details
-            radio={radio}
-            radioChange={this.radioChange}
-            location={location}
-            selectedDate={selectedDate}
-            textChange={this.textChange}
-            handleDateChange={this.handleDateChange}
-          />
-          <Post
-            title={title}
-            details={details}
-            imageCap={imageCap}
-            imgPermission={imgPermission}
-            checkboxChange={this.checkboxChange}
-            textChange={this.textChange}
-            handleUploadFile={this.handleUploadFile}
-            radio={radio}
-            imgLink={imgLink}
-            message={message}
-            uploadFlag={uploadFlag}
-            imageFlag={imageFlag}
-          />
-          <AdditionalInfo
-            tags={tags}
-            category={category}
-            infoTrue={infoTrue}
-            tagsChange={this.tagsChange}
-            categoryChange={this.categoryChange}
-            checkboxChange={this.checkboxChange}
-            wlmConnection={wlmConnection}
-            textChange={this.textChange}
-          />
-          <Buttons handleSubmit={this.handleSubmit} />
-        </form>
-      </main>
+      <MuiThemeProvider theme={FormTheme}>
+        <main>
+          <header>
+            <h1>Add to HOWL</h1>
+          </header>
+          <form>
+            <ContactInfo
+              name={name}
+              email={email}
+              phone={phone}
+              textChange={this.textChange}
+            />
+            <Details
+              radio={radio}
+              radioChange={this.radioChange}
+              location={location}
+              selectedDate={selectedDate}
+              textChange={this.textChange}
+              handleDateChange={this.handleDateChange}
+              dropdownChange={this.dropdownChange}
+            />
+            <Post
+              title={title}
+              details={details}
+              imageCap={imageCap}
+              imgPermission={imgPermission}
+              checkboxChange={this.checkboxChange}
+              textChange={this.textChange}
+              handleUploadFile={this.handleUploadFile}
+              radio={radio}
+              imgLink={imgLink}
+              message={message}
+              uploadFlag={uploadFlag}
+              imageFlag={imageFlag}
+            />
+            <AdditionalInfo
+              tags={tags}
+              category={category}
+              infoTrue={infoTrue}
+              tagsChange={this.tagsChange}
+              dropdownChange={this.dropdownChange}
+              checkboxChange={this.checkboxChange}
+              wlmConnection={wlmConnection}
+              additionalComments={additionalComments}
+              textChange={this.textChange}
+            />
+            <Buttons handleSubmit={this.handleSubmit} />
+          </form>
+        </main>
+      </MuiThemeProvider>
     );
   }
 }
