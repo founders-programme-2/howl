@@ -60,7 +60,9 @@ const AdditionalInfo = ({
         Please select one or more &#39;tags&#39; for your contribution. A tag
         can be thought of as a related theme or subcategory.{' '}
       </p>
-      <FormControl className={[classes.formControl, classes.formControlTags]}>
+      <FormControl
+        className={`${classes.formControl} ${classes.formControlTags}`}
+      >
         <InputLabel htmlFor="selectMultipleCheckbox" className={classes.label}>
           Tags
         </InputLabel>
@@ -103,7 +105,7 @@ const AdditionalInfo = ({
         rows="4"
         fullWidth
         placeholder="examples: activist, daughter of an activist, et cetera)"
-        className={[classes.textField, classes.textFieldWlm]}
+        className={`${classes.textField} ${classes.textFieldWlm}`}
         margin="normal"
         onChange={textChange('wlmConnection')}
         InputProps={{

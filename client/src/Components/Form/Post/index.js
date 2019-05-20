@@ -115,7 +115,7 @@ const Post = ({
             multiline
             fullWidth
             rows="4"
-            className={[classes.textField, classes.textFieldDetails]}
+            className={`${classes.textField} ${classes.textFieldDetails}`}
             margin="normal"
             onChange={textChange('details')}
             InputProps={{
