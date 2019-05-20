@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import {
   Button,
   Select,
@@ -11,6 +11,7 @@ import {
   Chip,
   Checkbox,
   ListItemText,
+  MuiThemeProvider,
 } from '../../muIndex';
 import {
   FooterDiv,
@@ -19,9 +20,10 @@ import {
   FilterDiv,
   SearchDiv,
   BoldText,
+  ButtonsContainer,
 } from './Footer.style';
 import { tags as tagsArr, categories, locations } from '../../data';
-import { styles, BootstrapInput, MenuProps } from './mui.style';
+import { styles, BootstrapInput, MenuProps, footerTheme } from './mui.style';
 
 const renderSelectItems = items => {
   return items.map(item => (
@@ -60,11 +62,11 @@ class Footer extends Component {
     const { classes } = this.props;
     const { tags } = this.state;
     return (
-      <Fragment>
+      <MuiThemeProvider theme={footerTheme}>
         <FooterDiv>
           <TitleDiv>
             <StyledTitle>Search Archive</StyledTitle>
-            <Button className={classes.howToSearchButton}>HOW TO SEARCH</Button>
+            <Button className={classes.howToSearchButton}>How to search</Button>
           </TitleDiv>
 
           <FilterDiv>
@@ -132,6 +134,7 @@ class Footer extends Component {
               <Select
                 className={classes.tagsSelect}
                 multiple
+                disableUnderline
                 value={tags}
                 input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                 renderValue={selected => (
@@ -156,20 +159,25 @@ class Footer extends Component {
             <FormControl className={classes.searchFormControl}>
               <TextField
                 id="outlined-search"
-                label="Search ..."
+                label="Search..."
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
                 }}
                 type="search"
                 className={classes.searchTextField}
                 variant="filled"
+                InputProps={{
+                  disableUnderline: true,
+                }}
               />
+            </FormControl>
+            <ButtonsContainer>
               <Button className={classes.searchButton}>Search</Button>
               <Button className={classes.resetButton}>Reset</Button>
-            </FormControl>
+            </ButtonsContainer>
           </SearchDiv>
         </FooterDiv>
-      </Fragment>
+      </MuiThemeProvider>
     );
   }
 }
