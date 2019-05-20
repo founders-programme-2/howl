@@ -76,6 +76,7 @@ const Post = ({
               type="file"
               accept="image/*"
               hidden
+              onChange={handleUploadFile}
             />
             <AttachImg
               src={Attach}
