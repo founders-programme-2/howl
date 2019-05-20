@@ -9,9 +9,9 @@ const Buttons = ({ handleSubmit }) => {
   return (
     <ButtonsContainer>
       <Link to={ADD_URL}>
-        <GoBack type="button">Go Back</GoBack>
+        <GoBack type="button" value="Go Back" />
       </Link>
-      <Submit onClick={handleSubmit}>Submit</Submit>
+      <Submit type="button" value="Submit" onClick={handleSubmit} />
     </ButtonsContainer>
   );
 };
