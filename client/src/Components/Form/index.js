@@ -18,7 +18,7 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: '',
+    selectedDate: new Date(),
     year: '',
     month: '',
     title: '',
