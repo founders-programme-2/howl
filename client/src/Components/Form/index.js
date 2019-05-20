@@ -18,7 +18,7 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: 'January 1960',
+    selectedDate: '',
     year: '',
     month: '',
     title: '',
@@ -27,6 +27,7 @@ class Form extends Component {
     imgPermission: false,
     imgLink: '',
     wlmConnection: '',
+    additionalComments: '',
   };
 
   radioChange = event => {
@@ -74,7 +75,7 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
     const submittedData = { ...this.state };
-    axios.post('/posts/create', submittedData).then(res => {
+    axios.post('/posts/create', submittedData).then(() => {
       const { history } = this.props;
       history.push('/story');
     });
@@ -96,6 +97,7 @@ class Form extends Component {
       imageCap,
       imgPermission,
       wlmConnection,
+      additionalComments,
     } = this.state;
     return (
       <MuiThemeProvider theme={FormTheme}>
@@ -137,6 +139,7 @@ class Form extends Component {
               dropdownChange={this.dropdownChange}
               checkboxChange={this.checkboxChange}
               wlmConnection={wlmConnection}
+              additionalComments={additionalComments}
               textChange={this.textChange}
             />
             <Buttons handleSubmit={this.handleSubmit} />
