@@ -12,6 +12,7 @@ export default createGlobalStyle`
         --secondary-font-color: #FFFFFF;
         --main-btn-color: #F6C25B;
         --highlight-color: #C02700;
+        --secondary-bg-color: #000000;
     }
 
     body {
@@ -84,5 +85,15 @@ export default createGlobalStyle`
         border-radius: 20px;
         padding: 0.8rem;
         margin: 1rem;
+    }
+
+    figcaption {
+        font-family: 'Roboto', sans-serif;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+        margin: 0rem 2rem;
+        text-align: center;
     }
 `;

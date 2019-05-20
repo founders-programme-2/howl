@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const NavBtn = styled.button`
+export const NavBtn = styled.button`
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   font-size: 1.2rem;
@@ -11,4 +11,7 @@ const NavBtn = styled.button`
   }
 `;
 
-export default NavBtn;
+export const BtnRight = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
