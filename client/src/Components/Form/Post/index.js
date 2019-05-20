@@ -36,6 +36,12 @@ const Post = ({
         className={classes.textField}
         margin="normal"
         onChange={textChange('title')}
+        InputProps={{
+          disableUnderline: true,
+        }}
+        InputLabelProps={{
+          className: classes.label,
+        }}
       />
       {radio === 'imagePost' || radio === 'both' ? (
         <Fragment>
@@ -51,6 +57,12 @@ const Post = ({
             className={classes.textField}
             margin="normal"
             onChange={textChange('imageCap')}
+            InputProps={{
+              disableUnderline: true,
+            }}
+            InputLabelProps={{
+              className: classes.label,
+            }}
           />
         </Fragment>
       ) : null}
@@ -65,9 +77,26 @@ const Post = ({
               accept="image/*"
               hidden
             />
-            <AttachImg src={Attach} alt="attach" />
+            <AttachImg
+              src={Attach}
+              alt="attach"
+              className={classes.uploadIcon}
+            />
           </label>
         </Fragment>
+      ) : null}
+      {radio === 'imagePost' || radio === 'both' ? (
+        <FormControlLabel
+          className={classes.formControlLabel}
+          control={
+            <Checkbox
+              checked={imgPermission}
+              onChange={checkboxChange('imgPermission')}
+              value="imgPermission"
+            />
+          }
+          label="I have the rights or permissions to upload this image publicly."
+        />
       ) : null}
       {radio === 'textPost' || radio === 'both' ? (
         <Fragment>
@@ -84,24 +113,19 @@ const Post = ({
             value={details}
             placeholder="Enter your story's details"
             multiline
+            fullWidth
             rows="4"
-            className={classes.textField}
+            className={[classes.textField, classes.textFieldDetails]}
             margin="normal"
             onChange={textChange('details')}
+            InputProps={{
+              disableUnderline: true,
+            }}
+            InputLabelProps={{
+              className: classes.label,
+            }}
           />
         </Fragment>
-      ) : null}
-      {radio === 'imagePost' || radio === 'both' ? (
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={imgPermission}
-              onChange={checkboxChange('imgPermission')}
-              value="imgPermission"
-            />
-          }
-          label="I have the rights or permissions to upload this image publicly."
-        />
       ) : null}
     </FormControl>
   );
