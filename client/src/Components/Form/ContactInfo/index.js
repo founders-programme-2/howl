@@ -22,6 +22,12 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
           className={classes.textField}
           margin="normal"
           onChange={textChange('name')}
+          InputProps={{
+            disableUnderline: true,
+          }}
+          InputLabelProps={{
+            className: classes.label,
+          }}
         />
         <TextField
           id="email"
@@ -32,17 +38,34 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
           className={classes.textField}
           margin="normal"
           onChange={textChange('email')}
+          InputProps={{
+            disableUnderline: true,
+            classes: {
+              input: classes.input,
+            },
+          }}
+          InputLabelProps={{
+            className: classes.label,
+          }}
         />
         <TextField
           id="phoneNum"
           name="phone"
           value={phone}
           label="Phone Number"
-          placeholder="Enter your phone number..."
+          placeholder="Enter your phone number. e.g:(+44 20 7946 0009)"
           className={classes.textField}
-          helperText="e.g:(+44 20 7946 0009)"
           margin="normal"
           onChange={textChange('phone')}
+          InputProps={{
+            disableUnderline: true,
+            classes: {
+              input: classes.input,
+            },
+          }}
+          InputLabelProps={{
+            className: classes.label,
+          }}
         />
       </form>
     </Fragment>
