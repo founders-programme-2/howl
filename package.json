@@ -4,6 +4,7 @@
   "description": "Repository for the Founders Program project \"Howl\". May 2019",
   "main": "server.js",
   "scripts": {
+    "start:dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "nodemon ./src/server.js ",
     "dev:client": "cd ./client && npm start",
     "start": "node ./src/server.js",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "codecov": "^3.4.0",
+    "concurrently": "^4.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",

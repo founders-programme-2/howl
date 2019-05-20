@@ -12,6 +12,7 @@ export default createGlobalStyle`
         --secondary-font-color: #FFFFFF;
         --main-btn-color: #F6C25B;
         --highlight-color: #C02700;
+        --secondary-bg-color: #000000;
     }
 
     body {
