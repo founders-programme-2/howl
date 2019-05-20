@@ -1,8 +1,34 @@
 export const styles = theme => ({
   formControl: {
-    margin: theme.spacing(3),
-    minWidth: 120,
-    maxWidth: 300,
+    display: 'block',
+    marginLeft: '5%',
+    marginRight: '5%',
+    width: '50%',
+    background: 'white',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    borderRadius: 4,
+  },
+  select: {
+    width: '100%',
+    paddingLeft: '2%',
+  },
+  formControlTags: {
+    height: '50%',
+  },
+  textField: {
+    marginLeft: '5%',
+    marginRight: '5%',
+    width: '50%',
+    background: 'white',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    borderRadius: 4,
+    paddingLeft: '2%',
+  },
+  label: {
+    paddingLeft: '2%',
+  },
+  textFieldWlm: {
+    width: '90%',
   },
   chips: {
     display: 'flex',
@@ -14,7 +40,20 @@ export const styles = theme => ({
     overflowY: 'auto',
   },
   chip: {
-    margin: theme.spacing / 4,
+    background: 'rgba(192, 39, 0, 0.7)',
+    margin: '3px',
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  formControlCheckbox: {
+    display: 'block',
+    width: '100%',
+  },
+  formControlLabel: {
+    margin: '2%',
+    paddingLeft: '2%',
+    fontSize: 14,
   },
 });
 
