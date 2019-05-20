@@ -10,6 +10,7 @@
     "start": "node ./src/server.js",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
+    "test": "jest ./tests",
     "coverage": "jest --coverage",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
