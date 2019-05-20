@@ -28,6 +28,9 @@ class Form extends Component {
     imgLink: '',
     wlmConnection: '',
     additionalComments: '',
+    message: '',
+    uploadFlag: false,
+    imageFlag: true,
   };
 
   radioChange = event => {
@@ -67,9 +70,42 @@ class Form extends Component {
   handleUploadFile = event => {
     const img = new FormData();
     img.append('uploadedImg', event.target.files[0]);
-    axios
-      .post('/upload', img)
-      .then(({ data }) => this.setState({ imgLink: data.image }));
+    this.setState({ uploadFlag: true, imageFlag: false }, () => {
+      axios.post('/upload', img).then(({ data }) => {
+        if (data.success) {
+          this.setState({
+            uploadFlag: false,
+            imgLink: data.image,
+            message: 'Image uploaded successfully!',
+          });
+        } else {
+          this.setState({
+            uploadFlag: false,
+            imageFlag: true,
+            imgLink: 'no url was retrieved',
+            message: 'Something went wrong, please try again.',
+          });
+        }
+      });
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const submittedData = { ...this.state };
+    axios.post('/posts/create', submittedData).then(() => {
+      const { history } = this.props;
+      history.push('/story');
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    const submittedData = { ...this.state };
+    axios.post('/posts/create', submittedData).then(res => {
+      const { history } = this.props;
+      history.push('/story');
+    });
   };
 
   handleSubmit = event => {
@@ -98,6 +134,10 @@ class Form extends Component {
       imgPermission,
       wlmConnection,
       additionalComments,
+      message,
+      imgLink,
+      uploadFlag,
+      imageFlag,
     } = this.state;
     return (
       <MuiThemeProvider theme={FormTheme}>
@@ -130,6 +170,10 @@ class Form extends Component {
               textChange={this.textChange}
               handleUploadFile={this.handleUploadFile}
               radio={radio}
+              imgLink={imgLink}
+              message={message}
+              uploadFlag={uploadFlag}
+              imageFlag={imageFlag}
             />
             <AdditionalInfo
               tags={tags}
