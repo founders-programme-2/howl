@@ -1,5 +1,5 @@
 {
-    "arrTags" : [
+    "tags" : [
     "Lesbianism",
     "Sexuality",
     "Working class",
@@ -28,8 +28,8 @@
     "Health",
     "Music",
     "International"
-    ], 
-    "arrCategory": [
+    ],
+    "categories": [
         "Cat1",
         "Cat2",
         "Cat3",
@@ -37,6 +37,20 @@
         "Cat5",
         "Cat6",
         "Cat7"
+    ],
+    "locations": [
+        "North East",
+        "North West",
+        "Yorkshire and the Humber",
+        "East Midlands",
+        "West Midlands",
+        "East of England",
+        "London",
+        "South East",
+        "South West",
+        "Scotland",
+        "Northern Ireland",
+        "Wales",
+        "Ireland"
     ]
-
 }
