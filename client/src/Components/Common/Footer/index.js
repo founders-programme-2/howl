@@ -60,11 +60,18 @@ class Footer extends Component {
       year: null,
       location: null,
       search: null,
+      result: [],
     };
   }
 
-  updateStateValues = (name, value) => {
-    this.setState({ [name]: value });
+  updateResult = ({ tags, category, year, location, search }) => {
+    // Axios should be here, depending on response, change result.
+  };
+
+  updateStateValue = (name, value) => {
+    this.setState({ [name]: value }, () => {
+      this.updateResult(this.state);
+    });
   };
 
   howToSearchHandler = () => {
@@ -94,7 +101,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={category || 'Category'}
                 onChange={event => {
-                  this.updateStateValues('category', event.target.value);
+                  this.updateStateValue('category', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -114,7 +121,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={location || 'Location'}
                 onChange={event => {
-                  this.updateStateValues('location', event.target.value);
+                  this.updateStateValue('location', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -133,7 +140,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={year || 'Year'}
                 onChange={event => {
-                  this.updateStateValues('year', event.target.value);
+                  this.updateStateValue('year', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -164,7 +171,7 @@ class Footer extends Component {
                 disableUnderline
                 value={tags}
                 onChange={event => {
-                  this.updateStateValues('tags', event.target.value);
+                  this.updateStateValue('tags', event.target.value);
                 }}
                 input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                 renderValue={selected => (
@@ -192,7 +199,7 @@ class Footer extends Component {
                 label="Search..."
                 value={search || ''}
                 onChange={event => {
-                  this.updateStateValues('search', event.target.value);
+                  this.updateStateValue('search', event.target.value);
                 }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
