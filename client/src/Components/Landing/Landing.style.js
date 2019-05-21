@@ -7,7 +7,7 @@ const { SML } = responsiveSizes;
 
 export const Sheader = styled.header`
   grid-area: header;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 `;
 
 export const Sp = styled.p`

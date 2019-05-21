@@ -54,7 +54,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Logo = styled.img`
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
