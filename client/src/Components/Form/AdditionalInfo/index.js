@@ -20,34 +20,61 @@ const AdditionalInfo = ({
   tags,
   tagsChange,
   category,
-  categoryChange,
+  dropdownChange,
   infoTrue,
   checkboxChange,
   textChange,
   wlmConnection,
+  additionalComments,
 }) => {
   return (
     <Fragment>
-      <TextField
-        id="standard-multiline-static"
-        label="Connection to Women’s Liberation Movement"
-        name="wlmConnection"
-        value={wlmConnection}
-        multiline
-        rows="4"
-        placeholder="examples: activist, daughter of an activist, et cetera)"
-        className={classes.textField}
-        margin="normal"
-        onChange={textChange('wlmConnection')}
-      />
+      <p>
+        Please select one major category under which your contribution falls
+        under. We understand that there might be more than one fits, please
+        select one and you will be given a chance to select some subcategories
+        later.
+      </p>
       <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="selectMultipleCheckbox">Tags</InputLabel>
+        <InputLabel htmlFor="category" className={classes.label}>
+          Category
+        </InputLabel>
+        <Select
+          aria-label="category"
+          value={category}
+          onChange={dropdownChange}
+          inputProps={{
+            name: 'category',
+            id: 'category',
+          }}
+          disableUnderline
+          className={classes.select}
+        >
+          {arrCategory.sort().map(cat => (
+            <MenuItem value={cat} key={cat}>
+              {cat}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+      <p>
+        Please select one or more &#39;tags&#39; for your contribution. A tag
+        can be thought of as a related theme or subcategory.{' '}
+      </p>
+      <FormControl
+        className={`${classes.formControl} ${classes.formControlTags}`}
+      >
+        <InputLabel htmlFor="selectMultipleCheckbox" className={classes.label}>
+          Tags
+        </InputLabel>
         <Select
           aria-label="tags"
           multiple
           value={tags}
           onChange={tagsChange}
           input={<Input id="selectMultipleCheckbox" />}
+          disableUnderline
+          className={classes.select}
           renderValue={selected => (
             <div className={classes.chips}>
               {selected.map(value => (
@@ -57,7 +84,7 @@ const AdditionalInfo = ({
           )}
           MenuProps={MenuProps}
         >
-          {arrTags.map(tag => (
+          {arrTags.sort().map(tag => (
             <MenuItem key={tag} value={tag}>
               <Checkbox checked={tags.indexOf(tag) > -1} />
               <ListItemText primary={tag} />
@@ -65,24 +92,52 @@ const AdditionalInfo = ({
           ))}
         </Select>
       </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="category">Category</InputLabel>
-        <Select
-          aria-label="category"
-          value={category}
-          onChange={categoryChange}
-          inputProps={{
-            name: 'category',
-            id: 'category',
-          }}
-        >
-          {arrCategory.map(cat => (
-            <MenuItem value={cat} key={cat}>
-              {cat}
-            </MenuItem>
-          ))}
-        </Select>
+      <p>
+        Tell us about yourself. What is your connection to the Women&#39;s
+        Liberation Movement? Please do not share any private information here
+        such as your phone number or address.
+      </p>
+      <TextField
+        id="standard-multiline-static"
+        label="Connection to Women’s Liberation Movement"
+        name="wlmConnection"
+        value={wlmConnection}
+        multiline
+        rows="4"
+        fullWidth
+        placeholder="examples: activist, daughter of an activist, et cetera)"
+        className={`${classes.textField} ${classes.textFieldWlm}`}
+        margin="normal"
+        onChange={textChange('wlmConnection')}
+        InputProps={{
+          disableUnderline: true,
+        }}
+        InputLabelProps={{
+          className: classes.label,
+        }}
+      />
+      <p>Anything else you would like to tell us?</p>
+      <TextField
+        id="additionalComments"
+        label="Additional comments?"
+        name="additionalComments"
+        value={additionalComments}
+        multiline
+        rows="4"
+        placeholder="Talk to us!"
+        className={classes.textField}
+        margin="normal"
+        onChange={textChange('additionalComments')}
+        InputProps={{
+          disableUnderline: true,
+        }}
+        InputLabelProps={{
+          className: classes.label,
+        }}
+      />
+      <FormControl className={classes.formControlCheckbox}>
         <FormControlLabel
+          className={classes.formControlLabel}
           control={
             <Checkbox
               checked={infoTrue}
