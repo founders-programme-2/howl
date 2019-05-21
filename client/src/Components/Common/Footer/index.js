@@ -52,17 +52,14 @@ const yearsGenerator = () => {
 };
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tags: [],
-      category: null,
-      year: null,
-      location: null,
-      search: null,
-      result: [],
-    };
-  }
+  state = {
+    tags: [],
+    category: null,
+    year: null,
+    location: null,
+    search: null,
+    result: [],
+  };
 
   updateResult = ({ tags, category, year, location, search }) => {
     // Axios should be here, depending on response, change result.
@@ -232,11 +229,18 @@ class Footer extends Component {
             <ButtonsContainer>
               <Button
                 className={classes.searchButton}
-                onClick={() => { this.updateResult(this.state)}}
+                onClick={() => {
+                  this.updateResult(this.state);
+                }}
               >
                 Search
               </Button>
-              <Button className={classes.resetButton} onClick={this.resetFields}>Reset</Button>
+              <Button
+                className={classes.resetButton}
+                onClick={this.resetFields}
+              >
+                Reset
+              </Button>
             </ButtonsContainer>
           </SearchDiv>
         </FooterDiv>
