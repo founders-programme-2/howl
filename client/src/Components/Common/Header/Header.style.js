@@ -9,6 +9,10 @@ export const NavSection = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   min-width: 100%;
+
+  @media (max-width: ${SML}) {
+    flex-flow: column nowrap;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -21,6 +25,10 @@ export const NavList = styled.ul`
   @media (max-width: ${LRG}) {
     flex-flow: row wrap;
     justify-content: space-around;
+  }
+
+  @media (max-width: ${SML}) {
+    flex-flow: column nowrap;
   }
 `;
 
