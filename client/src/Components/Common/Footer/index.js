@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import {
   Button,
   Select,
@@ -65,6 +66,11 @@ class Footer extends Component {
     this.setState({ [name]: value });
   };
 
+  howToSearchHandler = () => {
+    const { history } = this.props;
+    if(history) history.push('/help');
+  };
+
   render() {
     const { classes } = this.props;
     const { tags, category, year, location } = this.state;
@@ -73,7 +79,7 @@ class Footer extends Component {
         <FooterDiv>
           <TitleDiv>
             <StyledTitle>Search Archive</StyledTitle>
-            <Button className={classes.howToSearchButton}>How to search</Button>
+            <Button className={classes.howToSearchButton} onClick={this.howToSearchHandler} >How to search</Button>
           </TitleDiv>
 
           <FilterDiv>
@@ -200,4 +206,4 @@ class Footer extends Component {
   }
 }
 
-export default withStyles(styles)(Footer);
+export default withRouter(withStyles(styles)(Footer));
