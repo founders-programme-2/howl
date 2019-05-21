@@ -65,8 +65,8 @@ export const NavBtn = styled.button`
   }
 `;
 
-// Had to wrap button in a div in order for the margin to work. Fragments did not work.
-export const BtnWrapper = styled.div`
+// Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
+export const CntrdWrapper = styled.div`
   margin: auto;
 `;
 
