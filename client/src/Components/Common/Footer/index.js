@@ -69,14 +69,27 @@ class Footer extends Component {
   };
 
   updateStateValue = (name, value) => {
-    this.setState({ [name]: value }, () => {
-      this.updateResult(this.state);
-    });
+    this.setState({ [name]: value });
   };
 
   howToSearchHandler = () => {
     const { history } = this.props;
     if (history) history.push('/help');
+  };
+
+  resetFields = () => {
+    this.setState(
+      {
+        tags: [],
+        category: null,
+        year: null,
+        location: null,
+        search: null,
+      },
+      () => {
+        this.updateResult(this.state);
+      }
+    );
   };
 
   render() {
@@ -213,8 +226,13 @@ class Footer extends Component {
               />
             </FormControl>
             <ButtonsContainer>
-              <Button className={classes.searchButton}>Search</Button>
-              <Button className={classes.resetButton}>Reset</Button>
+              <Button
+                className={classes.searchButton}
+                onClick={() => { this.updateResult(this.state)}}
+              >
+                Search
+              </Button>
+              <Button className={classes.resetButton} onClick={this.resetFields}>Reset</Button>
             </ButtonsContainer>
           </SearchDiv>
         </FooterDiv>
