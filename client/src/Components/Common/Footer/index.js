@@ -59,10 +59,11 @@ class Footer extends Component {
       category: null,
       year: null,
       location: null,
+      search: null,
     };
   }
 
-  onSelectChange = (name, value) => {
+  updateStateValues = (name, value) => {
     this.setState({ [name]: value });
   };
 
@@ -73,7 +74,7 @@ class Footer extends Component {
 
   render() {
     const { classes } = this.props;
-    const { tags, category, year, location } = this.state;
+    const { tags, category, year, location, search, } = this.state;
     return (
       <MuiThemeProvider theme={footerTheme}>
         <FooterDiv>
@@ -88,7 +89,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={category || 'Category'}
                 onChange={event => {
-                  this.onSelectChange('category', event.target.value);
+                  this.updateStateValues('category', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -108,7 +109,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={location || 'Location'}
                 onChange={event => {
-                  this.onSelectChange('location', event.target.value);
+                  this.updateStateValues('location', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -127,7 +128,7 @@ class Footer extends Component {
                 className={classes.select}
                 value={year || 'Year'}
                 onChange={event => {
-                  this.onSelectChange('year', event.target.value);
+                  this.updateStateValues('year', event.target.value);
                 }}
                 input={
                   <BootstrapInput
@@ -158,7 +159,7 @@ class Footer extends Component {
                 disableUnderline
                 value={tags}
                 onChange={event => {
-                  this.onSelectChange('tags', event.target.value);
+                  this.updateStateValues('tags', event.target.value);
                 }}
                 input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                 renderValue={selected => (
@@ -184,6 +185,8 @@ class Footer extends Component {
               <TextField
                 id="outlined-search"
                 label="Search..."
+                value={search || ''}
+                onChange={(event) => {this.updateStateValues('search', event.target.value)}}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
                 }}
