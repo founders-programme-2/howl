@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import responsiveSizes from '../../../constants/responsiveSizes';
 
-const { SML, MDM, LRG } = responsiveSizes;
+const { SML, LRG } = responsiveSizes;
 
 export const NavSection = styled.nav`
   background-color: black;

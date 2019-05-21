@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import responsiveSizes from './constants/responsiveSizes';
 
-const { SML, MDM, LRG } = responsiveSizes;
+const { SML, MDM } = responsiveSizes;
 
 export default createGlobalStyle`
 
@@ -118,6 +118,11 @@ export default createGlobalStyle`
         main {
             max-width: 90%;
         }
+
+        header {
+            margin: 4rem 1rem 1rem;
+        }
+
         h1 {
             font-size: 2.8rem;
         }
