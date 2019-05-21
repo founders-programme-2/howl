@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import responsiveSizes from '../../../constants/responsiveSizes';
+
+const { SML, MDM, LRG } = responsiveSizes;
 
 export const NavSection = styled.nav`
   background-color: black;
@@ -14,6 +17,11 @@ export const NavList = styled.ul`
   flex-flow: row nowrap;
   margin: auto;
   padding: 0;
+
+  @media (max-width: ${LRG}) {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 `;
 
 export const NavLi = styled.li`
