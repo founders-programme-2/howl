@@ -113,6 +113,7 @@ class Footer extends Component {
               <Select
                 className={classes.select}
                 value={category || 'Category'}
+                aria-label="category"
                 onChange={event => {
                   this.updateStateValue('category', event.target.value);
                 }}
@@ -133,6 +134,7 @@ class Footer extends Component {
               <Select
                 className={classes.select}
                 value={location || 'Location'}
+                aria-label="location"
                 onChange={event => {
                   this.updateStateValue('location', event.target.value);
                 }}
@@ -152,6 +154,7 @@ class Footer extends Component {
               <Select
                 className={classes.select}
                 value={year || 'Year'}
+                aria-label="year"
                 onChange={event => {
                   this.updateStateValue('year', event.target.value);
                 }}
@@ -183,6 +186,7 @@ class Footer extends Component {
                 multiple
                 disableUnderline
                 value={tags}
+                aria-label="tags"
                 onChange={event => {
                   this.updateStateValue('tags', event.target.value);
                 }}
