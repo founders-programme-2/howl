@@ -3,6 +3,7 @@ const request = require('supertest');
 const assert = require('assert');
 const faker = require('faker');
 const app = require('../src/app');
+const { locations, tags, categories } = require('../client/src/Components/data');
 
 /* eslint-disable no-undef */
 
@@ -12,16 +13,30 @@ describe('Test create story route', () => {
     First test, to test the error response if it returns what it should return.
     request is the 'supertest' package used to create fake request to test the response.
    */
-  test('Error response', () => request(app)
+
+  test('Success response', () => request(app)
     .post('/posts/create')
     .send({
-      owner: faker.name.firstName, title: faker.lorem.word, body: faker.lorem.paragraphs, date: faker.date.between('1960-01-01', '1980-01-01'),
+      name: `${faker.name.firstName('female')} ${faker.name.lastName}`,
+      email: faker.internet.email,
+      phone: faker.phone.phoneNumber,
+      locations: faker.random.arrayElement(locations),
+      title: faker.lorem.word,
+      year: faker.random.number({ min: 1960, max: 1980 }),
+      month: faker.date.month,
+      details: faker.lorem.paragraphs,
+      imgLink: faker.image.imageUrl,
+      imageCap: faker.name.title,
+      wlmConnection: faker.lorem.words,
+      additionalComments: faker.lorem.words,
+      tags: tags.filter(() => faker.random.boolean),
+      category: faker.random.arrayElement(categories),
     })
     .set('Accept', 'application/json') // To set headers
     .expect('Content-Type', /json/) // Expected response headers, if not matched will return a test error.
-    .expect(200, { success: false, err: 'There\'s been an error in saving the data to Airtable' }));
+    .expect(200, { success: true }));
   /* Prev line: first parameter is the response status expected,
-     and second parameter is the reponse body expected
+     and second parameter is the response body expected (succeeded)
    */
 });
 
