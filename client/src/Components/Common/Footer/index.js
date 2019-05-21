@@ -55,12 +55,19 @@ class Footer extends Component {
     super(props);
     this.state = {
       tags: [],
+      category: null,
+      year: null,
+      location: null,
     };
   }
 
+  onSelectChange = (name, value) => {
+    this.setState({ [name]: value });
+  };
+
   render() {
     const { classes } = this.props;
-    const { tags } = this.state;
+    const { tags, category, year, location } = this.state;
     return (
       <MuiThemeProvider theme={footerTheme}>
         <FooterDiv>
@@ -73,7 +80,10 @@ class Footer extends Component {
             <FormControl className={classes.formControl}>
               <Select
                 className={classes.select}
-                value="Category"
+                value={category || 'Category'}
+                onChange={event => {
+                  this.onSelectChange('category', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="category"
@@ -90,7 +100,10 @@ class Footer extends Component {
 
               <Select
                 className={classes.select}
-                value="Location"
+                value={location || 'Location'}
+                onChange={event => {
+                  this.onSelectChange('location', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="location"
@@ -106,7 +119,10 @@ class Footer extends Component {
               </Select>
               <Select
                 className={classes.select}
-                value="Year"
+                value={year || 'Year'}
+                onChange={event => {
+                  this.onSelectChange('year', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="year"
@@ -132,10 +148,12 @@ class Footer extends Component {
                 Tags
               </InputLabel>
               <Select
-                className={classes.tagsSelect}
                 multiple
                 disableUnderline
                 value={tags}
+                onChange={event => {
+                  this.onSelectChange('tags', event.target.value);
+                }}
                 input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                 renderValue={selected => (
                   <div className={classes.chips}>
