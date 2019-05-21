@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
+import responsiveSizes from './constants/responsiveSizes';
+
+const { SML, MDM, LRG } = responsiveSizes;
+
 export default createGlobalStyle`
 
 // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular, bold)
@@ -13,6 +17,7 @@ export default createGlobalStyle`
         --main-btn-color: #F6C25B;
         --highlight-color: #C02700;
         --secondary-bg-color: #000000;
+        --responsive-large: 910px;
     }
 
     body {
@@ -95,5 +100,26 @@ export default createGlobalStyle`
         font-size: 1rem;
         margin: 0rem 2rem;
         text-align: center;
+    }
+
+    // media query for tablets
+    @media screen and (max-width: ${MDM}) {
+        main {
+            padding: 0;
+            max-width: 85%;
+        }
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    // media query for mobile
+    @media screen and (max-width: ${SML}) {
+        main {
+            max-width: 90%;
+        }
+        h1 {
+            font-size: 2.8rem;
+        }
     }
 `;
