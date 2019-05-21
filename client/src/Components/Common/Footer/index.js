@@ -69,18 +69,23 @@ class Footer extends Component {
 
   howToSearchHandler = () => {
     const { history } = this.props;
-    if(history) history.push('/help');
+    if (history) history.push('/help');
   };
 
   render() {
     const { classes } = this.props;
-    const { tags, category, year, location, search, } = this.state;
+    const { tags, category, year, location, search } = this.state;
     return (
       <MuiThemeProvider theme={footerTheme}>
         <FooterDiv>
           <TitleDiv>
             <StyledTitle>Search Archive</StyledTitle>
-            <Button className={classes.howToSearchButton} onClick={this.howToSearchHandler} >How to search</Button>
+            <Button
+              className={classes.howToSearchButton}
+              onClick={this.howToSearchHandler}
+            >
+              How to search
+            </Button>
           </TitleDiv>
 
           <FilterDiv>
@@ -186,7 +191,9 @@ class Footer extends Component {
                 id="outlined-search"
                 label="Search..."
                 value={search || ''}
-                onChange={(event) => {this.updateStateValues('search', event.target.value)}}
+                onChange={event => {
+                  this.updateStateValues('search', event.target.value);
+                }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
                 }}
