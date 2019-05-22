@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <h1>
+    404!
+  </h1>,
+  <h2>
+    Sorry, the page you are looking for is unavailable.
+  </h2>,
+  " ",
+]
+`;

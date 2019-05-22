@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <main>
+    <h1>
+      Hello Main page!
+    </h1>
+  </main>,
+  " ",
+]
+`;

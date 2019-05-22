@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  <h2>
+    Contact Info
+  </h2>,
+  <p>
+    Our team of moderators will need to approve your story before it is published publicly. If we have any questions or concerns about your content, we will get in touch using your contact details. We will not use your details to send you spam mail.
+  </p>,
+  <input
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated ContactInfo-label-2"
+      data-shrink={false}
+      htmlFor="name"
+    >
+      Name
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="name"
+        name="name"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your name..."
+        required={false}
+        type="text"
+        value=""
+      />
+    </div>
+  </input>,
+  <input
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated ContactInfo-label-2"
+      data-shrink={false}
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="email"
+        name="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your email..."
+        required={false}
+        type="text"
+        value=""
+      />
+    </div>
+  </input>,
+  <input
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated ContactInfo-label-2"
+      data-shrink={false}
+      htmlFor="phoneNum"
+    >
+      Phone Number
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="phoneNum"
+        name="phone"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your phone number. e.g:(+44 20 7946 0009)"
+        required={false}
+        type="text"
+        value=""
+      />
+    </div>
+  </input>,
+]
+`;
