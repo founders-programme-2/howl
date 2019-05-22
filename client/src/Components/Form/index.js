@@ -7,6 +7,7 @@ import AdditionalInfo from './AdditionalInfo';
 import { MuiThemeProvider } from '../muIndex';
 import FormTheme from './Form.style';
 import Buttons from './Buttons';
+import validateFunc from './validation';
 
 class Form extends Component {
   state = {
@@ -92,29 +93,17 @@ class Form extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const submittedData = { ...this.state };
-    axios.post('/posts/create', submittedData).then(() => {
-      const { history } = this.props;
-      history.push('/story');
-    });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    const submittedData = { ...this.state };
-    axios.post('/posts/create', submittedData).then(res => {
-      const { history } = this.props;
-      history.push('/story');
-    });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    const submittedData = { ...this.state };
-    axios.post('/posts/create', submittedData).then(() => {
-      const { history } = this.props;
-      history.push('/story');
-    });
+    validateFunc({ ...this.state })
+      .then(() => {
+        const submittedData = { ...this.state };
+        axios.post('/posts/create', submittedData).then(() => {
+          const { history } = this.props;
+          history.push('/story');
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {

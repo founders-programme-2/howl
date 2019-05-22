@@ -28,6 +28,7 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
         InputLabelProps={{
           className: classes.label,
         }}
+        helperText="Enter your name"
       />
       <TextField
         id="email"
