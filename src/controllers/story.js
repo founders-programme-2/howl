@@ -15,6 +15,8 @@ const create = (req, res) => {
     imageCap,
     imgLink,
     wlmConnection,
+    additionalComments,
+
   } = req.body;
 
 
@@ -32,6 +34,7 @@ const create = (req, res) => {
     connectionToWlm: wlmConnection,
     tags,
     category,
+    additionalComments,
   }, { typecast: true }, (err) => {
     if (err) {
       res.json({ success: false, err: 'There\'s been an error in saving the data to Airtable' });

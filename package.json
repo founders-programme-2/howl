@@ -10,6 +10,7 @@
     "start": "node ./src/server.js",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
+    "test": "jest ./tests",
     "coverage": "jest --coverage",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
@@ -32,12 +33,15 @@
     "multer": "^1.4.1"
   },
   "devDependencies": {
+    "assert": "^2.0.0",
     "codecov": "^3.4.0",
     "concurrently": "^4.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
+    "faker": "^4.1.0",
     "jest": "^24.8.0",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
   }
 }

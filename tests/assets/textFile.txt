@@ -1,0 +1,1 @@
+This is a random text file to be used to test the route /upload when the cloudinary reject the file (that's why we're sending text file not an image).

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import {
   Button,
   Select,
@@ -51,29 +52,68 @@ const yearsGenerator = () => {
 };
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tags: [],
-    };
-  }
+  state = {
+    tags: [],
+    category: null,
+    year: null,
+    location: null,
+    search: null,
+    result: [],
+  };
+
+  updateResult = ({ tags, category, year, location, search }) => {
+    // Axios should be here, depending on response, change result.
+  };
+
+  updateStateValue = (name, value) => {
+    this.setState({ [name]: value });
+  };
+
+  howToSearchHandler = () => {
+    const { history } = this.props;
+    if (history) history.push('/help');
+  };
+
+  resetFields = () => {
+    this.setState(
+      {
+        tags: [],
+        category: null,
+        year: null,
+        location: null,
+        search: null,
+      },
+      () => {
+        this.updateResult(this.state);
+      }
+    );
+  };
 
   render() {
     const { classes } = this.props;
-    const { tags } = this.state;
+    const { tags, category, year, location, search } = this.state;
     return (
       <MuiThemeProvider theme={footerTheme}>
         <FooterDiv>
           <TitleDiv>
             <StyledTitle>Search Archive</StyledTitle>
-            <Button className={classes.howToSearchButton}>How to search</Button>
+            <Button
+              className={classes.howToSearchButton}
+              onClick={this.howToSearchHandler}
+            >
+              How to search
+            </Button>
           </TitleDiv>
 
           <FilterDiv>
             <FormControl className={classes.formControl}>
               <Select
                 className={classes.select}
-                value="Category"
+                value={category || 'Category'}
+                aria-label="category"
+                onChange={event => {
+                  this.updateStateValue('category', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="category"
@@ -90,7 +130,11 @@ class Footer extends Component {
 
               <Select
                 className={classes.select}
-                value="Location"
+                value={location || 'Location'}
+                aria-label="location"
+                onChange={event => {
+                  this.updateStateValue('location', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="location"
@@ -106,7 +150,11 @@ class Footer extends Component {
               </Select>
               <Select
                 className={classes.select}
-                value="Year"
+                value={year || 'Year'}
+                aria-label="year"
+                onChange={event => {
+                  this.updateStateValue('year', event.target.value);
+                }}
                 input={
                   <BootstrapInput
                     name="year"
@@ -132,10 +180,13 @@ class Footer extends Component {
                 Tags
               </InputLabel>
               <Select
-                className={classes.tagsSelect}
                 multiple
                 disableUnderline
                 value={tags}
+                aria-label="tags"
+                onChange={event => {
+                  this.updateStateValue('tags', event.target.value);
+                }}
                 input={<Input id="selectMultipleCheckbox" aria-label="Tags" />}
                 renderValue={selected => (
                   <div className={classes.chips}>
@@ -160,6 +211,10 @@ class Footer extends Component {
               <TextField
                 id="outlined-search"
                 label="Search..."
+                value={search || ''}
+                onChange={event => {
+                  this.updateStateValue('search', event.target.value);
+                }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
                 }}
@@ -172,8 +227,20 @@ class Footer extends Component {
               />
             </FormControl>
             <ButtonsContainer>
-              <Button className={classes.searchButton}>Search</Button>
-              <Button className={classes.resetButton}>Reset</Button>
+              <Button
+                className={classes.searchButton}
+                onClick={() => {
+                  this.updateResult(this.state);
+                }}
+              >
+                Search
+              </Button>
+              <Button
+                className={classes.resetButton}
+                onClick={this.resetFields}
+              >
+                Reset
+              </Button>
             </ButtonsContainer>
           </SearchDiv>
         </FooterDiv>
@@ -182,4 +249,4 @@ class Footer extends Component {
   }
 }
 
-export default withStyles(styles)(Footer);
+export default withRouter(withStyles(styles)(Footer));
