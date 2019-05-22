@@ -1,3 +1,4 @@
 const Story = require('./story');
+const Feed = require('./feed');
 
-module.exports = { Story };
+module.exports = { Story, Feed };
