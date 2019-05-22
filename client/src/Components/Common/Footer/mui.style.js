@@ -24,6 +24,9 @@ export const styles = theme => ({
       color: theme.palette.common.white,
       backgroundColor: 'var(--main-btn-color)',
     },
+    '@media (max-width:780px)': {
+      margin: `1% 25% 1% 25%`,
+    },
   },
   formControl: {
     width: '100%',
