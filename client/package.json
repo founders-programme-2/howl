@@ -35,6 +35,8 @@
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
+    "test:update": "react-scripts test -u --watchAll=false",
+    "test:nowatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src"
