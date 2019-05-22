@@ -13,29 +13,24 @@ class Archive extends Component {
   componentDidMount() {
     axios.get('/archive/feed').then(response => {
       this.setState({ results: response.data.data });
-      console.log(this.state.results, 'results-in');
     });
-    console.log(this.state.results, 'results');
-  }
-
-  // renders all titles on the archive page as a feed
-  renderResultsAsEntry() {
-    const { results } = this.state;
-    console.log('results are : ', results);
-    return results.map(result => (
-      <Entry
-        key={result.id}
-        title={result.fields.title}
-        year={result.fields.year}
-        category={result.fields.category}
-        details={result.fields.details}
-        tags={result.fields.tags}
-      />
-    ));
   }
 
   render() {
     const { TIMELINE_URL } = navigationUrls;
+    const { results } = this.state;
+    const renderResultsAsEntries = results
+      ? results.map(result => (
+          <Entry
+            key={result.id}
+            title={result.fields.title}
+            year={result.fields.year}
+            category={result.fields.category}
+            details={result.fields.details}
+            tags={result.fields.tags}
+          />
+        ))
+      : null;
     return (
       <Fragment>
         <main>
@@ -52,7 +47,7 @@ class Archive extends Component {
             <Link to={TIMELINE_URL}>timeline</Link> is coming soon!
           </p>
           <h2>Recent contributions</h2>
-          {this.renderResultsAsEntry()}
+          {renderResultsAsEntries}
         </main>
         <Footer />
       </Fragment>

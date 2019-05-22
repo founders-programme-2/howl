@@ -11,6 +11,7 @@ const Entry = ({ title, year, category, details, tags }) => {
   const renderTags = incomingTags => {
     return incomingTags.map(tag => <p key={tag}>{tag}</p>);
   };
+
   return (
     <Fragment>
       <h3>{title}</h3>
