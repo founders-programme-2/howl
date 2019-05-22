@@ -19,7 +19,9 @@ class Archive extends Component {
   // renders all titles on the archive page as a feed
   renderResultsAsEntry() {
     const { results } = this.state;
-    return results.map(result => <Entry title={result} />);
+    return results.map(result => (
+      <Entry key={result.title} title={result.title} details={result.details} />
+    ));
   }
 
   render() {
