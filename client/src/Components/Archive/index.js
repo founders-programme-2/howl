@@ -13,14 +13,24 @@ class Archive extends Component {
   componentDidMount() {
     axios.get('/archive/feed').then(response => {
       this.setState({ results: response.data.data });
+      console.log(this.state.results, 'results-in');
     });
+    console.log(this.state.results, 'results');
   }
 
   // renders all titles on the archive page as a feed
   renderResultsAsEntry() {
     const { results } = this.state;
+    console.log('results are : ', results);
     return results.map(result => (
-      <Entry key={result.title} title={result.title} details={result.details} />
+      <Entry
+        key={result.id}
+        title={result.fields.title}
+        year={result.fields.year}
+        category={result.fields.category}
+        details={result.fields.details}
+        tags={result.fields.tags}
+      />
     ));
   }
 
