@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import About from './index';
+import Add from './index';
 
 test('Natural', () => {
-  const about = renderer.create(<BrowserRouter> <About /> </BrowserRouter>).toJSON();
-  expect(about).toMatchSnapshot();
+  const add = renderer.create(<BrowserRouter> <Add /> </BrowserRouter>).toJSON();
+  expect(add).toMatchSnapshot();
 });
