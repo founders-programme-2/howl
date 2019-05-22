@@ -3,8 +3,8 @@ import React, { Fragment } from 'react';
 const Entry = ({ title, year, category, details, tags }) => {
   const shortenDetails = storyDetails => {
     const shortenP = storyDetails.split(' ').slice(0, 29);
-    shortenP.push('...');
-    const shortenedBody = shortenP.join(' ');
+    let shortenedBody = shortenP.join(' ');
+    shortenedBody += '...';
     return shortenedBody;
   };
 
