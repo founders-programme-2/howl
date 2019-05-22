@@ -110,6 +110,13 @@ export default createGlobalStyle`
         }
         h1 {
             font-size: 3.5rem;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
         }
     }
 
