@@ -8,9 +8,7 @@ const Entry = ({ title, year, category, details, tags }) => {
     return shortenedBody;
   };
 
-  const renderTags = incomingTags => {
-    return incomingTags.map(tag => <p key={tag}>{tag}</p>);
-  };
+  const renderTags = tags ? tags.map(tag => <p key={tag}>{tag}</p>) : null;
 
   return (
     <Fragment>
@@ -22,7 +20,7 @@ const Entry = ({ title, year, category, details, tags }) => {
       <h4>Details:</h4>
       <p>{shortenDetails(details)}</p>
       <h4>Tags:</h4>
-      {renderTags(tags)}
+      {renderTags}
     </Fragment>
   );
 };
