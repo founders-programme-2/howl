@@ -5,7 +5,13 @@ const feed = (req, res) => {
   Story.select({
     maxRecords: 10,
     view: 'Approved Stories',
-    fields: ['title', 'details', 'year', 'imageUrl', 'imageCaption', 'tags', 'category'],
+    fields: ['id', 'title', 'details', 'year', 'imageUrl', 'imageCaption', 'tags', 'category'],
+    sort: [
+      {
+        field: 'id',
+        direction: 'desc',
+      },
+    ],
   }).eachPage(
     (records, fetchNextPage) => {
       // This function (`page`) will get called for each page of records.
