@@ -17,7 +17,6 @@ export default createGlobalStyle`
         --main-btn-color: #F6C25B;
         --highlight-color: #C02700;
         --secondary-bg-color: #000000;
-        --responsive-large: 910px;
     }
 
     body {
