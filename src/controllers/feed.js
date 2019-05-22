@@ -1,17 +1,17 @@
 const { Story } = require('../airtables');
 
 const feed = (req, res) => {
-  const { title, details } = req.body;
-  const storyTitles = [];
+  const storyData = [];
   Story.select({
     maxRecords: 10,
-    view: 'Grid view',
+    view: 'Approved Stories',
+    fields: ['title', 'details'],
   }).eachPage(
     (records, fetchNextPage) => {
       // This function (`page`) will get called for each page of records.
 
       records.forEach((record) => {
-        storyTitles.push(record.fields.title);
+        storyData.push(record.fields);
       });
 
       // To fetch the next page of records, call `fetchNextPage`.
@@ -23,7 +23,7 @@ const feed = (req, res) => {
       if (err) {
         res.json({ success: false, err: "There's been an error in fetching the Archive feed." });
       } else {
-        res.json({ success: true, data: storyTitles });
+        res.json({ success: true, data: storyData });
       }
     },
   );
