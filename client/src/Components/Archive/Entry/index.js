@@ -2,11 +2,10 @@ import React, { Fragment } from 'react';
 
 const Entry = ({ title, details }) => {
   const shortenDetails = storyDetails => {
-    const splitDetails = storyDetails.split(' ');
-    const newArr = splitDetails.slice(0, 29);
-    newArr.push('...');
-    const bodyString = newArr.join(' ');
-    return bodyString;
+    const shortenP = storyDetails.split(' ').slice(0, 29);
+    shortenP.push('...');
+    const shortenedBody = shortenP.join(' ');
+    return shortenedBody;
   };
 
   return (
