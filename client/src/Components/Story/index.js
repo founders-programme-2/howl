@@ -10,6 +10,7 @@ import {
   ImgFigure,
   DetailsHeader,
   FigCap,
+  Title,
 } from './Story.style';
 
 class Story extends Component {
@@ -61,25 +62,25 @@ class Story extends Component {
       <Fragment>
         <ContentContainer>
           <TextContainer>
-            <h3>{title}</h3>
-            <div>
+            <Title>{title}</Title>
+            <section>
               <HeaderFour>Date of story:</HeaderFour>
               <Para>
                 {month} {year}
               </Para>
-            </div>
-            <div>
+            </section>
+            <section>
               <HeaderFour>Category:</HeaderFour>
               <Para>{category}</Para>
-            </div>
-            <div>
+            </section>
+            <section>
               <HeaderFour>Tags:</HeaderFour>
               <Para>{modifiedTags}</Para>
-            </div>
-            <div>
+            </section>
+            <section>
               <DetailsHeader>Details:</DetailsHeader>
               <p>{details}</p>
-            </div>
+            </section>
           </TextContainer>
           {imgAndCaption}
         </ContentContainer>
