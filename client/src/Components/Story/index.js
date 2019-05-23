@@ -1,6 +1,16 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import Footer from '../Common/Footer';
+import {
+  Para,
+  HeaderFour,
+  PostImg,
+  ContentContainer,
+  TextContainer,
+  ImgFigure,
+  DetailsHeader,
+  FigCap,
+} from './Story.style';
 
 class Story extends Component {
   state = {
@@ -38,34 +48,41 @@ class Story extends Component {
       category,
     } = this.state;
 
-    const modifiedTags = tags ? tags.join(' ') : null;
+    const modifiedTags = tags ? tags.join(', ') : null;
     const imgAndCaption =
       imageUrl && imageCaption ? (
-        <firgure>
-          <img src={imageUrl} alt={imageCaption} />
-          <figcaption>{imageCaption}</figcaption>
-        </firgure>
+        <ImgFigure>
+          <PostImg src={imageUrl} alt={imageCaption} />
+          <FigCap>{imageCaption}</FigCap>
+        </ImgFigure>
       ) : null;
 
     return (
       <Fragment>
-        <h3>{title}</h3>
-        {imgAndCaption}
-
-        <h4>Date of story:</h4>
-        <p>
-          {month} {year}
-        </p>
-
-        <h4>Category:</h4>
-        <p>{category}</p>
-
-        <h4>Tags:</h4>
-        <p>{modifiedTags}</p>
-
-        <h4>Details:</h4>
-        <p>{details}</p>
-
+        <ContentContainer>
+          <TextContainer>
+            <h3>{title}</h3>
+            <div>
+              <HeaderFour>Date of story:</HeaderFour>
+              <Para>
+                {month} {year}
+              </Para>
+            </div>
+            <div>
+              <HeaderFour>Category:</HeaderFour>
+              <Para>{category}</Para>
+            </div>
+            <div>
+              <HeaderFour>Tags:</HeaderFour>
+              <Para>{modifiedTags}</Para>
+            </div>
+            <div>
+              <DetailsHeader>Details:</DetailsHeader>
+              <p>{details}</p>
+            </div>
+          </TextContainer>
+          {imgAndCaption}
+        </ContentContainer>
         <Footer />
       </Fragment>
     );
