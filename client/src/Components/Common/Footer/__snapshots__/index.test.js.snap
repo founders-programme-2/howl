@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <footer
+    className="sc-bdVaJa iZwRho"
+  >
+    <section
+      className="sc-bwzfXH iEgWMV"
+    >
+      <h2
+        className="sc-htpNat gKOkZF"
+      >
+        Search Archive
+      </h2>
+      <button
+        className="MuiButtonBase-root MuiButton-root Footer-howToSearchButton-1 MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          How to search
+        </span>
+      </button>
+    </section>
+    <section
+      className="sc-bxivhb embyEq"
+    >
+      <div
+        className="MuiFormControl-root Footer-formControl-2"
+      >
+        <div
+          aria-label="Category"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-category"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-bZQynM kihKbR"
+              >
+                Category
+              </span>
+            </div>
+            <input
+              id="category-customized-select"
+              name="category"
+              type="hidden"
+              value="Category"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="Location"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-location"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-bZQynM kihKbR"
+              >
+                Location
+              </span>
+            </div>
+            <input
+              id="location-customized-select"
+              name="location"
+              type="hidden"
+              value="Location"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="Year"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-year"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-bZQynM kihKbR"
+              >
+                Year
+              </span>
+            </div>
+            <input
+              id="year-customized-select"
+              name="year"
+              type="hidden"
+              value="Year"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root Footer-multipleSelectFormControl-3"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-MultipleSelectInputLabel-6"
+          data-shrink={false}
+          htmlFor="selectMultipleCheckbox"
+        >
+          Tags
+        </label>
+        <div
+          aria-label="Tags"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiInput-input"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              id="selectMultipleCheckbox"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="sc-ifAKCX dwKICT"
+    >
+      <div
+        className="MuiFormControl-root Footer-searchFormControl-8"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+            data-shrink={false}
+            htmlFor="outlined-search"
+          >
+            Search...
+          </label>
+          <div
+            className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+              disabled={false}
+              id="outlined-search"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="search"
+            />
+          </div>
+        </div>
+      </div>
+      <section
+        className="sc-EHOje bFQIyp"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Search
+          </span>
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Reset
+          </span>
+        </button>
+      </section>
+    </section>
+  </footer>,
+  " ",
+]
+`;
