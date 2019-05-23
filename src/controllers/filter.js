@@ -1,6 +1,7 @@
 const { Story } = require('../airtables/story');
 
 const filter = (req, res) => {
+  const incomingData = req.body;
   const filteredData = [];
   Story.select({
     view: 'Approved Stories',
@@ -14,10 +15,18 @@ const filter = (req, res) => {
   }).eachPage(
     (records, fetchNextPage) => {
       // This function (`page`) will get called for each page of records.
+      console.log(res, 'res');
+      // const filterFunc = incomingData ? (
+      //   if req.body.tags === records.
+      // )
 
-      records.forEach((record) => {
-        storyData.push(record);
-      });
+      // (data) => {
+      //   if (data.fields.includes(records.tags && categories && search && location)) {
+      //     records.forEach((record) => {
+      //       filteredData.push(record);
+      //     });
+      //   }
+      // };
 
       // To fetch the next page of records, call `fetchNextPage`.
       // If there are more records, `page` will get called again.

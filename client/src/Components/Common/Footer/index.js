@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import navigationUrls from '../../../constants/navigationUrls';
 import {
   Button,
   Select,
@@ -51,6 +53,8 @@ const yearsGenerator = () => {
   return years;
 };
 
+const { HELP_URL } = navigationUrls;
+
 class Footer extends Component {
   state = {
     tags: [],
@@ -61,8 +65,13 @@ class Footer extends Component {
     result: [],
   };
 
-  updateResult = ({ tags, category, year, location, search }) => {
-    // Axios should be here, depending on response, change result.
+  updateResult = event => {
+    const submittedData = { ...this.state };
+    axios.post('/filter', submittedData).then(res => {
+      console.log(res);
+      // const { history } = this.props;
+      // history.push('/results');
+    });
   };
 
   updateStateValue = (name, value) => {
@@ -71,7 +80,7 @@ class Footer extends Component {
 
   howToSearchHandler = () => {
     const { history } = this.props;
-    if (history) history.push('/help');
+    if (history) history.push(HELP_URL);
   };
 
   resetFields = () => {
@@ -230,7 +239,7 @@ class Footer extends Component {
               <Button
                 className={classes.searchButton}
                 onClick={() => {
-                  this.updateResult(this.state);
+                  this.updateResult();
                 }}
               >
                 Search
