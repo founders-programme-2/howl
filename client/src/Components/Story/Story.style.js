@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const Title = styled.h1`
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin: 2rem 2rem;
+`;
+
 const Para = styled.p`
   display: inline;
   margin-left: 0.5rem;
@@ -28,13 +35,13 @@ const ImgFigure = styled.figure`
   flex-flow: column nowrap;
 `;
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.main`
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
 `;
 
-const TextContainer = styled.div`
+const TextContainer = styled.article`
   width: 60%;
 `;
 
@@ -52,4 +59,5 @@ export {
   ImgFigure,
   DetailsHeader,
   FigCap,
+  Title,
 };
