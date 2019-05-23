@@ -2,6 +2,7 @@
 
 exports[`Natural 1`] = `
 Array [
+  " ",
   <main>
     <h1>
       Hello Story page!
@@ -324,5 +325,6 @@ Array [
       </section>
     </section>
   </footer>,
+  " ",
 ]
 `;

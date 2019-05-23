@@ -8,7 +8,7 @@ Array [
   <p>
     Our team of moderators will need to approve your story before it is published publicly. If we have any questions or concerns about your content, we will get in touch using your contact details. We will not use your details to send you spam mail.
   </p>,
-  <input
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
     <label
@@ -37,8 +37,8 @@ Array [
         value=""
       />
     </div>
-  </input>,
-  <input
+  </div>,
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
     <label
@@ -67,8 +67,8 @@ Array [
         value=""
       />
     </div>
-  </input>,
-  <input
+  </div>,
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
     <label
@@ -97,6 +97,6 @@ Array [
         value=""
       />
     </div>
-  </input>,
+  </div>,
 ]
 `;

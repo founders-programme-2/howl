@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Natural 1`] = `
-<form
+<div
   className="MuiFormControl-root Post-formControl-6"
 >
   <p>
     What would you like to title your contribution to the archive (under 10 words)?
   </p>
-  <input
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Post-textField-1"
   >
     <label
@@ -36,11 +36,11 @@ exports[`Natural 1`] = `
         value=""
       />
     </div>
-  </input>
+  </div>
   <p>
     Please enter your story relating to the Women's Liberation Movement below. We encourage detailed memories but request you have you have a story that is longer than 1000 words, you email directly directly to us at fakeemail@howl.co.uk
   </p>
-  <input
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root Post-textField-1 Post-textFieldDetails-2"
   >
     <label
@@ -69,6 +69,6 @@ exports[`Natural 1`] = `
         value=""
       />
     </div>
-  </input>
-</form>
+  </div>
+</div>
 `;

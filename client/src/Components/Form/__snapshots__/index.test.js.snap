@@ -16,7 +16,7 @@ Array [
       <p>
         Our team of moderators will need to approve your story before it is published publicly. If we have any questions or concerns about your content, we will get in touch using your contact details. We will not use your details to send you spam mail.
       </p>
-      <input
+      <div
         className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
       >
         <label
@@ -45,8 +45,8 @@ Array [
             value=""
           />
         </div>
-      </input>
-      <input
+      </div>
+      <div
         className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
       >
         <label
@@ -75,8 +75,8 @@ Array [
             value=""
           />
         </div>
-      </input>
-      <input
+      </div>
+      <div
         className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
       >
         <label
@@ -105,7 +105,7 @@ Array [
             value=""
           />
         </div>
-      </input>
+      </div>
       <h2>
         Your Contribution
       </h2>
@@ -115,7 +115,7 @@ Array [
       <p>
         Where did this event occur?
       </p>
-      <form
+      <div
         className="MuiFormControl-root Details-formControl-56"
       >
         <label
@@ -172,7 +172,7 @@ Array [
             </svg>
           </div>
         </div>
-      </form>
+      </div>
       <p>
         Approximately when did this event occur?
       </p>
@@ -281,7 +281,7 @@ Array [
       <p>
         What kind of contribution would you like to make?
       </p>
-      <form
+      <div
         className="MuiFormControl-root Details-formControlRadio-58"
       >
         <legend
@@ -490,14 +490,14 @@ Array [
             </label>
           </div>
         </div>
-      </form>
-      <form
+      </div>
+      <div
         className="MuiFormControl-root Post-formControl-298"
       >
         <p>
           What would you like to title your contribution to the archive (under 10 words)?
         </p>
-        <input
+        <div
           className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Post-textField-293"
         >
           <label
@@ -526,11 +526,11 @@ Array [
               value=""
             />
           </div>
-        </input>
+        </div>
         <p>
           Please enter your story relating to the Women's Liberation Movement below. We encourage detailed memories but request you have you have a story that is longer than 1000 words, you email directly directly to us at fakeemail@howl.co.uk
         </p>
-        <input
+        <div
           className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root Post-textField-293 Post-textFieldDetails-294"
         >
           <label
@@ -559,12 +559,12 @@ Array [
               value=""
             />
           </div>
-        </input>
-      </form>
+        </div>
+      </div>
       <p>
         Please select one major category under which your contribution falls under. We understand that there might be more than one fits, please select one and you will be given a chance to select some subcategories later.
       </p>
-      <form
+      <div
         className="MuiFormControl-root AdditionalInfo-formControl-299"
       >
         <label
@@ -621,12 +621,12 @@ Array [
             </svg>
           </div>
         </div>
-      </form>
+      </div>
       <p>
         Please select one or more 'tags' for your contribution. A tag can be thought of as a related theme or subcategory.
          
       </p>
-      <form
+      <div
         className="MuiFormControl-root AdditionalInfo-formControl-299 AdditionalInfo-formControlTags-301"
       >
         <label
@@ -681,11 +681,11 @@ Array [
             </svg>
           </div>
         </div>
-      </form>
+      </div>
       <p>
         Tell us about yourself. What is your connection to the Women's Liberation Movement? Please do not share any private information here such as your phone number or address.
       </p>
-      <input
+      <div
         className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root AdditionalInfo-textField-302 AdditionalInfo-textFieldWlm-304"
       >
         <label
@@ -714,11 +714,11 @@ Array [
             value=""
           />
         </div>
-      </input>
+      </div>
       <p>
         Anything else you would like to tell us?
       </p>
-      <input
+      <div
         className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root AdditionalInfo-textField-302"
       >
         <label
@@ -747,8 +747,8 @@ Array [
             value=""
           />
         </div>
-      </input>
-      <form
+      </div>
+      <div
         className="MuiFormControl-root AdditionalInfo-formControlCheckbox-307"
       >
         <label
@@ -800,7 +800,7 @@ Array [
             I certify that this information is true to the best of my knowledge and contains no personal attacks.
           </span>
         </label>
-      </form>
+      </div>
       <div
         className="sc-ifAKCX fCjymO"
       >

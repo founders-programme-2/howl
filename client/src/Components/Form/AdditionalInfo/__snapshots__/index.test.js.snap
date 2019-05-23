@@ -6,7 +6,7 @@ Array [
   <p>
     Please select one major category under which your contribution falls under. We understand that there might be more than one fits, please select one and you will be given a chance to select some subcategories later.
   </p>,
-  <form
+  <div
     className="MuiFormControl-root AdditionalInfo-formControl-1"
   >
     <label
@@ -63,12 +63,12 @@ Array [
         </svg>
       </div>
     </div>
-  </form>,
+  </div>,
   <p>
     Please select one or more 'tags' for your contribution. A tag can be thought of as a related theme or subcategory.
      
   </p>,
-  <form
+  <div
     className="MuiFormControl-root AdditionalInfo-formControl-1 AdditionalInfo-formControlTags-3"
   >
     <label
@@ -123,11 +123,11 @@ Array [
         </svg>
       </div>
     </div>
-  </form>,
+  </div>,
   <p>
     Tell us about yourself. What is your connection to the Women's Liberation Movement? Please do not share any private information here such as your phone number or address.
   </p>,
-  <input
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root AdditionalInfo-textField-4 AdditionalInfo-textFieldWlm-6"
   >
     <label
@@ -156,11 +156,11 @@ Array [
         value=""
       />
     </div>
-  </input>,
+  </div>,
   <p>
     Anything else you would like to tell us?
   </p>,
-  <input
+  <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root AdditionalInfo-textField-4"
   >
     <label
@@ -189,8 +189,8 @@ Array [
         value=""
       />
     </div>
-  </input>,
-  <form
+  </div>,
+  <div
     className="MuiFormControl-root AdditionalInfo-formControlCheckbox-9"
   >
     <label
@@ -242,7 +242,7 @@ Array [
         I certify that this information is true to the best of my knowledge and contains no personal attacks.
       </span>
     </label>
-  </form>,
+  </div>,
   " ",
 ]
 `;
