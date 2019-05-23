@@ -10,10 +10,10 @@ Array [
       </h1>
     </header>
     <p>
-      Browse our story and photo archive by using the archive controls at the bottom of this page to filter your results by category, location, tags or year. Above the search controls, you'll find a yellow bar of dates. This allows you to view stories from between a time span of four to five years.
+      Browse our story and photo archive by using the archive controls at the bottom of this page to filter your results by category, location, tags or year.
     </p>
     <p>
-      Prefer a visual approach? Take a look at the
+      Prefer a visual approach? Don't worry our
        
       <a
         href="/timeline"
@@ -21,8 +21,11 @@ Array [
       >
         timeline
       </a>
-      .
+       is coming soon!
     </p>
+    <h2>
+      Recent contributions
+    </h2>
   </main>,
   <footer
     className="sc-bdVaJa iZwRho"
@@ -39,6 +42,7 @@ Array [
         className="MuiButtonBase-root MuiButton-root Footer-howToSearchButton-1 MuiButton-text"
         disabled={false}
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -65,7 +69,7 @@ Array [
         className="MuiFormControl-root Footer-formControl-2"
       >
         <div
-          aria-label="Category"
+          aria-label="category"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -110,7 +114,7 @@ Array [
           </div>
         </div>
         <div
-          aria-label="Location"
+          aria-label="location"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -155,7 +159,7 @@ Array [
           </div>
         </div>
         <div
-          aria-label="Year"
+          aria-label="year"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -211,7 +215,7 @@ Array [
           Tags
         </label>
         <div
-          aria-label="Tags"
+          aria-label="tags"
           className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
@@ -287,6 +291,7 @@ Array [
               onFocus={[Function]}
               required={false}
               type="search"
+              value=""
             />
           </div>
         </div>
@@ -298,6 +303,7 @@ Array [
           className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
           disabled={false}
           onBlur={[Function]}
+          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -320,6 +326,7 @@ Array [
           className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
           disabled={false}
           onBlur={[Function]}
+          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}

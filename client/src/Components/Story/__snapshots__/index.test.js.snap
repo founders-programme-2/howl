@@ -23,6 +23,7 @@ Array [
         className="MuiButtonBase-root MuiButton-root Footer-howToSearchButton-1 MuiButton-text"
         disabled={false}
         onBlur={[Function]}
+        onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
@@ -49,7 +50,7 @@ Array [
         className="MuiFormControl-root Footer-formControl-2"
       >
         <div
-          aria-label="Category"
+          aria-label="category"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -94,7 +95,7 @@ Array [
           </div>
         </div>
         <div
-          aria-label="Location"
+          aria-label="location"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -139,7 +140,7 @@ Array [
           </div>
         </div>
         <div
-          aria-label="Year"
+          aria-label="year"
           className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
           onClick={[Function]}
         >
@@ -195,7 +196,7 @@ Array [
           Tags
         </label>
         <div
-          aria-label="Tags"
+          aria-label="tags"
           className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
         >
@@ -271,6 +272,7 @@ Array [
               onFocus={[Function]}
               required={false}
               type="search"
+              value=""
             />
           </div>
         </div>
@@ -282,6 +284,7 @@ Array [
           className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
           disabled={false}
           onBlur={[Function]}
+          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
@@ -304,6 +307,7 @@ Array [
           className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
           disabled={false}
           onBlur={[Function]}
+          onClick={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
