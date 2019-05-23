@@ -39,29 +39,33 @@ class Story extends Component {
     } = this.state;
 
     const modifiedTags = tags ? tags.join(' ') : null;
-    const image = imageUrl ? (
-      <div>
-        <img src={imageUrl} alt="post image" />
-      </div>
-    ) : null;
-    const imgCap = imageCaption ? <p>{imageCaption}</p> : null;
+    const imgAndCaption =
+      imageUrl && imageCaption ? (
+        <firgure>
+          <img src={imageUrl} alt={imageCaption} />
+          <figcaption>{imageCaption}</figcaption>
+        </firgure>
+      ) : null;
+
     return (
       <Fragment>
-        <Fragment>
-          <h3>{title}</h3>
-          {image}
-          {imageCaption}
-          <h4>Date of story:</h4>
-          <p>
-            {month} {year}
-          </p>
-          <h4>Category:</h4>
-          <p>{category}</p>
-          <h4>Tags:</h4>
-          <p>{modifiedTags}</p>
-          <h4>Details:</h4>
-          <p>{details}</p>
-        </Fragment>
+        <h3>{title}</h3>
+        {imgAndCaption}
+
+        <h4>Date of story:</h4>
+        <p>
+          {month} {year}
+        </p>
+
+        <h4>Category:</h4>
+        <p>{category}</p>
+
+        <h4>Tags:</h4>
+        <p>{modifiedTags}</p>
+
+        <h4>Details:</h4>
+        <p>{details}</p>
+
         <Footer />
       </Fragment>
     );
