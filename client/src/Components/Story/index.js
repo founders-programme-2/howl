@@ -3,7 +3,7 @@ import axios from 'axios';
 import Footer from '../Common/Footer';
 import {
   Para,
-  HeaderFour,
+  HeaderTwo,
   PostImg,
   ContentContainer,
   TextContainer,
@@ -64,17 +64,17 @@ class Story extends Component {
           <TextContainer>
             <Title>{title}</Title>
             <section>
-              <HeaderFour>Date of story:</HeaderFour>
+              <HeaderTwo>Date of story:</HeaderTwo>
               <Para>
                 {month} {year}
               </Para>
             </section>
             <section>
-              <HeaderFour>Category:</HeaderFour>
+              <HeaderTwo>Category:</HeaderTwo>
               <Para>{category}</Para>
             </section>
             <section>
-              <HeaderFour>Tags:</HeaderFour>
+              <HeaderTwo>Tags:</HeaderTwo>
               <Para>{modifiedTags}</Para>
             </section>
             <section>

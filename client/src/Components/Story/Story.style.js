@@ -12,13 +12,27 @@ const Para = styled.p`
   margin-left: 0.5rem;
 `;
 
-const HeaderFour = styled.h4`
+const HeaderTwo = styled.h2`
+  font-family: 'Raleway', sans-serif;
+  font-variant: small-caps;
+  line-height: 1.5rem;
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  margin: 2rem 2rem;
   display: inline;
   margin-right: 0;
   font-weight: 600;
 `;
 
-const DetailsHeader = styled.h4`
+const DetailsHeader = styled.h2`
+  font-family: 'Raleway', sans-serif;
+  font-variant: small-caps;
+  line-height: 1.5rem;
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  margin: 2rem 2rem;
   font-weight: 600;
 `;
 
@@ -52,7 +66,7 @@ const FigCap = styled.figcaption`
 
 export {
   Para,
-  HeaderFour,
+  HeaderTwo,
   PostImg,
   ContentContainer,
   TextContainer,
