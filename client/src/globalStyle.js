@@ -57,7 +57,19 @@ export default createGlobalStyle`
     h3 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin: 2rem 2rem;
+
+    }
+
+    h4 {
+        font-family: 'Raleway', sans-serif;
+        font-variant: small-caps;
+        line-height: 1.5rem;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.3rem;
+        margin: 2rem 2rem;
     }
 
     p {
