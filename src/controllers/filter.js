@@ -5,21 +5,26 @@ const filter = (req, res) => {
     category, location, year, tags, search,
   } = req.body;
 
+  // creates a formula that airtable uses to filter response
+  // this string is the first part of the command that airtable api calls for
   let formula = '(AND(';
-  if (category !== undefined) {
-    formula += `{category} = "${category}", `;
-  }
-  if (location !== undefined) {
-    formula += `{location} = "${location}", `;
-  }
-  if (year !== undefined) {
-    formula += `{year} = "${year}" `;
-  }
-  formula += '))';
 
-  console.log('formula: ', formula);
+  // dynamically generates the fields that airtable needs to filter response data
+  const formulaFields = {
+    category: `{category} = "${category}", `,
+    location: `{location} = "${location}", `,
+    year: `{year} = "${year}", `,
+  };
 
-  // `(AND({category} = "${category}", {location} = "${location}", {year} = "${year}"))`,
+  // The request body comes in with keys for all fields. If the user has not selected a filter,
+  // it comes in as undefined. This function checks for truthy keys in request body. For each key,
+  // it adds the corresponding string from formulaFields to formula
+  Object.keys(req.body).forEach((key) => {
+    if (key) formula += `${formulaFields[key]}`;
+  });
+
+  // removes a danging space and apostrophe from formula and adds '))' to complete the formula string.
+  formula = `${formula.substring(0, formula.length - 2)}))`;
 
   const filteredData = [];
   Story.select({
@@ -48,16 +53,6 @@ const filter = (req, res) => {
 
       records.forEach((record) => {
         filteredData.push(record);
-
-        // // RESPONSE VARIABLES
-        // const { category, year, location } = record.fields;
-
-        // // THIS FILTER IS FOR REQUIRED FORM PARAMS
-        // if (reqCategory == category && reqYear == year && reqLocation == location) {
-        //   filteredData.push(record);
-        // }
-
-        // // THIS FILTER IS FOR CONDITIONAL FORM PARAMS
       });
       // To fetch the next page of records, call `fetchNextPage`.
       // If there are more records, `page` will get called again.
