@@ -1,43 +1,100 @@
 import * as Yup from 'yup';
-import { locations, categories } from '../data.json';
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string(
-    'Enter a valid name, no special characters allowed'
-  ).required(),
-  email: Yup.string('Enter your email').email(
-    'You need to enter a valid email address'
+  name: Yup.string()
+    .required("Hi, what's your name?")
+    .matches(
+      /^[a-z ]*$/i,
+      'Please enter a valid name that contains no numbers or special characters.'
+    ),
+  email: Yup.string()
+    .required("What's your email address?")
+    .email('You need to enter a valid email address.'),
+  phone: Yup.string().matches(
+    /^[\d+ ]*$/,
+    'Please enter a valid phone number that contains no letters or special characters.'
   ),
-  phone: Yup.string().required(),
-  location: Yup.string().required(),
+  location: Yup.string().required('Where did this event occur?'),
 
-  title: Yup.string('Enter a valid title').required(),
-  details: Yup.string('Enter valid details').required(),
-  imageCap: Yup.string('Enter a valid image caption').required(),
-  imgLink: Yup.string()
-    .url('Please upload an image')
-    .required(),
-  wlmConnection: Yup.string(
-    "Enter a valid description about your connection to Women's Liberation Movement"
-  ).required(),
-  tags: Yup.array().min(1, 'Please select at least one tag'),
+  title: Yup.string()
+    .required('What title would suit your story? (under 10 words).')
+    .matches(
+      /^[a-z0-9 ]*$/i,
+      'Please enter a valid title. No special characters allowed.'
+    ),
+  details: Yup.string().when('radio', {
+    is: radio => radio === 'textPost' || radio === 'both',
+    then: Yup.string()
+      .required('Describe what happened in no less than 1000 words.')
+      .matches(
+        /^[a-z0-9 ]*/i,
+        'Please enter valid descriptive details. No special characters allowed.'
+      ),
+  }),
+  imageCap: Yup.string().when('radio', {
+    is: radio => radio === 'imagePost' || radio === 'both',
+    then: Yup.string()
+      .required('How would you caption this image?')
+      .matches(
+        /^[a-z0-9 ]*$/i,
+        'Please enter a valid image caption. No special characters allowed.'
+      ),
+  }),
+  imgLink: Yup.string().when('radio', {
+    is: radio => radio === 'imagePost' || radio === 'both',
+    then: Yup.string()
+      .required('Please upload your image:')
+      .url(),
+  }),
+  wlmConnection: Yup.string()
+    .required("What's your connection to the Women's Liberation Movement?")
+    .matches(
+      /^[a-z0-9 ]*$/i,
+      "Please enter a valid description of your connection to Women's Liberation Movement. No special characters allowed."
+    ),
+  tags: Yup.array().required('What tags would best describe your story?'),
 
-  category: Yup.string().required('Please select a location'),
-  infoTrue: Yup.bool(
-    true,
-    'You need to certify that your information is true'
-  ).required(),
-  imgPermission: Yup.boolean().oneOf(
-    [true],
-    'You need to confirm that you can post this image publicly'
+  category: Yup.string().required(
+    'What category would best describe your story?'
   ),
+  infoTrue: Yup.bool()
+    .test(
+      'infoTrue',
+      'You must certify that the information you entered is correct and contains no personal attacks.',
+      value => value === true
+    )
+    .required(
+      'You must certify that the information you entered is correct and contains no personal attacks.'
+    ),
+  imgPermission: Yup.bool().when('radio', {
+    is: radio => radio === 'imagePost' || radio === 'both',
+    then: Yup.bool()
+      .test(
+        'imgPermission',
+        'You must confirm that you have the rights to post this image publicly.',
+        value => value === true
+      )
+      .required(
+        'You must confirm that you have the rights to post this image publicly.'
+      ),
+  }),
   selectedDate: Yup.date()
-    .min('January 1960')
-    .max('December 1990')
+    .min(
+      'January 1960',
+      'Approximately when did this event occur? Please choose a date between Jan 1960 and Dec 1990.'
+    )
+    .max(
+      'December 1990',
+      'Approximately when did this event occur? Please choose a date between Jan 1960 and Dec 1990.'
+    )
     .required(),
+  additionalComments: Yup.string().matches(
+    /^[a-zA-Z0-9 ]*$/,
+    'Please enter valid comments. No special characters allowed.'
+  ),
 });
 
-const validateFunc = (
+const validateFunc = ({
   tags,
   category,
   infoTrue,
@@ -52,8 +109,9 @@ const validateFunc = (
   imgPermission,
   imgLink,
   wlmConnection,
-  additionalComments
-) => {
+  additionalComments,
+  radio,
+}) => {
   return validationSchema.validate(
     {
       tags,
@@ -71,56 +129,10 @@ const validateFunc = (
       imgLink,
       wlmConnection,
       additionalComments,
+      radio,
     },
     { abortEarly: false }
   );
 };
 
 export default validateFunc;
-
-// tags,
-// category,
-// infoTrue,
-// name,
-// email,
-// phone,
-// location,
-// selectedDate,
-// title,
-// details,
-// imageCap,
-// imgPermission,
-// imgLink,
-// wlmConnection,
-// additionalComments,
-
-//  email: Yup.string('Enter your email')
-//     .email('You need to enter a valid email address')
-//     .required('Email is required'),
-//   phone: Yup.string().required('Phone number is required'),
-//   location: Yup.required('Please select a location').oneOf([locations]),
-//   title: Yup.string('Enter a valid title').required(
-//     'Please enter a suitable title'
-//   ),
-// details: Yup.string('Enter a valid details').required(
-//   'Please enter a suitable details'
-// ),
-// imageCap: Yup.string('Enter a valid image caption').required(
-//   'Please enter a suitable image caption'
-// ),
-// imgLink: Yup.string().url('Please upload an image'),
-// wlmConnection: Yup.string(
-//   "Enter a valid description about your connection to Women's Liberation Movement"
-// ).required(
-//   "Please tell us about your connection to Women's Liberation Movement"
-// ),
-// tags: Yup.array()
-//   .min(1, 'Please select at least one tag')
-//   .required('Please select the appropriate tags'),
-// category: Yup.string().required('Please select a location').oneOf([categories]),
-// infoTrue: Yup.boolean(),
-// imgPermission: Yup.boolean(),
-//   additionalComments: Yup.string('Enter valid input'),
-// selectedDate: Yup.string().date()
-//   .min('January 1960')
-//   .max('December 1990'),
