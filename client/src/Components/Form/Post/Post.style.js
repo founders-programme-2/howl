@@ -8,4 +8,9 @@ const Message = styled.span`
   margin: 10px;
 `;
 
-export { AttachImg, Message };
+const ErrMsg = styled.p`
+  color: red;
+  font-weight: bold;
+`;
+
+export { AttachImg, Message, ErrMsg };
