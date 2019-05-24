@@ -2,12 +2,28 @@ const { Story } = require('../airtables');
 
 const filter = (req, res) => {
   const {
-    category, location, tags, search, year,
+    category, location, year, tags, search,
   } = req.body;
+
+  let formula = '(AND(';
+  if (category !== undefined) {
+    formula += `{category} = "${category}", `;
+  }
+  if (location !== undefined) {
+    formula += `{location} = "${location}", `;
+  }
+  if (year !== undefined) {
+    formula += `{year} = "${year}" `;
+  }
+  formula += '))';
+
+  console.log('formula: ', formula);
+
+  // `(AND({category} = "${category}", {location} = "${location}", {year} = "${year}"))`,
 
   const filteredData = [];
   Story.select({
-    filterByFormula: `(AND({category} = "${category}", {location} = "${location}", {year} = "${year}"))`,
+    filterByFormula: formula,
     view: 'Approved Stories',
     fields: [
       'id',
