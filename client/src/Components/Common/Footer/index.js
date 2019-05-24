@@ -78,6 +78,11 @@ class Footer extends Component {
     this.setState({ [name]: value });
   };
 
+  updateSearchValue = (name, value) => {
+    value.trim().toLowerCase();
+    this.setState({ [name]: value });
+  };
+
   howToSearchHandler = () => {
     const { history } = this.props;
     if (history) history.push(HELP_URL);
@@ -222,7 +227,7 @@ class Footer extends Component {
                 label="Search..."
                 value={search || ''}
                 onChange={event => {
-                  this.updateStateValue('search', event.target.value);
+                  this.updateSearchValue('search', event.target.value);
                 }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
