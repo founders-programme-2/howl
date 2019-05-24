@@ -29,12 +29,13 @@ const filter = (req, res) => {
         // REQUEST VARIABLES
         const reqCategory = req.body.category;
         const reqYear = req.body.year;
-        console.log(req.body);
+        const reqLocation = req.body.location;
 
         // RESPONSE VARIABLES
-        const { category, year } = record.fields;
+        const { category, year, location } = record.fields;
+        console.log(location);
 
-        if (reqCategory == category && reqYear == year) {
+        if (reqCategory == category && reqYear == year && reqLocation == location) {
           filteredData.push(record);
         }
       });
