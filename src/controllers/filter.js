@@ -1,11 +1,20 @@
-const { Story } = require('../airtables/story');
+const { Story } = require('../airtables');
 
 const filter = (req, res) => {
-  const incomingData = req.body;
   const filteredData = [];
   Story.select({
     view: 'Approved Stories',
-    fields: ['id', 'title', 'details', 'year', 'imageUrl', 'imageCaption', 'tags', 'category'],
+    fields: [
+      'id',
+      'title',
+      'details',
+      'year',
+      'imageUrl',
+      'imageCaption',
+      'tags',
+      'category',
+      'location',
+    ],
     sort: [
       {
         field: 'id',
@@ -14,20 +23,21 @@ const filter = (req, res) => {
     ],
   }).eachPage(
     (records, fetchNextPage) => {
-      // This function (`page`) will get called for each page of records.
-      console.log(res, 'res');
-      // const filterFunc = incomingData ? (
-      //   if req.body.tags === records.
-      // )
+      // This function will get called for each page of records.
 
-      // (data) => {
-      //   if (data.fields.includes(records.tags && categories && search && location)) {
-      //     records.forEach((record) => {
-      //       filteredData.push(record);
-      //     });
-      //   }
-      // };
+      records.forEach((record) => {
+        // REQUEST VARIABLES
+        const reqCategory = req.body.category;
+        const reqYear = req.body.year;
+        console.log(req.body);
 
+        // RESPONSE VARIABLES
+        const { category, year } = record.fields;
+
+        if (reqCategory == category && reqYear == year) {
+          filteredData.push(record);
+        }
+      });
       // To fetch the next page of records, call `fetchNextPage`.
       // If there are more records, `page` will get called again.
       // If there are no more records, `done` will get called.

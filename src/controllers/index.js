@@ -1,8 +1,11 @@
-const Story = require('./story');
+const story = require('./story');
 const getStory = require('./getStory');
-const Feed = require('./feed');
-const Filter = require('./filter');
+const feed = require('./feed');
+const filter = require('./filter');
 
 module.exports = {
-  Story, Feed, getStory, Filter,
+  story,
+  feed,
+  getStory,
+  filter,
 };

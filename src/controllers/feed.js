@@ -15,7 +15,6 @@ const feed = (req, res) => {
   }).eachPage(
     (records, fetchNextPage) => {
       // This function (`page`) will get called for each page of records.
-
       records.forEach((record) => {
         storyData.push(record);
       });
