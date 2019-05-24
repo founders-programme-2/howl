@@ -1,6 +1,10 @@
 const { Story } = require('../airtables');
 
 const filter = (req, res) => {
+  const {
+    category, location, tags, search,
+  } = req.body;
+
   const filteredData = [];
   Story.select({
     view: 'Approved Stories',
@@ -21,19 +25,12 @@ const filter = (req, res) => {
         direction: 'desc',
       },
     ],
-    filterByFormula: ADD(),
   }).eachPage(
     (records, fetchNextPage) => {
       // This function will get called for each page of records.
 
       records.forEach((record) => {
         filteredData.push(record);
-
-        // // REQUEST VARIABLES
-        // const reqCategory = req.body.category;
-        // const reqYear = req.body.year;
-        // const reqLocation = req.body.location;
-        // const reqTags = req.body.tags;
 
         // // RESPONSE VARIABLES
         // const { category, year, location } = record.fields;
@@ -52,7 +49,7 @@ const filter = (req, res) => {
     },
     (err) => {
       if (err) {
-        res.json({ success: false, err: "There's been an error in fetching the Archive feed." });
+        res.json({ success: false, err: "There's been an error in fetching your search." });
       } else {
         res.json({ success: true, data: filteredData });
       }
