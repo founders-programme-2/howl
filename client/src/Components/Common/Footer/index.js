@@ -67,7 +67,7 @@ class Footer extends Component {
 
   updateResult = event => {
     const submittedData = { ...this.state };
-    axios.post('/filter', submittedData).then(res => {
+    axios.get('/filter', submittedData).then(res => {
       console.log(res);
       // const { history } = this.props;
       // history.push('/results');
