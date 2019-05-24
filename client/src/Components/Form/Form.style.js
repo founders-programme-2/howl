@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import { createMuiTheme } from '../muIndex';
 
 const FormTheme = createMuiTheme({
@@ -11,4 +12,14 @@ const FormTheme = createMuiTheme({
   },
 });
 
-export default FormTheme;
+const ErrMsg = styled.p`
+  color: red;
+  font-weight: bold;
+`;
+
+const FormMsg = styled.p`
+  color: green;
+  font-weight: bold;
+`;
+
+export { FormTheme, ErrMsg, FormMsg };
