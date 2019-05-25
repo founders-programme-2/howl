@@ -53,7 +53,7 @@ const ContentContainer = styled.main`
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  min-height: 50vh;
+  min-height: 65vh;
 `;
 
 const TextContainer = styled.article`
