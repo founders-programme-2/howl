@@ -35,6 +35,7 @@ class Story extends Component {
       const { success } = res.data;
       if (success) {
         const { data } = res.data;
+        data.body = true;
         Object.keys(data).forEach(ele => {
           this.setState({ [ele]: data[ele] });
         });
