@@ -32,10 +32,16 @@ class Story extends Component {
     const { id } = this.props.match.params;
 
     axios.get(`/posts/${id}`).then(res => {
-      const { data } = res.data;
-      Object.keys(data).forEach(ele => {
-        this.setState({ [ele]: data[ele] });
-      });
+      const { success } = res.data;
+      if (success) {
+        const { data } = res.data;
+        Object.keys(data).forEach(ele => {
+          this.setState({ [ele]: data[ele] });
+        });
+      } else {
+        const { err } = res.data;
+        this.setState({ message: err });
+      }
     });
   }
 
@@ -66,24 +72,24 @@ class Story extends Component {
       <Fragment>
         <TextContainer>
           <Title>{title}</Title>
-          <section>
+          <div aria-label="[Date of Story]">
             <HeaderTwo>Date of story:</HeaderTwo>
             <Para>
               {month} {year}
             </Para>
-          </section>
-          <section>
+          </div>
+          <div aria-label="[Category]">
             <HeaderTwo>Category:</HeaderTwo>
             <Para>{category}</Para>
-          </section>
-          <section>
+          </div>
+          <div aria-label="[Tags]">
             <HeaderTwo>Tags:</HeaderTwo>
             <Para>{modifiedTags}</Para>
-          </section>
-          <section>
+          </div>
+          <div aria-label="[Details]">
             <DetailsHeader>Details:</DetailsHeader>
             <p>{details}</p>
-          </section>
+          </div>
         </TextContainer>
         {imgAndCaption}
       </Fragment>
