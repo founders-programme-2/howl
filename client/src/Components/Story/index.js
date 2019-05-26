@@ -16,6 +16,7 @@ import {
 
 class Story extends Component {
   state = {
+    name: '',
     title: '',
     details: '',
     month: null,
@@ -24,6 +25,7 @@ class Story extends Component {
     imageCaption: '',
     tags: null,
     category: '',
+    timeCreated: '',
     body: null,
     message: '',
   };
@@ -35,6 +37,7 @@ class Story extends Component {
       const { success } = res.data;
       if (success) {
         const { data } = res.data;
+        console.log(data);
         data.body = true;
         Object.keys(data).forEach(ele => {
           this.setState({ [ele]: data[ele] });
@@ -48,6 +51,7 @@ class Story extends Component {
 
   render() {
     const {
+      name,
       title,
       details,
       month,
@@ -56,6 +60,7 @@ class Story extends Component {
       imageCaption,
       tags,
       category,
+      timeCreated,
       body,
       message,
     } = this.state;
@@ -73,6 +78,14 @@ class Story extends Component {
       <Fragment>
         <TextContainer>
           <Title>{title}</Title>
+          <div aria-label="[Time Created]">
+            <HeaderTwo>Submission date:</HeaderTwo>
+            <Para>{timeCreated}</Para>
+          </div>
+          <div aria-label="[Author's name]">
+            <HeaderTwo>Author&#39;s name:</HeaderTwo>
+            <Para>{name}</Para>
+          </div>
           <div aria-label="[Date of Story]">
             <HeaderTwo>Date of story:</HeaderTwo>
             <Para>
