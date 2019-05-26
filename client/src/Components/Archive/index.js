@@ -8,6 +8,7 @@ import Entry from './Entry/index';
 class Archive extends Component {
   state = {
     results: [],
+    selectedPostId: '',
   };
 
   componentDidMount() {
@@ -16,6 +17,14 @@ class Archive extends Component {
     });
   }
 
+  viewFullPost = id => () => {
+    this.setState({ selectedPostId: id }, () => {
+      const { history } = this.props;
+      const { selectedPostId } = this.state;
+      history.push(`/story/${selectedPostId}`);
+    });
+  };
+
   render() {
     const { TIMELINE_URL } = navigationUrls;
     const { results } = this.state;
@@ -23,11 +32,13 @@ class Archive extends Component {
       ? results.map(result => (
           <Entry
             key={result.id}
+            id={result.id}
             title={result.fields.title}
             year={result.fields.year}
             category={result.fields.category}
             details={result.fields.details}
             tags={result.fields.tags}
+            viewFullPost={this.viewFullPost}
           />
         ))
       : null;
