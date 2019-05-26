@@ -24,9 +24,7 @@ export default createGlobalStyle`
     // for main content of each page outside of footer and header
     main {
         max-width: 80%;
-        margin: 0 auto;
-        padding-left: 3rem;
-        padding-bottom: 6rem;
+        margin: 0 auto 6rem;
     }
 
     header {
