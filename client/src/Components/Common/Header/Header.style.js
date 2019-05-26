@@ -25,7 +25,7 @@ export const NavLink = styled(Link)`
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 1.3rem;
-  color: white;
+  color: ${props => props.theme.color};
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   text-transform: uppercase;
