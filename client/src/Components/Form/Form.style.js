@@ -4,7 +4,7 @@ import responsiveSizes from '../../constants/responsiveSizes';
 
 const { MDM } = responsiveSizes;
 
-export const FormTheme = createMuiTheme({
+const FormTheme = createMuiTheme({
   palette: {
     primary: {
       main: '#C02700',
@@ -15,7 +15,17 @@ export const FormTheme = createMuiTheme({
   },
 });
 
-export const CntrForm = styled.form`
+const ErrMsg = styled.p`
+  color: red;
+  font-weight: bold;
+`;
+
+const FormMsg = styled.p`
+  color: green;
+  font-weight: bold;
+`;
+
+const CntrForm = styled.form`
   @media (max-width: ${MDM}) {
     display: flex;
     flex-flow: column nowrap;
@@ -23,3 +33,5 @@ export const CntrForm = styled.form`
     justify-content: center;
   }
 `;
+
+export { FormTheme, ErrMsg, FormMsg, CntrForm };

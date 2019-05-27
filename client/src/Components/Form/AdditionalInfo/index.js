@@ -13,6 +13,7 @@ import {
   TextField,
 } from '../../muIndex';
 import { styles, MenuProps } from './muiStyles';
+import { ErrMsg, ErrMsgInfoTrue } from './AdditionalInfo.style';
 import { tags as arrTags, categories as arrCategory } from '../../data.json';
 
 const AdditionalInfo = ({
@@ -26,18 +27,27 @@ const AdditionalInfo = ({
   textChange,
   wlmConnection,
   additionalComments,
+  tagsErr,
+  categoryErr,
+  infoTrueErr,
+  wlmConnectionErr,
+  additionalCommentsErr,
 }) => {
   return (
     <Fragment>
-      <p>
-        Please select one major category under which your contribution falls
-        under. We understand that there might be more than one fits, please
-        select one and you will be given a chance to select some subcategories
-        later.
-      </p>
+      {categoryErr ? (
+        <ErrMsg>{categoryErr}</ErrMsg>
+      ) : (
+        <p>
+          Please select one major category under which your contribution falls
+          under. We understand that there might be more than one fits, please
+          select one and you will be given a chance to select some subcategories
+          later.
+        </p>
+      )}
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="category" className={classes.label}>
-          Category
+          Category (required)
         </InputLabel>
         <Select
           aria-label="category"
@@ -57,15 +67,19 @@ const AdditionalInfo = ({
           ))}
         </Select>
       </FormControl>
-      <p>
-        Please select one or more &#39;tags&#39; for your contribution. A tag
-        can be thought of as a related theme or subcategory.{' '}
-      </p>
+      {tagsErr ? (
+        <ErrMsg>{tagsErr}</ErrMsg>
+      ) : (
+        <p>
+          Please select one or more &#39;tags&#39; for your contribution. A tag
+          can be thought of as a related theme or subcategory.{' '}
+        </p>
+      )}
       <FormControl
         className={`${classes.formControl} ${classes.formControlTags}`}
       >
         <InputLabel htmlFor="selectMultipleCheckbox" className={classes.label}>
-          Tags
+          Tags (required)
         </InputLabel>
         <Select
           aria-label="tags"
@@ -92,14 +106,18 @@ const AdditionalInfo = ({
           ))}
         </Select>
       </FormControl>
-      <p>
-        Tell us about yourself. What is your connection to the Women&#39;s
-        Liberation Movement? Please do not share any private information here
-        such as your phone number or address.
-      </p>
+      {wlmConnectionErr ? (
+        <ErrMsg>{wlmConnectionErr}</ErrMsg>
+      ) : (
+        <p>
+          Tell us about yourself. What is your connection to the Women&#39;s
+          Liberation Movement? Please do not share any private information here
+          such as your phone number or address.
+        </p>
+      )}
       <TextField
         id="standard-multiline-static"
-        label="Connection to Women’s Liberation Movement"
+        label="Connection to Women’s Liberation Movement (required)"
         name="wlmConnection"
         value={wlmConnection}
         multiline
@@ -116,10 +134,14 @@ const AdditionalInfo = ({
           className: classes.label,
         }}
       />
-      <p>Anything else you would like to tell us?</p>
+      {additionalCommentsErr ? (
+        <ErrMsg>{additionalComments}</ErrMsg>
+      ) : (
+        <p>Anything else you would like to tell us?</p>
+      )}
       <TextField
         id="additionalComments"
-        label="Additional comments?"
+        label="Additional comments? (optional)"
         name="additionalComments"
         value={additionalComments}
         multiline
@@ -136,6 +158,7 @@ const AdditionalInfo = ({
         }}
       />
       <FormControl className={classes.formControlCheckbox}>
+        {infoTrueErr ? <ErrMsgInfoTrue>{infoTrueErr}</ErrMsgInfoTrue> : null}
         <FormControlLabel
           className={classes.formControlLabel}
           control={
