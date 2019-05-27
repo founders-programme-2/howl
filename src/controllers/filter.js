@@ -9,11 +9,20 @@ const filter = (req, res) => {
   // this string is the first part of the command that airtable api calls for
   let formula = '(AND(';
 
+  // const tagString = '';
+  // if (key && key === 'tags') {
+  //   tags.forEach((tag) => {
+  //     formula += `{tags} = "${tag}", `;
+  //     return formula;
+  //   });
+  // }
+
   // dynamically generates the fields that airtable needs to filter response data
   const formulaFields = {
     category: `{category} = "${category}", `,
     location: `{location} = "${location}", `,
     year: `{year} = "${year}", `,
+    // tags: tagString,
   };
 
   // The request body comes in with keys for all fields. If the user has not selected a filter,
