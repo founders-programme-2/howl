@@ -4,10 +4,10 @@ exports[`Natural 1`] = `
 Array [
   " ",
   <main
-    className="sc-gzVnrw cXmlzn"
+    className="sc-gzVnrw ihTCAW"
   >
     <header
-      className="sc-bdVaJa fKqqHq"
+      className="sc-bdVaJa hBvXQO"
     >
       <p
         className="sc-bwzfXH fkIixq"
@@ -21,7 +21,7 @@ Array [
       </h1>
     </header>
     <section
-      className="sc-EHOje oJfcH"
+      className="sc-EHOje geugfT"
     >
       <h2
         className="sc-bxivhb hIUPna"
@@ -61,11 +61,11 @@ Array [
     </section>
     <img
       alt="A group of women and their children"
-      className="sc-bZQynM fBxSxl"
+      className="sc-bZQynM cyZjUb"
       src="landing_page.jpg"
     />
     <section
-      className="sc-ifAKCX kHTStJ"
+      className="sc-ifAKCX iKwzAU"
     >
       <h2
         className="sc-bxivhb hIUPna"
@@ -105,10 +105,10 @@ Array [
     name="bottomLink"
   >
     <footer
-      className="sc-dnqmqq jswhyW"
+      className="sc-dnqmqq gXyvrq"
     >
       <section
-        className="sc-iwsKbI kDuEPZ"
+        className="sc-iwsKbI jbUSYv"
       >
         <h2
           className="sc-gZMcBi fjmVRH"
@@ -140,7 +140,7 @@ Array [
         </button>
       </section>
       <section
-        className="sc-gqjmRU hDzohC"
+        className="sc-gqjmRU csCXnY"
       >
         <div
           className="MuiFormControl-root Footer-formControl-2"
@@ -339,7 +339,7 @@ Array [
         </div>
       </section>
       <section
-        className="sc-VigVT kJzHug"
+        className="sc-VigVT iNwlaN"
       >
         <div
           className="MuiFormControl-root Footer-searchFormControl-8"

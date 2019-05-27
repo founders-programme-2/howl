@@ -145,10 +145,10 @@ Array [
     </h2>
   </main>,
   <footer
-    className="sc-EHOje hLoBUR"
+    className="sc-EHOje bPdsFe"
   >
     <section
-      className="sc-bZQynM UKBOE"
+      className="sc-bZQynM dwiaGO"
     >
       <h2
         className="sc-gzVnrw kMShsh"
@@ -180,7 +180,7 @@ Array [
       </button>
     </section>
     <section
-      className="sc-htoDjs gzcsJi"
+      className="sc-htoDjs jmwFNL"
     >
       <div
         className="MuiFormControl-root Footer-formControl-2"
@@ -379,7 +379,7 @@ Array [
       </div>
     </section>
     <section
-      className="sc-dnqmqq bFlfzv"
+      className="sc-dnqmqq HGgUv"
     >
       <div
         className="MuiFormControl-root Footer-searchFormControl-8"

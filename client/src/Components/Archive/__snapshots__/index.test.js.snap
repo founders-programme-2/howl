@@ -26,12 +26,30 @@ Array [
     <h2>
       Recent contributions
     </h2>
+    <div
+      className="sc-gqjmRU dGqUPs"
+    >
+      <div
+        className="sweet-loading"
+      >
+        <div
+          className="css-1evy0nx-wrapper-wrapper"
+        >
+          <div
+            className="css-z7rh7d-style"
+          />
+          <div
+            className="css-jib95i-style"
+          />
+        </div>
+      </div>
+    </div>
   </main>,
   <footer
-    className="sc-bdVaJa iZwRho"
+    className="sc-bdVaJa imiDSa"
   >
     <section
-      className="sc-bwzfXH iEgWMV"
+      className="sc-bwzfXH jARfsg"
     >
       <h2
         className="sc-htpNat gKOkZF"
@@ -60,10 +78,13 @@ Array [
         >
           How to search
         </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
       </button>
     </section>
     <section
-      className="sc-bxivhb embyEq"
+      className="sc-bxivhb jNAVfP"
     >
       <div
         className="MuiFormControl-root Footer-formControl-2"
@@ -262,7 +283,7 @@ Array [
       </div>
     </section>
     <section
-      className="sc-ifAKCX dwKICT"
+      className="sc-ifAKCX VfwVw"
     >
       <div
         className="MuiFormControl-root Footer-searchFormControl-8"
@@ -321,6 +342,9 @@ Array [
           >
             Search
           </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
         </button>
         <button
           className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
@@ -344,6 +368,9 @@ Array [
           >
             Reset
           </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
         </button>
       </section>
     </section>
