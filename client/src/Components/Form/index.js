@@ -142,12 +142,12 @@ class Form extends Component {
         });
       })
       .catch(err => {
-        this.inputsArray.map(ele => {
+        this.inputsArray.forEach(ele => {
           const errName = `${ele}Err`;
           this.setState({ [errName]: null });
         });
         const errorsArray = err.inner;
-        errorsArray.map(ele => {
+        errorsArray.forEach(ele => {
           const errName = `${ele.path}Err`;
           this.setState({ [errName]: [ele.message][0] });
         });
