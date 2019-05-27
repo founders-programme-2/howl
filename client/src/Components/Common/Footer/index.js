@@ -65,7 +65,7 @@ class Footer extends Component {
     result: [],
   };
 
-  updateResult = event => {
+  updateResult = ({ tags, category, year, location, search }) => {
     const submittedData = { ...this.state };
     axios.get('/filter', submittedData).then(res => {
       console.log(res);
@@ -244,7 +244,7 @@ class Footer extends Component {
               <Button
                 className={classes.searchButton}
                 onClick={() => {
-                  this.updateResult();
+                  this.updateResult(this.state);
                 }}
               >
                 Search
