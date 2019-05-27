@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <main>
+    <header>
+      <h1>
+        Feminist Resources
+      </h1>
+    </header>
+    <p>
+      While HOWL exists to fill a gap in the archival and sharing of personal stories, many other thorough and valuable feminist resources exist. If you are looking to learn more, please have a look at the following:
+    </p>
+    <article>
+      <a
+        href="https://www.bl.uk/sisterhood/timeline"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          British Library Timeline of the Women's Liberation Movement
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Listen to oral history interviews featuring activists of the Women’s Liberation Movement
+      </p>
+    </article>
+    <article>
+      <a
+        href="http://www.lse.ac.uk/Library/Collections/Collection-highlights/The-Womens-Library"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          London School of Economics and Political Science
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Information on the Women's Library
+      </p>
+    </article>
+    <article>
+      <a
+        href="http://feministlibrary.co.uk/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Feminist Library
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        The Feminist Library is a large collection of Women's Liberation Movement literature based in London.
+      </p>
+    </article>
+    <article>
+      <a
+        href="https://www.bishopsgate.org.uk/Library"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Bishopsgate Institute
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Bishopsgate Institute's printed and archival collections cover a variety of subject areas exploring the experiences of everyday people, and including a special focus on feminist and women's history.
+      </p>
+    </article>
+    <article>
+      <a
+        href="https://southallblacksisters.org.uk/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Southall Black Sisters
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Southall Black Sisters, a not-for-profit, secular and inclusive organisation, was established in 1979 to meet the needs of Black (Asian and African-Caribbean) women. Their aims are to highlight and challenge all forms gender-related violence against women, empower them to gain more control over their lives; live without fear of violence and assert their human rights to justice, equality and freedom.
+      </p>
+    </article>
+    <article>
+      <a
+        href="https://finnmackay.wordpress.com/about/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Blog by Finn Mackay
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Blog of feminist activist Finn Mackay
+      </p>
+    </article>
+    <article>
+      <a
+        href="https://womenslibrary.org.uk/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Glasgow Women's Library
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        Glasgow Women’s Library is the only Accredited Museum in the UK dedicated to women’s lives, histories and achievements, with a lending library, archive collections and innovative programmes of public events & learning opportunities.
+      </p>
+    </article>
+    <article>
+      <a
+        href="https://feministarchivenorth.org.uk/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2
+          className="sc-bdVaJa gxzuMa"
+        >
+          Feminist Archive North
+        </h2>
+      </a>
+      <p
+        className="sc-bwzfXH gYnxCV"
+      >
+        The Women’s Liberation Movement was a major factor in social change, from the groups and demonstrations of the 1970s to the activist policy work of the 1980s and 1990s. The 21st century feminist revival is a strong and vibrant force today. In our collections you can find out where ideas began, and how feminist politics were put into practice. The Feminist Archive has the original sources.
+      </p>
+    </article>
+  </main>,
+  " ",
+]
+`;

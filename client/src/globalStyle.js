@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
+import responsiveSizes from './constants/responsiveSizes';
+
+const { SML, MDM } = responsiveSizes;
+
 export default createGlobalStyle`
 
 // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular, bold)
@@ -57,7 +61,19 @@ export default createGlobalStyle`
     h3 {
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin: 2rem 2rem;
+
+    }
+
+    h4 {
+        font-family: 'Raleway', sans-serif;
+        font-variant: small-caps;
+        line-height: 1.5rem;
+        text-transform: lowercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.3rem;
+        margin: 2rem 2rem;
     }
 
     p {
@@ -95,5 +111,38 @@ export default createGlobalStyle`
         font-size: 1rem;
         margin: 0rem 2rem;
         text-align: center;
+    }
+
+    // media query for tablets
+    @media screen and (max-width: ${MDM}) {
+        main {
+            padding: 0;
+            max-width: 85%;
+        }
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    // media query for mobile
+    @media screen and (max-width: ${SML}) {
+        main {
+            max-width: 90%;
+        }
+
+        header {
+            margin: 4rem 1rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
     }
 `;

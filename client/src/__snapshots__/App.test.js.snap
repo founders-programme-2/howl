@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  <nav
+    className="sc-ckVGcZ irOTHt"
+  >
+    <a
+      aria-label="Navigation to top of page"
+      className="sc-hSdWYo dIVGbO"
+      href="#top"
+      name="topLink"
+    >
+      Top of page
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Howl logo"
+        className="sc-kEYyzF dbDzZO"
+        src="logo.svg"
+      />
+    </a>
+    <ul
+      className="sc-jKJlTe lbwfIz"
+    >
+      <li
+        className="sc-eNQAEJ lhaAPO"
+      >
+        <a
+          className="sc-hMqMXs gCPFcj"
+          href="/about"
+          onClick={[Function]}
+        >
+          About Howl
+        </a>
+      </li>
+      <li
+        className="sc-eNQAEJ lhaAPO"
+      >
+        <a
+          className="sc-hMqMXs gCPFcj"
+          href="/wlm"
+          onClick={[Function]}
+        >
+          Women's Liberation
+        </a>
+      </li>
+      <li
+        className="sc-eNQAEJ lhaAPO"
+      >
+        <a
+          className="sc-hMqMXs gCPFcj"
+          href="/resources"
+          onClick={[Function]}
+        >
+          Feminist Resources
+        </a>
+      </li>
+      <li
+        className="sc-eNQAEJ lhaAPO"
+      >
+        <a
+          className="sc-hMqMXs gCPFcj"
+          href="/archive"
+          onClick={[Function]}
+        >
+          The Archive
+        </a>
+      </li>
+      <li
+        className="sc-eNQAEJ lhaAPO"
+      >
+        <a
+          className="sc-hMqMXs gCPFcj"
+          href="/timeline"
+          onClick={[Function]}
+        >
+          Interactive Timeline
+        </a>
+      </li>
+    </ul>
+    <div
+      className="sc-iAyFgw jRxCrv"
+    >
+      <a
+        href="/add"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-kkGfuU bpWUiq"
+          type="button"
+        >
+          Add Your Story
+        </button>
+      </a>
+    </div>
+  </nav>,
+  <main
+    className="sc-gzVnrw cXmlzn"
+  >
+    <header
+      className="sc-bdVaJa fKqqHq"
+    >
+      <p
+        className="sc-bwzfXH fkIixq"
+      >
+        Welcome to Howl:
+      </p>
+      <h1>
+        A History of 
+        <br />
+         Women's Liberation
+      </h1>
+    </header>
+    <section
+      className="sc-EHOje oJfcH"
+    >
+      <h2
+        className="sc-bxivhb hIUPna"
+      >
+        Who are we?
+      </h2>
+      <p
+        className="sc-bwzfXH fkIixq"
+      >
+        <a
+          className="sc-htpNat kISLqo"
+          href="/about"
+          onClick={[Function]}
+        >
+          Howl
+        </a>
+         is a group of UK-based women who are interested in building an archive of memories, ephemera and resources relating to the
+         
+        <a
+          className="sc-htpNat kISLqo"
+          href="/wlm"
+          onClick={[Function]}
+        >
+          Women's Liberation Movement
+        </a>
+         in the United Kingdom between the nineteen sixties and nineties. We welcome any sister with a memory relating to the movement to
+         
+        <a
+          className="sc-htpNat kISLqo"
+          href="/add"
+          onClick={[Function]}
+        >
+          add your story, photos or ephemera
+        </a>
+         to our archive.
+      </p>
+    </section>
+    <img
+      alt="A group of women and their children"
+      className="sc-bZQynM fBxSxl"
+      src="landing_page.jpg"
+    />
+    <section
+      className="sc-ifAKCX kHTStJ"
+    >
+      <h2
+        className="sc-bxivhb hIUPna"
+      >
+        Navigation
+      </h2>
+      <p
+        className="sc-bwzfXH fkIixq"
+      >
+        Browse our story and photo archive by using the archive controls at
+         
+        <a
+          aria-label="Scroll to bottom"
+          href="#bottomLink"
+        >
+          the bottom of this page
+        </a>
+         
+        to filter your results by category, location, tags or year. The yellow bar of years above the search controls allows you to view stories from within a four to five period of time.
+        <br />
+        <br />
+        All other information is accessible from the black banner
+         
+        <a
+          aria-label="Scroll to top"
+          href="#topLink"
+        >
+          the top of the page
+        </a>
+        . From there, you can navigate to other parts of the project, including more information about Howl, the Women's Liberation Movement and other resources.
+      </p>
+    </section>
+  </main>,
+  <a
+    aria-label="Search bar"
+    className="sc-htoDjs hXLbRl"
+    name="bottomLink"
+  >
+    <footer
+      className="sc-dnqmqq jswhyW"
+    >
+      <section
+        className="sc-iwsKbI kDuEPZ"
+      >
+        <h2
+          className="sc-gZMcBi fjmVRH"
+        >
+          Search Archive
+        </h2>
+        <button
+          className="MuiButtonBase-root MuiButton-root Footer-howToSearchButton-1 MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            How to search
+          </span>
+        </button>
+      </section>
+      <section
+        className="sc-gqjmRU hDzohC"
+      >
+        <div
+          className="MuiFormControl-root Footer-formControl-2"
+        >
+          <div
+            aria-label="category"
+            className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiSelect-root"
+            >
+              <div
+                aria-haspopup="true"
+                aria-pressed="false"
+                className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+                id="select-category"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="sc-fjdhpX fSyqNM"
+                >
+                  Category
+                </span>
+              </div>
+              <input
+                id="category-customized-select"
+                name="category"
+                type="hidden"
+                value="Category"
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            aria-label="location"
+            className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiSelect-root"
+            >
+              <div
+                aria-haspopup="true"
+                aria-pressed="false"
+                className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+                id="select-location"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="sc-fjdhpX fSyqNM"
+                >
+                  Location
+                </span>
+              </div>
+              <input
+                id="location-customized-select"
+                name="location"
+                type="hidden"
+                value="Location"
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            aria-label="year"
+            className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiSelect-root"
+            >
+              <div
+                aria-haspopup="true"
+                aria-pressed="false"
+                className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+                id="select-year"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="sc-fjdhpX fSyqNM"
+                >
+                  Year
+                </span>
+              </div>
+              <input
+                id="year-customized-select"
+                name="year"
+                type="hidden"
+                value="Year"
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiFormControl-root Footer-multipleSelectFormControl-3"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-MultipleSelectInputLabel-6"
+            data-shrink={false}
+            htmlFor="selectMultipleCheckbox"
+          >
+            Tags
+          </label>
+          <div
+            aria-label="tags"
+            className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiSelect-root"
+            >
+              <div
+                aria-haspopup="true"
+                aria-pressed="false"
+                className="MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiInput-input"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "&#8203;",
+                    }
+                  }
+                />
+              </div>
+              <input
+                id="selectMultipleCheckbox"
+                type="hidden"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root MuiSelect-icon"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="sc-VigVT kJzHug"
+      >
+        <div
+          className="MuiFormControl-root Footer-searchFormControl-8"
+        >
+          <div
+            className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+              data-shrink={false}
+              htmlFor="outlined-search"
+            >
+              Search...
+            </label>
+            <div
+              className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+              onClick={[Function]}
+            >
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+                disabled={false}
+                id="outlined-search"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="search"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <section
+          className="sc-jTzLTM kKdwzQ"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Search
+            </span>
+          </button>
+          <button
+            className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiButton-label"
+            >
+              Reset
+            </span>
+          </button>
+        </section>
+      </section>
+    </footer>
+  </a>,
+]
+`;

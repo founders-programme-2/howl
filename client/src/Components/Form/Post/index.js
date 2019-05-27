@@ -7,7 +7,7 @@ import {
   Checkbox,
   FormControl,
 } from '../../muIndex';
-import { AttachImg, Message } from './Post.style';
+import { AttachImg, Message, CntrDiv } from './Post.style';
 import styles from './muiStyles';
 import Loader from './Loader';
 
@@ -130,32 +130,34 @@ const Post = ({
     ) : null;
   return (
     <FormControl className={classes.formControl}>
-      <p>
-        What would you like to title your contribution to the archive (under 10
-        words)?
-      </p>
-      <TextField
-        id="title"
-        label="Title"
-        name="title"
-        value={title}
-        placeholder="Enter your Title..."
-        className={classes.textField}
-        margin="normal"
-        onChange={textChange('title')}
-        InputProps={{
-          disableUnderline: true,
-        }}
-        InputLabelProps={{
-          className: classes.label,
-        }}
-      />
-      {imageCaptionComponent}
-      {imageUploadInput}
-      {uploadStatusMsg}
-      {LoaderWithMsg}
-      {postDetails}
-      {imgPermissionCheckbox}
+      <CntrDiv>
+        <p>
+          What would you like to title your contribution to the archive (under 10
+          words)?
+        </p>
+        <TextField
+          id="title"
+          label="Title"
+          name="title"
+          value={title}
+          placeholder="Enter your Title..."
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('title')}
+          InputProps={{
+            disableUnderline: true,
+          }}
+          InputLabelProps={{
+            className: classes.label,
+          }}
+        />
+        {imageCaptionComponent}
+        {imageUploadInput}
+        {uploadStatusMsg}
+        {LoaderWithMsg}
+        {postDetails}
+        {imgPermissionCheckbox}
+      </CntrDiv>
     </FormControl>
   );
 };
