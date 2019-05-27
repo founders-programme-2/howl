@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+<div
+  className="sc-htpNat hJFhOq"
+>
+  <a
+    href="/add"
+    onClick={[Function]}
+  >
+    <input
+      className="sc-bwzfXH dIgSMj"
+      type="button"
+      value="Go Back"
+    />
+  </a>
+  <input
+    className="sc-bdVaJa dasZuf"
+    type="button"
+    value="Submit"
+  />
+</div>
+`;
