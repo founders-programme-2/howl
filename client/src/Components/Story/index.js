@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import Footer from '../Common/Footer';
+import BounceLoaderComponent from '../BounceLoader';
 
 import {
   Para,
@@ -12,6 +13,7 @@ import {
   DetailsHeader,
   FigCap,
   Title,
+  LoaderContainer,
 } from './Story.style';
 
 class Story extends Component {
@@ -28,23 +30,25 @@ class Story extends Component {
     timeCreated: '',
     body: null,
     message: '',
+    loadingFlag: false,
   };
 
   componentDidMount() {
     const { id } = this.props.match.params;
-
-    axios.get(`/posts/${id}`).then(res => {
-      const { success } = res.data;
-      if (success) {
-        const { data } = res.data;
-        data.body = true;
-        Object.keys(data).forEach(ele => {
-          this.setState({ [ele]: data[ele] });
-        });
-      } else {
-        const { err } = res.data;
-        this.setState({ message: err });
-      }
+    this.setState({ loadingFlag: true }, () => {
+      axios.get(`/posts/${id}`).then(res => {
+        const { success } = res.data;
+        if (success) {
+          const { data } = res.data;
+          data.body = true;
+          Object.keys(data).forEach(ele => {
+            this.setState({ [ele]: data[ele], loadingFlag: false });
+          });
+        } else {
+          const { err } = res.data;
+          this.setState({ message: err, loadingFlag: false });
+        }
+      });
     });
   }
 
@@ -62,6 +66,7 @@ class Story extends Component {
       timeCreated,
       body,
       message,
+      loadingFlag,
     } = this.state;
 
     const modifiedTags = tags ? tags.join(', ') : null;
@@ -110,12 +115,20 @@ class Story extends Component {
 
     const messageVar = message ? <h1>{message}</h1> : null;
 
+    const ContentOrLoader = loadingFlag ? (
+      <LoaderContainer>
+        <BounceLoaderComponent loadingFlag={loadingFlag} />
+      </LoaderContainer>
+    ) : (
+      <Fragment>
+        {messageVar}
+        {bodyVar}
+      </Fragment>
+    );
+
     return (
       <Fragment>
-        <ContentContainer>
-          {messageVar}
-          {bodyVar}
-        </ContentContainer>
+        <ContentContainer>{ContentOrLoader}</ContentContainer>
         <Footer />
       </Fragment>
     );
