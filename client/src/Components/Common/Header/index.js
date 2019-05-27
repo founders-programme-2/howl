@@ -8,7 +8,7 @@ import {
   NavLi,
   Logo,
   NavBtn,
-  BtnWrapper,
+  CntrdWrapper,
   Sa,
 } from './Header.style';
 import logoPath from '../../../assets/logo.svg';
@@ -28,9 +28,11 @@ const Header = () => {
       <Sa href="#top" name="topLink" aria-label="Navigation to top of page">
         Top of page
       </Sa>
-      <Link to="/">
-        <Logo src={logoPath} alt="Howl logo" />
-      </Link>
+      <CntrdWrapper>
+        <Link to="/">
+          <Logo src={logoPath} alt="Howl logo" />
+        </Link>
+      </CntrdWrapper>
       <NavList>
         <NavLi>
           <NavLink to={ABOUT_URL}>About Howl</NavLink>
@@ -48,11 +50,11 @@ const Header = () => {
           <NavLink to={TIMELINE_URL}>Interactive Timeline</NavLink>
         </NavLi>
       </NavList>
-      <BtnWrapper>
+      <CntrdWrapper>
         <Link to={ADD_URL}>
           <NavBtn type="button">Add Your Story</NavBtn>
         </Link>
-      </BtnWrapper>
+      </CntrdWrapper>
     </NavSection>
   );
 };

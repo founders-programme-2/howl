@@ -11,7 +11,7 @@
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
     "test": "jest ./tests",
-    "coverage": "jest --coverage",
+    "coverage": "jest --coverage ./tests",
     "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "repository": {
