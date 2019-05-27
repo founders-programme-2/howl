@@ -17,7 +17,8 @@
     "react-scripts": "3.0.1",
     "react-spinners": "^0.5.4",
     "styled-components": "^4.2.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "enzyme": "^3.9.0",

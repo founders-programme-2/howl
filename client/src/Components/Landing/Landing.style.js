@@ -33,7 +33,7 @@ export const SsectionNav = styled.section`
   margin: 2rem;
 
   @media (max-width: ${SML}) {
-      margin: 1rem;
+    margin: 1rem;
   }
 `;
 
@@ -42,7 +42,7 @@ export const SsectionWho = styled.section`
   grid-area: who;
 
   @media (max-width: ${SML}) {
-      margin: 0 1rem;
+    margin: 0 1rem;
   }
 `;
 

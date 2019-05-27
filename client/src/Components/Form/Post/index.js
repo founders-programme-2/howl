@@ -7,7 +7,7 @@ import {
   Checkbox,
   FormControl,
 } from '../../muIndex';
-import { AttachImg, Message, CntrDiv } from './Post.style';
+import { Message, ErrMsg, CntrDiv } from './Post.style';
 import styles from './muiStyles';
 import Loader from './Loader';
 
@@ -25,14 +25,23 @@ const Post = ({
   imgLink,
   uploadFlag,
   imageFlag,
+  imageCapErr,
+  imgLinkErr,
+  detailsErr,
+  imgPermissionErr,
+  titleErr,
 }) => {
   const imageCaptionComponent =
     radio === 'imagePost' || radio === 'both' ? (
       <Fragment>
-        <p>Please enter a caption for this image (under 100 words):</p>
+        {imageCapErr ? (
+          <ErrMsg>{imageCapErr}</ErrMsg>
+        ) : (
+          <p>Please enter a caption for this image (under 100 words):</p>
+        )}
         <TextField
           id="imageCap"
-          label="Image Caption"
+          label="Image Caption (required)"
           name="imageCap"
           value={imageCap}
           placeholder="Enter image caption..."
@@ -54,7 +63,11 @@ const Post = ({
   const imageUploadInput =
     (radio === 'imagePost' || radio === 'both') && imageFlag ? (
       <Fragment>
-        <p>Please upload your image:</p>
+        {imgLinkErr ? (
+          <ErrMsg>{imgLinkErr}</ErrMsg>
+        ) : (
+          <p>Please upload your image:</p>
+        )}
 
         <label htmlFor="inputImg">
           <input
@@ -65,7 +78,7 @@ const Post = ({
             accept="image/*"
             hidden
           />
-          <AttachImg src={Attach} alt="attach" className={classes.uploadIcon} />
+          <img src={Attach} alt="attach" className={classes.uploadIcon} />
         </label>
       </Fragment>
     ) : null;
@@ -86,15 +99,20 @@ const Post = ({
   const postDetails =
     radio === 'textPost' || radio === 'both' ? (
       <Fragment>
-        <p>
-          Please enter your story relating to the Women&#39;s Liberation
-          Movement below. We encourage detailed memories but request you have
-          you have a story that is longer than 1000 words, you email directly
-          directly to us at fakeemail@howl.co.uk
-        </p>
+        {detailsErr ? (
+          <ErrMsg>{detailsErr}</ErrMsg>
+        ) : (
+          <p>
+            Please enter your story relating to the Women&#39;s Liberation
+            Movement below. We encourage detailed memories but request you have
+            a story that is longer than 1000 words, you email directly directly
+            to us at fakeemail@howl.co.uk
+          </p>
+        )}
+
         <TextField
           id="details"
-          label="Details"
+          label="Details (required)"
           name="details"
           value={details}
           placeholder="Enter your story's details"
@@ -116,28 +134,37 @@ const Post = ({
 
   const imgPermissionCheckbox =
     radio === 'imagePost' || radio === 'both' ? (
-      <FormControlLabel
-        className={classes.formControlLabel}
-        control={
-          <Checkbox
-            checked={imgPermission}
-            onChange={checkboxChange('imgPermission')}
-            value="imgPermission"
-          />
-        }
-        label="I have the rights or permissions to upload this image publicly."
-      />
+      <Fragment>
+        {imgPermissionErr ? <ErrMsg> {imgPermissionErr}</ErrMsg> : null}
+
+        <FormControlLabel
+          className={classes.formControlLabel}
+          control={
+            <Checkbox
+              checked={imgPermission}
+              onChange={checkboxChange('imgPermission')}
+              value="imgPermission"
+            />
+          }
+          label="I have the rights or permissions to upload this image publicly."
+        />
+      </Fragment>
     ) : null;
   return (
     <FormControl className={classes.formControl}>
       <CntrDiv>
-        <p>
-          What would you like to title your contribution to the archive (under 10
-          words)?
-        </p>
+        {titleErr ? (
+          <ErrMsg>{titleErr}</ErrMsg>
+        ) : (
+          <p>
+            What would you like to title your contribution to the archive (under
+            10 words)?
+          </p>
+        )}
+
         <TextField
           id="title"
-          label="Title"
+          label="Title (required)"
           name="title"
           value={title}
           placeholder="Enter your Title..."
