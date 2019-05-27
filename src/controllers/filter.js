@@ -15,32 +15,32 @@ const filter = (req, res) => {
   // this string is the first part of the command that airtable api calls for
   let formula = '(AND(';
 
-  // const tagString = '';
-  // if (key && key === 'tags') {
-  //   tags.forEach((tag) => {
-  //     formula += `{tags} = "${tag}", `;
-  //     return formula;
-  //   });
-  // }
+  let tagString = '';
+  if (tags) {
+    tags.forEach((tag) => {
+      tagString += `{tags} = "${tag}", `;
+    });
+  }
 
   // dynamically generates the fields that airtable needs to filter response data
   const formulaFields = {
     category: `{category} = "${category}", `,
     location: `{location} = "${location}", `,
     year: `{year} = "${year}", `,
-    // tags: tagString,
+    tags: tagString,
   };
 
   // The request body comes in with keys for all fields. If the user has not selected a filter,
   // it comes in as undefined. This function checks for truthy keys in request body. For each key,
   // it adds the corresponding string from formulaFields to formula
   Object.keys(req.body).forEach((key) => {
-    if (key) formula += `${formulaFields[key]}`;
+    if (key && key !== 'search') formula += `${formulaFields[key]}`;
   });
 
   // removes a danging space and apostrophe from formula and adds '))' to complete the formula string.
   formula = `${formula.substring(0, formula.length - 2)}))`;
 
+  console.log(formula, 'TOTAL FORMULA');
   const filteredData = [];
   Story.select({
     filterByFormula: formula,
@@ -78,6 +78,7 @@ const filter = (req, res) => {
       if (err) {
         res.json({ success: false, err: "There's been an error in fetching your search." });
       } else {
+        console.log('succesful result: ', filteredData);
         res.json({ success: true, data: filteredData });
       }
     },
