@@ -37,7 +37,6 @@ class Story extends Component {
       const { success } = res.data;
       if (success) {
         const { data } = res.data;
-        console.log(data);
         data.body = true;
         Object.keys(data).forEach(ele => {
           this.setState({ [ele]: data[ele] });
@@ -78,32 +77,32 @@ class Story extends Component {
       <Fragment>
         <TextContainer>
           <Title>{title}</Title>
-          <div aria-label="[Time Created]">
+          <section>
             <HeaderTwo>Submission date:</HeaderTwo>
             <Para>{timeCreated}</Para>
-          </div>
-          <div aria-label="[Author's name]">
+          </section>
+          <section>
             <HeaderTwo>Author&#39;s name:</HeaderTwo>
             <Para>{name}</Para>
-          </div>
-          <div aria-label="[Date of Story]">
+          </section>
+          <section>
             <HeaderTwo>Date of story:</HeaderTwo>
             <Para>
               {month} {year}
             </Para>
-          </div>
-          <div aria-label="[Category]">
+          </section>
+          <section>
             <HeaderTwo>Category:</HeaderTwo>
             <Para>{category}</Para>
-          </div>
-          <div aria-label="[Tags]">
+          </section>
+          <section>
             <HeaderTwo>Tags:</HeaderTwo>
             <Para>{modifiedTags}</Para>
-          </div>
-          <div aria-label="[Details]">
+          </section>
+          <section>
             <DetailsHeader>Details:</DetailsHeader>
             <p>{details}</p>
-          </div>
+          </section>
         </TextContainer>
         {imgAndCaption}
       </Fragment>
