@@ -5,6 +5,12 @@ const filter = (req, res) => {
     category, location, year, tags, search,
   } = req.body;
 
+  console.log('Category: ', category);
+  console.log('Location: ', location);
+  console.log('Year: ', year);
+  console.log('Tags: ', tags[0]);
+  console.log('Search: ', search);
+
   // creates a formula that airtable uses to filter response
   // this string is the first part of the command that airtable api calls for
   let formula = '(AND(';
