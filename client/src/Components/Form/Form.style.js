@@ -1,6 +1,10 @@
+import styled from 'styled-components';
 import { createMuiTheme } from '../muIndex';
+import responsiveSizes from '../../constants/responsiveSizes';
 
-const FormTheme = createMuiTheme({
+const { MDM } = responsiveSizes;
+
+export const FormTheme = createMuiTheme({
   palette: {
     primary: {
       main: '#C02700',
@@ -11,4 +15,11 @@ const FormTheme = createMuiTheme({
   },
 });
 
-export default FormTheme;
+export const CntrForm = styled.form`
+  @media (max-width: ${MDM}) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+`;

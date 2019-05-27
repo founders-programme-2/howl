@@ -45,8 +45,8 @@ class Story extends Component {
             this.setState({ [ele]: data[ele], loadingFlag: false });
           });
         } else {
-          const { err } = res.data;
-          this.setState({ message: err, loadingFlag: false });
+          const { error } = res.data;
+          this.setState({ message: error, loadingFlag: false });
         }
       });
     });
