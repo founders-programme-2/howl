@@ -25,7 +25,7 @@ const validationSchema = Yup.object().shape({
   details: Yup.string().when('radio', {
     is: radio => radio === 'textPost' || radio === 'both',
     then: Yup.string()
-      .required('Describe what happened in no less than 1000 words.')
+      .required('Describe what happened in no more than 1000 words.')
       .matches(
         /^[a-z0-9 ]*/i,
         'Please enter valid descriptive details. No special characters allowed.'
