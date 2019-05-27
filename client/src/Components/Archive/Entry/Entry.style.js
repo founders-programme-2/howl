@@ -2,12 +2,15 @@ import styled from 'styled-components';
 
 const Article = styled.article`
   padding: 1rem 0;
-  margin: 1rem 0;
+  margin: 5% 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
+  transition: all 0.2s ease-in-out;
+
   &:hover {
     cursor: pointer;
-    color: var(--highlight-color);
+    transform: scale(1.1);
+    box-shadow: 4px 4px 4px 4px rgba(246, 194, 91, 0.5);
   }
 `;
 
