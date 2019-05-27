@@ -4,16 +4,21 @@ import { Link } from 'react-router-dom';
 import Footer from '../Common/Footer';
 import navigationUrls from '../../constants/navigationUrls';
 import Entry from './Entry/index';
+import BounceLoaderComponent from '../BounceLoader';
+import BouncerContainer from './Archive.style';
 
 class Archive extends Component {
   state = {
     results: [],
     selectedPostId: '',
+    loadingFlag: false,
   };
 
   componentDidMount() {
-    axios.get('/archive/feed').then(response => {
-      this.setState({ results: response.data.data });
+    this.setState({ loadingFlag: true }, () => {
+      axios.get('/archive/feed').then(response => {
+        this.setState({ results: response.data.data, loadingFlag: false });
+      });
     });
   }
 
@@ -27,7 +32,7 @@ class Archive extends Component {
 
   render() {
     const { TIMELINE_URL } = navigationUrls;
-    const { results } = this.state;
+    const { results, loadingFlag } = this.state;
     const renderResultsAsEntries = results
       ? results.map(result => (
           <Entry
@@ -42,6 +47,14 @@ class Archive extends Component {
           />
         ))
       : null;
+
+    const EntriesOrLoader = loadingFlag ? (
+      <BouncerContainer>
+        <BounceLoaderComponent loadingFlag={loadingFlag} />
+      </BouncerContainer>
+    ) : (
+      <Fragment>{renderResultsAsEntries}</Fragment>
+    );
     return (
       <Fragment>
         <main>
@@ -58,7 +71,7 @@ class Archive extends Component {
             <Link to={TIMELINE_URL}>timeline</Link> is coming soon!
           </p>
           <h2>Recent contributions</h2>
-          {renderResultsAsEntries}
+          {EntriesOrLoader}
         </main>
         <Footer />
       </Fragment>
