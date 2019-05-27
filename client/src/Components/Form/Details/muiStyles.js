@@ -1,3 +1,5 @@
+// TODO: Refactor media query to take in constant variable for size
+
 const styles = () => ({
   selectLocation: {
     width: '100%',
@@ -10,6 +12,9 @@ const styles = () => ({
     background: 'white',
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     borderRadius: 4,
+    '@media (max-width: 768px)': {
+      width: '80%',
+    },
   },
   label: {
     paddingLeft: '2%',
