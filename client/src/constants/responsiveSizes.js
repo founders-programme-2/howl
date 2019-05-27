@@ -8,5 +8,6 @@
 export default {
   SML: '500px',
   MDM: '768px',
+  MDM_LRG: '1000px',
   LRG: '910px',
 };
