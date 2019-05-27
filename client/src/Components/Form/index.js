@@ -5,7 +5,7 @@ import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
 import { MuiThemeProvider } from '../muIndex';
-import FormTheme from './Form.style';
+import { FormTheme, CntrForm } from './Form.style';
 import Buttons from './Buttons';
 
 class Form extends Component {
@@ -145,7 +145,7 @@ class Form extends Component {
           <header>
             <h1>Add to HOWL</h1>
           </header>
-          <form>
+          <CntrForm>
             <ContactInfo
               name={name}
               email={email}
@@ -187,7 +187,7 @@ class Form extends Component {
               textChange={this.textChange}
             />
             <Buttons handleSubmit={this.handleSubmit} />
-          </form>
+          </CntrForm>
         </main>
       </MuiThemeProvider>
     );

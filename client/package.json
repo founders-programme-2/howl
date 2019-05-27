@@ -5,7 +5,7 @@
   "dependencies": {
     "@date-io/date-fns": "^1.3.5",
     "@emotion/core": "^10.0.10",
-    "@material-ui/core": "^4.0.0-beta.2",
+    "@material-ui/core": "^4.0.0-rc.0",
     "@material-ui/pickers": "^3.0.0-beta.1",
     "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
@@ -20,6 +20,8 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -28,12 +30,15 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.17.0",
-    "react-a11y": "^1.1.0"
+    "react-a11y": "^1.1.0",
+    "react-test-renderer": "^16.8.6"
   },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
+    "test:update": "react-scripts test -u --watchAll=false",
+    "test:nowatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src"

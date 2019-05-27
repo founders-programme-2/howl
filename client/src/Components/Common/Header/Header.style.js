@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import responsiveSizes from '../../../constants/responsiveSizes';
+
+const { SML, LRG } = responsiveSizes;
 
 export const NavSection = styled.nav`
   background-color: black;
   display: flex;
   flex-flow: row nowrap;
   min-width: 100%;
+
+  @media (max-width: ${SML}) {
+    flex-flow: column nowrap;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -14,6 +21,15 @@ export const NavList = styled.ul`
   flex-flow: row nowrap;
   margin: auto;
   padding: 0;
+
+  @media (max-width: ${LRG}) {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  @media (max-width: ${SML}) {
+    flex-flow: column nowrap;
+  }
 `;
 
 export const NavLi = styled.li`
@@ -38,7 +54,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Logo = styled.img`
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
@@ -57,8 +73,8 @@ export const NavBtn = styled.button`
   }
 `;
 
-// Had to wrap button in a div in order for the margin to work. Fragments did not work.
-export const BtnWrapper = styled.div`
+// Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
+export const CntrdWrapper = styled.div`
   margin: auto;
 `;
 
