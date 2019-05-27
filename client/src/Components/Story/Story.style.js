@@ -36,7 +36,6 @@ const DetailsHeader = styled.h2`
   margin: 2rem 2rem;
   font-weight: 600;
 `;
-
 const PostImg = styled.img`
   width: 80%;
   margin: 2rem auto 1rem;
@@ -69,6 +68,10 @@ const FigCap = styled.figcaption`
   margin: 0 auto;
 `;
 
+const LoaderContainer = styled.div`
+  margin: 10% auto;
+`;
+
 export {
   Para,
   HeaderTwo,
@@ -79,4 +82,5 @@ export {
   DetailsHeader,
   FigCap,
   Title,
+  LoaderContainer,
 };
