@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { createMuiTheme } from '../muIndex';
+import responsiveSizes from '../../constants/responsiveSizes';
+
+const { MDM } = responsiveSizes;
 
 const FormTheme = createMuiTheme({
   palette: {
@@ -22,4 +25,13 @@ const FormMsg = styled.p`
   font-weight: bold;
 `;
 
-export { FormTheme, ErrMsg, FormMsg };
+const CntrForm = styled.form`
+  @media (max-width: ${MDM}) {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export { FormTheme, ErrMsg, FormMsg, CntrForm };

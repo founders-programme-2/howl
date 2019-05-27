@@ -7,7 +7,7 @@ import {
   Checkbox,
   FormControl,
 } from '../../muIndex';
-import { AttachImg, Message, ErrMsg } from './Post.style';
+import { Message, ErrMsg, CntrDiv } from './Post.style';
 import styles from './muiStyles';
 import Loader from './Loader';
 
@@ -78,7 +78,7 @@ const Post = ({
             accept="image/*"
             hidden
           />
-          <AttachImg src={Attach} alt="attach" className={classes.uploadIcon} />
+          <img src={Attach} alt="attach" className={classes.uploadIcon} />
         </label>
       </Fragment>
     ) : null;
@@ -152,37 +152,39 @@ const Post = ({
     ) : null;
   return (
     <FormControl className={classes.formControl}>
-      {titleErr ? (
-        <ErrMsg>{titleErr}</ErrMsg>
-      ) : (
-        <p>
-          What would you like to title your contribution to the archive (under
-          10 words)?
-        </p>
-      )}
+      <CntrDiv>
+        {titleErr ? (
+          <ErrMsg>{titleErr}</ErrMsg>
+        ) : (
+          <p>
+            What would you like to title your contribution to the archive (under
+            10 words)?
+          </p>
+        )}
 
-      <TextField
-        id="title"
-        label="Title (required)"
-        name="title"
-        value={title}
-        placeholder="Enter your Title..."
-        className={classes.textField}
-        margin="normal"
-        onChange={textChange('title')}
-        InputProps={{
-          disableUnderline: true,
-        }}
-        InputLabelProps={{
-          className: classes.label,
-        }}
-      />
-      {imageCaptionComponent}
-      {imageUploadInput}
-      {uploadStatusMsg}
-      {LoaderWithMsg}
-      {postDetails}
-      {imgPermissionCheckbox}
+        <TextField
+          id="title"
+          label="Title (required)"
+          name="title"
+          value={title}
+          placeholder="Enter your Title..."
+          className={classes.textField}
+          margin="normal"
+          onChange={textChange('title')}
+          InputProps={{
+            disableUnderline: true,
+          }}
+          InputLabelProps={{
+            className: classes.label,
+          }}
+        />
+        {imageCaptionComponent}
+        {imageUploadInput}
+        {uploadStatusMsg}
+        {LoaderWithMsg}
+        {postDetails}
+        {imgPermissionCheckbox}
+      </CntrDiv>
     </FormControl>
   );
 };

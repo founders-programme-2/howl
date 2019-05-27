@@ -5,7 +5,7 @@ import Details from './Details';
 import Post from './Post';
 import AdditionalInfo from './AdditionalInfo';
 import { MuiThemeProvider } from '../muIndex';
-import { FormTheme, ErrMsg, FormMsg } from './Form.style';
+import { FormTheme, ErrMsg, FormMsg, CntrForm } from './Form.style';
 import Buttons from './Buttons';
 import validateFunc from './validation';
 
@@ -200,7 +200,7 @@ class Form extends Component {
           <header>
             <h1>Add to HOWL</h1>
           </header>
-          <form>
+          <CntrForm>
             <ContactInfo
               name={name}
               email={email}
@@ -268,7 +268,7 @@ class Form extends Component {
               </FormMsg>
             ) : null}
             <Buttons handleSubmit={this.handleSubmit} />
-          </form>
+          </CntrForm>
         </main>
       </MuiThemeProvider>
     );

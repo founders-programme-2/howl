@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import responsiveSizes from '../../constants/responsiveSizes';
+
+const { SML } = responsiveSizes;
+
 export const Sheader = styled.header`
   grid-area: header;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 `;
 
 export const Sp = styled.p`
@@ -27,19 +31,32 @@ export const Sh2 = styled.h2`
 export const SsectionNav = styled.section`
   grid-area: nav;
   margin: 2rem;
+
+  @media (max-width: ${SML}) {
+    margin: 1rem;
+  }
 `;
 
 export const SsectionWho = styled.section`
   margin: 0 2rem;
-  width: 25vw;
   grid-area: who;
+
+  @media (max-width: ${SML}) {
+    margin: 0 1rem;
+  }
 `;
 
 export const Simg = styled.img`
   border-radius: 20px;
-  width: 20vw;
+  width: 100%;
   margin: 0;
   grid-area: image;
+  place-self: center;
+
+  @media (max-width: ${SML}) {
+    width: 80%;
+    display: none;
+  }
 `;
 
 export const Smain = styled.main`
@@ -50,6 +67,15 @@ export const Smain = styled.main`
     'header header'
     'who image'
     'nav nav';
+
+  @media (max-width: ${SML}) {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'header'
+      'who'
+      'image'
+      'nav';
+  }
 `;
 
 export const SaHidden = styled.a`
