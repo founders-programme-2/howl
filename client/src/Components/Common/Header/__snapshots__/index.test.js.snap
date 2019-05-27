@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <nav
+    className="sc-bdVaJa KvuRE"
+  >
+    <a
+      aria-label="Navigation to top of page"
+      className="sc-gzVnrw fvJkGQ"
+      href="#top"
+      name="topLink"
+    >
+      Top of page
+    </a>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Howl logo"
+        className="sc-ifAKCX dTrtc"
+        src="logo.svg"
+      />
+    </a>
+    <ul
+      className="sc-bwzfXH hcodBN"
+    >
+      <li
+        className="sc-htpNat jfwiNj"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/about"
+          onClick={[Function]}
+        >
+          About Howl
+        </a>
+      </li>
+      <li
+        className="sc-htpNat jfwiNj"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/wlm"
+          onClick={[Function]}
+        >
+          Women's Liberation
+        </a>
+      </li>
+      <li
+        className="sc-htpNat jfwiNj"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/resources"
+          onClick={[Function]}
+        >
+          Feminist Resources
+        </a>
+      </li>
+      <li
+        className="sc-htpNat jfwiNj"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/archive"
+          onClick={[Function]}
+        >
+          The Archive
+        </a>
+      </li>
+      <li
+        className="sc-htpNat jfwiNj"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/timeline"
+          onClick={[Function]}
+        >
+          Interactive Timeline
+        </a>
+      </li>
+    </ul>
+    <div
+      className="sc-bZQynM laTINv"
+    >
+      <a
+        href="/add"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-EHOje NTaOB"
+          type="button"
+        >
+          Add Your Story
+        </button>
+      </a>
+    </div>
+  </nav>,
+  " ",
+]
+`;
