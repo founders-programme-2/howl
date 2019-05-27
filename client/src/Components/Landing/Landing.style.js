@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import responsiveSizes from '../../constants/responsiveSizes';
 
-const { SML } = responsiveSizes;
+const { SML, MDM, MDM_LRG } = responsiveSizes;
 
 export const Sheader = styled.header`
   grid-area: header;
@@ -33,29 +33,38 @@ export const SsectionNav = styled.section`
   margin: 2rem;
 
   @media (max-width: ${SML}) {
-      margin: 1rem;
+    margin: 1rem;
   }
 `;
 
 export const SsectionWho = styled.section`
-  margin: 0 2rem;
+  margin: auto 2rem;
   grid-area: who;
+  max-width: 30rem;
 
   @media (max-width: ${SML}) {
-      margin: 0 1rem;
+    margin: 0 1rem;
   }
 `;
 
 export const Simg = styled.img`
   border-radius: 20px;
-  width: 100%;
+  max-width: 90%;
   margin: 0;
   grid-area: image;
   place-self: center;
 
+  @media (max-width: ${MDM_LRG}) {
+    max-width: 80%;
+  }
+
+  @media (max-width: ${MDM}) {
+    max-width: 13rem;
+  }
+
   @media (max-width: ${SML}) {
-    width: 80%;
-    display: none;
+    max-width: 17rem;
+    margin: 2rem 0;
   }
 `;
 
@@ -66,7 +75,14 @@ export const Smain = styled.main`
   grid-template-areas:
     'header header'
     'who image'
-    'nav nav';
+    'nav image';
+
+  @media (max-width: ${MDM_LRG}) {
+    grid-template-areas:
+      'header header'
+      'who image'
+      'nav nav';
+  }
 
   @media (max-width: ${SML}) {
     grid-template-columns: auto;
