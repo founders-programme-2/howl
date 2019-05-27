@@ -7,7 +7,7 @@ const getStory = (req, res) => {
 
   Story.find(id, (err, record) => {
     if (err) {
-      res.json({ success: false, err: `${err.message}.` }); return;
+      res.json({ success: false, error: `${err.message}.` }); return;
     }
     const rawObj = record._rawJson.fields;
     const createdAt = record._rawJson.createdTime.slice(0, 10);
@@ -21,7 +21,7 @@ const getStory = (req, res) => {
     if (allowedObj.status) {
       res.json({ success: true, data: allowedObj });
     } else {
-      res.json({ success: false, err: 'The story you requested is still pending approval.' });
+      res.json({ success: false, error: 'The story you requested is still pending approval.' });
     }
   });
 };

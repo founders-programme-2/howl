@@ -43,8 +43,8 @@ class Story extends Component {
           this.setState({ [ele]: data[ele] });
         });
       } else {
-        const { err } = res.data;
-        this.setState({ message: err });
+        const { error } = res.data;
+        this.setState({ message: error });
       }
     });
   }
