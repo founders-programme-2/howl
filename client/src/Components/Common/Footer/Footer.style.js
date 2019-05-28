@@ -14,7 +14,6 @@ export const FooterDiv = styled.footer`
   bottom: 0;
   position: relative;
   align-items: center;
-
   @media (max-width: ${MDM}) {
     flex-flow: column nowrap;
   }
@@ -23,9 +22,10 @@ export const FooterDiv = styled.footer`
 export const TitleDiv = styled.section`
   width: 30%;
   height: 100%;
-
+  margin: 4% auto;
   @media (max-width: ${MDM}) {
     width: 100%;
+    height: 17vh;
   }
 `;
 
@@ -37,34 +37,40 @@ export const StyledTitle = styled.h2`
 `;
 
 export const FilterDiv = styled.section`
-  width: 40%;
+  width: 50%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  margin: auto;
   @media (max-width: ${MDM}) {
     width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
   }
 `;
 
 export const SearchDiv = styled.section`
-  width: 30%;
-  height: 40%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: auto;
-
+  margin: 0 auto;
   @media (max-width: ${MDM}) {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 4%;
   }
 `;
 
 export const ButtonsContainer = styled.section`
-  width: 80%;
-  margin: 1% auto 0px;
+  width: 82%;
+  margin: 1% auto;
   display: flex;
   justify-content: center;
+  @media (max-width: ${MDM}) {
+    width: 96.6%;
+    margin: 0 auto 1.7%;
+  }
 `;
 
 export const BoldText = styled.span`
