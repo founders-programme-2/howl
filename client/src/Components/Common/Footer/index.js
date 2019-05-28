@@ -57,7 +57,7 @@ const { HELP_URL } = navigationUrls;
 
 class Footer extends Component {
   state = {
-    tags: ['Lesbianism'],
+    tags: [],
     category: 'Groups',
     year: '1960',
     location: 'North East',

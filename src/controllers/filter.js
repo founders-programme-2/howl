@@ -13,28 +13,28 @@ const filter = (req, res) => {
 
   // creates a formula that airtable uses to filter response
   // this string is the first part of the command that airtable api calls for
-  let formula = '(AND(';
+  let formula = '(AND({tags} = "Lesbianism", ';
 
-  let tagString = '';
-  if (tags) {
-    tags.forEach((tag) => {
-      tagString += `{tags} = "${tag}", `;
-    });
-  }
+  // let tagString = '{tags} = ';
+  // if (tags) {
+  //   tags.forEach((tag) => {
+  //     tagString += "${tag}", `;
+  //   });
+  // }
 
   // dynamically generates the fields that airtable needs to filter response data
   const formulaFields = {
     category: `{category} = "${category}", `,
     location: `{location} = "${location}", `,
     year: `{year} = "${year}", `,
-    tags: tagString,
+    // tags: tagString,
   };
 
   // The request body comes in with keys for all fields. If the user has not selected a filter,
   // it comes in as undefined. This function checks for truthy keys in request body. For each key,
   // it adds the corresponding string from formulaFields to formula
   Object.keys(req.body).forEach((key) => {
-    if (key && key !== 'search') formula += `${formulaFields[key]}`;
+    if (key && key !== 'search' && key !== 'tags') formula += `${formulaFields[key]}`;
   });
 
   // removes a danging space and apostrophe from formula and adds '))' to complete the formula string.
