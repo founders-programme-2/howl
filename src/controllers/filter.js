@@ -15,26 +15,11 @@ const filter = (req, res) => {
   // this string is the first part of the command that airtable api calls for
   let formula = '(AND(';
 
-  // let tagString = '{tags} = ';
-  // if (tags) {
-  //   tags.map((tag) => {
-  //     if (tags[0]) {
-  //       tagString += `"${tag}, `;
-  //     } else if (tags[tags.length - 1]) {
-  //       tagString += `${tag}"`;
-  //     } else {
-  //       tagString += `${tag}, `;
-  //     }
-  //   });
-  // }
-  // console.log('after tags', tagString);
-
   // dynamically generates the fields that airtable needs to filter response data
   const formulaFields = {
     category: `{category} = "${category}", `,
     location: `{location} = "${location}", `,
     year: `{year} = "${year}", `,
-    // tags: tagString,
   };
 
   // The request body comes in with keys for all fields. If the user has not selected a filter,
@@ -47,7 +32,6 @@ const filter = (req, res) => {
   // removes a danging space and apostrophe from formula and adds '))' to complete the formula string.
   formula = `${formula.substring(0, formula.length - 2)}))`;
 
-  console.log(formula, 'TOTAL FORMULA');
   const filteredData = [];
   Story.select({
     filterByFormula: formula,
@@ -73,23 +57,23 @@ const filter = (req, res) => {
     (records, fetchNextPage) => {
       // This function will get called for each page of records.
 
+      // This function loops through each incoming Airtable entry (already filtered by the airtable search formula
+      // for year, location & category). If tags is not undefined in the footer request, we loop
+      // through the array of tags in the search and check if any of the incoming Airtable entries match
+      // for any of the tag search queries. If there are any matches & if the record is not already in
+      // the filtered data, we push that entry to our response (filteredData)
       records.forEach((record) => {
-        if (tags) {
-          // console.log('THESE ARE THE INCOMING TAGS', record.fields.tags);
-          console.log('these are the tags', tags);
+        if (tags.length !== 0) {
           tags.forEach((el) => {
-            if (record.fields.tags.includes(el)) {
-              // console.log(`${record.fields.tags} includes ${el}`);
-              if (!filteredData.includes(record)) {
-                filteredData.push(record);
-              }
+            if (record.fields.tags.includes(el) && !filteredData.includes(record)) {
+              filteredData.push(record);
             }
           });
-          // if (record.fields.tags == )
         } else {
           filteredData.push(record);
         }
       });
+
       // To fetch the next page of records, call `fetchNextPage`.
       // If there are more records, `page` will get called again.
       // If there are no more records, `done` will get called.
@@ -99,7 +83,7 @@ const filter = (req, res) => {
       if (err) {
         res.json({ success: false, err: "There's been an error in fetching your search." });
       } else {
-        console.log('succesful result: ', filteredData);
+        console.log('successful result: ', filteredData);
         res.json({ success: true, data: filteredData });
       }
     },
