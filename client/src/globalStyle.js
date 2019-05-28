@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
+import responsiveSizes from './constants/responsiveSizes';
+
+const { SML, MDM } = responsiveSizes;
+
 export default createGlobalStyle`
 
 // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular, bold)
@@ -24,9 +28,7 @@ export default createGlobalStyle`
     // for main content of each page outside of footer and header
     main {
         max-width: 80%;
-        margin: 0 auto;
-        padding-left: 3rem;
-        padding-bottom: 6rem;
+        margin: 0 auto 6rem;
     }
 
     header {
@@ -107,5 +109,38 @@ export default createGlobalStyle`
         font-size: 1rem;
         margin: 0rem 2rem;
         text-align: center;
+    }
+
+    // media query for tablets
+    @media screen and (max-width: ${MDM}) {
+        main {
+            padding: 0;
+            max-width: 85%;
+        }
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    // media query for mobile
+    @media screen and (max-width: ${SML}) {
+        main {
+            max-width: 90%;
+        }
+
+        header {
+            margin: 4rem 1rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
     }
 `;

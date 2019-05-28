@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import DateFun from './DatePicker';
 import { locations } from '../../data.json';
+import ErrMsg from './Details.style';
 
 import {
   withStyles,
@@ -24,7 +25,21 @@ const Details = ({
   selectedDate,
   handleDateChange,
   dropdownChange,
+  locationErr,
+  selectedDateErr,
 }) => {
+  const locationQuestion = locationErr ? (
+    <ErrMsg>{locationErr}</ErrMsg>
+  ) : (
+    <p>Where did this event occur?</p>
+  );
+
+  const DateQuestion = selectedDateErr ? (
+    <ErrMsg>{selectedDateErr}</ErrMsg>
+  ) : (
+    <p>Approximately when did this event occur?</p>
+  );
+
   return (
     <Fragment>
       <h2>Your Contribution</h2>
@@ -37,11 +52,10 @@ const Details = ({
         perfectly. Answer to the best of your ability and put any comments in
         &#39;Additional comments&#39; section at the end of the form.
       </p>
-      <p>Where did this event occur?</p>
-
+      {locationQuestion}
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="location" className={classes.label}>
-          Location
+          Location (required)
         </InputLabel>
         <Select
           inputProps={{
@@ -61,7 +75,7 @@ const Details = ({
           ))}
         </Select>
       </FormControl>
-      <p>Approximately when did this event occur?</p>
+      {DateQuestion}   
       <DateFun
         selectedDate={selectedDate}
         handleDateChange={handleDateChange}

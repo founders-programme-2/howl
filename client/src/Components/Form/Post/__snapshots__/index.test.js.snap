@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+<div
+  className="MuiFormControl-root Post-formControl-6"
+>
+  <p>
+    What would you like to title your contribution to the archive (under 10 words)?
+  </p>
+  <div
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Post-textField-1"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-3"
+      data-shrink={false}
+      htmlFor="title"
+    >
+      Title
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input"
+        disabled={false}
+        id="title"
+        name="title"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your Title..."
+        required={false}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <p>
+    Please enter your story relating to the Women's Liberation Movement below. We encourage detailed memories but request you have you have a story that is longer than 1000 words, you email directly directly to us at fakeemail@howl.co.uk
+  </p>
+  <div
+    className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root Post-textField-1 Post-textFieldDetails-2"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-3"
+      data-shrink={false}
+      htmlFor="details"
+    >
+      Details
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+      onClick={[Function]}
+    >
+      <textarea
+        aria-invalid={false}
+        className="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+        disabled={false}
+        id="details"
+        name="details"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Enter your story's details"
+        required={false}
+        rows="4"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import navigationUrls from '../../../constants/navigationUrls';
+
 import {
   NavLink,
   NavList,
@@ -8,7 +9,7 @@ import {
   NavLi,
   Logo,
   NavBtn,
-  BtnWrapper,
+  CntrdWrapper,
   Sa,
 } from './Header.style';
 import logoPath from '../../../assets/logo.svg';
@@ -22,39 +23,67 @@ const {
   WLM_URL,
 } = navigationUrls;
 
-const Header = () => {
+const Header = ({ location }) => {
+  const { pathname: url } = location;
   return (
     <NavSection>
       <Sa href="#top" name="topLink" aria-label="Navigation to top of page">
         Top of page
       </Sa>
-      <Link to="/">
-        <Logo src={logoPath} alt="Howl logo" />
-      </Link>
+      <CntrdWrapper>
+        <Link to="/">
+          <Logo src={logoPath} alt="Howl logo" />
+        </Link>
+      </CntrdWrapper>
       <NavList>
         <NavLi>
-          <NavLink to={ABOUT_URL}>About Howl</NavLink>
+          <NavLink
+            to={ABOUT_URL}
+            theme={{ color: url === ABOUT_URL ? 'var(--main-btn-color)' : 'white' }}
+          >
+            About Howl
+          </NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to={WLM_URL}>Women&#39;s Liberation</NavLink>
+          <NavLink
+            to={WLM_URL}
+            theme={{ color: url === WLM_URL ? 'var(--main-btn-color)' : 'white' }}
+          >
+            Women&#39;s Liberation
+          </NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to={RESOURCES_URL}>Feminist Resources</NavLink>
+          <NavLink
+            to={RESOURCES_URL}
+            theme={{ color: url === RESOURCES_URL ? 'var(--main-btn-color)' : 'white' }}
+          >
+            Feminist Resources
+          </NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to={ARCHIVE_URL}>The Archive</NavLink>
+          <NavLink
+            to={ARCHIVE_URL}
+            theme={{ color: url === ARCHIVE_URL ? 'var(--main-btn-color)' : 'white' }}
+          >
+            The Archive
+          </NavLink>
         </NavLi>
         <NavLi>
-          <NavLink to={TIMELINE_URL}>Interactive Timeline</NavLink>
+          <NavLink
+            to={TIMELINE_URL}
+            theme={{ color: url === TIMELINE_URL ? 'var(--main-btn-color)' : 'white' }}
+          >
+            Interactive Timeline
+          </NavLink>
         </NavLi>
       </NavList>
-      <BtnWrapper>
+      <CntrdWrapper>
         <Link to={ADD_URL}>
           <NavBtn type="button">Add Your Story</NavBtn>
         </Link>
-      </BtnWrapper>
+      </CntrdWrapper>
     </NavSection>
   );
 };
 
-export default Header;
+export default withRouter(Header);

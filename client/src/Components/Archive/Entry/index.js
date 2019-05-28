@@ -1,6 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import {
+  Article,
+  HeaderFour,
+  Para,
+  DetailsHeader,
+  DetailsPara,
+} from './Entry.style';
 
-const Entry = ({ title, year, category, details, tags }) => {
+const Entry = ({ id, title, year, category, details, tags, viewFullPost }) => {
   const shortenDetails = storyDetails => {
     if (storyDetails) {
       const shortenP = storyDetails.split(' ').slice(0, 29);
@@ -11,20 +18,30 @@ const Entry = ({ title, year, category, details, tags }) => {
     return null;
   };
 
-  const renderTags = tags ? tags.map(tag => <p key={tag}>{tag}</p>) : null;
+  const renderTags = tags
+    ? tags.map(tag => <Para key={tag}>{tag}</Para>)
+    : null;
 
   return (
-    <Fragment>
+    <Article onClick={viewFullPost(id)}>
       <h3>{title || 'Untitled'}</h3>
-      <h4>Date of story:</h4>
-      <p>{year}</p>
-      <h4>Category:</h4>
-      <p>{category}</p>
-      <h4>Details:</h4>
-      <p>{shortenDetails(details)}</p>
-      <h4>Tags:</h4>
-      {renderTags}
-    </Fragment>
+      <div aria-label="[Date of Story]">
+        <HeaderFour>Date of story:</HeaderFour>
+        <Para>{year}</Para>
+      </div>
+      <div aria-label="Category">
+        <HeaderFour>Category:</HeaderFour>
+        <Para>{category}</Para>
+      </div>
+      <div aria-label="[Tags]">
+        <HeaderFour>Tags:</HeaderFour>
+        {renderTags}
+      </div>
+      <div aria-label="[Details]">
+        <DetailsHeader>Details:</DetailsHeader>
+        <DetailsPara>{shortenDetails(details)}</DetailsPara>
+      </div>
+    </Article>
   );
 };
 
