@@ -78,16 +78,7 @@ const validationSchema = Yup.object().shape({
         'You must confirm that you have the rights to post this image publicly.'
       ),
   }),
-  selectedDate: Yup.date()
-    .min(
-      'January 1960',
-      'Approximately when did this event occur? Please choose a date between Jan 1960 and Dec 1990.'
-    )
-    .max(
-      'December 1990',
-      'Approximately when did this event occur? Please choose a date between Jan 1960 and Dec 1990.'
-    )
-    .required(),
+
   additionalComments: Yup.string().matches(
     /^[a-zA-Z0-9 ]*$/,
     'Please enter valid comments. No special characters allowed.'
