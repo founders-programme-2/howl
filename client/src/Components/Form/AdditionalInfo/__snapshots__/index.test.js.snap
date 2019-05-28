@@ -14,7 +14,7 @@ Array [
       data-shrink={false}
       htmlFor="category"
     >
-      Category
+      Category (required)
     </label>
     <div
       aria-label="category"
@@ -76,7 +76,7 @@ Array [
       data-shrink={false}
       htmlFor="selectMultipleCheckbox"
     >
-      Tags
+      Tags (required)
     </label>
     <div
       aria-label="tags"
@@ -135,7 +135,7 @@ Array [
       data-shrink={false}
       htmlFor="standard-multiline-static"
     >
-      Connection to Women’s Liberation Movement
+      Connection to Women’s Liberation Movement (required)
     </label>
     <div
       className="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
@@ -168,7 +168,7 @@ Array [
       data-shrink={false}
       htmlFor="additionalComments"
     >
-      Additional comments?
+      Additional comments? (optional)
     </label>
     <div
       className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
