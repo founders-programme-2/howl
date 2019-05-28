@@ -22,6 +22,7 @@ export const FooterDiv = styled.footer`
 export const TitleDiv = styled.section`
   width: 30%;
   height: 100%;
+  margin: 4% auto;
   @media (max-width: ${MDM}) {
     width: 100%;
     height: 17vh;
@@ -43,7 +44,7 @@ export const FilterDiv = styled.section`
   margin: auto;
   @media (max-width: ${MDM}) {
     width: 100%;
-    margin: 4% auto;
+    margin: auto;
     display: flex;
     flex-flow: column nowrap;
   }
@@ -54,8 +55,7 @@ export const SearchDiv = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: auto;
-
+  margin: 0 auto;
   @media (max-width: ${MDM}) {
     width: 100%;
     margin-bottom: 4%;
