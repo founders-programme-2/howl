@@ -220,7 +220,6 @@ class Footer extends Component {
                 }}
                 type="search"
                 className={classes.searchTextField}
-                variant="filled"
                 InputProps={{
                   disableUnderline: true,
                 }}
