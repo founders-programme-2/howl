@@ -27,7 +27,7 @@ import { tags as tagsArr, categories, locations } from '../../data';
 import { styles, BootstrapInput, MenuProps, footerTheme } from './mui.style';
 
 const renderSelectItems = items => {
-  return items.map(item => (
+  return items.sort().map(item => (
     <MenuItem key={item} value={item}>
       {item}
     </MenuItem>
@@ -35,7 +35,7 @@ const renderSelectItems = items => {
 };
 
 const renderMultiSelectItems = (items, selectedItems) => {
-  return items.map(item => (
+  return items.sort().map(item => (
     <MenuItem key={item} value={item}>
       <Checkbox checked={selectedItems.indexOf(item) > -1} />
       <ListItemText primary={item} />
@@ -84,7 +84,8 @@ class Footer extends Component {
         search: null,
       },
       () => {
-        this.updateResult(this.state);
+        const { history } = this.props;
+        history.push('/archive');
       }
     );
   };
