@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import responsiveSizes from '../../../constants/responsiveSizes';
 
-const { SML, MDM } = responsiveSizes;
+const { SML } = responsiveSizes;
 
 const Article = styled.article`
   padding: 1rem 0;
