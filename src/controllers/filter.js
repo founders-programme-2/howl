@@ -13,14 +13,21 @@ const filter = (req, res) => {
 
   // creates a formula that airtable uses to filter response
   // this string is the first part of the command that airtable api calls for
-  let formula = '(AND({tags} = "Lesbianism", ';
+  let formula = '(AND(';
 
   // let tagString = '{tags} = ';
   // if (tags) {
-  //   tags.forEach((tag) => {
-  //     tagString += "${tag}", `;
+  //   tags.map((tag) => {
+  //     if (tags[0]) {
+  //       tagString += `"${tag}, `;
+  //     } else if (tags[tags.length - 1]) {
+  //       tagString += `${tag}"`;
+  //     } else {
+  //       tagString += `${tag}, `;
+  //     }
   //   });
   // }
+  // console.log('after tags', tagString);
 
   // dynamically generates the fields that airtable needs to filter response data
   const formulaFields = {
@@ -67,7 +74,21 @@ const filter = (req, res) => {
       // This function will get called for each page of records.
 
       records.forEach((record) => {
-        filteredData.push(record);
+        if (tags) {
+          // console.log('THESE ARE THE INCOMING TAGS', record.fields.tags);
+          console.log('these are the tags', tags);
+          tags.forEach((el) => {
+            if (record.fields.tags.includes(el)) {
+              // console.log(`${record.fields.tags} includes ${el}`);
+              if (!filteredData.includes(record)) {
+                filteredData.push(record);
+              }
+            }
+          });
+          // if (record.fields.tags == )
+        } else {
+          filteredData.push(record);
+        }
       });
       // To fetch the next page of records, call `fetchNextPage`.
       // If there are more records, `page` will get called again.
