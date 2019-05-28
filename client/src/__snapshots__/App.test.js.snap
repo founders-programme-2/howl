@@ -37,6 +37,11 @@ Array [
           className="sc-jlyJG cXGZKF"
           href="/about"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           About Howl
         </a>
@@ -48,6 +53,11 @@ Array [
           className="sc-jlyJG cXGZKF"
           href="/wlm"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Women's Liberation
         </a>
@@ -59,6 +69,11 @@ Array [
           className="sc-jlyJG cXGZKF"
           href="/resources"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Feminist Resources
         </a>
@@ -70,6 +85,11 @@ Array [
           className="sc-jlyJG cXGZKF"
           href="/archive"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           The Archive
         </a>
@@ -81,6 +101,11 @@ Array [
           className="sc-jlyJG cXGZKF"
           href="/timeline"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Interactive Timeline
         </a>
@@ -103,7 +128,7 @@ Array [
     </div>
   </nav>,
   <main
-    className="sc-gzVnrw ihTCAW"
+    className="sc-gzVnrw XBwpT"
   >
     <header
       className="sc-bdVaJa hBvXQO"
@@ -120,7 +145,7 @@ Array [
       </h1>
     </header>
     <section
-      className="sc-EHOje geugfT"
+      className="sc-EHOje rWvia"
     >
       <h2
         className="sc-bxivhb hIUPna"
@@ -160,7 +185,7 @@ Array [
     </section>
     <img
       alt="A group of women and their children"
-      className="sc-bZQynM cyZjUb"
+      className="sc-bZQynM gkehWF"
       src="landing_page.jpg"
     />
     <section
@@ -204,10 +229,10 @@ Array [
     name="bottomLink"
   >
     <footer
-      className="sc-dnqmqq gXyvrq"
+      className="sc-dnqmqq kBznaB"
     >
       <section
-        className="sc-iwsKbI jbUSYv"
+        className="sc-iwsKbI pKGhr"
       >
         <h2
           className="sc-gZMcBi fjmVRH"
@@ -239,7 +264,7 @@ Array [
         </button>
       </section>
       <section
-        className="sc-gqjmRU csCXnY"
+        className="sc-gqjmRU gAFCbu"
       >
         <div
           className="MuiFormControl-root Footer-formControl-2"
@@ -438,7 +463,7 @@ Array [
         </div>
       </section>
       <section
-        className="sc-VigVT iNwlaN"
+        className="sc-VigVT fSVIjt"
       >
         <div
           className="MuiFormControl-root Footer-searchFormControl-8"
@@ -447,19 +472,19 @@ Array [
             className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Footer-searchTextFieldLabel-10"
               data-shrink={false}
               htmlFor="outlined-search"
             >
               Search...
             </label>
             <div
-              className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
-                className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+                className="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch"
                 disabled={false}
                 id="outlined-search"
                 onBlur={[Function]}
@@ -473,7 +498,7 @@ Array [
           </div>
         </div>
         <section
-          className="sc-jTzLTM kKdwzQ"
+          className="sc-jTzLTM bowiQG"
         >
           <button
             className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"

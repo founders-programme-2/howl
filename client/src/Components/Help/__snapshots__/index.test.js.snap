@@ -145,10 +145,10 @@ Array [
     </h2>
   </main>,
   <footer
-    className="sc-EHOje bPdsFe"
+    className="sc-EHOje gFYmhb"
   >
     <section
-      className="sc-bZQynM dwiaGO"
+      className="sc-bZQynM guOOjK"
     >
       <h2
         className="sc-gzVnrw kMShsh"
@@ -180,7 +180,7 @@ Array [
       </button>
     </section>
     <section
-      className="sc-htoDjs jmwFNL"
+      className="sc-htoDjs bWvjHx"
     >
       <div
         className="MuiFormControl-root Footer-formControl-2"
@@ -379,7 +379,7 @@ Array [
       </div>
     </section>
     <section
-      className="sc-dnqmqq HGgUv"
+      className="sc-dnqmqq hUprcs"
     >
       <div
         className="MuiFormControl-root Footer-searchFormControl-8"
@@ -388,19 +388,19 @@ Array [
           className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Footer-searchTextFieldLabel-10"
             data-shrink={false}
             htmlFor="outlined-search"
           >
             Search...
           </label>
           <div
-            className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
               aria-invalid={false}
-              className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch"
               disabled={false}
               id="outlined-search"
               onBlur={[Function]}
@@ -414,7 +414,7 @@ Array [
         </div>
       </div>
       <section
-        className="sc-iwsKbI jVhqdw"
+        className="sc-iwsKbI lcbfVX"
       >
         <button
           className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
