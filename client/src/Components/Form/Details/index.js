@@ -102,9 +102,6 @@ const Details = ({
           disableUnderline
           className={classes.selectDropdown}
         >
-          <MenuItem value="month">
-            <BoldText>Month</BoldText>
-          </MenuItem>
           {renderSelectItems(months)}
         </Select>
       </FormControl>
@@ -125,9 +122,6 @@ const Details = ({
           disableUnderline
           className={classes.selectDropdown}
         >
-          <MenuItem value="year">
-            <BoldText>Year</BoldText>
-          </MenuItem>
           {renderSelectItems(yearsGenerator())}
         </Select>
       </FormControl>
