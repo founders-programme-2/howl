@@ -9,10 +9,13 @@ import {
 
 const Entry = ({ id, title, year, category, details, tags, viewFullPost }) => {
   const shortenDetails = storyDetails => {
-    const shortenP = storyDetails.split(' ').slice(0, 29);
-    let shortenedBody = shortenP.join(' ');
-    shortenedBody += '...';
-    return shortenedBody;
+    if (storyDetails) {
+      const shortenP = storyDetails.split(' ').slice(0, 29);
+      let shortenedBody = shortenP.join(' ');
+      shortenedBody += '...';
+      return shortenedBody;
+    }
+    return null;
   };
 
   const renderTags = tags
@@ -21,7 +24,7 @@ const Entry = ({ id, title, year, category, details, tags, viewFullPost }) => {
 
   return (
     <Article onClick={viewFullPost(id)}>
-      <h3>{title}</h3>
+      <h3>{title || 'Untitled'}</h3>
       <div aria-label="[Date of Story]">
         <HeaderFour>Date of story:</HeaderFour>
         <Para>{year}</Para>
