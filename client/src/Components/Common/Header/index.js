@@ -8,9 +8,7 @@ import {
   NavSection,
   NavLi,
   Logo,
-  NavBtn,
   CntrdWrapper,
-  Sa,
 } from './Header.style';
 import logoPath from '../../../assets/logo.svg';
 
