@@ -1,4 +1,6 @@
 import React from 'react';
+import aboutImage from '../../assets/about_page.jpg';
+import Simg from './About.style';
 
 const About = () => {
   return (
@@ -6,6 +8,7 @@ const About = () => {
       <header>
         <h1>About Howl</h1>
       </header>
+      <Simg src={aboutImage} alt="HOWL women at a protest" />
       <p>
         The History of Women&#39;s Liberation (HOWL) project arose initially out
         of discussions older/old feminists were holding about the importance of
