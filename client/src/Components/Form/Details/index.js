@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { months, locations } from '../../data.json';
-import { ErrMsg, BoldText } from './Details.style';
+import ErrMsg from './Details.style';
 
 import {
   withStyles,
@@ -92,7 +92,7 @@ const Details = ({
       {DateQuestion}
       <FormControl className={classes.formControlDate}>
         <InputLabel htmlFor="month" className={classes.label}>
-          Month (Optional)
+          Month (optional)
         </InputLabel>
         <Select
           inputProps={{
@@ -105,7 +105,13 @@ const Details = ({
           disableUnderline
           className={classes.selectDropdown}
         >
-          {renderSelectItems(months)}
+          {months.map(monthEle => {
+            return (
+              <MenuItem key={monthEle} value={monthEle}>
+                {monthEle}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
       <FormControl
