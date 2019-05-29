@@ -5,4 +5,8 @@ const ErrMsg = styled.p`
   font-weight: bold;
 `;
 
-export default ErrMsg;
+const BoldText = styled.span`
+  font-weight: bold;
+`;
+
+export { ErrMsg, BoldText };
