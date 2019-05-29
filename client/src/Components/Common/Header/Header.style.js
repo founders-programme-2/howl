@@ -63,19 +63,6 @@ export const Logo = styled.img`
   }
 `;
 
-export const NavBtn = styled.button`
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-  font-size: 1.2rem;
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--main-bg-color);
-    transform: scale(1.1);
-  }
-`;
-
-// Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
 export const CntrdWrapper = styled.div`
   margin-left: 2rem;
 
