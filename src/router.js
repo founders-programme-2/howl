@@ -4,6 +4,7 @@ const {
 } = require('./controllers');
 
 const { uploadImg, multerUploads, cloudinaryConfig } = require('./middlewares/uploadImg');
+const { footerSearch } = require('./middlewares/footerSearch');
 
 const router = express.Router();
 
@@ -12,6 +13,6 @@ router.get('/archive/feed', feed.feed);
 router.post('/filter', filter.filter);
 router.post('/upload', [cloudinaryConfig, multerUploads, uploadImg]);
 router.post('/posts/create', story.create);
-router.post('/search', search.search);
+router.post('/search', footerSearch);
 
 module.exports = router;
