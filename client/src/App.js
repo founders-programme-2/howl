@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
 
@@ -32,27 +32,30 @@ const {
   WLM_URL,
 } = navigationUrls;
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Header />
-      <GlobalStyle />
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path={ABOUT_URL} component={About} />
-        <Route path={ADD_URL} component={Add} />
-        <Route path={FORM_URL} component={Form} />
-        <Route path={ARCHIVE_URL} component={Archive} />
-        <Route path={HELP_URL} component={Help} />
-        <Route path={RESOURCES_URL} component={Resources} />
-        <Route path={RESULTS_URL} component={Results} />
-        <Route path={STORY_URL} component={Story} />
-        <Route path={TIMELINE_URL} component={Timeline} />
-        <Route path={WLM_URL} component={Wlm} />
-        <Route component={Error404} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+class App extends Component {
+
+  render() {
+    return (
+      <BrowserRouter>
+        <Header />
+        <GlobalStyle />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path={ABOUT_URL} component={About} />
+          <Route path={ADD_URL} component={Add} />
+          <Route path={FORM_URL} component={Form} />
+          <Route path={ARCHIVE_URL} component={Archive} />
+          <Route path={HELP_URL} component={Help} />
+          <Route path={RESOURCES_URL} component={Resources} />
+          <Route path={RESULTS_URL} component={Results} />
+          <Route path={STORY_URL} component={Story} />
+          <Route path={TIMELINE_URL} component={Timeline} />
+          <Route path={WLM_URL} component={Wlm} />
+          <Route component={Error404} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+}
 
 export default App;
