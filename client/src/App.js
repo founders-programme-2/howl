@@ -37,6 +37,10 @@ class App extends Component {
     results: [],
   };
 
+  updateResults = (newResults) => {
+    this.setState({ results: newResults });
+  };
+
   render() {
     return (
       <BrowserRouter>
