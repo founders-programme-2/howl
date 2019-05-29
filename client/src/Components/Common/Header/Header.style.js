@@ -9,6 +9,7 @@ export const NavSection = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   min-width: 100%;
+  justify-content: space-around;
 
   @media (max-width: ${SML}) {
     flex-flow: column nowrap;
@@ -76,7 +77,7 @@ export const NavBtn = styled.button`
 
 // Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
 export const CntrdWrapper = styled.div`
-  margin: auto 5% auto 5%;
+  margin-left: 2rem;
 
   @media (max-width: ${LRG}) {
     margin: auto;
