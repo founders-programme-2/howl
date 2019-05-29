@@ -1,11 +1,12 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { animateScroll } from 'react-scroll';
 import Footer from '../Common/Footer';
 import navigationUrls from '../../constants/navigationUrls';
 import Entry from './Entry/index';
 import BounceLoaderComponent from '../BounceLoader';
-import BouncerContainer from './Archive.style';
+import {BouncerContainer, ScrollButton} from './Archive.style';
 
 class Archive extends Component {
   state = {
@@ -21,6 +22,10 @@ class Archive extends Component {
       });
     });
   }
+
+  scrollToTop = () => {
+    animateScroll.scrollToTop({ duration: 1500, delay: 100, smooth: true });
+  };
 
   viewFullPost = id => () => {
     this.setState({ selectedPostId: id }, () => {
@@ -73,6 +78,7 @@ class Archive extends Component {
           <h2>Recent contributions</h2>
           {EntriesOrLoader}
         </main>
+        <ScrollButton onClick={this.scrollToTop}> Jump to top </ScrollButton>
         <Footer />
       </Fragment>
     );
