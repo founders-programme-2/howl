@@ -19,7 +19,7 @@ export const NavList = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  margin: auto;
+  margin: auto 2% auto 2%;
   padding: 0;
 
   @media (max-width: ${LRG}) {
@@ -35,7 +35,7 @@ export const NavList = styled.ul`
 
 export const NavLi = styled.li`
   text-align: center;
-  padding: 0.5rem;
+  padding: 1.5rem;
 `;
 
 export const NavLink = styled(Link)`
@@ -76,7 +76,15 @@ export const NavBtn = styled.button`
 
 // Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
 export const CntrdWrapper = styled.div`
-  margin: auto;
+  margin: auto 5% auto 5%;
+
+  @media (max-width: ${LRG}) {
+    margin: auto;
+  }
+
+  @media (max-width: ${SML}) {
+    margin: auto;
+  }
 `;
 
 export const Sa = styled.a`
