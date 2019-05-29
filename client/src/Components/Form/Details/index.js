@@ -75,7 +75,7 @@ const Details = ({
           ))}
         </Select>
       </FormControl>
-      {DateQuestion}   
+      {DateQuestion}
       <DateFun
         selectedDate={selectedDate}
         handleDateChange={handleDateChange}
