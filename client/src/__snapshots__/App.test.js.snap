@@ -3,18 +3,18 @@
 exports[`Natural 1`] = `
 Array [
   <nav
-    className="sc-jDwBTQ dtUOIK"
+    className="sc-gPEVay fpsEcC"
   >
     <a
       aria-label="Navigation to top of page"
-      className="sc-bRBYWo cRopwu"
+      className="sc-hzDkRC fngDjQ"
       href="#top"
       name="topLink"
     >
       Top of page
     </a>
     <div
-      className="sc-Rmtcm cOubBF"
+      className="sc-bRBYWo dFOmjt"
     >
       <a
         href="/"
@@ -22,19 +22,19 @@ Array [
       >
         <img
           alt="Howl logo"
-          className="sc-gipzik jMvTnC"
+          className="sc-csuQGl GELnJ"
           src="logo.svg"
         />
       </a>
     </div>
     <ul
-      className="sc-gPEVay hfrhqc"
+      className="sc-iRbamj eaZUYo"
     >
       <li
-        className="sc-iRbamj kHpLwR"
+        className="sc-jlyJG hkwdSg"
       >
         <a
-          className="sc-jlyJG cXGZKF"
+          className="sc-gipzik dxyUaN"
           href="/about"
           onClick={[Function]}
           theme={
@@ -47,10 +47,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-iRbamj kHpLwR"
+        className="sc-jlyJG hkwdSg"
       >
         <a
-          className="sc-jlyJG cXGZKF"
+          className="sc-gipzik dxyUaN"
           href="/wlm"
           onClick={[Function]}
           theme={
@@ -63,10 +63,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-iRbamj kHpLwR"
+        className="sc-jlyJG hkwdSg"
       >
         <a
-          className="sc-jlyJG cXGZKF"
+          className="sc-gipzik dxyUaN"
           href="/resources"
           onClick={[Function]}
           theme={
@@ -79,10 +79,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-iRbamj kHpLwR"
+        className="sc-jlyJG hkwdSg"
       >
         <a
-          className="sc-jlyJG cXGZKF"
+          className="sc-gipzik dxyUaN"
           href="/archive"
           onClick={[Function]}
           theme={
@@ -95,10 +95,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-iRbamj kHpLwR"
+        className="sc-jlyJG hkwdSg"
       >
         <a
-          className="sc-jlyJG cXGZKF"
+          className="sc-gipzik dxyUaN"
           href="/timeline"
           onClick={[Function]}
           theme={
@@ -112,14 +112,14 @@ Array [
       </li>
     </ul>
     <div
-      className="sc-Rmtcm cOubBF"
+      className="sc-bRBYWo dFOmjt"
     >
       <a
         href="/add"
         onClick={[Function]}
       >
         <button
-          className="sc-csuQGl jfrGTF"
+          className="sc-Rmtcm cYhcND"
           type="button"
         >
           Add Your Story
