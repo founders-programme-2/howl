@@ -33,6 +33,9 @@ const {
 } = navigationUrls;
 
 class App extends Component {
+  state = {
+    results: [],
+  };
 
   render() {
     return (
