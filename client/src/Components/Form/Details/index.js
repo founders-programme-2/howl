@@ -36,7 +36,10 @@ const Details = ({
   const DateQuestion = yearErr ? (
     <ErrMsg>{yearErr}</ErrMsg>
   ) : (
-    <p>Approximately when did this event occur?</p>
+    <p>
+      Approximately when did this event occur? If the event spans multiple
+      years, select the year when it started.
+    </p>
   );
 
   const yearsGenerator = () => {
