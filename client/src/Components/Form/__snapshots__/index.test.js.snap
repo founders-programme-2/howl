@@ -44,7 +44,7 @@ Array [
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
-            placeholder="Enter your name..."
+            placeholder="Enter your name or pseudo-name..."
             required={false}
             type="text"
             value=""
