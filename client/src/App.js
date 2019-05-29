@@ -37,7 +37,7 @@ class App extends Component {
     results: [],
   };
 
-  updateResults = (newResults) => {
+  updateResults = newResults => {
     this.setState({ results: newResults });
   };
 
@@ -47,17 +47,61 @@ class App extends Component {
         <Header />
         <GlobalStyle />
         <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path={ABOUT_URL} component={About} />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Landing {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={ABOUT_URL}
+            render={props => (
+              <About {...props} footerProp={this.updateResults} />
+            )}
+          />
           <Route path={ADD_URL} component={Add} />
           <Route path={FORM_URL} component={Form} />
-          <Route path={ARCHIVE_URL} component={Archive} />
-          <Route path={HELP_URL} component={Help} />
-          <Route path={RESOURCES_URL} component={Resources} />
-          <Route path={RESULTS_URL} component={Results} />
-          <Route path={STORY_URL} component={Story} />
-          <Route path={TIMELINE_URL} component={Timeline} />
-          <Route path={WLM_URL} component={Wlm} />
+          <Route
+            path={ARCHIVE_URL}
+            render={props => (
+              <Archive {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={HELP_URL}
+            render={props => (
+              <Help {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={RESOURCES_URL}
+            render={props => (
+              <Resources {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={RESULTS_URL}
+            render={props => (
+              <Results {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={STORY_URL}
+            render={props => (
+              <Story {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={TIMELINE_URL}
+            render={props => (
+              <Timeline {...props} footerProp={this.updateResults} />
+            )}
+          />
+          <Route
+            path={WLM_URL}
+            render={props => <Wlm {...props} footerProp={this.updateResults} />}
+          />
           <Route component={Error404} />
         </Switch>
       </BrowserRouter>
