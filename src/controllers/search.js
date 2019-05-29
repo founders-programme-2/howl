@@ -1,9 +1,14 @@
 const { Story } = require('../airtables');
 
 const search = (req, res) => {
+  let { search } = req.body;
+  search = search.toLowerCase();
+
+  console.log('We will search for: ', search);
   const filteredData = [];
+
   Story.select({
-    // filterByFormula: ,
+    filterByFormula: `FIND(LOWER("${search}"), LOWER(details)) > 0`,
     view: 'Approved Stories',
     fields: [
       'id',
@@ -40,7 +45,7 @@ const search = (req, res) => {
       if (err) {
         res.json({ success: false, err: "There's been an error in fetching your search." });
       } else {
-        console.log('successful result: ', filteredData);
+        // console.log('successful result: ', filteredData);
         res.json({ success: true, data: filteredData });
       }
     },
