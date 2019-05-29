@@ -42,6 +42,8 @@ class App extends Component {
   };
 
   render() {
+    const { results } = this.state;
+
     return (
       <BrowserRouter>
         <Header />
@@ -83,7 +85,11 @@ class App extends Component {
           <Route
             path={RESULTS_URL}
             render={props => (
-              <Results {...props} footerProp={this.updateResults} />
+              <Results
+                {...props}
+                footerProp={this.updateResults}
+                results={results}
+              />
             )}
           />
           <Route
