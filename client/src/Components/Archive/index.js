@@ -37,7 +37,7 @@ class Archive extends Component {
   render() {
     const { TIMELINE_URL } = navigationUrls;
     const { results, loadingFlag } = this.state;
-    const { footerProp } = this.props;
+    const { setFilters } = this.props;
     const renderResultsAsEntries = results
       ? results.map(result => (
           <Entry
@@ -78,7 +78,7 @@ class Archive extends Component {
           <h2>Recent contributions</h2>
           {EntriesOrLoader}
         </main>
-        <Footer updateResults={footerProp} />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }

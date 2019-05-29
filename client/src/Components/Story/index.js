@@ -17,7 +17,7 @@ import {
 } from './Story.style';
 
 class Story extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
 
@@ -73,7 +73,7 @@ class Story extends Component {
       message,
       loadingFlag,
     } = this.state;
-    const { footerProp } = this.props;
+    const { setFilters } = this.props;
     const modifiedTags = tags ? tags.join(', ') : null;
     const imgAndCaption =
       imageUrl && imageCaption ? (
@@ -134,7 +134,7 @@ class Story extends Component {
     return (
       <Fragment>
         <ContentContainer>{ContentOrLoader}</ContentContainer>
-        <Footer updateResults={footerProp} />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }

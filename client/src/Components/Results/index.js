@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Footer from '../Common/Footer';
 
-const Results = ({ footerProp, results }) => {
+const Results = ({ setFilters, filters }) => {
   const renderResults = res => {
     return res.map(story => <p>{story}</p>);
   };
@@ -9,8 +9,8 @@ const Results = ({ footerProp, results }) => {
   return (
     <Fragment>
       <h1>Hello Results page!</h1>
-      {renderResults(results)}
-      <Footer updateResults={footerProp} />
+      {renderResults(filters)}
+      <Footer setFilters={setFilters} />
     </Fragment>
   );
 };

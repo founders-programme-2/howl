@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Footer from '../Common/Footer';
 
-const Wlm = ({ footerProp }) => {
+const Wlm = ({ setFilters }) => {
   return (
     <Fragment>
       <main>
@@ -44,7 +44,7 @@ const Wlm = ({ footerProp }) => {
           much more is needed.
         </p>
       </main>
-      <Footer updateResults={footerProp} />
+      <Footer setFilters={setFilters} />
     </Fragment>
   );
 };

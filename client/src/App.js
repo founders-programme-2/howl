@@ -34,15 +34,15 @@ const {
 
 class App extends Component {
   state = {
-    results: [],
+    filters: [],
   };
 
-  updateResults = newResults => {
+  updateFilters = newResults => {
     this.setState({ results: newResults });
   };
 
   render() {
-    const { results } = this.state;
+    const { filters } = this.state;
 
     return (
       <BrowserRouter>
@@ -53,13 +53,13 @@ class App extends Component {
             exact
             path="/"
             render={props => (
-              <Landing {...props} footerProp={this.updateResults} />
+              <Landing {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
             path={ABOUT_URL}
             render={props => (
-              <About {...props} footerProp={this.updateResults} />
+              <About {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route path={ADD_URL} component={Add} />
@@ -67,19 +67,19 @@ class App extends Component {
           <Route
             path={ARCHIVE_URL}
             render={props => (
-              <Archive {...props} footerProp={this.updateResults} />
+              <Archive {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
             path={HELP_URL}
             render={props => (
-              <Help {...props} footerProp={this.updateResults} />
+              <Help {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
             path={RESOURCES_URL}
             render={props => (
-              <Resources {...props} footerProp={this.updateResults} />
+              <Resources {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
@@ -87,26 +87,26 @@ class App extends Component {
             render={props => (
               <Results
                 {...props}
-                footerProp={this.updateResults}
-                results={results}
+                setFilters={this.updateFilters}
+                filters={filters}
               />
             )}
           />
           <Route
             path={STORY_URL}
             render={props => (
-              <Story {...props} footerProp={this.updateResults} />
+              <Story {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
             path={TIMELINE_URL}
             render={props => (
-              <Timeline {...props} footerProp={this.updateResults} />
+              <Timeline {...props} setFilters={this.updateFilters} />
             )}
           />
           <Route
             path={WLM_URL}
-            render={props => <Wlm {...props} footerProp={this.updateResults} />}
+            render={props => <Wlm {...props} setFilters={this.updateFilters} />}
           />
           <Route component={Error404} />
         </Switch>

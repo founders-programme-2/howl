@@ -65,9 +65,9 @@ class Footer extends Component {
   updateResult = ({ tags, category, year, location, search }) => {
     // Axios should be here, depending on response, change result.
     // After Axios, should update App.js results
-    const { updateResults, history } = this.props;
+    const { setFilters, history } = this.props;
     const { RESULTS_URL } = navigationUrls;
-    updateResults(['Result-1', 'Result-2']);
+    setFilters({ tags, category, year, location, search });
     history.push(RESULTS_URL);
   };
 
