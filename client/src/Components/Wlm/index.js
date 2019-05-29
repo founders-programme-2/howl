@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Footer from '../Common/Footer';
 
-const Wlm = () => {
+const Wlm = ({ footerProp }) => {
   return (
     <Fragment>
       <main>
@@ -44,7 +44,7 @@ const Wlm = () => {
           much more is needed.
         </p>
       </main>
-      <Footer />
+      <Footer updateResults={footerProp} />
     </Fragment>
   );
 };

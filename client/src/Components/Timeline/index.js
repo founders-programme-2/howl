@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Common/Footer';
 import navigationUrls from '../../constants/navigationUrls';
 
-const Timeline = () => {
+const Timeline = ({ footerProp }) => {
   const { ARCHIVE_URL } = navigationUrls;
   return (
     <Fragment>
@@ -23,7 +23,7 @@ const Timeline = () => {
           <Link to={ARCHIVE_URL}>archive</Link> for a text-based experience.
         </p>
       </main>
-      <Footer />
+      <Footer updateResults={footerProp} />
     </Fragment>
   );
 };

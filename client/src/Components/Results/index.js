@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import Footer from '../Common/Footer';
 
-const Results = () => {
+const Results = ({ footerProp }) => {
   return (
     <Fragment>
       <h1>Hello Results page!</h1>
-      <Footer />
+      <Footer updateResults={footerProp} />
     </Fragment>
   );
 };

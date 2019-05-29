@@ -14,7 +14,7 @@ import {
 import landingImage from '../../assets/landing_page.jpg';
 import Footer from '../Common/Footer';
 
-const Landing = () => {
+const Landing = ({ footerProp }) => {
   return (
     <Fragment>
       <Smain>
@@ -61,7 +61,7 @@ const Landing = () => {
         </SsectionNav>
       </Smain>
       <SaHidden name="bottomLink" aria-label="Search bar">
-        <Footer />
+        <Footer updateResults={footerProp} />
       </SaHidden>
     </Fragment>
   );

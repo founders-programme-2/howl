@@ -8,6 +8,10 @@ import BounceLoaderComponent from '../BounceLoader';
 import BouncerContainer from './Archive.style';
 
 class Archive extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     results: [],
     selectedPostId: '',
@@ -33,6 +37,7 @@ class Archive extends Component {
   render() {
     const { TIMELINE_URL } = navigationUrls;
     const { results, loadingFlag } = this.state;
+    const { footerProp } = this.props;
     const renderResultsAsEntries = results
       ? results.map(result => (
           <Entry
@@ -73,7 +78,7 @@ class Archive extends Component {
           <h2>Recent contributions</h2>
           {EntriesOrLoader}
         </main>
-        <Footer />
+        <Footer updateResults={footerProp} />
       </Fragment>
     );
   }

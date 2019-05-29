@@ -12,7 +12,7 @@ import searchInput from '../../assets/helpSearchInput.svg';
 import searchBtn from '../../assets/helpSearchBtn.svg';
 import Footer from '../Common/Footer/index';
 
-const Help = () => {
+const Help = ({ footerProp }) => {
   return (
     <Fragment>
       <main>
@@ -86,7 +86,7 @@ const Help = () => {
 
         <CallToAction>Now give it a try yourself!</CallToAction>
       </main>
-      <Footer />
+      <Footer updateResults={footerProp} />
     </Fragment>
   );
 };

@@ -17,6 +17,10 @@ import {
 } from './Story.style';
 
 class Story extends Component {
+  constructor(props){
+    super(props);
+  }
+
   state = {
     name: '',
     title: '',
@@ -69,7 +73,7 @@ class Story extends Component {
       message,
       loadingFlag,
     } = this.state;
-
+    const { footerProp } = this.props;
     const modifiedTags = tags ? tags.join(', ') : null;
     const imgAndCaption =
       imageUrl && imageCaption ? (
@@ -130,7 +134,7 @@ class Story extends Component {
     return (
       <Fragment>
         <ContentContainer>{ContentOrLoader}</ContentContainer>
-        <Footer />
+        <Footer updateResults={footerProp} />
       </Fragment>
     );
   }
