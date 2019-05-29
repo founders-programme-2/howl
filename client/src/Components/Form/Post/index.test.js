@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import Post from './index';
 import axios from 'axios';
+import Post from './index';
 
 test('Natural', () => {
   let state = {};
