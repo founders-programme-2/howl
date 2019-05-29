@@ -25,6 +25,7 @@ import {
 } from './Footer.style';
 import { tags as tagsArr, categories, locations } from '../../data';
 import { styles, BootstrapInput, MenuProps, footerTheme } from './mui.style';
+import navigationUrls from '../../../constants/navigationUrls';
 
 const renderSelectItems = items => {
   return items.sort().map(item => (
@@ -63,6 +64,11 @@ class Footer extends Component {
 
   updateResult = ({ tags, category, year, location, search }) => {
     // Axios should be here, depending on response, change result.
+    // After Axios, should update App.js results
+    const { updateResults, history } = this.props;
+    const { RESULTS_URL } = navigationUrls;
+    updateResults(['Result-1', 'Result-2']);
+    history.push(RESULTS_URL);
   };
 
   updateStateValue = (name, value) => {
