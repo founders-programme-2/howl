@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
-import DateFun from './DatePicker';
-import { locations } from '../../data.json';
-import ErrMsg from './Details.style';
+import { months, locations } from '../../data.json';
+import { ErrMsg, BoldText } from './Details.style';
 
 import {
   withStyles,
@@ -22,11 +21,11 @@ const Details = ({
   radio,
   radioChange,
   location,
-  selectedDate,
-  handleDateChange,
   dropdownChange,
   locationErr,
-  selectedDateErr,
+  yearErr,
+  year,
+  month,
 }) => {
   const locationQuestion = locationErr ? (
     <ErrMsg>{locationErr}</ErrMsg>
@@ -34,11 +33,27 @@ const Details = ({
     <p>Where did this event occur?</p>
   );
 
-  const DateQuestion = selectedDateErr ? (
-    <ErrMsg>{selectedDateErr}</ErrMsg>
+  const DateQuestion = yearErr ? (
+    <ErrMsg>{yearErr}</ErrMsg>
   ) : (
     <p>Approximately when did this event occur?</p>
   );
+
+  const yearsGenerator = () => {
+    const years = [];
+    for (let i = 1960; i <= 1990; i += 1) {
+      years.push(i);
+    }
+    return years;
+  };
+
+  const renderSelectItems = items => {
+    return items.sort().map(item => (
+      <MenuItem key={item} value={item}>
+        {item}
+      </MenuItem>
+    ));
+  };
 
   return (
     <Fragment>
@@ -66,20 +81,56 @@ const Details = ({
           value={location}
           onChange={dropdownChange}
           disableUnderline
-          className={classes.selectLocation}
+          className={classes.selectDropdown}
         >
-          {locations.sort().map(loc => (
-            <MenuItem value={loc} key={loc}>
-              {loc}
-            </MenuItem>
-          ))}
+          {renderSelectItems(locations)}
         </Select>
       </FormControl>
-      {DateQuestion}   
-      <DateFun
-        selectedDate={selectedDate}
-        handleDateChange={handleDateChange}
-      />
+      {DateQuestion}
+      <FormControl className={classes.formControlDate}>
+        <InputLabel htmlFor="month" className={classes.label}>
+          Month (Optional)
+        </InputLabel>
+        <Select
+          inputProps={{
+            name: 'month',
+            id: 'month',
+          }}
+          aria-label="month"
+          value={month}
+          onChange={dropdownChange}
+          disableUnderline
+          className={classes.selectDropdown}
+        >
+          <MenuItem value="month">
+            <BoldText>Month</BoldText>
+          </MenuItem>
+          {renderSelectItems(months)}
+        </Select>
+      </FormControl>
+      <FormControl
+        className={`${classes.formControlDate} ${classes.formControlYear}`}
+      >
+        <InputLabel htmlFor="year" className={classes.label}>
+          Year (required)
+        </InputLabel>
+        <Select
+          inputProps={{
+            name: 'year',
+            id: 'year',
+          }}
+          aria-label="year"
+          value={year}
+          onChange={dropdownChange}
+          disableUnderline
+          className={classes.selectDropdown}
+        >
+          <MenuItem value="year">
+            <BoldText>Year</BoldText>
+          </MenuItem>
+          {renderSelectItems(yearsGenerator())}
+        </Select>
+      </FormControl>
       <p>What kind of contribution would you like to make?</p>
       <FormControl className={classes.formControlRadio}>
         <FormLabel component="legend">I would like to share:</FormLabel>
