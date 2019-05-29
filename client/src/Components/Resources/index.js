@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import resourcesData from './resourcesData';
+import bibliographyData from './bibliographyData';
 import { Sh2, Sp } from './Resources.style';
+import Footer from '../Common/Footer';
 
 const Resources = () => {
   // maps over data and renders resources on page
@@ -15,6 +17,17 @@ const Resources = () => {
     );
   });
 
+  // maps over books in data.json and renders bibliography
+  const renderBibliography = bibliographyData.books.map(book => {
+    return (
+      <article key={book.title}>
+        <Sh2>Title: {book.title}</Sh2>
+        <Sp>Author: {book.author}</Sp>
+        <Sp>Date: {book.date}</Sp>
+        <Sp>Description: {book.description}</Sp>
+      </article>
+    );
+  });
   return (
     <Fragment>
       <main>
@@ -28,7 +41,10 @@ const Resources = () => {
           following:
         </p>
         {renderResources}
+        <h2>Bibliography</h2>
+        {renderBibliography}
       </main>
+      <Footer />
     </Fragment>
   );
 };
