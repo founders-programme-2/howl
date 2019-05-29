@@ -91,6 +91,26 @@ const Details = ({
       </FormControl>
       {DateQuestion}
       <FormControl className={classes.formControlDate}>
+        <InputLabel htmlFor="year" className={classes.label}>
+          Year (required)
+        </InputLabel>
+        <Select
+          inputProps={{
+            name: 'year',
+            id: 'year',
+          }}
+          aria-label="year"
+          value={year}
+          onChange={dropdownChange}
+          disableUnderline
+          className={classes.selectDropdown}
+        >
+          {renderSelectItems(yearsGenerator())}
+        </Select>
+      </FormControl>
+      <FormControl
+        className={`${classes.formControlDate} ${classes.formControlMonth}`}
+      >
         <InputLabel htmlFor="month" className={classes.label}>
           Month (optional)
         </InputLabel>
@@ -112,26 +132,6 @@ const Details = ({
               </MenuItem>
             );
           })}
-        </Select>
-      </FormControl>
-      <FormControl
-        className={`${classes.formControlDate} ${classes.formControlYear}`}
-      >
-        <InputLabel htmlFor="year" className={classes.label}>
-          Year (required)
-        </InputLabel>
-        <Select
-          inputProps={{
-            name: 'year',
-            id: 'year',
-          }}
-          aria-label="year"
-          value={year}
-          onChange={dropdownChange}
-          disableUnderline
-          className={classes.selectDropdown}
-        >
-          {renderSelectItems(yearsGenerator())}
         </Select>
       </FormControl>
       <p>What kind of contribution would you like to make?</p>
