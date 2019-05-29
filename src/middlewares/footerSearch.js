@@ -11,8 +11,24 @@ const footerSearch = (req, res) => {
   console.log('Tags: ', tags);
   console.log('Search query: ', searchQuery);
 
-  if (search !== '') {
+  if (searchQuery !== undefined) {
     search.search(searchQuery, (err, result) => {
+      if (err) {
+        console.log('Error in search function: ', error);
+      } else {
+        res.json({ success: true, data: result });
+      }
+    });
+  }
+
+  if (category || location || year || tags) {
+    const filterVar = {
+      category,
+      location,
+      year,
+      tags,
+    };
+    filter.filter(filterVar, (err, result) => {
       if (err) {
         console.log('Error in search function: ', error);
       } else {

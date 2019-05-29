@@ -1,15 +1,7 @@
 const { Story } = require('../airtables');
 
-const filter = (req, res) => {
-  const {
-    category, location, year, tags, search,
-  } = req.body;
-
-  console.log('Category: ', category);
-  console.log('Location: ', location);
-  console.log('Year: ', year);
-  console.log('Tags: ', tags[0]);
-  console.log('Search: ', search);
+const filter = (filterVar, cb) => {
+  console.log(filterVar);
 
   // creates a formula that airtable uses to filter response
   // this string is the first part of the command that airtable api calls for
@@ -25,8 +17,8 @@ const filter = (req, res) => {
   // The request body comes in with keys for all fields. If the user has not selected a filter,
   // it comes in as undefined. This function checks for truthy keys in request body. For each key,
   // it adds the corresponding string from formulaFields to formula
-  Object.keys(req.body).forEach((key) => {
-    if (key && key !== 'search' && key !== 'tags') formula += `${formulaFields[key]}`;
+  Object.keys(filterVar).forEach((key) => {
+    if (key && key !== 'tags') formula += `${formulaFields[key]}`;
   });
 
   // removes a danging space and apostrophe from formula and adds '))' to complete the formula string.
@@ -84,7 +76,7 @@ const filter = (req, res) => {
         res.json({ success: false, err: "There's been an error in fetching your search." });
       } else {
         console.log('successful result: ', filteredData);
-        res.json({ success: true, data: filteredData });
+        cb(null, filteredData);
       }
     },
   );
