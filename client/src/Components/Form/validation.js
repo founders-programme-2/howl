@@ -23,7 +23,7 @@ const validationSchema = Yup.object().shape({
     .required('What title would suit your story? (under 10 words).')
     .matches(
       /^[^{}<>]*$/,
-      'Please enter a valid title. No special characters allowed.'
+      'Please enter a valid title. No { } < > characters allowed.'
     ),
   details: Yup.string().when('radio', {
     is: radio => radio === 'textPost' || radio === 'both',
@@ -31,7 +31,7 @@ const validationSchema = Yup.object().shape({
       .required('Describe what happened in no more than 1000 words.')
       .matches(
         /^[^{}<>]*$/,
-        'Please enter valid descriptive details. No special characters allowed.'
+        'Please enter valid descriptive details. No { } < > characters allowed.'
       ),
   }),
   imageCap: Yup.string().when('radio', {
@@ -40,7 +40,7 @@ const validationSchema = Yup.object().shape({
       .required('How would you caption this image?')
       .matches(
         /^[^{}<>]*$/,
-        'Please enter a valid image caption. No special characters allowed.'
+        'Please enter a valid image caption. No { } < > characters allowed.'
       ),
   }),
   imgLink: Yup.string().when('radio', {
@@ -53,7 +53,7 @@ const validationSchema = Yup.object().shape({
     .required("What's your connection to the Women's Liberation Movement?")
     .matches(
       /^[^{}<>]*$/,
-      "Please enter a valid description of your connection to Women's Liberation Movement. No special characters allowed."
+      "Please enter a valid description of your connection to Women's Liberation Movement. No { } < > characters allowed."
     ),
   tags: Yup.array().required('What tags would best describe your story?'),
 
@@ -84,7 +84,7 @@ const validationSchema = Yup.object().shape({
 
   additionalComments: Yup.string().matches(
     /^[^{}<>]*$/,
-    'Please enter valid comments. No special characters allowed.'
+    'Please enter valid comments. No { } < > characters allowed.'
   ),
 });
 
