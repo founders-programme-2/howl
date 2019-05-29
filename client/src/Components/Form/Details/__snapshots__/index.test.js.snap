@@ -20,7 +20,7 @@ Array [
       data-shrink={false}
       htmlFor="location"
     >
-      Location
+      Location (required)
     </label>
     <div
       aria-label="location"
@@ -198,7 +198,7 @@ Array [
         >
           <span
             aria-disabled={false}
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-254 MuiRadio-root MuiRadio-colorSecondary"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-253 MuiRadio-root MuiRadio-colorSecondary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -215,7 +215,7 @@ Array [
               className="MuiIconButton-label"
             >
               <div
-                className="PrivateRadioButtonIcon-root-258"
+                className="PrivateRadioButtonIcon-root-257"
               >
                 <svg
                   aria-hidden="true"
@@ -230,7 +230,7 @@ Array [
                 </svg>
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-259"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-258"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -242,7 +242,7 @@ Array [
               </div>
               <input
                 checked={false}
-                className="PrivateSwitchBase-input-257"
+                className="PrivateSwitchBase-input-256"
                 disabled={false}
                 name="storyType"
                 onChange={[Function]}
@@ -262,7 +262,7 @@ Array [
         >
           <span
             aria-disabled={false}
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-254 MuiRadio-root MuiRadio-colorSecondary"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-253 MuiRadio-root MuiRadio-colorSecondary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -279,7 +279,7 @@ Array [
               className="MuiIconButton-label"
             >
               <div
-                className="PrivateRadioButtonIcon-root-258"
+                className="PrivateRadioButtonIcon-root-257"
               >
                 <svg
                   aria-hidden="true"
@@ -294,7 +294,7 @@ Array [
                 </svg>
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-259"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-258"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -306,7 +306,7 @@ Array [
               </div>
               <input
                 checked={false}
-                className="PrivateSwitchBase-input-257"
+                className="PrivateSwitchBase-input-256"
                 disabled={false}
                 name="storyType"
                 onChange={[Function]}
@@ -326,7 +326,7 @@ Array [
         >
           <span
             aria-disabled={false}
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-254 MuiRadio-root MuiRadio-colorSecondary"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-253 MuiRadio-root MuiRadio-colorSecondary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -343,7 +343,7 @@ Array [
               className="MuiIconButton-label"
             >
               <div
-                className="PrivateRadioButtonIcon-root-258"
+                className="PrivateRadioButtonIcon-root-257"
               >
                 <svg
                   aria-hidden="true"
@@ -358,7 +358,7 @@ Array [
                 </svg>
                 <svg
                   aria-hidden="true"
-                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-259"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-258"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -370,7 +370,7 @@ Array [
               </div>
               <input
                 checked={false}
-                className="PrivateSwitchBase-input-257"
+                className="PrivateSwitchBase-input-256"
                 disabled={false}
                 name="storyType"
                 onChange={[Function]}

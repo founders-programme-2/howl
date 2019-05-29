@@ -3,16 +3,33 @@
 exports[`Natural 1`] = `
 Array [
   " ",
-  <main>
-    <h1>
-      Hello Story page!
-    </h1>
+  <main
+    className="sc-VigVT imaKcb"
+  >
+    <div
+      className="sc-jzJRlG euHQks"
+    >
+      <div
+        className="sweet-loading"
+      >
+        <div
+          className="css-1evy0nx-wrapper-wrapper"
+        >
+          <div
+            className="css-z7rh7d-style"
+          />
+          <div
+            className="css-jib95i-style"
+          />
+        </div>
+      </div>
+    </div>
   </main>,
   <footer
-    className="sc-bdVaJa iZwRho"
+    className="sc-bdVaJa dycKuB"
   >
     <section
-      className="sc-bwzfXH iEgWMV"
+      className="sc-bwzfXH fiRAvd"
     >
       <h2
         className="sc-htpNat gKOkZF"
@@ -41,10 +58,13 @@ Array [
         >
           How to search
         </span>
+        <span
+          className="MuiTouchRipple-root"
+        />
       </button>
     </section>
     <section
-      className="sc-bxivhb embyEq"
+      className="sc-bxivhb jbVdgm"
     >
       <div
         className="MuiFormControl-root Footer-formControl-2"
@@ -243,7 +263,7 @@ Array [
       </div>
     </section>
     <section
-      className="sc-ifAKCX dwKICT"
+      className="sc-ifAKCX ezvIgM"
     >
       <div
         className="MuiFormControl-root Footer-searchFormControl-8"
@@ -252,19 +272,19 @@ Array [
           className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
         >
           <label
-            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Footer-searchTextFieldLabel-10"
             data-shrink={false}
             htmlFor="outlined-search"
           >
             Search...
           </label>
           <div
-            className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+            className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
             onClick={[Function]}
           >
             <input
               aria-invalid={false}
-              className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch"
               disabled={false}
               id="outlined-search"
               onBlur={[Function]}
@@ -278,7 +298,7 @@ Array [
         </div>
       </div>
       <section
-        className="sc-EHOje bFQIyp"
+        className="sc-EHOje khXZcR"
       >
         <button
           className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
@@ -302,6 +322,9 @@ Array [
           >
             Search
           </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
         </button>
         <button
           className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
@@ -325,6 +348,9 @@ Array [
           >
             Reset
           </span>
+          <span
+            className="MuiTouchRipple-root"
+          />
         </button>
       </section>
     </section>
