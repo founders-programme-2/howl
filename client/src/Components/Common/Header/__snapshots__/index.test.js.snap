@@ -4,7 +4,7 @@ exports[`Natural 1`] = `
 Array [
   " ",
   <nav
-    className="sc-bdVaJa KvuRE"
+    className="sc-bdVaJa knHpaF"
   >
     <a
       aria-label="Navigation to top of page"
@@ -14,18 +14,22 @@ Array [
     >
       Top of page
     </a>
-    <a
-      href="/"
-      onClick={[Function]}
+    <div
+      className="sc-bZQynM laTINv"
     >
-      <img
-        alt="Howl logo"
-        className="sc-ifAKCX dTrtc"
-        src="logo.svg"
-      />
-    </a>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Howl logo"
+          className="sc-ifAKCX iZOrPs"
+          src="logo.svg"
+        />
+      </a>
+    </div>
     <ul
-      className="sc-bwzfXH hcodBN"
+      className="sc-bwzfXH dKkkgT"
     >
       <li
         className="sc-htpNat jfwiNj"
@@ -34,6 +38,11 @@ Array [
           className="sc-bxivhb bRkUzh"
           href="/about"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           About Howl
         </a>
@@ -45,6 +54,11 @@ Array [
           className="sc-bxivhb bRkUzh"
           href="/wlm"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Women's Liberation
         </a>
@@ -56,6 +70,11 @@ Array [
           className="sc-bxivhb bRkUzh"
           href="/resources"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Feminist Resources
         </a>
@@ -67,6 +86,11 @@ Array [
           className="sc-bxivhb bRkUzh"
           href="/archive"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           The Archive
         </a>
@@ -78,6 +102,11 @@ Array [
           className="sc-bxivhb bRkUzh"
           href="/timeline"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Interactive Timeline
         </a>
