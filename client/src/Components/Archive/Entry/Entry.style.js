@@ -31,8 +31,9 @@ const HeaderFour = styled.h4`
 const Title = styled.h3`
   @media (max-width: ${SML}) {
     text-align: center;
-     margin: 2rem auto
-     width: 100%;
+    width: 90%;
+    margin: 2rem 1rem;
+    background: pink;
   }
 `;
 
