@@ -15,6 +15,7 @@ const validationSchema = Yup.object().shape({
     'Please enter a valid phone number that contains no letters or special characters.'
   ),
   location: Yup.string().required('Where did this event occur?'),
+  year: Yup.string().required('Approximately when did this event occur?'),
 
   title: Yup.string()
     .required('What title would suit your story? (under 10 words).')
@@ -93,7 +94,7 @@ const validateFunc = ({
   email,
   phone,
   location,
-  selectedDate,
+  year,
   title,
   details,
   imageCap,
@@ -112,7 +113,7 @@ const validateFunc = ({
       email,
       phone,
       location,
-      selectedDate,
+      year,
       title,
       details,
       imageCap,
