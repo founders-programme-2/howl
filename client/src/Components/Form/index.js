@@ -67,6 +67,7 @@ class Form extends Component {
     'imgLink',
     'wlmConnection',
     'additionalComments',
+    'year',
   ];
 
   radioChange = event => {
