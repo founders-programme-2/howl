@@ -19,7 +19,6 @@ class Form extends Component {
     email: '',
     phone: '',
     location: '',
-    selectedDate: new Date(),
     year: '',
     month: '',
     title: '',
@@ -40,7 +39,7 @@ class Form extends Component {
     emailErr: null,
     phoneErr: null,
     locationErr: null,
-    selectedDateErr: null,
+    yearErr: null,
     titleErr: null,
     detailsErr: null,
     imageCapErr: null,
@@ -68,6 +67,7 @@ class Form extends Component {
     'imgLink',
     'wlmConnection',
     'additionalComments',
+    'year',
   ];
 
   radioChange = event => {
@@ -88,20 +88,6 @@ class Form extends Component {
 
   textChange = name => event => {
     this.setState({ [name]: event.target.value });
-  };
-
-  handleDateChange = date => {
-    const options = {
-      year: 'numeric',
-      month: 'long',
-    };
-    const dateModified = date.toLocaleDateString('en-US', options);
-    const splitted = dateModified.split(' ');
-    this.setState({
-      selectedDate: dateModified,
-      month: splitted[0],
-      year: splitted[1],
-    });
   };
 
   handleUploadFile = event => {
@@ -165,7 +151,8 @@ class Form extends Component {
       email,
       phone,
       location,
-      selectedDate,
+      month,
+      year,
       title,
       details,
       imageCap,
@@ -184,7 +171,7 @@ class Form extends Component {
       emailErr,
       phoneErr,
       locationErr,
-      selectedDateErr,
+      yearErr,
       titleErr,
       detailsErr,
       imageCapErr,
@@ -214,11 +201,12 @@ class Form extends Component {
               radio={radio}
               radioChange={this.radioChange}
               location={location}
-              selectedDate={selectedDate}
               handleDateChange={this.handleDateChange}
               dropdownChange={this.dropdownChange}
               locationErr={locationErr}
-              selectedDateErr={selectedDateErr}
+              yearErr={yearErr}
+              month={month}
+              year={year}
             />
             <Post
               title={title}
