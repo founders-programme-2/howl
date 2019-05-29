@@ -62,9 +62,7 @@ class Footer extends Component {
     result: [],
   };
 
-  updateResult = ({ tags, category, year, location, search }) => {
-    // Axios should be here, depending on response, change result.
-    // After Axios, should update App.js results
+  submitSearch = ({ tags, category, year, location, search }) => {
     const { setFilters, history } = this.props;
     const { RESULTS_URL } = navigationUrls;
     setFilters({ tags, category, year, location, search });
@@ -236,7 +234,7 @@ class Footer extends Component {
               <Button
                 className={classes.searchButton}
                 onClick={() => {
-                  this.updateResult(this.state);
+                  this.submitSearch(this.state);
                 }}
               >
                 Search
