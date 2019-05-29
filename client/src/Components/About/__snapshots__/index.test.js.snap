@@ -9,6 +9,11 @@ Array [
         About Howl
       </h1>
     </header>
+    <img
+      alt="HOWL women at a protest"
+      className="sc-bdVaJa bScuXf"
+      src="about_page.jpg"
+    />
     <p>
       The History of Women's Liberation (HOWL) project arose initially out of discussions older/old feminists were holding about the importance of collecting and producing our own history. Our time is limited. We need to act now. In HOWL, we intend to collectively create a broad picture that includes and represents women from all parts of the UK. Our core collection years are from 1965 to the 1990s. We will achieve this through reaching out to old feminists, creating a website, collecting oral histories, gathering memorabilia and holding events. HOWL originated in London but we are committed to making sure that the voices and materials collected are diverse, inclusive and cover the whole of the UK.
     </p>
@@ -32,13 +37,13 @@ Array [
     </p>
   </main>,
   <footer
-    className="sc-bdVaJa dycKuB"
+    className="sc-bwzfXH bmqgFz"
   >
     <section
-      className="sc-bwzfXH fiRAvd"
+      className="sc-htpNat jvwxwt"
     >
       <h2
-        className="sc-htpNat gKOkZF"
+        className="sc-bxivhb hOulHU"
       >
         Search Archive
       </h2>
@@ -67,7 +72,7 @@ Array [
       </button>
     </section>
     <section
-      className="sc-bxivhb jbVdgm"
+      className="sc-ifAKCX dIzAIk"
     >
       <div
         className="MuiFormControl-root Footer-formControl-2"
@@ -93,7 +98,7 @@ Array [
               tabIndex={0}
             >
               <span
-                className="sc-bZQynM kihKbR"
+                className="sc-gzVnrw grgfgk"
               >
                 Category
               </span>
@@ -138,7 +143,7 @@ Array [
               tabIndex={0}
             >
               <span
-                className="sc-bZQynM kihKbR"
+                className="sc-gzVnrw grgfgk"
               >
                 Location
               </span>
@@ -183,7 +188,7 @@ Array [
               tabIndex={0}
             >
               <span
-                className="sc-bZQynM kihKbR"
+                className="sc-gzVnrw grgfgk"
               >
                 Year
               </span>
@@ -266,7 +271,7 @@ Array [
       </div>
     </section>
     <section
-      className="sc-ifAKCX ezvIgM"
+      className="sc-EHOje sXSQn"
     >
       <div
         className="MuiFormControl-root Footer-searchFormControl-8"
@@ -301,7 +306,7 @@ Array [
         </div>
       </div>
       <section
-        className="sc-EHOje khXZcR"
+        className="sc-bZQynM jABVuX"
       >
         <button
           className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
