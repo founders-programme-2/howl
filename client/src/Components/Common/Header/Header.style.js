@@ -29,6 +29,7 @@ export const NavList = styled.ul`
 
   @media (max-width: ${SML}) {
     flex-flow: column nowrap;
+    margin-bottom: 1rem;
   }
 `;
 

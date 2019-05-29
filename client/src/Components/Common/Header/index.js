@@ -30,6 +30,7 @@ const Header = ({ location }) => {
           <Logo src={logoPath} alt="Howl logo" />
         </Link>
       </CntrdWrapper>
+
       <NavList>
         <NavLi>
           <NavLink
@@ -41,6 +42,7 @@ const Header = ({ location }) => {
             About Howl
           </NavLink>
         </NavLi>
+
         <NavLi>
           <NavLink
             to={WLM_URL}
@@ -51,8 +53,30 @@ const Header = ({ location }) => {
             Women&#39;s Liberation
           </NavLink>
         </NavLi>
+
         <NavLi>
           <NavLink
+<<<<<<< HEAD
+            to={ARCHIVE_URL}
+            theme={{
+              color: url === ARCHIVE_URL ? 'var(--main-btn-color)' : 'white',
+            }}
+          >
+            The Archive
+=======
+            to={TIMELINE_URL}
+            theme={{
+              color: url === TIMELINE_URL ? 'var(--main-btn-color)' : 'white',
+            }}
+          >
+            Interactive Timeline
+>>>>>>> fix/header-links-order
+          </NavLink>
+        </NavLi>
+
+        <NavLi>
+          <NavLink
+<<<<<<< HEAD
             to={TIMELINE_URL}
             theme={{
               color: url === TIMELINE_URL ? 'var(--main-btn-color)' : 'white',
@@ -61,18 +85,35 @@ const Header = ({ location }) => {
             Interactive Timeline
           </NavLink>
         </NavLi>
+
         <NavLi>
           <NavLink
+            to={ADD_URL}
+            theme={{
+              color: url === RESOURCES_URL ? 'var(--main-btn-color)' : 'white',
+            }}
+          >
+            Add Story
+=======
             to={ARCHIVE_URL}
             theme={{
               color: url === ARCHIVE_URL ? 'var(--main-btn-color)' : 'white',
             }}
           >
             Our Stories
+>>>>>>> fix/header-links-order
           </NavLink>
         </NavLi>
+
         <NavLi>
           <NavLink
+<<<<<<< HEAD
+            to={RESOURCES_URL}
+            theme={{
+              color: url === RESOURCES_URL ? 'var(--main-btn-color)' : 'white',
+            }}
+          >
+=======
             to={ADD_URL}
             theme={{
               color: url === ADD_URL ? 'var(--main-btn-color)' : 'white',
@@ -88,6 +129,7 @@ const Header = ({ location }) => {
               color: url === RESOURCES_URL ? 'var(--main-btn-color)' : 'white',
             }}
           >
+>>>>>>> fix/header-links-order
             Feminist Resources
           </NavLink>
         </NavLi>
