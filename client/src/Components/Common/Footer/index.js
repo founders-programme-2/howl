@@ -65,8 +65,9 @@ class Footer extends Component {
   submitSearch = ({ tags, category, year, location, search }) => {
     const { setFilters, history } = this.props;
     const { RESULTS_URL } = navigationUrls;
-    setFilters({ tags, category, year, location, search });
-    history.push(RESULTS_URL);
+    setFilters({ tags, category, year, location, search }).then(() => {
+      history.push(RESULTS_URL);
+    });
   };
 
   updateStateValue = (name, value) => {
