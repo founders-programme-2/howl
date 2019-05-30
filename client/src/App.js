@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
-
 import GlobalStyle from './globalStyle';
 import {
   Landing,
@@ -35,7 +34,7 @@ const {
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <Header id="header" />
       <GlobalStyle />
       <Switch>
         <Route exact path="/" component={Landing} />
