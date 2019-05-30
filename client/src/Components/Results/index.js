@@ -3,7 +3,8 @@ import Footer from '../Common/Footer';
 
 const Results = ({ setFilters, filters }) => {
   const renderResults = res => {
-    return res.map(story => <p>{story}</p>);
+    // Axios request should be here, this is a stupid initial render.
+    return Object.keys(res).map(el => <p>{el}</p>);
   };
 
   return (
