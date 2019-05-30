@@ -8,10 +8,6 @@ import BounceLoaderComponent from '../BounceLoader';
 import BouncerContainer from './Archive.style';
 
 class Archive extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     results: [],
     selectedPostId: '',

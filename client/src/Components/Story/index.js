@@ -17,10 +17,6 @@ import {
 } from './Story.style';
 
 class Story extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     name: '',
     title: '',
