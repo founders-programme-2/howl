@@ -130,7 +130,7 @@ Array [
         className="MuiFormControl-root Details-formControl-56"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-57"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-59"
           data-shrink={false}
           htmlFor="location"
         >
@@ -138,7 +138,7 @@ Array [
         </label>
         <div
           aria-label="location"
-          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectLocation-55"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-55"
           onClick={[Function]}
         >
           <div
@@ -185,115 +185,129 @@ Array [
         </div>
       </div>
       <p>
-        Approximately when did this event occur?
+        Approximately when did this event occur? If the event spans multiple years, select the year when it started.
       </p>
       <div
-        className="MuiGrid-root DateFun-grid-79"
+        className="MuiFormControl-root Details-formControlDate-57"
       >
-        <div
-          className="MuiFormControl-root MuiTextField-root"
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-59"
+          data-shrink={false}
+          htmlFor="year"
         >
-          <label
-            className="MuiFormLabel-root MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
-            data-shrink={true}
-          >
-            Year and Month
-          </label>
+          Year (required)
+        </label>
+        <div
+          aria-label="year"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-55"
+          onClick={[Function]}
+        >
           <div
-            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"
-            onClick={[Function]}
+            className="MuiSelect-root"
           >
-            <fieldset
-              aria-hidden={true}
-              className="PrivateNotchedOutline-root-196 MuiOutlinedInput-notchedOutline"
-              style={
-                Object {
-                  "paddingLeft": 8,
-                }
-              }
-            >
-              <legend
-                className="PrivateNotchedOutline-legend-197"
-                style={
-                  Object {
-                    "width": 0,
-                  }
-                }
-              >
-                <span
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "&#8203;",
-                    }
-                  }
-                />
-              </legend>
-            </fieldset>
-            <input
-              aria-invalid={false}
-              className="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd"
-              disabled={false}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              required={false}
-              type="text"
-              value="May 2019"
-            />
             <div
-              className="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              id="select-year"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <button
-                className="MuiButtonBase-root MuiIconButton-root"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiIconButton-label"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="MuiSvgIcon-root"
-                    focusable="false"
-                    role="presentation"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                    />
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                  </svg>
-                </span>
-              </button>
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
             </div>
+            <input
+              id="year"
+              name="year"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
           </div>
-          <p
-            className="MuiFormHelperText-root DateFun-helperText-78 MuiFormHelperText-contained MuiFormHelperText-filled"
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root Details-formControlDate-57 Details-formControlMonth-58"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-59"
+          data-shrink={false}
+          htmlFor="month"
+        >
+          Month (optional)
+        </label>
+        <div
+          aria-label="month"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-55"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
           >
-            When did this happen?
-          </p>
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+              id="select-month"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              id="month"
+              name="month"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
       <p>
         What kind of contribution would you like to make?
       </p>
       <div
-        className="MuiFormControl-root Details-formControlRadio-58"
+        className="MuiFormControl-root Details-formControlRadio-60"
       >
         <legend
           className="MuiFormLabel-root"
@@ -312,7 +326,7 @@ Array [
             >
               <span
                 aria-disabled={false}
-                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-255 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-checked-256 Mui-checked"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-93 MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-checked-94 Mui-checked"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -329,7 +343,7 @@ Array [
                   className="MuiIconButton-label"
                 >
                   <div
-                    className="PrivateRadioButtonIcon-root-259 PrivateRadioButtonIcon-checked-261"
+                    className="PrivateRadioButtonIcon-root-109 PrivateRadioButtonIcon-checked-111"
                   >
                     <svg
                       aria-hidden="true"
@@ -344,7 +358,7 @@ Array [
                     </svg>
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-260"
+                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-110"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -356,7 +370,7 @@ Array [
                   </div>
                   <input
                     checked={true}
-                    className="PrivateSwitchBase-input-258"
+                    className="PrivateSwitchBase-input-96"
                     disabled={false}
                     name="storyType"
                     onChange={[Function]}
@@ -376,7 +390,7 @@ Array [
             >
               <span
                 aria-disabled={false}
-                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-255 MuiRadio-root MuiRadio-colorSecondary"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-93 MuiRadio-root MuiRadio-colorSecondary"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -393,7 +407,7 @@ Array [
                   className="MuiIconButton-label"
                 >
                   <div
-                    className="PrivateRadioButtonIcon-root-259"
+                    className="PrivateRadioButtonIcon-root-109"
                   >
                     <svg
                       aria-hidden="true"
@@ -408,7 +422,7 @@ Array [
                     </svg>
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-260"
+                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-110"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -420,7 +434,7 @@ Array [
                   </div>
                   <input
                     checked={false}
-                    className="PrivateSwitchBase-input-258"
+                    className="PrivateSwitchBase-input-96"
                     disabled={false}
                     name="storyType"
                     onChange={[Function]}
@@ -440,7 +454,7 @@ Array [
             >
               <span
                 aria-disabled={false}
-                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-255 MuiRadio-root MuiRadio-colorSecondary"
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-93 MuiRadio-root MuiRadio-colorSecondary"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -457,7 +471,7 @@ Array [
                   className="MuiIconButton-label"
                 >
                   <div
-                    className="PrivateRadioButtonIcon-root-259"
+                    className="PrivateRadioButtonIcon-root-109"
                   >
                     <svg
                       aria-hidden="true"
@@ -472,7 +486,7 @@ Array [
                     </svg>
                     <svg
                       aria-hidden="true"
-                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-260"
+                      className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-110"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -484,7 +498,7 @@ Array [
                   </div>
                   <input
                     checked={false}
-                    className="PrivateSwitchBase-input-258"
+                    className="PrivateSwitchBase-input-96"
                     disabled={false}
                     name="storyType"
                     onChange={[Function]}
@@ -503,7 +517,7 @@ Array [
         </div>
       </div>
       <div
-        className="MuiFormControl-root Post-formControl-297"
+        className="MuiFormControl-root Post-formControl-147"
       >
         <div
           className="sc-ifAKCX kPChof"
@@ -512,10 +526,10 @@ Array [
             What would you like to title your contribution to the archive (under 10 words)?
           </p>
           <div
-            className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Post-textField-292"
+            className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Post-textField-142"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-294"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-144"
               data-shrink={false}
               htmlFor="title"
             >
@@ -545,10 +559,10 @@ Array [
             Please enter your story relating to the Women's Liberation Movement below. We encourage detailed memories but request you have a story that is longer than 1000 words, you email directly directly to us at fakeemail@howl.co.uk
           </p>
           <div
-            className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root Post-textField-292 Post-textFieldDetails-293"
+            className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root Post-textField-142 Post-textFieldDetails-143"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-294"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Post-label-144"
               data-shrink={false}
               htmlFor="details"
             >
@@ -580,10 +594,10 @@ Array [
         Please select one major category under which your contribution falls under. We understand that there might be more than one fits, please select one and you will be given a chance to select some subcategories later.
       </p>
       <div
-        className="MuiFormControl-root AdditionalInfo-formControl-298"
+        className="MuiFormControl-root AdditionalInfo-formControl-148"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-302"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-152"
           data-shrink={false}
           htmlFor="category"
         >
@@ -591,7 +605,7 @@ Array [
         </label>
         <div
           aria-label="category"
-          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl AdditionalInfo-select-299"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl AdditionalInfo-select-149"
           onClick={[Function]}
         >
           <div
@@ -642,10 +656,10 @@ Array [
          
       </p>
       <div
-        className="MuiFormControl-root AdditionalInfo-formControl-298 AdditionalInfo-formControlTags-300"
+        className="MuiFormControl-root AdditionalInfo-formControl-148 AdditionalInfo-formControlTags-150"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-302"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-152"
           data-shrink={false}
           htmlFor="selectMultipleCheckbox"
         >
@@ -653,7 +667,7 @@ Array [
         </label>
         <div
           aria-label="tags"
-          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl AdditionalInfo-select-299"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl AdditionalInfo-select-149"
           onClick={[Function]}
         >
           <div
@@ -701,10 +715,10 @@ Array [
         Tell us about yourself. What is your connection to the Women's Liberation Movement? Please do not share any private information here such as your phone number or address.
       </p>
       <div
-        className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root AdditionalInfo-textField-301 AdditionalInfo-textFieldWlm-303"
+        className="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root AdditionalInfo-textField-151 AdditionalInfo-textFieldWlm-153"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-302"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-152"
           data-shrink={false}
           htmlFor="standard-multiline-static"
         >
@@ -734,10 +748,10 @@ Array [
         Anything else you would like to tell us?
       </p>
       <div
-        className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root AdditionalInfo-textField-301"
+        className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root AdditionalInfo-textField-151"
       >
         <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-302"
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated AdditionalInfo-label-152"
           data-shrink={false}
           htmlFor="additionalComments"
         >
@@ -764,14 +778,14 @@ Array [
         </div>
       </div>
       <div
-        className="MuiFormControl-root AdditionalInfo-formControlCheckbox-306"
+        className="MuiFormControl-root AdditionalInfo-formControlCheckbox-156"
       >
         <label
-          className="MuiFormControlLabel-root AdditionalInfo-formControlLabel-307"
+          className="MuiFormControlLabel-root AdditionalInfo-formControlLabel-157"
         >
           <span
             aria-disabled={false}
-            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-255 MuiCheckbox-root MuiCheckbox-colorSecondary"
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-93 MuiCheckbox-root MuiCheckbox-colorSecondary"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -800,7 +814,7 @@ Array [
               </svg>
               <input
                 checked={false}
-                className="PrivateSwitchBase-input-258"
+                className="PrivateSwitchBase-input-96"
                 data-indeterminate={false}
                 disabled={false}
                 onChange={[Function]}
