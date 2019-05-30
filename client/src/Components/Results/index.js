@@ -73,8 +73,10 @@ class Results extends Component {
     const { filters } = this.props;
     return (
       <Fragment>
-        <h1>Hello Results page!</h1>
-        {this.renderResults(filters)}
+        <main>
+          <h1>Hello Results page!</h1>
+          {this.renderResults(filters)}
+        </main>
         <Footer setFilters={this.setFilters} />
       </Fragment>
     );
