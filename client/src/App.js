@@ -34,7 +34,7 @@ const {
 
 class App extends Component {
   state = {
-    filters: [],
+    filters: {},
   };
 
   updateFilters = filters =>
