@@ -1,10 +1,15 @@
 const { filter, search } = require('../controllers/');
 
+// middleware function designed to handle different airtable calls
 const footerSearch = (req, res) => {
   const {
     category, location, year, tags, search: searchQuery,
   } = req.body;
 
+  /* NOTE: Currently, this will only search for EITHER a search query,
+  OR category/location/year/tags */
+
+  // makes a call to airtable to search the details column, and returns to frontend
   if (searchQuery !== '') {
     search.search(searchQuery, (err, result) => {
       if (err) {
@@ -14,6 +19,7 @@ const footerSearch = (req, res) => {
         res.json({ success: true, data: result });
       }
     });
+    // makes a call to airtable to search for other queries and returns to fe
   } else if (category || location || year || tags) {
     const filterVar = {
       category,
