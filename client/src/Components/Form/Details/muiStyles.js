@@ -30,7 +30,7 @@ const styles = () => ({
     },
   },
 
-  formControlYear: {
+  formControlMonth: {
     marginBottom: 0,
   },
 

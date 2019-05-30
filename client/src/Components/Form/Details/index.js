@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { months, locations } from '../../data.json';
-import { ErrMsg, BoldText } from './Details.style';
+import ErrMsg from './Details.style';
 
 import {
   withStyles,
@@ -91,26 +91,6 @@ const Details = ({
       </FormControl>
       {DateQuestion}
       <FormControl className={classes.formControlDate}>
-        <InputLabel htmlFor="month" className={classes.label}>
-          Month (Optional)
-        </InputLabel>
-        <Select
-          inputProps={{
-            name: 'month',
-            id: 'month',
-          }}
-          aria-label="month"
-          value={month}
-          onChange={dropdownChange}
-          disableUnderline
-          className={classes.selectDropdown}
-        >
-          {renderSelectItems(months)}
-        </Select>
-      </FormControl>
-      <FormControl
-        className={`${classes.formControlDate} ${classes.formControlYear}`}
-      >
         <InputLabel htmlFor="year" className={classes.label}>
           Year (required)
         </InputLabel>
@@ -126,6 +106,32 @@ const Details = ({
           className={classes.selectDropdown}
         >
           {renderSelectItems(yearsGenerator())}
+        </Select>
+      </FormControl>
+      <FormControl
+        className={`${classes.formControlDate} ${classes.formControlMonth}`}
+      >
+        <InputLabel htmlFor="month" className={classes.label}>
+          Month (optional)
+        </InputLabel>
+        <Select
+          inputProps={{
+            name: 'month',
+            id: 'month',
+          }}
+          aria-label="month"
+          value={month}
+          onChange={dropdownChange}
+          disableUnderline
+          className={classes.selectDropdown}
+        >
+          {months.map(monthEle => {
+            return (
+              <MenuItem key={monthEle} value={monthEle}>
+                {monthEle}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
       <p>What kind of contribution would you like to make?</p>
