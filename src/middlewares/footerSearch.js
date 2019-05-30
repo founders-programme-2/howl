@@ -11,7 +11,7 @@ const footerSearch = (req, res) => {
   console.log('Tags: ', tags);
   console.log('Search query: ', searchQuery);
 
-  if (searchQuery !== undefined) {
+  if (searchQuery !== '') {
     search.search(searchQuery, (err, result) => {
       if (err) {
         console.log('Error in search function: ', error);

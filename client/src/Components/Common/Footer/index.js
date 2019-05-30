@@ -58,9 +58,9 @@ const { HELP_URL } = navigationUrls;
 class Footer extends Component {
   state = {
     tags: [],
-    category: 'Groups',
+    category: '',
     year: '1960',
-    location: 'North East',
+    location: '',
     search: '',
     result: [],
   };
@@ -68,7 +68,7 @@ class Footer extends Component {
   updateResult = ({ tags, category, year, location, search }) => {
     const submittedData = { tags, category, year, location, search };
     console.log('Submitting: ', submittedData);
-    axios.post('/filter', submittedData).then(res => {
+    axios.post('/search', submittedData).then(res => {
       console.log(res);
       // const { history } = this.props;
       // history.push('/results');
@@ -93,10 +93,10 @@ class Footer extends Component {
     this.setState(
       {
         tags: [],
-        category: null,
-        year: null,
-        location: null,
-        search: null,
+        category: '',
+        year: '',
+        location: '',
+        search: '',
       },
       () => {
         this.updateResult(this.state);
