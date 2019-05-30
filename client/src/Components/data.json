@@ -1,4 +1,18 @@
-{
+{ "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  
   "tags": [
     "Black and ethnic minority",
     "Childcare",
