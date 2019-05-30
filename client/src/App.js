@@ -37,9 +37,12 @@ class App extends Component {
     filters: [],
   };
 
-  updateFilters = newResults => {
-    this.setState({ results: newResults });
-  };
+  updateFilters = filters =>
+    new Promise(resolve => {
+      this.setState({ filters }, () => {
+        resolve();
+      });
+    });
 
   render() {
     const { filters } = this.state;
