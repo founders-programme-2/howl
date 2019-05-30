@@ -34,6 +34,7 @@ class Story extends Component {
   };
 
   componentDidMount() {
+    // eslint-disable-next-line react/destructuring-assignment
     const { id } = this.props.match.params;
     this.setState({ loadingFlag: true }, () => {
       axios.get(`/posts/${id}`).then(res => {

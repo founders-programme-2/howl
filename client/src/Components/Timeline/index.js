@@ -14,8 +14,8 @@ const Timeline = () => {
         <p>
           Browse our timeline by using the controls at the bottom of this page
           to filter your results by category, location, tags or year. Above the
-          search controls, you'll find a yellow bar of dates. This allows you to
-          view stories from between a time span of four to five years.
+          search controls, you&#39;ll find a yellow bar of dates. This allows
+          you to view stories from between a time span of four to five years.
         </p>
 
         <p>
