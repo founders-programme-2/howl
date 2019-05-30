@@ -8,6 +8,9 @@ Array [
   <p>
     Our team of moderators will need to approve your story before it is published publicly. If we have any questions or concerns about your content, we will get in touch using your contact details. We will not use your details to send you spam mail.
   </p>,
+  <p
+    className="sc-bdVaJa fKlUTO"
+  />,
   <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
@@ -16,7 +19,7 @@ Array [
       data-shrink={false}
       htmlFor="name"
     >
-      Name
+      Name (required)
     </label>
     <div
       className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
@@ -31,13 +34,16 @@ Array [
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
-        placeholder="Enter your name..."
+        placeholder="Enter your name or pseudo-name..."
         required={false}
         type="text"
         value=""
       />
     </div>
   </div>,
+  <p
+    className="sc-bdVaJa fKlUTO"
+  />,
   <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
@@ -46,7 +52,7 @@ Array [
       data-shrink={false}
       htmlFor="email"
     >
-      Email
+      Email (required)
     </label>
     <div
       className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
@@ -68,6 +74,9 @@ Array [
       />
     </div>
   </div>,
+  <p
+    className="sc-bdVaJa fKlUTO"
+  />,
   <div
     className="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root ContactInfo-textField-1"
   >
@@ -76,7 +85,7 @@ Array [
       data-shrink={false}
       htmlFor="phoneNum"
     >
-      Phone Number
+      Phone Number (optional)
     </label>
     <div
       className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
