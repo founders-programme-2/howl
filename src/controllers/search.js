@@ -2,10 +2,10 @@ const { Story } = require('../airtables');
 
 let search = (searchQuery, cb) => {
   search = searchQuery.toLowerCase();
-
-  console.log('We will search for: ', search);
   const filteredData = [];
 
+  /* Searches only in the details column, since we were unable to search across
+  the entire airtable for now. */
   Story.select({
     filterByFormula: `FIND(LOWER("${search}"), LOWER(details)) > 0`,
     view: 'Approved Stories',
@@ -31,7 +31,6 @@ let search = (searchQuery, cb) => {
       // This function (`page`) will get called for each page of records.
 
       records.forEach((record) => {
-        console.log('Retrieved', record.get('id'));
         filteredData.push(record);
       });
 
@@ -44,7 +43,7 @@ let search = (searchQuery, cb) => {
       if (err) {
         cb(err, null);
       } else {
-        // console.log('successful result: ', filteredData);
+        // Returns the result to the footerSearch middleware
         cb(null, filteredData);
       }
     },

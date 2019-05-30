@@ -59,7 +59,7 @@ class Footer extends Component {
   state = {
     tags: [],
     category: '',
-    year: '1960',
+    year: '',
     location: '',
     search: '',
     result: [],
@@ -67,9 +67,7 @@ class Footer extends Component {
 
   updateResult = ({ tags, category, year, location, search }) => {
     const submittedData = { tags, category, year, location, search };
-    console.log('Submitting: ', submittedData);
     axios.post('/search', submittedData).then(res => {
-      console.log(res);
       // const { history } = this.props;
       // history.push('/results');
     });
@@ -225,7 +223,7 @@ class Footer extends Component {
             <FormControl className={classes.searchFormControl}>
               <TextField
                 id="outlined-search"
-                label="Search..."
+                label="Search articles ..."
                 value={search || ''}
                 onChange={event => {
                   this.updateSearchValue('search', event.target.value);

@@ -5,23 +5,16 @@ const footerSearch = (req, res) => {
     category, location, year, tags, search: searchQuery,
   } = req.body;
 
-  console.log('Category: ', category);
-  console.log('Location: ', location);
-  console.log('Year: ', year);
-  console.log('Tags: ', tags);
-  console.log('Search query: ', searchQuery);
-
   if (searchQuery !== '') {
     search.search(searchQuery, (err, result) => {
       if (err) {
+        // eslint-disable-next-line no-console
         console.log('Error in search function: ', err);
       } else {
         res.json({ success: true, data: result });
       }
     });
-  }
-
-  if (category || location || year || tags) {
+  } else if (category || location || year || tags) {
     const filterVar = {
       category,
       location,
@@ -30,7 +23,8 @@ const footerSearch = (req, res) => {
     };
     filter.filter(filterVar, (err, result) => {
       if (err) {
-        console.log('Error in search function: ', err);
+        // eslint-disable-next-line no-console
+        console.log('Error in filter function: ', err);
       } else {
         res.json({ success: true, data: result });
       }
