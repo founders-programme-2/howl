@@ -3,9 +3,138 @@
 exports[`Natural 1`] = `
 Array [
   " ",
-  <h1>
-    Hello Results page!
-  </h1>,
+  <main>
+    <h1>
+      Hello Results page!
+    </h1>
+    <article
+      className="sc-gzVnrw faWvSI"
+      onClick={[Function]}
+    >
+      <h3
+        className="sc-dnqmqq hoMFLC"
+      >
+        Womens march
+      </h3>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Date of story:
+        </h4>
+        <p
+          className="sc-VigVT eOCrtR"
+        >
+          1964
+        </p>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Category:
+        </h4>
+        <p
+          className="sc-VigVT eOCrtR"
+        >
+          Campaigns
+        </p>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Tags:
+        </h4>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-iwsKbI gvCFvS"
+        >
+          Details:
+        </h4>
+        <p
+          className="sc-gZMcBi hiKrCO"
+        >
+          A group of Women set up an East Anglia University Womens Liberation Group in Sep 1973↵This had a series of successful meetings discussing issues, which related to the 6 Demands...
+        </p>
+      </section>
+    </article>
+    <article
+      className="sc-gzVnrw faWvSI"
+      onClick={[Function]}
+    >
+      <h3
+        className="sc-dnqmqq hoMFLC"
+      >
+        This is a test
+      </h3>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Date of story:
+        </h4>
+        <p
+          className="sc-VigVT eOCrtR"
+        >
+          1975
+        </p>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Category:
+        </h4>
+        <p
+          className="sc-VigVT eOCrtR"
+        >
+          Culture
+        </p>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-htoDjs gJdDqM"
+        >
+          Tags:
+        </h4>
+        <p
+          className="sc-gqjmRU ihqyWS"
+        >
+          Books
+        </p>
+      </section>
+      <section
+        className="sc-jTzLTM JyBkP"
+      >
+        <h4
+          className="sc-iwsKbI gvCFvS"
+        >
+          Details:
+        </h4>
+        <p
+          className="sc-gZMcBi hiKrCO"
+        >
+          A group of Women set up an East Anglia University Womens Liberation Group in Sep 1973↵This had a series of successful meetings discussing issues, which related to the 6 Demands...
+        </p>
+      </section>
+    </article>
+  </main>,
   <footer
     className="sc-bdVaJa dycKuB"
   >
