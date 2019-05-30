@@ -9,6 +9,7 @@ export const NavSection = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   min-width: 100%;
+  justify-content: space-around;
 
   @media (max-width: ${SML}) {
     flex-flow: column nowrap;
@@ -19,7 +20,7 @@ export const NavList = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  margin: auto;
+  margin: auto 2% auto 2%;
   padding: 0;
 
   @media (max-width: ${LRG}) {
@@ -29,12 +30,13 @@ export const NavList = styled.ul`
 
   @media (max-width: ${SML}) {
     flex-flow: column nowrap;
+    margin-bottom: 1rem;
   }
 `;
 
 export const NavLi = styled.li`
   text-align: center;
-  padding: 0.5rem;
+  padding: 1.5rem;
 `;
 
 export const NavLink = styled(Link)`
@@ -61,21 +63,16 @@ export const Logo = styled.img`
   }
 `;
 
-export const NavBtn = styled.button`
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-  font-size: 1.2rem;
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--main-bg-color);
-    transform: scale(1.1);
-  }
-`;
-
-// Had to wrap button/logo in a div in order for the margin to work. Fragments did not work.
 export const CntrdWrapper = styled.div`
-  margin: auto;
+  margin-left: 2rem;
+
+  @media (max-width: ${LRG}) {
+    margin: auto;
+  }
+
+  @media (max-width: ${SML}) {
+    margin: auto;
+  }
 `;
 
 export const Sa = styled.a`

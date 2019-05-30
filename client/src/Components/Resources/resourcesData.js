@@ -54,6 +54,13 @@ const resourcesData = [
     info:
       'The Women’s Liberation Movement was a major factor in social change, from the groups and demonstrations of the 1970s to the activist policy work of the 1980s and 1990s. The 21st century feminist revival is a strong and vibrant force today. In our collections you can find out where ideas began, and how feminist politics were put into practice. The Feminist Archive has the original sources.',
   },
+  {
+    id: 8,
+    title: 'Feminist Archive South',
+    link: 'http://feministarchivesouth.org.uk/about/',
+    info:
+      'THE FEMINIST ARCHIVE (SOUTH) IN BRISTOL, ENGLAND, HOUSES NATIONAL AND INTERNATIONAL MATERIAL RELATING TO THE HISTORY OF FEMINISM, C.1960-2000. IT IS the southern branch of the Feminist Archive.',
+  },
 ];
 
 export default resourcesData;

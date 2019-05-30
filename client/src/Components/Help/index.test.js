@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Help from './index';
 
 test('Natural', () => {
-  const help = renderer.create(<BrowserRouter> <Help /> </BrowserRouter>).toJSON();
+  const help = renderer
+    .create(
+      <BrowserRouter>
+        {' '}
+        <Help />{' '}
+      </BrowserRouter>
+    )
+    .toJSON();
   expect(help).toMatchSnapshot();
 });

@@ -4,7 +4,7 @@ const validationSchema = Yup.object().shape({
   name: Yup.string()
     .required("Hi, what's your name?")
     .matches(
-      /^[a-z ]*$/i,
+      /^[a-z' ]*$/i,
       'Please enter a valid name that contains no numbers or special characters.'
     ),
   email: Yup.string()
@@ -15,20 +15,23 @@ const validationSchema = Yup.object().shape({
     'Please enter a valid phone number that contains no letters or special characters.'
   ),
   location: Yup.string().required('Where did this event occur?'),
+  year: Yup.string().required(
+    'Approximately when did this event occur? If the event spans multiple years, select the year when it started.'
+  ),
 
   title: Yup.string()
     .required('What title would suit your story? (under 10 words).')
     .matches(
-      /^[a-z0-9 ]*$/i,
-      'Please enter a valid title. No special characters allowed.'
+      /^[^{}<>]*$/,
+      'Please enter a valid title. No { } < > characters allowed.'
     ),
   details: Yup.string().when('radio', {
     is: radio => radio === 'textPost' || radio === 'both',
     then: Yup.string()
       .required('Describe what happened in no more than 1000 words.')
       .matches(
-        /^[a-z0-9 ]*/i,
-        'Please enter valid descriptive details. No special characters allowed.'
+        /^[^{}<>]*$/,
+        'Please enter valid descriptive details. No { } < > characters allowed.'
       ),
   }),
   imageCap: Yup.string().when('radio', {
@@ -36,8 +39,8 @@ const validationSchema = Yup.object().shape({
     then: Yup.string()
       .required('How would you caption this image?')
       .matches(
-        /^[a-z0-9 ]*$/i,
-        'Please enter a valid image caption. No special characters allowed.'
+        /^[^{}<>]*$/,
+        'Please enter a valid image caption. No { } < > characters allowed.'
       ),
   }),
   imgLink: Yup.string().when('radio', {
@@ -49,8 +52,8 @@ const validationSchema = Yup.object().shape({
   wlmConnection: Yup.string()
     .required("What's your connection to the Women's Liberation Movement?")
     .matches(
-      /^[a-z0-9 ]*$/i,
-      "Please enter a valid description of your connection to Women's Liberation Movement. No special characters allowed."
+      /^[^{}<>]*$/,
+      "Please enter a valid description of your connection to Women's Liberation Movement. No { } < > characters allowed."
     ),
   tags: Yup.array().required('What tags would best describe your story?'),
 
@@ -80,8 +83,8 @@ const validationSchema = Yup.object().shape({
   }),
 
   additionalComments: Yup.string().matches(
-    /^[a-zA-Z0-9 ]*$/,
-    'Please enter valid comments. No special characters allowed.'
+    /^[^{}<>]*$/,
+    'Please enter valid comments. No { } < > characters allowed.'
   ),
 });
 
@@ -93,7 +96,7 @@ const validateFunc = ({
   email,
   phone,
   location,
-  selectedDate,
+  year,
   title,
   details,
   imageCap,
@@ -112,7 +115,7 @@ const validateFunc = ({
       email,
       phone,
       location,
-      selectedDate,
+      year,
       title,
       details,
       imageCap,
