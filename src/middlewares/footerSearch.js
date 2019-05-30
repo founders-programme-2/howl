@@ -14,7 +14,7 @@ const footerSearch = (req, res) => {
   if (searchQuery !== '') {
     search.search(searchQuery, (err, result) => {
       if (err) {
-        console.log('Error in search function: ', error);
+        console.log('Error in search function: ', err);
       } else {
         res.json({ success: true, data: result });
       }
@@ -30,7 +30,7 @@ const footerSearch = (req, res) => {
     };
     filter.filter(filterVar, (err, result) => {
       if (err) {
-        console.log('Error in search function: ', error);
+        console.log('Error in search function: ', err);
       } else {
         res.json({ success: true, data: result });
       }

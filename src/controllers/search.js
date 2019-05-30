@@ -42,7 +42,7 @@ let search = (searchQuery, cb) => {
     },
     (err) => {
       if (err) {
-        res.json({ success: false, err: "There's been an error in fetching your search." });
+        cb(err, null);
       } else {
         // console.log('successful result: ', filteredData);
         cb(null, filteredData);
