@@ -33,7 +33,6 @@ const Title = styled.h3`
     text-align: center;
     width: 90%;
     margin: 2rem 1rem;
-    background: pink;
   }
 `;
 
