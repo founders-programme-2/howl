@@ -5,42 +5,46 @@ import {
   Para,
   DetailsHeader,
   DetailsPara,
+  TagsPara,
+  Section,
+  Title,
 } from './Entry.style';
 
 const Entry = ({ id, title, year, category, details, tags, viewFullPost }) => {
   const shortenDetails = storyDetails => {
-    if (storyDetails) {
-      const shortenP = storyDetails.split(' ').slice(0, 29);
-      let shortenedBody = shortenP.join(' ');
-      shortenedBody += '...';
-      return shortenedBody;
+    if (details) {
+      if (details.length > 200) {
+        const shortenP = storyDetails.split(' ').slice(0, 30);
+        let shortenedBody = shortenP.join(' ');
+        shortenedBody += '...';
+        return shortenedBody;
+      }
+      return details;
     }
-    return null;
+    return 'No description';
   };
 
-  const renderTags = tags
-    ? tags.map(tag => <Para key={tag}>{tag}</Para>)
-    : null;
+  const renderTags = tags ? <TagsPara>{tags.join(', ')}</TagsPara> : null;
 
   return (
     <Article onClick={viewFullPost(id)}>
-      <h3>{title || 'Untitled'}</h3>
-      <div aria-label="[Date of Story]">
+      <Title>{title}</Title>
+      <Section>
         <HeaderFour>Date of story:</HeaderFour>
         <Para>{year}</Para>
-      </div>
-      <div aria-label="Category">
+      </Section>
+      <Section>
         <HeaderFour>Category:</HeaderFour>
         <Para>{category}</Para>
-      </div>
-      <div aria-label="[Tags]">
+      </Section>
+      <Section>
         <HeaderFour>Tags:</HeaderFour>
         {renderTags}
-      </div>
-      <div aria-label="[Details]">
+      </Section>
+      <Section>
         <DetailsHeader>Details:</DetailsHeader>
         <DetailsPara>{shortenDetails(details)}</DetailsPara>
-      </div>
+      </Section>
     </Article>
   );
 };
