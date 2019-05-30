@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Wlm from './index';
 
 test('Natural', () => {
-  const wlm = renderer.create(<BrowserRouter> <Wlm /> </BrowserRouter>).toJSON();
+  const wlm = renderer
+    .create(
+      <BrowserRouter>
+        {' '}
+        <Wlm />{' '}
+      </BrowserRouter>
+    )
+    .toJSON();
   expect(wlm).toMatchSnapshot();
 });

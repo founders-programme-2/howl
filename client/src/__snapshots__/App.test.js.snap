@@ -3,106 +3,128 @@
 exports[`Natural 1`] = `
 Array [
   <nav
-    className="sc-ckVGcZ irOTHt"
+    className="sc-iRbamj jSfPFv"
   >
-    <a
-      aria-label="Navigation to top of page"
-      className="sc-hSdWYo dIVGbO"
-      href="#top"
-      name="topLink"
+    <div
+      className="sc-bRBYWo fVvjun"
     >
-      Top of page
-    </a>
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      <img
-        alt="Howl logo"
-        className="sc-kEYyzF dbDzZO"
-        src="logo.svg"
-      />
-    </a>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Howl logo"
+          className="sc-Rmtcm iOHbcP"
+          src="logo.svg"
+        />
+      </a>
+    </div>
     <ul
-      className="sc-jKJlTe lbwfIz"
+      className="sc-jlyJG krWJkz"
     >
       <li
-        className="sc-eNQAEJ lhaAPO"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-hMqMXs gCPFcj"
+          className="sc-csuQGl ZBeNU"
           href="/about"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           About Howl
         </a>
       </li>
       <li
-        className="sc-eNQAEJ lhaAPO"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-hMqMXs gCPFcj"
+          className="sc-csuQGl ZBeNU"
           href="/wlm"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Women's Liberation
         </a>
       </li>
       <li
-        className="sc-eNQAEJ lhaAPO"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-hMqMXs gCPFcj"
-          href="/resources"
-          onClick={[Function]}
-        >
-          Feminist Resources
-        </a>
-      </li>
-      <li
-        className="sc-eNQAEJ lhaAPO"
-      >
-        <a
-          className="sc-hMqMXs gCPFcj"
-          href="/archive"
-          onClick={[Function]}
-        >
-          The Archive
-        </a>
-      </li>
-      <li
-        className="sc-eNQAEJ lhaAPO"
-      >
-        <a
-          className="sc-hMqMXs gCPFcj"
+          className="sc-csuQGl ZBeNU"
           href="/timeline"
           onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
           Interactive Timeline
         </a>
       </li>
-    </ul>
-    <div
-      className="sc-iAyFgw jRxCrv"
-    >
-      <a
-        href="/add"
-        onClick={[Function]}
+      <li
+        className="sc-gipzik fuDaOI"
       >
-        <button
-          className="sc-kkGfuU bpWUiq"
-          type="button"
+        <a
+          className="sc-csuQGl ZBeNU"
+          href="/archive"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
-          Add Your Story
-        </button>
-      </a>
-    </div>
+          Our Stories
+        </a>
+      </li>
+      <li
+        className="sc-gipzik fuDaOI"
+      >
+        <a
+          className="sc-csuQGl ZBeNU"
+          href="/add"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Add Story
+        </a>
+      </li>
+      <li
+        className="sc-gipzik fuDaOI"
+      >
+        <a
+          className="sc-csuQGl ZBeNU"
+          href="/resources"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Feminist Resources
+        </a>
+      </li>
+    </ul>
   </nav>,
   <main
-    className="sc-gzVnrw cXmlzn"
+    className="sc-gzVnrw XBwpT"
   >
     <header
-      className="sc-bdVaJa fKqqHq"
+      className="sc-bdVaJa hBvXQO"
     >
       <p
         className="sc-bwzfXH fkIixq"
@@ -116,7 +138,7 @@ Array [
       </h1>
     </header>
     <section
-      className="sc-EHOje oJfcH"
+      className="sc-EHOje rWvia"
     >
       <h2
         className="sc-bxivhb hIUPna"
@@ -156,11 +178,11 @@ Array [
     </section>
     <img
       alt="A group of women and their children"
-      className="sc-bZQynM fBxSxl"
+      className="sc-bZQynM gkehWF"
       src="landing_page.jpg"
     />
     <section
-      className="sc-ifAKCX kHTStJ"
+      className="sc-ifAKCX iKwzAU"
     >
       <h2
         className="sc-bxivhb hIUPna"
@@ -200,10 +222,10 @@ Array [
     name="bottomLink"
   >
     <footer
-      className="sc-dnqmqq jswhyW"
+      className="sc-dnqmqq kBznaB"
     >
       <section
-        className="sc-iwsKbI kDuEPZ"
+        className="sc-iwsKbI pKGhr"
       >
         <h2
           className="sc-gZMcBi fjmVRH"
@@ -235,7 +257,7 @@ Array [
         </button>
       </section>
       <section
-        className="sc-gqjmRU hDzohC"
+        className="sc-gqjmRU gAFCbu"
       >
         <div
           className="MuiFormControl-root Footer-formControl-2"
@@ -434,7 +456,7 @@ Array [
         </div>
       </section>
       <section
-        className="sc-VigVT kJzHug"
+        className="sc-VigVT fSVIjt"
       >
         <div
           className="MuiFormControl-root Footer-searchFormControl-8"
@@ -443,19 +465,19 @@ Array [
             className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
           >
             <label
-              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-searchTextFieldLabel-10"
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Footer-searchTextFieldLabel-10"
               data-shrink={false}
               htmlFor="outlined-search"
             >
               Search...
             </label>
             <div
-              className="MuiInputBase-root MuiFilledInput-root MuiInputBase-formControl"
+              className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
               onClick={[Function]}
             >
               <input
                 aria-invalid={false}
-                className="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputTypeSearch"
+                className="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch"
                 disabled={false}
                 id="outlined-search"
                 onBlur={[Function]}
@@ -469,7 +491,7 @@ Array [
           </div>
         </div>
         <section
-          className="sc-jTzLTM kKdwzQ"
+          className="sc-jTzLTM bowiQG"
         >
           <button
             className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"

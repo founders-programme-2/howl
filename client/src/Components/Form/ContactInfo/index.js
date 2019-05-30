@@ -1,8 +1,18 @@
 import React, { Fragment } from 'react';
 import { withStyles, TextField } from '../../muIndex';
 import styles from './muiStyles';
+import ErrMsg from './ContactInfo.style';
 
-const ContactInfo = ({ classes, name, email, phone, textChange }) => {
+const ContactInfo = ({
+  classes,
+  name,
+  email,
+  phone,
+  textChange,
+  nameErr,
+  emailErr,
+  phoneErr,
+}) => {
   return (
     <Fragment>
       <h2>Contact Info</h2>
@@ -13,12 +23,13 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
         use your details to send you spam mail.
       </p>
 
+      <ErrMsg>{nameErr}</ErrMsg>
       <TextField
         id="name"
         name="name"
         value={name}
-        label="Name"
-        placeholder="Enter your name..."
+        label="Name (required)"
+        placeholder="Enter your name or pseudo-name..."
         className={classes.textField}
         margin="normal"
         onChange={textChange('name')}
@@ -29,11 +40,12 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
           className: classes.label,
         }}
       />
+      <ErrMsg>{emailErr}</ErrMsg>
       <TextField
         id="email"
         name="email"
         value={email}
-        label="Email"
+        label="Email (required)"
         placeholder="Enter your email..."
         className={classes.textField}
         margin="normal"
@@ -48,11 +60,12 @@ const ContactInfo = ({ classes, name, email, phone, textChange }) => {
           className: classes.label,
         }}
       />
+      <ErrMsg>{phoneErr}</ErrMsg>
       <TextField
         id="phoneNum"
         name="phone"
         value={phone}
-        label="Phone Number"
+        label="Phone Number (optional)"
         placeholder="Enter your phone number. e.g:(+44 20 7946 0009)"
         className={classes.textField}
         margin="normal"

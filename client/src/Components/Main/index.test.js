@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Main from './index';
 
 test('Natural', () => {
-  const main = renderer.create(<BrowserRouter> <Main /> </BrowserRouter>).toJSON();
+  const main = renderer
+    .create(
+      <BrowserRouter>
+        {' '}
+        <Main />{' '}
+      </BrowserRouter>
+    )
+    .toJSON();
   expect(main).toMatchSnapshot();
 });

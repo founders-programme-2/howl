@@ -1,27 +1,51 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import {
+  Article,
+  HeaderFour,
+  Para,
+  DetailsHeader,
+  DetailsPara,
+  TagsPara,
+  Section,
+  Title,
+} from './Entry.style';
 
-const Entry = ({ title, year, category, details, tags }) => {
+const Entry = ({ id, title, year, category, details, tags, viewFullPost }) => {
   const shortenDetails = storyDetails => {
-    const shortenP = storyDetails.split(' ').slice(0, 29);
-    let shortenedBody = shortenP.join(' ');
-    shortenedBody += '...';
-    return shortenedBody;
+    if (details) {
+      if (details.length > 200) {
+        const shortenP = storyDetails.split(' ').slice(0, 30);
+        let shortenedBody = shortenP.join(' ');
+        shortenedBody += '...';
+        return shortenedBody;
+      }
+      return details;
+    }
+    return 'No description';
   };
 
-  const renderTags = tags ? tags.map(tag => <p key={tag}>{tag}</p>) : null;
+  const renderTags = tags ? <TagsPara>{tags.join(', ')}</TagsPara> : null;
 
   return (
-    <Fragment>
-      <h3>{title}</h3>
-      <h4>Date of story:</h4>
-      <p>{year}</p>
-      <h4>Category:</h4>
-      <p>{category}</p>
-      <h4>Details:</h4>
-      <p>{shortenDetails(details)}</p>
-      <h4>Tags:</h4>
-      {renderTags}
-    </Fragment>
+    <Article onClick={viewFullPost(id)}>
+      <Title>{title}</Title>
+      <Section>
+        <HeaderFour>Date of story:</HeaderFour>
+        <Para>{year}</Para>
+      </Section>
+      <Section>
+        <HeaderFour>Category:</HeaderFour>
+        <Para>{category}</Para>
+      </Section>
+      <Section>
+        <HeaderFour>Tags:</HeaderFour>
+        {renderTags}
+      </Section>
+      <Section>
+        <DetailsHeader>Details:</DetailsHeader>
+        <DetailsPara>{shortenDetails(details)}</DetailsPara>
+      </Section>
+    </Article>
   );
 };
 

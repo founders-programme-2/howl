@@ -22,16 +22,24 @@ test('Natural', () => {
       };
       const dateModified = date.toLocaleDateString('en-US', options);
       const splitted = dateModified.split(' ');
-      state = { ...state,
+      state = {
+        ...state,
         selectedDate: dateModified,
         month: splitted[0],
         year: splitted[1],
-      }
+      };
     },
     dropdownChange: event => {
       state = { ...state, [event.target.name]: event.target.value };
-    }
-  }
-  const details = renderer.create(<BrowserRouter> <Details { ...props } /> </BrowserRouter>).toJSON();
+    },
+  };
+  const details = renderer
+    .create(
+      <BrowserRouter>
+        {' '}
+        <Details {...props} />{' '}
+      </BrowserRouter>
+    )
+    .toJSON();
   expect(details).toMatchSnapshot();
 });

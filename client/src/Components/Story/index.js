@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import Footer from '../Common/Footer';
+import BounceLoaderComponent from '../BounceLoader';
 
 import {
   Para,
@@ -12,6 +13,7 @@ import {
   DetailsHeader,
   FigCap,
   Title,
+  LoaderContainer,
 } from './Story.style';
 
 class Story extends Component {
@@ -28,24 +30,26 @@ class Story extends Component {
     timeCreated: '',
     body: null,
     message: '',
+    loadingFlag: false,
   };
 
   componentDidMount() {
+    // eslint-disable-next-line react/destructuring-assignment
     const { id } = this.props.match.params;
-
-    axios.get(`/posts/${id}`).then(res => {
-      const { success } = res.data;
-      if (success) {
-        const { data } = res.data;
-        console.log(data);
-        data.body = true;
-        Object.keys(data).forEach(ele => {
-          this.setState({ [ele]: data[ele] });
-        });
-      } else {
-        const { error } = res.data;
-        this.setState({ message: error });
-      }
+    this.setState({ loadingFlag: true }, () => {
+      axios.get(`/posts/${id}`).then(res => {
+        const { success } = res.data;
+        if (success) {
+          const { data } = res.data;
+          data.body = true;
+          Object.keys(data).forEach(ele => {
+            this.setState({ [ele]: data[ele], loadingFlag: false });
+          });
+        } else {
+          const { error } = res.data;
+          this.setState({ message: error, loadingFlag: false });
+        }
+      });
     });
   }
 
@@ -63,6 +67,7 @@ class Story extends Component {
       timeCreated,
       body,
       message,
+      loadingFlag,
     } = this.state;
 
     const modifiedTags = tags ? tags.join(', ') : null;
@@ -78,32 +83,32 @@ class Story extends Component {
       <Fragment>
         <TextContainer>
           <Title>{title}</Title>
-          <div aria-label="[Time Created]">
+          <section>
             <HeaderTwo>Submission date:</HeaderTwo>
             <Para>{timeCreated}</Para>
-          </div>
-          <div aria-label="[Author's name]">
+          </section>
+          <section>
             <HeaderTwo>Author&#39;s name:</HeaderTwo>
             <Para>{name}</Para>
-          </div>
-          <div aria-label="[Date of Story]">
+          </section>
+          <section>
             <HeaderTwo>Date of story:</HeaderTwo>
             <Para>
               {month} {year}
             </Para>
-          </div>
-          <div aria-label="[Category]">
+          </section>
+          <section>
             <HeaderTwo>Category:</HeaderTwo>
             <Para>{category}</Para>
-          </div>
-          <div aria-label="[Tags]">
+          </section>
+          <section>
             <HeaderTwo>Tags:</HeaderTwo>
             <Para>{modifiedTags}</Para>
-          </div>
-          <div aria-label="[Details]">
+          </section>
+          <section>
             <DetailsHeader>Details:</DetailsHeader>
             <p>{details}</p>
-          </div>
+          </section>
         </TextContainer>
         {imgAndCaption}
       </Fragment>
@@ -111,12 +116,20 @@ class Story extends Component {
 
     const messageVar = message ? <h1>{message}</h1> : null;
 
+    const ContentOrLoader = loadingFlag ? (
+      <LoaderContainer>
+        <BounceLoaderComponent loadingFlag={loadingFlag} />
+      </LoaderContainer>
+    ) : (
+      <Fragment>
+        {messageVar}
+        {bodyVar}
+      </Fragment>
+    );
+
     return (
       <Fragment>
-        <ContentContainer>
-          {messageVar}
-          {bodyVar}
-        </ContentContainer>
+        <ContentContainer>{ContentOrLoader}</ContentContainer>
         <Footer />
       </Fragment>
     );
