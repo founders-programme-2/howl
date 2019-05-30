@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import navigationUrls from './constants/navigationUrls';
-
 import GlobalStyle from './globalStyle';
 import {
   Landing,
@@ -49,7 +48,7 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Header />
+        <Header id="header" />
         <GlobalStyle />
         <Switch>
           <Route

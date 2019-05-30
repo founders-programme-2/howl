@@ -3,10 +3,10 @@
 exports[`Natural 1`] = `
 Array [
   <nav
-    className="sc-gPEVay ijrYIW"
+    className="sc-iRbamj jSfPFv"
   >
     <div
-      className="sc-Rmtcm djJFEQ"
+      className="sc-bRBYWo fVvjun"
     >
       <a
         href="/"
@@ -14,19 +14,19 @@ Array [
       >
         <img
           alt="Howl logo"
-          className="sc-csuQGl GELnJ"
+          className="sc-Rmtcm iOHbcP"
           src="logo.svg"
         />
       </a>
     </div>
     <ul
-      className="sc-iRbamj liECGA"
+      className="sc-jlyJG krWJkz"
     >
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/about"
           onClick={[Function]}
           theme={
@@ -39,10 +39,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/wlm"
           onClick={[Function]}
           theme={
@@ -55,10 +55,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/timeline"
           onClick={[Function]}
           theme={
@@ -71,10 +71,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/archive"
           onClick={[Function]}
           theme={
@@ -87,10 +87,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/add"
           onClick={[Function]}
           theme={
@@ -103,10 +103,10 @@ Array [
         </a>
       </li>
       <li
-        className="sc-jlyJG ehherL"
+        className="sc-gipzik fuDaOI"
       >
         <a
-          className="sc-gipzik dxyUaN"
+          className="sc-csuQGl ZBeNU"
           href="/resources"
           onClick={[Function]}
           theme={
