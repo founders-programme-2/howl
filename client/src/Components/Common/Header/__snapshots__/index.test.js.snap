@@ -4,18 +4,10 @@ exports[`Natural 1`] = `
 Array [
   " ",
   <nav
-    className="sc-bdVaJa knHpaF"
+    className="sc-bdVaJa bnmdUt"
   >
-    <a
-      aria-label="Navigation to top of page"
-      className="sc-gzVnrw fvJkGQ"
-      href="#top"
-      name="topLink"
-    >
-      Top of page
-    </a>
     <div
-      className="sc-bZQynM laTINv"
+      className="sc-EHOje dWTUpW"
     >
       <a
         href="/"
@@ -29,10 +21,10 @@ Array [
       </a>
     </div>
     <ul
-      className="sc-bwzfXH dKkkgT"
+      className="sc-bwzfXH hPfERK"
     >
       <li
-        className="sc-htpNat jfwiNj"
+        className="sc-htpNat kdVOZR"
       >
         <a
           className="sc-bxivhb bRkUzh"
@@ -48,7 +40,7 @@ Array [
         </a>
       </li>
       <li
-        className="sc-htpNat jfwiNj"
+        className="sc-htpNat kdVOZR"
       >
         <a
           className="sc-bxivhb bRkUzh"
@@ -64,39 +56,7 @@ Array [
         </a>
       </li>
       <li
-        className="sc-htpNat jfwiNj"
-      >
-        <a
-          className="sc-bxivhb bRkUzh"
-          href="/resources"
-          onClick={[Function]}
-          theme={
-            Object {
-              "color": "white",
-            }
-          }
-        >
-          Feminist Resources
-        </a>
-      </li>
-      <li
-        className="sc-htpNat jfwiNj"
-      >
-        <a
-          className="sc-bxivhb bRkUzh"
-          href="/archive"
-          onClick={[Function]}
-          theme={
-            Object {
-              "color": "white",
-            }
-          }
-        >
-          The Archive
-        </a>
-      </li>
-      <li
-        className="sc-htpNat jfwiNj"
+        className="sc-htpNat kdVOZR"
       >
         <a
           className="sc-bxivhb bRkUzh"
@@ -111,22 +71,55 @@ Array [
           Interactive Timeline
         </a>
       </li>
-    </ul>
-    <div
-      className="sc-bZQynM laTINv"
-    >
-      <a
-        href="/add"
-        onClick={[Function]}
+      <li
+        className="sc-htpNat kdVOZR"
       >
-        <button
-          className="sc-EHOje NTaOB"
-          type="button"
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/archive"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
         >
-          Add Your Story
-        </button>
-      </a>
-    </div>
+          Our Stories
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/add"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Add Story
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/resources"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Feminist Resources
+        </a>
+      </li>
+    </ul>
   </nav>,
   " ",
 ]
