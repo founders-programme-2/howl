@@ -17,7 +17,7 @@ test('Natural', () => {
   const contentInfo = renderer
     .create(
       <BrowserRouter>
-        <ContentInfo { ...props } />
+        <ContentInfo {...props} />
       </BrowserRouter>
     )
     .toJSON();

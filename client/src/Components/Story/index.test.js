@@ -5,6 +5,12 @@ import Story from './index';
 
 test('Natural', () => {
   const story = renderer
-    .create(<BrowserRouter> <Story match={{ params: { id: 'recrmXEbjl4FKiCq1' } }} /> </BrowserRouter>).toJSON();
+    .create(
+      <BrowserRouter>
+        {' '}
+        <Story match={{ params: { id: 'recrmXEbjl4FKiCq1' } }} />{' '}
+      </BrowserRouter>
+    )
+    .toJSON();
   expect(story).toMatchSnapshot();
 });
