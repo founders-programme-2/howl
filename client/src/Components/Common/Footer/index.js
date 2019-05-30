@@ -68,6 +68,7 @@ class Footer extends Component {
   updateResult = ({ tags, category, year, location, search }) => {
     const submittedData = { tags, category, year, location, search };
     axios.post('/search', submittedData).then(res => {
+      console.log(res);
       // const { history } = this.props;
       // history.push('/results');
     });
