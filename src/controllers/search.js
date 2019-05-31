@@ -1,11 +1,25 @@
 const { Story } = require('../airtables');
 
-const feed = (req, res) => {
-  const storyData = [];
+let search = (searchQuery, cb) => {
+  search = searchQuery.toLowerCase();
+  const filteredData = [];
+
+  /* Searches only in the details column, since we were unable to search across
+  the entire airtable for now. */
   Story.select({
-    maxRecords: 10,
+    filterByFormula: `FIND(LOWER("${search}"), LOWER(details)) > 0`,
     view: 'Approved Stories',
-    fields: ['id', 'title', 'details', 'year', 'imageUrl', 'imageCaption', 'tags', 'category'],
+    fields: [
+      'id',
+      'title',
+      'details',
+      'year',
+      'imageUrl',
+      'imageCaption',
+      'tags',
+      'category',
+      'location',
+    ],
     sort: [
       {
         field: 'id',
@@ -15,8 +29,9 @@ const feed = (req, res) => {
   }).eachPage(
     (records, fetchNextPage) => {
       // This function (`page`) will get called for each page of records.
+
       records.forEach((record) => {
-        storyData.push(record);
+        filteredData.push(record);
       });
 
       // To fetch the next page of records, call `fetchNextPage`.
@@ -26,12 +41,13 @@ const feed = (req, res) => {
     },
     (err) => {
       if (err) {
-        res.json({ success: false, err: "There's been an error in fetching the Archive feed." });
+        cb(err, null);
       } else {
-        res.json({ success: true, data: storyData });
+        // Returns the result to the footerSearch middleware
+        cb(null, filteredData);
       }
     },
   );
 };
 
-module.exports = { feed };
+module.exports = { search };

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import navigationUrls from '../../../constants/navigationUrls';
 import {
   Button,
   Select,
@@ -25,7 +26,6 @@ import {
 } from './Footer.style';
 import { tags as tagsArr, categories, locations } from '../../data';
 import { styles, BootstrapInput, MenuProps, footerTheme } from './mui.style';
-import navigationUrls from '../../../constants/navigationUrls';
 
 const renderSelectItems = items => {
   return items.sort().map(item => (
@@ -52,13 +52,15 @@ const yearsGenerator = () => {
   return years;
 };
 
+const { HELP_URL } = navigationUrls;
+
 class Footer extends Component {
   state = {
     tags: [],
-    category: null,
-    year: null,
-    location: null,
-    search: null,
+    category: '',
+    year: '',
+    location: '',
+    search: '',
     result: [],
   };
 
@@ -74,19 +76,24 @@ class Footer extends Component {
     this.setState({ [name]: value });
   };
 
+  updateSearchValue = (name, value) => {
+    value.trim().toLowerCase();
+    this.setState({ [name]: value });
+  };
+
   howToSearchHandler = () => {
     const { history } = this.props;
-    if (history) history.push('/help');
+    if (history) history.push(HELP_URL);
   };
 
   resetFields = () => {
     this.setState(
       {
         tags: [],
-        category: null,
-        year: null,
-        location: null,
-        search: null,
+        category: '',
+        year: '',
+        location: '',
+        search: '',
       },
       () => {
         const { history } = this.props;
@@ -216,10 +223,10 @@ class Footer extends Component {
             <FormControl className={classes.searchFormControl}>
               <TextField
                 id="outlined-search"
-                label="Search..."
+                label="Search articles ..."
                 value={search || ''}
                 onChange={event => {
-                  this.updateStateValue('search', event.target.value);
+                  this.updateSearchValue('search', event.target.value);
                 }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,

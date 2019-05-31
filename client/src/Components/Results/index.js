@@ -1,11 +1,21 @@
 import React, { Fragment, Component } from 'react';
+import axios from 'axios';
 import Footer from '../Common/Footer';
 import Entry from '../Archive/Entry';
 
 class Results extends Component {
   state = {
     selectedPostId: '',
+    data: [],
   };
+
+  componentDidMount() {
+    const { filters } = this.props;
+    axios.post('/search', filters).then(res => {
+      const dataToRender = res.data.data;
+      this.setState({ data: dataToRender });
+    });
+  }
 
   viewFullPost = id => () => {
     this.setState({ selectedPostId: id }, () => {
@@ -15,47 +25,8 @@ class Results extends Component {
     });
   };
 
-  renderResults = res => {
-    // Axios request should be here, this is a stupid initial render.
-
-    const fakeResults = [
-      {
-        fields: {
-          category: 'Campaigns',
-          details:
-            "A group of Women set up an East Anglia University Womens Liberation Group in Sep 1973↵This had a series of successful meetings discussing issues, which related to the 6 Demands of the WLM↵However all the content and approach was very female heterosexual orientated↵At the end of that academic year around June 1974 we organised a women only party on Campus↵It was like a revelation We felt like we had never non judgmentally enjoyed each other's company as women↵The start of the new academic year in Oct 1974 came under the English and American Studies exchange program↵a very out American lesbian came to the Women's Liberation Group↵Everything opened up for all of us She had a relationship for the year she was in England with a woman who I was ↵sharing my flat in Norwich with I had my first lesbian relationship Although at the time I thought I was bi-sexual↵Still I came out as a lesbian in 1981 when I had my last relationship with a man and I have never looked back.",
-          id: 139,
-          tags: (8)[
-            ('Asian',
-            'Black',
-            'Books',
-            'Childcare',
-            'Conferences',
-            'Conflicts',
-            'Demonstrations',
-            'Education')
-          ],
-          title: 'Womens march',
-          year: 1964,
-        },
-        id: 'recU70hBSi0rAFhGo',
-      },
-      {
-        fields: {
-          category: 'Culture',
-          details:
-            "A group of Women set up an East Anglia University Womens Liberation Group in Sep 1973↵This had a series of successful meetings discussing issues, which related to the 6 Demands of the WLM↵However all the content and approach was very female heterosexual orientated↵At the end of that academic year around June 1974 we organised a women only party on Campus↵It was like a revelation We felt like we had never non judgmentally enjoyed each other's company as women↵The start of the new academic year in Oct 1974 came under the English and American Studies exchange program↵a very out American lesbian came to the Women's Liberation Group↵Everything opened up for all of us She had a relationship for the year she was in England with a woman who I was ↵sharing my flat in Norwich with I had my first lesbian relationship Although at the time I thought I was bi-sexual↵Still I came out as a lesbian in 1981 when I had my last relationship with a man and I have never looked back.",
-          id: 136,
-          tags: ['Books'],
-          title: 'This is a test',
-          year: 1975,
-        },
-        id: 'recujmyVLDfADsJyf',
-      },
-    ];
-
-    // When axios response data this function should return/change state:
-    return fakeResults.map(story => (
+  renderResults = dataToRender => {
+    return dataToRender.map(story => (
       <Entry
         key={story.id}
         id={story.id}
@@ -70,12 +41,12 @@ class Results extends Component {
   };
 
   render() {
-    const { filters } = this.props;
+    const { data } = this.state;
     return (
       <Fragment>
         <main>
           <h1>Hello Results page!</h1>
-          {this.renderResults(filters)}
+          {this.renderResults(data)}
         </main>
         <Footer setFilters={this.setFilters} />
       </Fragment>
