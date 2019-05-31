@@ -44,7 +44,7 @@ const Details = ({
 
   const yearsGenerator = () => {
     const years = [];
-    for (let i = 1960; i <= 1990; i += 1) {
+    for (let i = 1960; i <= 1995; i += 1) {
       years.push(i);
     }
     return years;
