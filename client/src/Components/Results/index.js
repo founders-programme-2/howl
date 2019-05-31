@@ -27,6 +27,10 @@ class Results extends Component {
   };
 
   renderResults = dataToRender => {
+    console.log('D2R: ', dataToRender);
+    if (dataToRender.length === 0) {
+      return <h2>No stories found. Please try again.</h2>;
+    }
     return dataToRender.map(story => (
       <Entry
         key={story.id}
