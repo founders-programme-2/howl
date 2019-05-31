@@ -7,7 +7,7 @@ const { SML, MDM } = responsiveSizes;
 export default createGlobalStyle`
 
 // import google fonts - Raleway (400/regular, 800, 900) and Roboto (regular, bold)
-    @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,900|Roboto:400,700');
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,900|Roboto:400,700|Montserrat');
     
 
     :root {
@@ -75,12 +75,10 @@ export default createGlobalStyle`
     }
 
     p {
-        font-family: 'Roboto', sans-serif;
-        font-variant: small-caps;
+        font-family: 'Montserrat', sans-serif;
         line-height: 1.5rem;
-        text-transform: lowercase;
         letter-spacing: 0.1rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 2rem 2rem;
 
     }
