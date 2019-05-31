@@ -4,6 +4,11 @@ import responsiveSizes from '../../constants/responsiveSizes';
 
 const { SML } = responsiveSizes;
 
+const TimelineHeader = styled.h1`
+  width: 100%;
+  font-size: 3rem;
+`;
+
 const Picture = styled.img`
   width: 70%;
   margin: 2rem auto;
@@ -28,4 +33,4 @@ const FigCap = styled.figcaption`
   }
 `;
 
-export { Picture, ImgFigure, FigCap };
+export { Picture, ImgFigure, FigCap, TimelineHeader };
