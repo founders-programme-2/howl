@@ -61,15 +61,19 @@ class Footer extends Component {
     year: '',
     location: '',
     search: '',
-    result: [],
   };
 
   submitSearch = ({ tags, category, year, location, search }) => {
+    const { RESULTS_URL, ARCHIVE_URL } = navigationUrls;
     const { setFilters, history } = this.props;
-    const { RESULTS_URL } = navigationUrls;
-    setFilters({ tags, category, year, location, search }).then(() => {
-      history.push(RESULTS_URL);
-    });
+
+    if (tags.length === 0 && !category && !year && !location && !search) {
+      history.push(ARCHIVE_URL);
+    } else {
+      setFilters({ tags, category, year, location, search }).then(() => {
+        history.push(RESULTS_URL);
+      });
+    }
   };
 
   updateStateValue = (name, value) => {
