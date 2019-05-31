@@ -42,13 +42,14 @@ class Results extends Component {
 
   render() {
     const { data } = this.state;
+    const { setFilters } = this.props;
     return (
       <Fragment>
         <main>
           <h1>Hello Results page!</h1>
           {this.renderResults(data)}
         </main>
-        <Footer setFilters={this.setFilters} />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }
