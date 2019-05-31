@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import Footer from '../Common/Footer';
 import Entry from '../Archive/Entry';
+import navigationUrls from '../../constants/navigationUrls';
 
 class Results extends Component {
   state = {
@@ -41,11 +42,18 @@ class Results extends Component {
   };
 
   apiCall() {
-    const { filters } = this.props;
-    axios.post('/search', filters).then(res => {
-      const dataToRender = res.data.data;
-      this.setState({ data: dataToRender });
-    });
+    const { filters, history } = this.props;
+    const { tags, category, year, location, search } = filters;
+    const { ARCHIVE_URL } = navigationUrls;
+    console.log(tags, category, year, location, search);
+    if (!tags && !category && !year && !location && !search) {
+      history.push(ARCHIVE_URL);
+    } else {
+      axios.post('/search', filters).then(res => {
+        const dataToRender = res.data.data;
+        this.setState({ data: dataToRender });
+      });
+    }
   }
 
   render() {
