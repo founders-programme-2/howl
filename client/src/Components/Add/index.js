@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Sbtn } from './Add.style';
+import Sbtn from './Add.style';
 import navigationUrls from '../../constants/navigationUrls';
 
 const Add = () => {

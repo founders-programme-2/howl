@@ -11,10 +11,12 @@ class Results extends Component {
     data: [],
   };
 
+  // makes the api call when navigating to the page
   componentDidMount() {
     this.apiCall();
   }
 
+  // makes the api call when props are passed down from a new search
   componentWillReceiveProps() {
     this.apiCall();
   }
@@ -27,8 +29,26 @@ class Results extends Component {
     });
   };
 
+  // queries the backend for searches from the footer
+  apiCall() {
+    const { filters, history } = this.props;
+    const { tags, category, year, location, search } = filters;
+    const { ARCHIVE_URL } = navigationUrls;
+
+    // if nothing is selected, redirects to the archive feed
+    if (!tags && !category && !year && !location && !search) {
+      history.push(ARCHIVE_URL);
+    } else {
+      // makes api call and sets results as state
+      axios.post('/search', filters).then(res => {
+        const dataToRender = res.data.data;
+        this.setState({ data: dataToRender });
+      });
+    }
+  }
+
+  // renders state (returned data from api call) on the page
   renderResults = dataToRender => {
-    console.log('D2R: ', dataToRender);
     if (dataToRender.length === 0) {
       return <h2>No stories found. Please try again.</h2>;
     }
@@ -45,21 +65,6 @@ class Results extends Component {
       />
     ));
   };
-
-  apiCall() {
-    const { filters, history } = this.props;
-    const { tags, category, year, location, search } = filters;
-    const { ARCHIVE_URL } = navigationUrls;
-    console.log(tags, category, year, location, search);
-    if (!tags && !category && !year && !location && !search) {
-      history.push(ARCHIVE_URL);
-    } else {
-      axios.post('/search', filters).then(res => {
-        const dataToRender = res.data.data;
-        this.setState({ data: dataToRender });
-      });
-    }
-  }
 
   render() {
     const { data } = this.state;

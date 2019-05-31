@@ -67,9 +67,11 @@ class Footer extends Component {
     const { RESULTS_URL, ARCHIVE_URL } = navigationUrls;
     const { setFilters, history } = this.props;
 
+    // redirects to archive page if there are no search queries selected
     if (tags.length === 0 && !category && !year && !location && !search) {
       history.push(ARCHIVE_URL);
     } else {
+      // otherwise redirects to results page
       setFilters({ tags, category, year, location, search }).then(() => {
         history.push(RESULTS_URL);
       });
