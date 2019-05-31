@@ -17,7 +17,11 @@ const Timeline = () => {
     <Fragment>
       <main>
         <header>
-          <TimelineHeader>The HOWL Timeline - Coming soon!</TimelineHeader>
+          <TimelineHeader>
+            The HOWL Timeline -
+            <br />
+            Coming soon!
+          </TimelineHeader>
           <ImgFigure>
             <Picture src={TimelinePic} alt="Coming soon interactive timeline" />
             <FigCap>Coming soon interactive timeline</FigCap>
