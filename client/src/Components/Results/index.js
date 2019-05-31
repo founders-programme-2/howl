@@ -10,11 +10,11 @@ class Results extends Component {
   };
 
   componentDidMount() {
-    const { filters } = this.props;
-    axios.post('/search', filters).then(res => {
-      const dataToRender = res.data.data;
-      this.setState({ data: dataToRender });
-    });
+    this.apiCall();
+  }
+
+  componentWillReceiveProps() {
+    this.apiCall();
   }
 
   viewFullPost = id => () => {
@@ -39,6 +39,14 @@ class Results extends Component {
       />
     ));
   };
+
+  apiCall() {
+    const { filters } = this.props;
+    axios.post('/search', filters).then(res => {
+      const dataToRender = res.data.data;
+      this.setState({ data: dataToRender });
+    });
+  }
 
   render() {
     const { data } = this.state;
