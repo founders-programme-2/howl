@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Common/Footer';
 import navigationUrls from '../../constants/navigationUrls';
-import { Picture, ImgFigure, FigCap } from './Timeline.style';
+import { Picture, ImgFigure, FigCap, TimelineHeader } from './Timeline.style';
 import TimelinePic from '../../assets/TimelinePic.svg';
 import SelectTimeFrame from '../../assets/SelectTimeFrame.svg';
 import CategorySelected from '../../assets/CategorySelected.svg';
@@ -17,8 +17,7 @@ const Timeline = () => {
     <Fragment>
       <main>
         <header>
-          <h1>The HOWL Timeline</h1>
-          <h2>Coming soon!</h2>
+          <TimelineHeader>The HOWL Timeline - Coming soon!</TimelineHeader>
           <ImgFigure>
             <Picture src={TimelinePic} alt="Coming soon interactive timeline" />
             <FigCap>Coming soon interactive timeline</FigCap>
