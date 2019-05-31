@@ -54,7 +54,9 @@ class Results extends Component {
     return (
       <Fragment>
         <main>
-          <h1>Hello Results page!</h1>
+          <header>
+            <h1>Search Results</h1>
+          </header>
           {this.renderResults(data)}
         </main>
         <Footer setFilters={setFilters} />
