@@ -3,6 +3,7 @@ import axios from 'axios';
 import Footer from '../Common/Footer';
 import Entry from '../Archive/Entry';
 import navigationUrls from '../../constants/navigationUrls';
+import Smain from './Results.style';
 
 class Results extends Component {
   state = {
@@ -65,12 +66,12 @@ class Results extends Component {
     const { setFilters } = this.props;
     return (
       <Fragment>
-        <main>
+        <Smain>
           <header>
             <h1>Search Results</h1>
           </header>
           {this.renderResults(data)}
-        </main>
+        </Smain>
         <Footer setFilters={setFilters} />
       </Fragment>
     );
