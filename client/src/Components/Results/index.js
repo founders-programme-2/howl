@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import Footer from '../Common/Footer';
 import Entry from '../Archive/Entry';
+import { Link } from 'react-router-dom';
 
 class Results extends Component {
   state = {
@@ -70,14 +71,16 @@ class Results extends Component {
   };
 
   render() {
-    const { filters } = this.props;
+    const { filters, setFilters } = this.props;
     return (
       <Fragment>
         <main>
-          <h1>Hello Results page!</h1>
+          <header>
+            <h1>Search Results</h1>
+          </header>
           {this.renderResults(filters)}
         </main>
-        <Footer setFilters={this.setFilters} />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }
