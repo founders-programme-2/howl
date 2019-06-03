@@ -11,7 +11,7 @@ import SelectedMultipleFilters from '../../assets/SelectedMultipleFilters.svg';
 import SearchFunctionality from '../../assets/SearchFunctionality.svg';
 import StoriesHover from '../../assets/StoriesHover.svg';
 
-const Timeline = () => {
+const Timeline = ({ setFilters }) => {
   const { ARCHIVE_URL } = navigationUrls;
   return (
     <Fragment>
@@ -122,7 +122,7 @@ const Timeline = () => {
           <Link to={ARCHIVE_URL}>archive</Link> for a text-based experience.
         </p>
       </main>
-      <Footer />
+      <Footer setFilters={setFilters} />
     </Fragment>
   );
 };

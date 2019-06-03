@@ -74,6 +74,7 @@ class Archive extends Component {
   render() {
     const { TIMELINE_URL } = navigationUrls;
     const { results, loadingFlag, jumpButton } = this.state;
+    const { setFilters } = this.props;
     const renderResultsAsEntries = results
       ? results.map(result => (
           <Entry
@@ -115,7 +116,7 @@ class Archive extends Component {
           {EntriesOrLoader}
         </main>
         <ScrollButton onClick={this.doScroll}> {jumpButton} </ScrollButton>
-        <Footer />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }

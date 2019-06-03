@@ -69,7 +69,7 @@ class Story extends Component {
       message,
       loadingFlag,
     } = this.state;
-
+    const { setFilters } = this.props;
     const modifiedTags = tags ? tags.join(', ') : null;
     const imgAndCaption =
       imageUrl && imageCaption ? (
@@ -130,7 +130,7 @@ class Story extends Component {
     return (
       <Fragment>
         <ContentContainer>{ContentOrLoader}</ContentContainer>
-        <Footer />
+        <Footer setFilters={setFilters} />
       </Fragment>
     );
   }

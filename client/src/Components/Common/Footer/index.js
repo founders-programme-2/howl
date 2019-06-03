@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import navigationUrls from '../../../constants/navigationUrls';
 import {
   Button,
   Select,
@@ -51,43 +52,54 @@ const yearsGenerator = () => {
   return years;
 };
 
+const { HELP_URL } = navigationUrls;
+
 class Footer extends Component {
   state = {
     tags: [],
-    category: null,
-    year: null,
-    location: null,
-    search: null,
-    result: [],
+    category: '',
+    year: '',
+    location: '',
+    search: '',
   };
 
-  updateResult = ({ tags, category, year, location, search }) => {
-    // Axios should be here, depending on response, change result.
+  submitSearch = ({ tags, category, year, location, search }) => {
+    const { RESULTS_URL, ARCHIVE_URL } = navigationUrls;
+    const { setFilters, history } = this.props;
+
+    // redirects to archive page if there are no search queries selected
+    if (tags.length === 0 && !category && !year && !location && !search) {
+      history.push(ARCHIVE_URL);
+    } else {
+      // otherwise redirects to results page
+      setFilters({ tags, category, year, location, search }).then(() => {
+        history.push(RESULTS_URL);
+      });
+    }
   };
 
   updateStateValue = (name, value) => {
     this.setState({ [name]: value });
   };
 
+  updateSearchValue = (name, value) => {
+    value.trim().toLowerCase();
+    this.setState({ [name]: value });
+  };
+
   howToSearchHandler = () => {
     const { history } = this.props;
-    if (history) history.push('/help');
+    if (history) history.push(HELP_URL);
   };
 
   resetFields = () => {
-    this.setState(
-      {
-        tags: [],
-        category: null,
-        year: null,
-        location: null,
-        search: null,
-      },
-      () => {
-        const { history } = this.props;
-        history.push('/archive');
-      }
-    );
+    this.setState({
+      tags: [],
+      category: '',
+      year: '',
+      location: '',
+      search: '',
+    });
   };
 
   render() {
@@ -211,10 +223,10 @@ class Footer extends Component {
             <FormControl className={classes.searchFormControl}>
               <TextField
                 id="outlined-search"
-                label="Search..."
+                label="Search articles ..."
                 value={search || ''}
                 onChange={event => {
-                  this.updateStateValue('search', event.target.value);
+                  this.updateSearchValue('search', event.target.value);
                 }}
                 InputLabelProps={{
                   className: classes.searchTextFieldLabel,
@@ -230,7 +242,7 @@ class Footer extends Component {
               <Button
                 className={classes.searchButton}
                 onClick={() => {
-                  this.updateResult(this.state);
+                  this.submitSearch(this.state);
                 }}
               >
                 Search

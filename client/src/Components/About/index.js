@@ -3,7 +3,7 @@ import aboutImage from '../../assets/about_page.jpg';
 import Simg from './About.style';
 import Footer from '../Common/Footer';
 
-const About = () => {
+const About = ({ setFilters }) => {
   return (
     <Fragment>
       <main>
@@ -34,7 +34,7 @@ const About = () => {
         <h2>Contact Us</h2>
         <p>Have a question? Send us an email at fakeemail@gmail.com.</p>
       </main>
-      <Footer />
+      <Footer setFilters={setFilters} />
     </Fragment>
   );
 };

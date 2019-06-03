@@ -4,7 +4,7 @@ import bibliographyData from './bibliographyData';
 import { Sh2, Sp } from './Resources.style';
 import Footer from '../Common/Footer';
 
-const Resources = () => {
+const Resources = ({ setFilters }) => {
   // maps over data and renders resources on page
   const renderResources = resourcesData.map(resource => {
     return (
@@ -44,7 +44,7 @@ const Resources = () => {
         <h2>Bibliography</h2>
         {renderBibliography}
       </main>
-      <Footer />
+      <Footer setFilters={setFilters} />
     </Fragment>
   );
 };
