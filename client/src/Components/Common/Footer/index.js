@@ -93,19 +93,13 @@ class Footer extends Component {
   };
 
   resetFields = () => {
-    this.setState(
-      {
-        tags: [],
-        category: '',
-        year: '',
-        location: '',
-        search: '',
-      },
-      () => {
-        const { history } = this.props;
-        history.push('/archive');
-      }
-    );
+    this.setState({
+      tags: [],
+      category: '',
+      year: '',
+      location: '',
+      search: '',
+    });
   };
 
   render() {
