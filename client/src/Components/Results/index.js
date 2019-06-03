@@ -41,8 +41,8 @@ class Results extends Component {
     } else {
       // makes api call and sets results as state
       axios.post('/search', filters).then(res => {
-        const dataToRender = res.data.data;
-        this.setState({ data: dataToRender });
+        const { data } = res.data;
+        this.setState({ data });
       });
     }
   }
