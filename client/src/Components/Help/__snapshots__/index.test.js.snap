@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <main>
+    <header>
+      <h1>
+        How to Search
+      </h1>
+    </header>
+    <section
+      className="sc-htpNat dQtbOH"
+    >
+      <h2
+        className="sc-bdVaJa bOqcwI"
+      >
+        Where to Start
+      </h2>
+      <p>
+        You have the option to search our archive by
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+           
+          section of time, category, location, tags, year, and your own search queries
+        </span>
+        . These options can be viewed one at a time, or in conjunction with others. Please be sure to make all of your selections before pressing
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+           "Search"
+        </span>
+        .
+      </p>
+    </section>
+    <section
+      className="sc-htpNat dQtbOH"
+    >
+      <h2
+        className="sc-bdVaJa bOqcwI"
+      >
+        Searching by Section of Time
+      </h2>
+      <p>
+        Clicking on any of the sections of time on the timeline will return only the results for that period (e.g. 1960 - 1965). Select one and then press 
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+          "Search"
+        </span>
+        , or continue to select other parameters first.
+      </p>
+      <img
+        alt="Example of clickable timeline"
+        className="sc-bwzfXH gJhaHw"
+        src="helpTimeline.svg"
+      />
+      <figcaption>
+        Example of the footer timeline
+      </figcaption>
+    </section>
+    <section
+      className="sc-htpNat dQtbOH"
+    >
+      <h2
+        className="sc-bdVaJa bOqcwI"
+      >
+        Searching by Category, Location, Tags, or Year
+      </h2>
+      <p>
+        Clicking on the small arrow on the edge any of these fields will give you a list of options to choose from for filtering your search results. Click on one to select it. Select one and then press
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+           "Search"
+        </span>
+        , or continue to select other parameters first.
+      </p>
+      <img
+        alt="Dropdown selector example"
+        className="sc-bwzfXH gJhaHw"
+        src="helpDropdowns.svg"
+      />
+      <figcaption>
+        Example of the footer drop down menus
+      </figcaption>
+    </section>
+    <section
+      className="sc-htpNat dQtbOH"
+    >
+      <h2
+        className="sc-bdVaJa bOqcwI"
+      >
+        Searching with your own search Queries
+      </h2>
+      <p>
+        By clicking on the empty input field with the text “search ...” you will be able to type in your own search queries. DO so, and then press
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+           "Search"
+        </span>
+        , or continue to select other parameters first.
+      </p>
+      <img
+        alt="Search input example"
+        className="sc-bwzfXH gJhaHw"
+        src="helpSearchInput.svg"
+      />
+      <figcaption>
+        Example of the search query input
+      </figcaption>
+    </section>
+    <section
+      className="sc-htpNat dQtbOH"
+    >
+      <h2
+        className="sc-bdVaJa bOqcwI"
+      >
+        Submitting your search
+      </h2>
+      <p>
+        Once you have made all of your selections, simply click
+        <span
+          className="sc-bxivhb jZEXJd"
+        >
+           "Search"
+        </span>
+        !
+      </p>
+      <img
+        alt="Search button example"
+        className="sc-bwzfXH gJhaHw"
+        src="helpSearchBtn.svg"
+      />
+      <figcaption>
+        Example of the footer search button
+      </figcaption>
+    </section>
+    <h2
+      className="sc-ifAKCX ULgNK"
+    >
+      Now give it a try yourself!
+    </h2>
+  </main>,
+  <footer
+    className="sc-EHOje gFYmhb"
+  >
+    <section
+      className="sc-bZQynM guOOjK"
+    >
+      <h2
+        className="sc-gzVnrw kMShsh"
+      >
+        Search Archive
+      </h2>
+      <button
+        className="MuiButtonBase-root MuiButton-root Footer-howToSearchButton-1 MuiButton-text"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          How to search
+        </span>
+      </button>
+    </section>
+    <section
+      className="sc-htoDjs bWvjHx"
+    >
+      <div
+        className="MuiFormControl-root Footer-formControl-2"
+      >
+        <div
+          aria-label="category"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-category"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-gZMcBi knIAwZ"
+              >
+                Category
+              </span>
+            </div>
+            <input
+              id="category-customized-select"
+              name="category"
+              type="hidden"
+              value="Category"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="location"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-location"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-gZMcBi knIAwZ"
+              >
+                Location
+              </span>
+            </div>
+            <input
+              id="location-customized-select"
+              name="location"
+              type="hidden"
+              value="Location"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="year"
+          className="MuiInputBase-root WithStyles(ForwardRef(InputBase))-root-44 MuiInputBase-formControl Footer-select-7"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input WithStyles(ForwardRef(InputBase))-input-45"
+              id="select-year"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="sc-gZMcBi knIAwZ"
+              >
+                Year
+              </span>
+            </div>
+            <input
+              id="year-customized-select"
+              name="year"
+              type="hidden"
+              value="Year"
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiFormControl-root Footer-multipleSelectFormControl-3"
+      >
+        <label
+          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Footer-MultipleSelectInputLabel-6"
+          data-shrink={false}
+          htmlFor="selectMultipleCheckbox"
+        >
+          Tags
+        </label>
+        <div
+          aria-label="tags"
+          className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+          onClick={[Function]}
+        >
+          <div
+            className="MuiSelect-root"
+          >
+            <div
+              aria-haspopup="true"
+              aria-pressed="false"
+              className="MuiSelect-select MuiSelect-selectMenu MuiSelect-filled MuiInputBase-input MuiInput-input"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "&#8203;",
+                  }
+                }
+              />
+            </div>
+            <input
+              id="selectMultipleCheckbox"
+              type="hidden"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="sc-dnqmqq hUprcs"
+    >
+      <div
+        className="MuiFormControl-root Footer-searchFormControl-8"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root Footer-searchTextField-9"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Footer-searchTextFieldLabel-10"
+            data-shrink={false}
+            htmlFor="outlined-search"
+          >
+            Search...
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch MuiInput-inputTypeSearch"
+              disabled={false}
+              id="outlined-search"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="search"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <section
+        className="sc-iwsKbI lcbfVX"
+      >
+        <button
+          className="MuiButtonBase-root MuiButton-root Footer-searchButton-11 MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Search
+          </span>
+        </button>
+        <button
+          className="MuiButtonBase-root MuiButton-root Footer-resetButton-12 MuiButton-text"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Reset
+          </span>
+        </button>
+      </section>
+    </section>
+  </footer>,
+  " ",
+]
+`;

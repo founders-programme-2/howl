@@ -1,0 +1,67 @@
+{
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+
+  "tags": [
+    "Black and ethnic minority",
+    "Childcare",
+    "Class",
+    "Conferences",
+    "Conflicts",
+    "Demonstrations",
+    "Education",
+    "Gender",
+    "Health",
+    "Housework",
+    "International",
+    "Irish",
+    "Jewish",
+    "Lesbianism",
+    "Media",
+    "Music",
+    "Protests",
+    "Publishing",
+    "Rape",
+    "Reproductive rights",
+    "Sexuality",
+    "Tendencies",
+    "Violence against women",
+    "Women’s centres",
+    "Work"
+  ],
+  "categories": [
+    "Campaigns",
+    "Culture",
+    "Groups",
+    "Laws",
+    "Meetings",
+    "Stories"
+  ],
+  "locations": [
+    "North East",
+    "North West",
+    "Yorkshire and the Humber",
+    "East Midlands",
+    "West Midlands",
+    "East of England",
+    "London",
+    "South East",
+    "South West",
+    "Scotland",
+    "Northern Ireland",
+    "Wales",
+    "Ireland"
+  ]
+}

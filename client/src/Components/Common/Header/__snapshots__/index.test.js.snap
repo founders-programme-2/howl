@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <nav
+    className="sc-bdVaJa bnmdUt"
+  >
+    <div
+      className="sc-EHOje dWTUpW"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="Howl logo"
+          className="sc-ifAKCX iZOrPs"
+          src="logo.svg"
+        />
+      </a>
+    </div>
+    <ul
+      className="sc-bwzfXH hPfERK"
+    >
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/about"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          About Howl
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/wlm"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Women's Liberation
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/timeline"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Interactive Timeline
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/archive"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Our Stories
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/add"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Add Story
+        </a>
+      </li>
+      <li
+        className="sc-htpNat kdVOZR"
+      >
+        <a
+          className="sc-bxivhb bRkUzh"
+          href="/resources"
+          onClick={[Function]}
+          theme={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Feminist Resources
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  " ",
+]
+`;

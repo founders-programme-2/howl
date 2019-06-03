@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Natural 1`] = `
+Array [
+  " ",
+  <h2>
+    Your Contribution
+  </h2>,
+  <p>
+    Collecting personal stories, pictures and artifacts from real women is hugely important to us at HOWL. We value everyone's input and thank you in advance for sharing with us. We will now go through and ask you a series of questions about the story or image that you'd like to contribute. Don't worry if you can't remember something perfectly. Answer to the best of your ability and put any comments in 'Additional comments' section at the end of the form.
+  </p>,
+  <p>
+    Where did this event occur?
+  </p>,
+  <div
+    className="MuiFormControl-root Details-formControl-2"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-5"
+      data-shrink={false}
+      htmlFor="location"
+    >
+      Location (required)
+    </label>
+    <div
+      aria-label="location"
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-1"
+      onClick={[Function]}
+    >
+      <div
+        className="MuiSelect-root"
+      >
+        <div
+          aria-haspopup="true"
+          aria-pressed="false"
+          className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="select-location"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </div>
+        <input
+          id="location"
+          name="location"
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  <p>
+    Approximately when did this event occur? If the event spans multiple years, select the year when it started.
+  </p>,
+  <div
+    className="MuiFormControl-root Details-formControlDate-3"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-5"
+      data-shrink={false}
+      htmlFor="year"
+    >
+      Year (required)
+    </label>
+    <div
+      aria-label="year"
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-1"
+      onClick={[Function]}
+    >
+      <div
+        className="MuiSelect-root"
+      >
+        <div
+          aria-haspopup="true"
+          aria-pressed="false"
+          className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="select-year"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </div>
+        <input
+          id="year"
+          name="year"
+          type="hidden"
+        />
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiFormControl-root Details-formControlDate-3 Details-formControlMonth-4"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Details-label-5"
+      data-shrink={false}
+      htmlFor="month"
+    >
+      Month (optional)
+    </label>
+    <div
+      aria-label="month"
+      className="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Details-selectDropdown-1"
+      onClick={[Function]}
+    >
+      <div
+        className="MuiSelect-root"
+      >
+        <div
+          aria-haspopup="true"
+          aria-pressed="false"
+          className="MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          id="select-month"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </div>
+        <input
+          id="month"
+          name="month"
+          type="hidden"
+        />
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root MuiSelect-icon"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  <p>
+    What kind of contribution would you like to make?
+  </p>,
+  <div
+    className="MuiFormControl-root Details-formControlRadio-6"
+  >
+    <legend
+      className="MuiFormLabel-root"
+    >
+      I would like to share:
+    </legend>
+    <div
+      className="MuiFormGroup-root"
+      role="radiogroup"
+    >
+      <div
+        className="MuiFormGroup-root MuiFormGroup-row"
+      >
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-90 MuiRadio-root MuiRadio-colorSecondary"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <div
+                className="PrivateRadioButtonIcon-root-106"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-107"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-93"
+                disabled={false}
+                name="storyType"
+                onChange={[Function]}
+                type="radio"
+                value="textPost"
+              />
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
+          >
+            Text Post
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-90 MuiRadio-root MuiRadio-colorSecondary"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <div
+                className="PrivateRadioButtonIcon-root-106"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-107"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-93"
+                disabled={false}
+                name="storyType"
+                onChange={[Function]}
+                type="radio"
+                value="imagePost"
+              />
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
+          >
+            Image Post
+          </span>
+        </label>
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            aria-disabled={false}
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary PrivateSwitchBase-root-90 MuiRadio-root MuiRadio-colorSecondary"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={null}
+          >
+            <span
+              className="MuiIconButton-label"
+            >
+              <div
+                className="PrivateRadioButtonIcon-root-106"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root PrivateRadioButtonIcon-layer-107"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+              <input
+                checked={false}
+                className="PrivateSwitchBase-input-93"
+                disabled={false}
+                name="storyType"
+                onChange={[Function]}
+                type="radio"
+                value="both"
+              />
+            </span>
+          </span>
+          <span
+            className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label"
+          >
+            Both
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>,
+  " ",
+]
+`;
