@@ -26,6 +26,12 @@ const filter = (filterVar, cb) => {
   to complete the formula string. */
   formula = `${formula.substring(0, formula.length - 2)}))`;
 
+  /* Resets formula variable if there are no categories/locations/years selected
+  so that every record is selected and then filtered by tags within the api call */
+  if (formula.length < 5) {
+    formula = '';
+  }
+
   const filteredData = [];
   Story.select({
     filterByFormula: formula,
@@ -59,6 +65,7 @@ const filter = (filterVar, cb) => {
         push that entry to our response (filteredData) */
       records.forEach((record) => {
         if (filterVar.tags.length !== 0) {
+          console.log('Searching for these tags:, ', filterVar.tags);
           filterVar.tags.forEach((el) => {
             if (record.fields.tags.includes(el) && !filteredData.includes(record)) {
               filteredData.push(record);

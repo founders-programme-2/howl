@@ -30,7 +30,7 @@ class Results extends Component {
   };
 
   // queries the backend for searches from the footer
-  apiCall() {
+  apiCall = () => {
     const { filters, history } = this.props;
     const { tags, category, year, location, search } = filters;
     const { ARCHIVE_URL } = navigationUrls;
@@ -45,7 +45,7 @@ class Results extends Component {
         this.setState({ data });
       });
     }
-  }
+  };
 
   // renders state (returned data from api call) on the page
   renderResults = dataToRender => {
