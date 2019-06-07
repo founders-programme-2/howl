@@ -5,6 +5,12 @@
       "author": "Author's Name",
       "date": "Date of Publication",
       "description": "Some text describing the book"
-    }
+    },
+    {
+      "title": "This is a Book",
+      "author": "Author's Name",
+      "date": "Date of Publication",
+      "description": "Some text describing the book"
+    },
   ]
 }
