@@ -26,13 +26,13 @@ const About = ({ setFilters }) => {
         </p>
         <h2>Want to get involved?</h2>
         <p>
-          Send an email introducing yourself to fakeemail@gmail.com and come to
+          Send an email introducing yourself to howl@howl-uk.org and come to
           one of our meetings!
         </p>
         <h2>Donate</h2>
         <p>Passionate about our cause? We are always looking for donations.</p>
         <h2>Contact Us</h2>
-        <p>Have a question? Send us an email at fakeemail@gmail.com.</p>
+        <p>Have a question? Send us an email at howl@howl-uk.org</p>
       </main>
       <Footer setFilters={setFilters} />
     </Fragment>
