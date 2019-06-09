@@ -3,8 +3,8 @@
 Repository for the Founders Program project "Howl". May 2019
 
 ## Introduction
-
-## Requirements
+This web application was created for the London-based group *HOWL* - A History of Women's Liberation.
+Their aim is to create a place to store their stories, photos and other ephemeria from the UK's Women's Liberation Movement spanning from 1960-1995.
 
 ## Installation
 
