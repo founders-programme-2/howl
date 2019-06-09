@@ -37,10 +37,6 @@ Now that you've started the project, you'll need to create a ```config.env``` fi
 To run our project, contact one of the maintainers for the necessary keys. You can follow the
 ```config.env.example``` template for an example of how to structure your ```config.env``` .
 
-## Configuration
-
-## FAQ
-
 ## Stack
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
