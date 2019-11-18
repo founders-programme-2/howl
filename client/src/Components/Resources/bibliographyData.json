@@ -5,6 +5,18 @@
       "author": "Author's Name",
       "date": "Date of Publication",
       "description": "Some text describing the book"
+    },
+    {
+      "title": "Here is a Title2",
+      "author": "Author's Name2",
+      "date": "Date of Publication2",
+      "description": "Some text describing the book2"
+    },
+    {
+      "title": "Sisterhood is Powerful",
+      "author": "Robin Morgan, editor",
+      "date": "1970-71",
+      "description": "The first American feminist anthology"
     }
   ]
 }
