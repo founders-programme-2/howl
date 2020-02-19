@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "assert": "^2.0.0",
-    "codecov": "^3.4.0",
+    "codecov": "^3.6.5",
     "concurrently": "^4.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
